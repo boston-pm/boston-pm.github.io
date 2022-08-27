@@ -68,7 +68,7 @@ paperback/coil-bound available for $8.50+s&h
 
 
 If you'd like to help decide which talk we'll ask Damian to give, check out
-the list at http://damian.conway.org/Seminars/ (*404*) and then post to the
+the list at <http://damian.conway.org/Seminars/> and then post to the
 discussion list or send your choice to me.  I recommend a vote for one of
 the following talks: Everyday Perl, Sufficiently Advanced Technologies,
 Time::Space::Continuum.
@@ -481,7 +481,7 @@ Perl.  He gave an overview of the system, showed it in use at rt.cpan.org,
 and discussed issues including module dependencies, managing a large
 project, and dealing with spam to the mail gateway.
 
-For more on RT, go to http://www.fsck.com/projects/rt/
+For more on RT, go to <http://www.fsck.com/projects/rt/>
 
 
 I presented a JAPH of mine that animates letters swapping around until they
@@ -523,7 +523,7 @@ http://www.perlmonks.org/index.pl?node_id=118799
 
 Dan Sugalski will be giving his presentation of Parrot, originally
 scheduled for last month's meeting.  Parrot will be the core of the Perl 6
-interpreter.  See http://www.parrotcode.org/ for more information about
+interpreter.  See <http://www.parrotcode.org/> for more information about
 Parrot.
 
 ## Tech Meeting Sep 11
@@ -587,7 +587,7 @@ followup on the meeting.
 We had about 55 people, possibly our largest tech meeting ever.  After
 introductions (which take a lot longer with 55 people!), Damian spoke for
 about three hours on the subject of Perl6.  (With frequent threats to talk
-even longer. :)  For more on Perl6, check out http://dev.perl.org
+even longer. :)  For more on Perl6, check out <http://dev.perl.org>
 
 Halfway through, there was a break to give away goodies.  Joe Johnston had
 brought several O'Reilly books, including the new XML book which he
@@ -666,14 +666,14 @@ See <http://reefknot.sourceforge.net> for more information.
 
 If you want to see what's going on before the meeting, check out:
 
-	http://macperl.sourceforge.net/
+<http://macperl.sourceforge.net/>
 
 Also see my development journal:
 
-	http://use.perl.org/~pudge/
+<http://use.perl.org/~pudge/>
 
-> -- 
-> Chris Nandor                      pudge at pobox.com    http://pudge.net/
+> --  
+> Chris Nandor                      pudge at pobox.com    http://pudge.net/  
 > Open Source Development Network    pudge at osdn.com     http://osdn.com/
 
 ## Social Meeting - April 30 - CBC 

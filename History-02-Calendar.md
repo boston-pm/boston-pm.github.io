@@ -73,7 +73,7 @@ This time, I used the 5.020 experimental features, **`postderef`** and **`signat
 that we've discussed in new release feature reviews (both promoted to stable in 5.024, so safe to use in real code).
 
  
-![a Lincoln telegram](./images/telegram.png)
+![a Lincoln telegram](./images/Telegram.png)
 
 BLU saw the history, but this month, Boston.pm gets to see the code.
 
@@ -103,7 +103,7 @@ BLU saw the history, but this month, Boston.pm gets to see the code.
 
 
 ## Tues Sept 13th, room E51-376 - Brendan Gregg's FlameGraphs (Bill Ricker, moderator)
-![FlameGraph of cpu of mysql](./images/cpu-mysql-crop-250.png)
+![FlameGraph of cpu of mysql](./images/Cpu-mysql-crop-250.png)
 
 I stumbled on a link to a set of posts and hand-drawn 'zines' about Linux
 debugging and 'doing' software at [jvns.ca/zines/](http://jvns.ca/zines/). 
@@ -141,7 +141,7 @@ Links
     - '''Further UPDATE''': Brendan presented at LISA'16 (Boston, 1st week December) on the BPF facility allowing full, full-speed tracing. Slides should already be on his website, I'll link the video when released in Q1
 * Used in [CPAN Devel::NYTProf](https://metacpan.org/pod/distribution/Devel-NYTProf/bin/nytprofhtml)
     - [blog announce by Tim Bunce](https://blog.timbunce.org/2013/04/08/nytprof-v5-flaming-precision/)
-![J Evans's debugging tools cover](./images/debugging-tools-cover-50pc.png)
+![J Evans's debugging tools cover](./images/Debugging-tools-cover-50pc.png)
 * [Julia Evans](http://jvns.ca/) Debugging and general dev blogs & debug zines - where i found the first links
     to the above - highly recommended
     -  [zines](http://jvns.ca/zines/) -> [debugging linux](http://jvns.ca/debugging-zine.pdf) from last week, direct inspiration for this talk
@@ -340,7 +340,7 @@ Ronald wrote :
  
 ## June 9th, 2015 Federico Lucifredi resumes his hardware and Perl series
 
-![Federico](./images/federico_lucifredi.jpg)
+![Federico](./images/federico_lucifredi-oreilly.jpg)
 
 A few years ago it was
 [discovered](http://www.bunniestudios.com/blog/?p=3554) that common SD
@@ -469,7 +469,7 @@ modules. Sources include:
 *    20 Dumb In-struct-ions
 *    24 Out of Order Perl
 
-P6 Advent calendar https://perl6advent.wordpress.com/2014/12/
+P6 Advent calendar <https://perl6advent.wordpress.com/2014/12/>
 
 *    p6-23 sleepsort !?
 *    p6-16 Quoting
@@ -991,7 +991,7 @@ Sean Quinlan presenting his and Adam Flott's new configuration management framew
 ## Tuesday September 13    E51-372   
 
 Perl community news. 
-Follow-up list of links http://article.gmane.org/gmane.comp.lang.perl.perl-mongers.boston/5473 
+Follow-up list of links <http://article.gmane.org/gmane.comp.lang.perl.perl-mongers.boston/5473> 
 and lightning talk:
 * Jerrad : no clobber;
 
@@ -1111,14 +1111,14 @@ Since July, Perl Mongers groups around the world are doing demo nights to build 
 
 > There are some key features of Perl 6 that Rakudo Star does not yet handle appropriately, although they will appear in upcoming releases. Thus, we do not consider Rakudo Star to be a "Perl 6.0.0" or "1.0" release. ... 
 
-- http://rakudo.org/node/75 announcement
-- http://github.com/rakudo/rakudo
-- http://parrot.org/
+- <http://rakudo.org/node/75 announcement>
+- <http://github.com/rakudo/rakudo>
+- <http://parrot.org/>
 
 
 ## August 10, 2010 E51-376 
 
-Nick Patch will present some of Ingy döt Net's recent Acmeist projects, TestML and JSYNC, and his experience porting them to Perl 6 with Ingy. Detailed abstract to follow. [for now see Ingy's notes http://blogs.perl.org/users/ingy_dot_net/2010/07/rakudos-really-really-release-ready.html] 
+Nick Patch will present some of Ingy döt Net's recent Acmeist projects, TestML and JSYNC, and his experience porting them to Perl 6 with Ingy. Detailed abstract to follow. (for now see Ingy's notes <http://blogs.perl.org/users/ingy_dot_net/2010/07/rakudos-really-really-release-ready.html>) 
 
 
 ## July 13, 2010  E51-376
@@ -1147,7 +1147,7 @@ Postponed to July
 
 * Bill and ensemble - maintaining a CPAN module
 
-Boston.pm acting through Bill Ricker with Tom Metro as backup have adopted Damian Conway's module  [Config::Std  http://search.cpan.org/dist/Config-Std/], which has a long RT bug queue most of which are fixed in CPAN but not closed, some documentation gaps, and a few real bugs. Bill will report on what steps are needed to enable that, and we'll see progress as a demo. 
+Boston.pm acting through Bill Ricker with Tom Metro as backup have adopted Damian Conway's module  [Config::Std](http://search.cpan.org/dist/Config-Std/), which has a long RT bug queue most of which are fixed in CPAN but not closed, some documentation gaps, and a few real bugs. Bill will report on what steps are needed to enable that, and we'll see progress as a demo. 
 
 folks are encouraged to bring a laptop preferably with git or a diff capable of creating patch files so you can contribute to fixing perldoc.
 
@@ -1204,7 +1204,7 @@ list of good perl stuff on that page remains available for filler talks
 Tuesday is a day early this week, and the 8th is as early as the Boston Perl Mongers can fall. After the as late as possible Labor Day, this is about pessimal. However we do it anyway. We have our usual room for fall.
 
 Our speakers are Shankar Viswanathan and Lars Ahlzen from the Open Street Map project. 
- http://www.osm.org
+ <http://www.osm.org>
 
 ## July 14 7:15 E51-376
 
@@ -1218,7 +1218,7 @@ Our speakers are Shankar Viswanathan and Lars Ahlzen from the Open Street Map pr
 * a survey of Perl IDE tools. 
 ** Uri suggests Emacs perl mode. 
 **  a survey of all IDE/editor options -
-**  who wants to present Eclipse? [Padre Perl IDE http://padre.perlide.org/] ? Komodo?
+**  who wants to present Eclipse? [Padre Perl IDE](http://padre.perlide.org/) ? Komodo?
 
 ## May 12, 7:15 PM - MIT E51-376
 
@@ -1422,7 +1422,7 @@ Ronald Kimball gave an introductory talk on Toolkit::Template, based on his expe
 
 Uri Guttman gave an informal presentation on his CMS::Simple and Template::Simple modules.
 
-Ronald Kimball also offered a quick look at [LOLCode http://www.lolcode.com].
+Ronald Kimball also offered a quick look at [LOLCode](http://www.lolcode.com).
 
 This was our first tech meeting sponsored by 
 Cambridge Interactive Development Corp!  
@@ -1502,7 +1502,7 @@ Our YAPC volunteer committee presented their plans for the [New England Perl Wor
 
 **Uri Guttman** gave a presentation on writing plug-ins in Perl.
 
-**Jerrad Pierce** recruited volunteers for this year's [Perl advent calendar http://perladvent.pm.org/].
+**Jerrad Pierce** recruited volunteers for this year's [Perl Advent Calendar](http://perladvent.pm.org/).
 
 **Kenneth Graves** followed up on his presentation from last month, with a script that solves a puzzle of putting unique 3-digit perfect squares (100, 121, etc.) into a crossword-style grid.
 

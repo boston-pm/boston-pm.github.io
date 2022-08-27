@@ -347,7 +347,7 @@ Ricky gave background on the Change Ringing style of bell ringing and also brief
 
 Slide notes <http://pukku.com/bostonpm/2018-09-ringing-halfsheet/>
 
-Program https://github.com/pukku/ringing_halfsheets> ( link is in the notes above).
+Program <https://github.com/pukku/ringing_halfsheets> ( link is in the notes above).
 
 We did not watch all the videos or dive into all the reference links ... have fun with this rabbit warren of links!
 
@@ -358,7 +358,7 @@ For the October 9 gathering of Boston Perl Mongers we'll be hosted by [MaxMind](
 
 (Boston.PM is happy to accept this offer of hosting from MaxMind, and would welcome hosting offers from other organizations in Eastern MA. It gives those who live further West or otherwise are unable/unwilling to travel to the city a chance to attend.
 
-"A resource for beginners and advanced Perl users alike, the Perl Advent calendar [ http://www.perladvent.org/2017/ ] features humourous stories featuring Santa's Elves and the fun they have with Perl. This talk will talk about all the exciting things that occurred in [last] year's calendar. Somewhat akin to twenty four two minute lighting talks, it'll expose you to a range of topics."
+"A resource for beginners and advanced Perl users alike, the Perl Advent calendar <http://www.perladvent.org/2017/> features humourous stories featuring Santa's Elves and the fun they have with Perl. This talk will talk about all the exciting things that occurred in (*last*) year's calendar. Somewhat akin to twenty four two minute lighting talks, it'll expose you to a range of topics."
 
 About the Speaker
 
@@ -640,7 +640,7 @@ Subject: Re: Tuesday - Tech meeting - Mojo 9 point OH!
 
 BTW in looking to open a tracking ticket to
 construct a guide for Mojo::DOM it seems we already have
-one! https://github.com/mojolicious/mojo/issues/1110 If anyone is
+one! <https://github.com/mojolicious/mojo/issues/1110> If anyone is
 looking for a good way to contribute to Mojo (or just to open source)
 without coding that would be a great way to do it!
 ```
@@ -674,7 +674,7 @@ Wed, May 26, 2021, 6:00 PM EDT
 *Boston.pm and Charlotte.PM invited to BLU.org's virtual meeting*
 
 Description: Jon "maddog" Hall discusses what customers really look for
-Details at http://blu.org/cgi-bin/calendar/2021-jun
+Details at <http://blu.org/cgi-bin/calendar/2021-jun>
 Organizer: Boston Linux + UNIX
 
 *(If you don't recognize the name ... Jon is a pundit and sometimes board member on things Linux and FLOSS; he was the manager at DEC who was the first to give Linus some hardware for porting Linux. We can thank him that it's portable !)*
@@ -863,7 +863,7 @@ SeaFile and LibreOffice Online together provide most of the functionality of Goo
 ## June July August Canceled for Summer
 
 
-# BOILERPLATE
+# Historical BOILERPLATE
 
 (*This is the boilerplate as used fall 2020 - spring 2022.
 Current boilerplate is below announced schedule [on homepage](index.html#boilerplate).*)
@@ -880,10 +880,10 @@ Current boilerplate is below announced schedule [on homepage](index.html#boilerp
 One can use plain web mode, but you can install the browser plug-in if you like (recommended if sharing slides or terminal). There are also iOS (iPhone/iPad) and Android apps which work well.
 
 
-JITSI keyboard shortcuts - https://jitsi.github.io/handbook/docs/user-guide/keyboard-shortcuts
+JITSI keyboard shortcuts - <https://jitsi.github.io/handbook/docs/user-guide/keyboard-shortcuts>
 
 JITSI scales fine to more people in face-sharing Brady-Bunch / Hollywood Squares mode than you can easily see at once (30ish) and if folks turn off their cameras when just listening/talking, i.e. when not commenting/presenting, it scales much higher. (If we later get more folks than will comfortably fit in Jitsi, we can set up a stream to YouTubeLive or some other platform … or upgrade to a proper panelist platform feeding a stream, but the “seminar” quality of Jitsi is fine for our level of anarchy.)
 
 I will routinely mute those not presenting so you’ll usually need to unmute to comment. Hint: Space-bar is push to talk, M is mute/unmute (on phone/tablet it’s the skeuomorphic microphone, avoid the handset hangup button!).
 
-As now seen on [Perl Weekly newsletter](https://perlweekly.com/) Perl weekly [234x60.png](https://ci5.googleusercontent.com/proxy/D2QriQdwcn_tK1TRXTPkcoNPn9vpdCDNLRk58GulS7G03m4WssozXgPmKtZJyy9oAcQArddOR-03HLuhs_AauZSlxo7gDoodNj2lgV2vgUzDGOaCskG95DM=s0-d-e1-ft#https://bpm.qualitybox.us/bpm/img_auth.php/d/da/Perl_weekly_234x60.png) and their [Events Calendar](https://perlweekly.com/events.html) - which you can import via the live [iCal calendar](https://perlweekly.com/perlweekly.ical) -- at least in months that i plan ahead (not this month). 
+As now seen on [Perl Weekly newsletter](https://perlweekly.com/) Perl weekly ![234x60.png](./images/perl_weekly_234x60.png){#pwnl height=30 width=117} and their [Events Calendar](https://perlweekly.com/events.html) - which you can import via the live [iCal calendar](https://perlweekly.com/perlweekly.ical) -- at least in months that i plan ahead (not this month). 

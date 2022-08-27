@@ -54,7 +54,6 @@ Boston-PM has presence on the following socials -
 * [Facebook Page](https://www.facebook.com/bostonpm/)
 * [FaceBook Group](https://www.facebook.com/groups/131595281237)
 * [YouTube](https://www.youtube.com/channel/UCY0sL_ILd6JUixlppAQlgsA/videos) (historical only at this time)
-![234x60.png](./images/Perl_weekly_234x60.png)
 * Perl Weekly [newsletter ![icon](./images/Mail-icon.png){#pwnl height=20 }](https://perlweekly.com/), [iCal calendar](https://perlweekly.com/perlweekly.ical), [![RSS](./images/feed-icon32x32.png){#rss height=20 }](https://perlweekly.com/perlweekly.rss); and their [Twitter ![icon](./images/Twitter-icon.png){#pwtw height=20 }](https://twitter.com/PerlWeekly) may promote select items of ours. <br /> [![](./images/perl_weekly_234x60.png)](https://perlweekly.com/)
 * [The Boston-area User Group Calendar](http://www.bugc.org) "Since 1997"
 
