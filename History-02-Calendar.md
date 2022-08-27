@@ -33,7 +33,7 @@ The facilities were very nice MBA case rooms in the Business & Humanities buildi
 ## December 13th - Christmas Lights Tour - *Bill & Greek Chorus*
 
 A mutually-guided tour of the first half of several Perl-ish Advent Calendars
-[![XmasLights33.png](./images/XmasLights33.png)](./images/Xmas-Lights.pdf)
+[![XmasLights33.png](./images/XmasLights33.png)](./documents/Xmas-Lights.pdf)
 
 Around this time of year there is a tradition in the programming
 communities to share our favorite libraries, tools, and tips we've
@@ -51,7 +51,7 @@ and maybe more from the master list via [Advent Planet ](http://www.lenjaffe.com
  
 (Audience participation: As usual, our Greek chorus answers each other's questions about the modules seen.)
  
-<Xmas-Lights.pdf>
+[PDF](./documents/Xmas-Lights.pdf)
  
  
  
@@ -77,36 +77,37 @@ that we've discussed in new release feature reviews (both promoted to stable in 
 
 BLU saw the history, but this month, Boston.pm gets to see the code.
 
-'''Materials'''
+**Materials**
  
-* <file/view/lincoln-whatsnextnews.pl.html> (tidy), source <lincoln-whatsnextnews.pl>
-* <Transposition_in_historic_context.pdf> Slides (pdf) <Transposition_in_historic_context-1A.pdf> (pdf-1a archival with fonts)
+* [`lincoln-whatsnextnews.pl` (html tidy)](./scripts/lincoln-whatsnextnews.pl.html) , source [`lincoln-whatsnextnews.pl` (source)](./scripts/lincoln-whatsnextnews.pl)
+* _Transposition in historic context_ [Slides (pdf)](./documents/Transposition_in_historic_context.pdf)  [(1A PDF)](./documents/Transposition_in_historic_context-1A.pdf) (pdf-1a archival with fonts)
 
-'''Citizen science links''' for the transcription project -
-* <http://www.smithsonianmag.com/smart-news/you-can-help-decode-thousands-top-secret-civil-war-telegrams-180959561>
-* <https://www.zooniverse.org/projects/zooniverse/decoding-the-civil-war>
-* <https://www.zooniverse.org/projects/zooniverse/decoding-the-civil-war/about/education>
+
+**Citizen science links** for the transcription project -
+
+* <http://www.smithsonianmag.com/smart-news/you-can-help-decode-thousands-top-secret-civil-war-telegrams-180959561>  
+* <https://www.zooniverse.org/projects/zooniverse/decoding-the-civil-war>  
+* <https://www.zooniverse.org/projects/zooniverse/decoding-the-civil-war/about/education>  
 * <https://blog.decodingthecivilwar'.org/>
 
-'''Articles'''
- 
+**Articles**
 
-* "'''Anatomy of a Cipher'''" <https://web.archive.org/web/20160628222057/http://www.c3teachers.org/wp-content/uploads/2016/01/Anatomy-of-a-Cipher.pdf>  Discussion of this code and this specific message''
-* ''"'''The Gray Fox Swallowed the Bait'''" (''NSA Spectrum// magazine, de-classified) Wig Wag intercept, cracking, and gas-lighting, not directly relate but showing confusion when code is intercepted and broken !
+* "**_Anatomy of a Cipher_**" [c3teachers pdf, archived](https://web.archive.org/web/20160628222057/http://www.c3teachers.org/wp-content/uploads/2016/01/Anatomy-of-a-Cipher.pdf)  _Discussion of this code and this specific message_
+* "**_The Gray Fox Swallowed the Bait_**" (_NSA Spectrum_ magazine, de-classified) _Wig Wag intercept, cracking, and gas-lighting, not directly relate but showing confusion when code is intercepted and broken_ !
  [NSA](https://www.nsa.gov/news-features/declassified-documents/cryptologic-spectrum/assets/files/gray_fox.pdf)
 
-'''Books'''
+**Books**
  
-* William Rattle Plum, <u>'''The Military Telegraph during the Civil War in the United States'''</u> v1 & v2
+* William Rattle Plum, <u>**The Military Telegraph during the Civil War in the United States**</u> v1 & v2
  [archive.org](https://archive.org/search.php?query=Plum%2C%20William%20Rattle)
-* David Homer Bates, "<u>'''Lincoln in the Telegraph Office'''</u>: Recollections of the United States Military Telegraph Corps" [archive.org](https://archive.org/search.php?query=Lincoln%20in%20the%20Telegraph%20Office%20%20Bates)
+* David Homer Bates, "<u>**Lincoln in the Telegraph Office**</u>: Recollections of the United States Military Telegraph Corps" [archive.org](https://archive.org/search.php?query=Lincoln%20in%20the%20Telegraph%20Office%20%20Bates)
 
 
 ## Tues Sept 13th, room E51-376 - Brendan Gregg's FlameGraphs (Bill Ricker, moderator)
 ![FlameGraph of cpu of mysql](./images/Cpu-mysql-crop-250.png)
 
-I stumbled on a link to a set of posts and hand-drawn 'zines' about Linux
-debugging and 'doing' software at [jvns.ca/zines/](http://jvns.ca/zines/). 
+I stumbled on a link to a set of posts and hand-drawn [**'zines'**](https://wizardzines.com/) about Linux
+debugging and 'doing' software at .
 The Linux Debugging zine includes several 'old friend' tools (which
 gives me confidence in this person's opinions) and also included new
 or new to me options and tools, and specifically enthused over **Brendan
@@ -137,14 +138,14 @@ Links
     - [Start of Advanced section](https://youtu.be/nZfNehCzGdw?t=3353) ... where we stopped, continue from here
     - [Slides](http://www.slideshare.net/slideshow/embed_code/28010650)
     - [Interactive Demos](https://github.com/brendangregg/FlameGraph/tree/master/demos) on GitHub
-    - [UPDATE: Linux finally has as-good-as-DTrace](http://www.brendangregg.com/blog/2016-10-27/dtrace-for-linux-2016.html) ('''new post''' 2016-10-27 after meeting!)
-    - '''Further UPDATE''': Brendan presented at LISA'16 (Boston, 1st week December) on the BPF facility allowing full, full-speed tracing. Slides should already be on his website, I'll link the video when released in Q1
+    - [UPDATE: Linux finally has as-good-as-DTrace](http://www.brendangregg.com/blog/2016-10-27/dtrace-for-linux-2016.html) (**new post** 2016-10-27 after meeting!)
+    - **Further UPDATE**: Brendan presented at LISA'16 (Boston, 1st week December) on the BPF facility allowing full, full-speed tracing. Slides should already be on his website, I'll link the video when released in Q1
 * Used in [CPAN Devel::NYTProf](https://metacpan.org/pod/distribution/Devel-NYTProf/bin/nytprofhtml)
     - [blog announce by Tim Bunce](https://blog.timbunce.org/2013/04/08/nytprof-v5-flaming-precision/)
 ![J Evans's debugging tools cover](./images/Debugging-tools-cover-50pc.png)
-* [Julia Evans](http://jvns.ca/) Debugging and general dev blogs & debug zines - where i found the first links
+* [Julia Evans](https://wizardzines.com/) Debugging and general dev blogs & debug zines - where i found the first links
     to the above - highly recommended
-    -  [zines](http://jvns.ca/zines/) -> [debugging linux](http://jvns.ca/debugging-zine.pdf) from last week, direct inspiration for this talk
+    -  [zines](https://wizardzines.com/) -> [debugging linux](http://jvns.ca/debugging-zine.pdf) from last week, direct inspiration for this talk
 
 ## NO AUGUST 2016 MEETING
 
@@ -172,8 +173,8 @@ Tim will examine best practices for testing Modern Perl, including a tutorial on
 [Tim King](http://www.theperlshop.com/about#tim-king) is Lead Developer at
 [The Perl Shop](http://www.theperlshop.com/). Tim got his start writing
 real-time embedded software for high-speed centrifuges the 1980’s and
-went on to do embedded software for '''Kurzweil Music Systems''' and
-'''Avid Technology.''' He has been developing for the web since the web
+went on to do embedded software for **Kurzweil Music Systems** and
+**Avid Technology.** He has been developing for the web since the web
 existed, and brings discipline and skills honed from embedded systems to
 enterprise software. His expertise is in designing for software quality,
 achieved through automated code testing, test-first development, and
@@ -333,7 +334,7 @@ Ronald wrote :
 >  Ronald
  
  
-'''Location''': Sunset Grill and Tap in Allston. 130 Brighton Avenue (at Harvard Ave).
+**Location**: Sunset Grill and Tap in Allston. 130 Brighton Avenue (at Harvard Ave).
  
 ## Tue 07/14/2015 E51-376 - NO MEETING
 
@@ -414,7 +415,7 @@ with this MQ server.
 I will walk you through a very high level of the integration itself,
 some of the challenges we faced, and how we overcame them. I’ll also
 go through some of the improvements I’ve made as part of the team of
-people maintaining the Net::AMQP::RabbitMQ module. '''BEWARE''', however,
+people maintaining the Net::AMQP::RabbitMQ module. **BEWARE**, however,
 this talk is not for the squeamish. There will be guts. perlguts, and
 they’ll be everywhere.
 
@@ -479,8 +480,8 @@ and blogs.
 
 **2014 Releases.**
 
-*    **Perl 5.20** <http://perlnews.org/2014/05/perl-5-20-released/> - we viewed demo of Hash Slices and some videos on new Signatures features at June meeting;
-*    **Perl 6** 2014.12.1 is **“Early Adopter Release”** <http://rakudo.org/2014/12/26/announce-rakudo-star-release-2014-12/>
+*    [**Perl 5.20**](http://perlnews.org/2014/05/perl-5-20-released/) - we viewed demo of Hash Slices and some videos on new Signatures features at June meeting;
+*    **Perl 6** 2014.12.1 is [**“Early Adopter Release”**](http://rakudo.org/2014/12/26/announce-rakudo-star-release-2014-12/)
      Does that mean it's Christmas ? Not quite. See <http://perl6.org/compilers/features>.
      See also [2015.01](https://p6weekly.wordpress.com/2015/01/05/2015-01-get-ready-to-party/) ; [P6 Timestamps](http://perl6maven.com/tutorial/timestamp), [Bailador is P6 Dancer light](http://perl6maven.com/getting-started-with-bailador)
 *    CPAN What's New :
@@ -597,7 +598,7 @@ Demos: <http://zak.freeshell.org/course/lab.html>
 [Hangouts](https://www.youtube.com/watch?v=ljdHUbjnWpw) and you can
 submit questions via IRC.)
  
-'''Zak Zebrowski''' is a MITRE data miner, specializing in forensic
+**Zak Zebrowski** is a MITRE data miner, specializing in forensic
 database analysis. He is interested in all things Perl, and enjoys
 teaching. He loves being outside when he's not programming.
  
@@ -616,18 +617,19 @@ driver that Selenium provides." - [pod](https://metacpan.org/pod/Selenium::Remot
 
 ### Bill Ricker demonstrates new features in the recently released Perl 5.20, including List::Util updates.
 
-* <https://metacpan.org/pod/release/RJBS/perl-5.20.0/pod/perldelta.pod>
-* <https://metacpan.org/pod/release/RJBS/perl-5.20.0/pod/perldelta.pod#Experimental-Subroutine-signatures>
-* <https://metacpan.org/pod/perlsub#Signatures> YAPC video ["Getting to Signatures"](https://www.youtube.com/watch?v=YvnIcLc2Nrs)
-* <https://metacpan.org/pod/release/RJBS/perl-5.20.0/pod/perldelta.pod#New-slice-syntax>
-* <https://metacpan.org/pod/perldata#Key-Value-Hash-Slices>
-* <https://metacpan.org/pod/release/RJBS/perl-5.20.0/pod/perldelta.pod#Experimental-Postfix-Dereferencing>
-* <https://metacpan.org/pod/release/RJBS/perl-5.20.0/pod/perldelta.pod#Deprecations>
-* <https://metacpan.org/pod/perlpolicy#discouraged>.
-* '''Module::Build removed''' <https://metacpan.org/pod/release/RJBS/perl-5.20.0/pod/perldelta.pod#Module-removals> Module::Build deprecated - comments of current and former maintainers -
+* [perldelta](https://metacpan.org/pod/release/RJBS/perl-5.20.0/pod/perldelta.pod)  
+    - [Signatures](https://metacpan.org/pod/release/RJBS/perl-5.20.0/pod/perldelta.pod#Experimental-Subroutine-signatures)  
+        - [perlsub#Signatures](https://metacpan.org/pod/perlsub#Signatures) 
+        - YAPC video ["Getting to Signatures"](https://www.youtube.com/watch?v=YvnIcLc2Nrs)
+    - [Slices](https://metacpan.org/pod/release/RJBS/perl-5.20.0/pod/perldelta.pod#New-slice-syntax)
+        - [Key-Value-Hash-Slices](https://metacpan.org/pod/perldata#Key-Value-Hash-Slices)
+        - [Experimental-Postfix-Dereferencing](https://metacpan.org/pod/release/RJBS/perl-5.20.0/pod/perldelta.pod#Experimental-Postfix-Dereferencing)
+* [Deprecations](https://metacpan.org/pod/release/RJBS/perl-5.20.0/pod/perldelta.pod#Deprecations)
+* [Policy](https://metacpan.org/pod/perlpolicy#discouraged).
+* [**Module::Build removed**](https://metacpan.org/pod/release/RJBS/perl-5.20.0/pod/perldelta.pod#Module-removals) Module::Build deprecated - comments of current and former maintainers -
   Video [Replacing Module::Build By Leon Timmermans (leont)](http://act.yapc.eu/ye2013/talk/4804);  [Obit for M-B](http://www.dagolden.com/index.php/2140/paying-respect-to-modulebuild/).
-*  '''List::Util''' [New Maintainer's blog](http://leonerds-code.blogspot.co.il/2014/06/listutil-additions-in-perl-520.html) <https://metacpan.org/pod/List::Util#KEY-VALUE-PAIR-LIST-FUNCTIONS>
-*  '''New easy OO CSV''' <http://search.cpan.org/~hmbrand/Text-CSV_XS-1.09/CSV_XS.pm#csv> (see also his [NLPW2014 video](https://www.youtube.com/watch?v=24LGPZ5ODAw) not viewed at meeting)
+*  **List::Util** [New Maintainer's blog](http://leonerds-code.blogspot.co.il/2014/06/listutil-additions-in-perl-520.html); [KV Lists](<https://metacpan.org/pod/List::Util#KEY-VALUE-PAIR-LIST-FUNCTIONS>)
+*  **New easy OO CSV** Text::[CSV_XS](http://search.cpan.org/~hmbrand/Text-CSV_XS-1.09/CSV_XS.pm#csv) (see also his [NLPW2014 video](https://www.youtube.com/watch?v=24LGPZ5ODAw) not viewed at meeting)
  
 ## May, 2014 - Ricardo Signes' 1.21 Gigawatts
 
@@ -636,7 +638,7 @@ Ricardo Signes (pre-recorded in NY, with live Q&A via Hangouts)
 
 A collection of the speaker's lightening talks, in the spirit of a highlight reel. 
 We replayed a recording of [Ricardo's talk to NY.pm](https://www.youtube.com/watch?v=iG4fQUrkyK8), 
-after which Ricardo joined us by tele-presense for '''live Q&A''' .)
+after which Ricardo joined us by tele-presense for **live Q&A** .)
  
 Some talks carefully guide the listeners through the entirety of a topic,
 starting with the basics and ending with the fine details. That's… not
@@ -670,10 +672,10 @@ Video replay presentation with group discussion as emergency substitute.
  
 Choice of :
  
-* '''"Unicode Programming in Modern Perl"''', Nick Patch (ex Boston!), NY.pm
-* '''DBIx::Class & Data::Query''' TPM Feb, Matt Phillips 0:30
-* '''Deck, experimental language''', TPM Feb, Chris Reuter
-* '''"Building Scalable, Distributed Job Queues with Redis and Redis::Client"''' (from 2012) Mike Friedman.
+* **"Unicode Programming in Modern Perl"**, Nick Patch (ex Boston!), NY.pm
+* **DBIx::Class & Data::Query** TPM Feb, Matt Phillips 0:30
+* **Deck, experimental language**, TPM Feb, Chris Reuter
+* **"Building Scalable, Distributed Job Queues with Redis and Redis::Client"** (from 2012) Mike Friedman.
 
 ## March, 2014 - Interesting Small Scripts
  TOPIC: Interesting Small Scripts
@@ -716,8 +718,8 @@ MODERATOR: Tom Metro
 
  
 How fast can Perl find duplicate files on a 100 GB file system? That's the
-question the '''Dallas/Fort Worth Perl Monger's Winter 2013 Deduplication
-Hackathon''' set out to answer. There were a diverse range of contest
+question the **Dallas/Fort Worth Perl Monger's Winter 2013 Deduplication
+Hackathon** set out to answer. There were a diverse range of contest
 entries, from the expected procedural Perl 5 code to ones that used Moose,
 MOP, and even one Perl 6 entry.
  
@@ -838,14 +840,15 @@ Boston.pm adopted one of Damian's PBP modules, Config::Std. It was broken by Per
 *William Cox and David Larochelle on Using Inline::Java with Perl*
 
 This talk is a report on inquiry begun on the [mailing list](http://www.mail-archive.com/boston-pm@mail.pm.org/index.html#07176)
-[slide deck](https://docs.google.com/presentation/d/1nWaw6ER0yuh0dtHWDVETaGLe1GFCQ71kynyeN_-VEmM)
+[slides @G](https://docs.google.com/presentation/d/1nWaw6ER0yuh0dtHWDVETaGLe1GFCQ71kynyeN_-VEmM)
+or [slides @H](https://blogs.harvard.edu/dlarochelle/files/2013/07/Inline-Java-PM1.pdf) [PPTx](http://blogs.law.harvard.edu/dlarochelle/files/2013/07/Inline-Java-PM.pptx)
 [Blog](http://blogs.law.harvard.edu/dlarochelle/2013/07/14/inlinejava-using-java-with-perl/)
  
 Q “There is a question that the slides don't address which I am curious about -- why didn't you just use Java & Java-based languages? 
 
 A. “each had major existing workflow in perl.one needed to fetch data only available with java api, other needed algorithm only with java api.”
 
-A. “Exactly. Our ORM is in Perl. Also, I did in 1 file of Perl what
+A. “Exactly. Our ORM is in Perl. :Also, I did in 1 file of Perl what
 Java would require in 10s. The need to maintain simplicity was important
 for my group. You have to follow the business requirements laid before
 you. A lot of my group writes Perl. The rest of engineering writing
@@ -964,15 +967,16 @@ Canonical's systems management and monitoring tool, Landscape (Landscape.canonic
 
 Apparently something else happens on 2/14, important in the dominant culture.
 
-## January 10, 2012  E51-376
+## January 10, 2012  E51-376 - DoS CVE
 
 David Larochelle explained the "new" multi-language web Denial of Service (DoS) threat that doesn't affect Perl (but affects Python & PHP). 
 
 References - search for 
 
+* [Slides](https://blogs.harvard.edu/dlarochelle/files/2012/01/perl_monger_hash_collisions.pdf)
 * advisory28122011.pdf
-* !CVE-2011-4885
-* Reported 2003 CrosbyWallach_UsenixSec2003.pdf
+* **CVE-2011-4885**
+* Reported 2003 [CrosbyWallach_UsenixSec2003.pdf](http://www.cs.rice.edu/~scrosby/hash/CrosbyWallach_UsenixSec2003.pdf)
 * Fixed in Perl 2005 - perldoc perlsec.html under Algorithmic-Complexity-Attacks
 
 # 2011
