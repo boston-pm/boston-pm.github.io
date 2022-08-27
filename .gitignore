@@ -1,0 +1,5 @@
+*.lst
+*.swp
+*.tmp
+*~
+nohup.out
