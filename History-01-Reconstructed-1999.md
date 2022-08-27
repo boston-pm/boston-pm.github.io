@@ -1,5 +1,5 @@
 % Reconstructed History (1999-2004)
-% Boston Perl Mongers 
+% Boston Perl Mongers   ![](./images/pmgeekbooktinyfall.jpg){#logo .float_r width=30% }
   from posts of: Ronald J Kimball, Uri Guttman, Elaine HFB, _etc_. 
 % 1999-2004
 

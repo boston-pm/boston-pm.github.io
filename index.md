@@ -1,6 +1,7 @@
-% Boston Perl Mongers
+% Boston Perl Mongers  ![](./images/Logo.jpg){#logo .float_r width=30% }
 % 
 % 2022
+
 
 
 Boston.pm is the Boston chapter of the international [Perl Mongers](https://www.pm.org/) collection of [Perl](https://www.perl.org) user groups, founded in 1998.
@@ -47,20 +48,20 @@ Typically these are negotiated among interested folks on the Discuss mailing-lis
 
 Boston-PM has presence on the following socials -
 
-* [MeetUp](https://www.meetup.com/boston-pm/)
-* [LinkedIn](https://www.linkedin.com/groups/41363/)
-* [Twitter](https://twitter.com/BostonPM)
+* [MeetUp](https://www.meetup.com/boston-pm/)![icon](./images/Meetup-icon.png){#mu height=20 }
+* [LinkedIn](https://www.linkedin.com/groups/41363/)![icon](./images/Linkedin-icon.png){#lin height=20 }
+* [Twitter](https://twitter.com/BostonPM)![icon](./images/Twitter-icon.png){#tw height=20 }
 * [Facebook Page](https://www.facebook.com/bostonpm/)
 * [FaceBook Group](https://www.facebook.com/groups/131595281237)
 * [YouTube](https://www.youtube.com/channel/UCY0sL_ILd6JUixlppAQlgsA/videos) (historical only at this time)
 ![234x60.png](./images/Perl_weekly_234x60.png)
-* Perl Weekly [newsletter](https://perlweekly.com/), [iCal calendar](https://perlweekly.com/perlweekly.ical), [![RSS](./images/feed-icon32x32.png)](https://perlweekly.com/perlweekly.rss); and their [Twitter](https://twitter.com/PerlWeekly) may promote select items of ours. <br /> [![](./images/perl_weekly_234x60.png)](https://perlweekly.com/)
+* Perl Weekly [newsletter ![icon](./images/Mail-icon.png){#pwnl height=20 }](https://perlweekly.com/), [iCal calendar](https://perlweekly.com/perlweekly.ical), [![RSS](./images/feed-icon32x32.png){#rss height=20 }](https://perlweekly.com/perlweekly.rss); and their [Twitter ![icon](./images/Twitter-icon.png){#pwtw height=20 }](https://twitter.com/PerlWeekly) may promote select items of ours. <br /> [![](./images/perl_weekly_234x60.png)](https://perlweekly.com/)
 * [The Boston-area User Group Calendar](http://www.bugc.org) "Since 1997"
 
 The primary announcement channels are MeetUp, Twitter, and Announce mailing-list.
 
 
-## Mailing Lists
+## Mailing Lists ![icon](./images/Mail-icon.png){#ml height=30 }
 
 (*Are Mailing Lists Anti-Social media?*)
 

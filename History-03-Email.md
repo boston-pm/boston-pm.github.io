@@ -1,4 +1,4 @@
-% Recent History 2017-present
+% Recent History 2017-present ![](./images/Logo.jpg){#logo .float_r width=30% }
 % Boston Perl Mongers
   Bill Ricker (& allied groups)
 % 2017-2022

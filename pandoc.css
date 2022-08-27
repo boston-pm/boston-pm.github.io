@@ -225,6 +225,15 @@ figcaption {
   margin: 0 0 .8em;
 }
 
+.float_r {
+  float: right;
+}
+
+.float_l {
+  float: left;
+}
+
+
 table {
   margin-bottom: 2em;
   border-bottom: 1px solid #ddd;

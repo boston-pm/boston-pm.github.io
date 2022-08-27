@@ -1,5 +1,5 @@
 % History Annals
-% Boston Perl Mongers
+% Boston Perl Mongers ![](./images/pmgeekbookbigt.gif){#logo.float_r width=30% }
   Ronald J Kimball & Bill Ricker
 % 1998-2022
 
@@ -16,8 +16,8 @@ Boston Perl Mongers history is divided into three parts, like Gaul.
 All start with a table of contents by year.*)
 
 
-| When        | | What Happened                   |
-|:------------|-|---------------------------------|
+| When        | | What Happened                                     |
+|:------------|-|---------------------------------------------------|
 | 1998-01-30  | | Boston.pm founded by **Chris Nandor** |
 | 1998-02-01  | | Discussion list created |
 | 1998-09-??  | | Meeting at MIT with **Randal Schwartz** |

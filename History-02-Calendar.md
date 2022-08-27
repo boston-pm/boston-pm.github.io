@@ -1,4 +1,4 @@
-% Calendar (Wiki) History (2004-2016)
+% Calendar (Wiki) History (2004-2016) ![](./images/Logo.jpg){#logo .float_r width=30% }
 % Boston Perl Mongers
   from old wiki entries of Ronald J Kimball & Bill Ricker
 % 2004-2016
