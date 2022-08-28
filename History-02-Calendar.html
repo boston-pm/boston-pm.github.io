@@ -766,6 +766,29 @@ Submitted by pmichaud on Thu, 07/29/2010 - 05:18</p>
 - [Global banking crisis ](http://venturebeat.com/2008/10/10/the-sequoia-rip-good-times-presentation-get-your-copy-here/)</code></pre>
 <p>We didn't wind up forcing PowerPointKaraoke on anyone, so the list of good perl stuff on that page remains available for filler talks</p>
 <h2 id="september-9---easy-cryptanalysis-with-tr-s-and-usrdictword---bill-ricker">September 9 - Easy cryptanalysis with tr, s, and /usr/dict/word - Bill Ricker</h2>
+<p>Using Perl to solve a simple substitution cipher.</p>
+<p>First, collect simple <a href="./scripts/words-count.pl.html">word-counts</a> - small repeated and long non-repeated words.</p>
+<pre><code>word            Count   length
+G                 5   1
+B                 4   1
+U                 2   1
+HJZ              11   3
+XGHJ              7   4
+HJZIZ             4   5
+FIGFWDLHU         2   9
+HJGH              4   4
+UJLKBPY           2   7
+UFBZPHLRLYBUHU    1  14
+AZRBWLAUWBGPU     1  13
+FIZGHBLPBUHU      1  12
+HL                6   2
+GRKGTU            2   6</code></pre>
+<p>Can we guess which of the 3 one-letter words is possessive 'S and not a 'real' word?</p>
+<pre><code>perl words-count.pl --dump | ack &#39;(?:(?=\S)\W)?\b\w\b&#39;  --passthru</code></pre>
+<p>That makes it pretty obvious which one is only as possessive, preceded by an apostrophe. (There's a reason professionals didn't include punctuaion unless it was carefully enciphered also!)</p>
+<p>Next, check if any long words are obvious from their pattern (pattern's own pattern is ABCCDEF or 1233456). <a href="./scripts/patternword.pl.html">pattern words</a></p>
+<p>Finally <a href="./scripts/chu.pl.html">iterate guessing letter translations</a>, with hints for words that dictionary says are uniquely determined already.</p>
+<p><a href="./scripts/simple-decipher-chu.tar.xz">Tarball</a> includes a &quot;how&quot; file with sequence for self demo.</p>
 <ul>
 <li><strong>CIDC</strong>, refreshment sponsor, wants your resume. Tell 'em Boston.PM sent you if you oblige.</li>
 </ul>

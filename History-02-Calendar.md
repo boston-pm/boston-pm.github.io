@@ -1316,6 +1316,45 @@ We didn't wind up forcing PowerPointKaraoke on anyone, so the list of good perl 
 
 ## September 9 - Easy cryptanalysis with tr, s, and /usr/dict/word - Bill Ricker
 
+Using Perl to solve a simple substitution cipher.
+
+
+First, collect simple [word-counts](./scripts/words-count.pl.html) - small repeated and long non-repeated words.
+```
+word        	Count	length
+G           	  5	  1
+B           	  4	  1
+U           	  2	  1
+HJZ         	 11	  3
+XGHJ        	  7	  4
+HJZIZ       	  4	  5
+FIGFWDLHU   	  2	  9
+HJGH        	  4	  4
+UJLKBPY     	  2	  7
+UFBZPHLRLYBUHU	  1	 14
+AZRBWLAUWBGPU	  1	 13
+FIZGHBLPBUHU	  1	 12
+HL          	  6	  2
+GRKGTU      	  2	  6
+```
+
+Can we guess which of the 3 one-letter words is possessive 'S and not a 'real' word?
+```
+perl words-count.pl --dump | ack '(?:(?=\S)\W)?\b\w\b'  --passthru
+```
+That makes it pretty obvious which one is only as possessive, preceded by an apostrophe.
+(There's a reason professionals didn't include punctuaion unless it was carefully enciphered also!)
+
+Next, check if any long words are obvious from their pattern (pattern's own pattern is ABCCDEF or 1233456).
+[pattern words](./scripts/patternword.pl.html)
+
+
+Finally [iterate guessing letter translations](./scripts/chu.pl.html), with hints for words that dictionary says are uniquely determined already.
+
+
+[Tarball](./scripts/simple-decipher-chu.tar.xz) includes a "how" file with sequence for self demo.
+
+
 * **CIDC**, refreshment sponsor, wants your resume. Tell 'em Boston.PM sent you if you oblige.
 
 ## August 12, 2008, Tech Meeting E51-376

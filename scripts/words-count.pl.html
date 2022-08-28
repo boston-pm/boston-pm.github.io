@@ -1,0 +1,190 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>words-count.pl</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+
+<link rel="stylesheet" href="chu.css" type="text/css" /><body>
+<a name="-top-"></a>
+<h1>words-count.pl</h1>
+
+
+
+<ul id="index">
+  <li><a href="#aid-to-solving-cryptograms-statistically">aid to solving cryptograms statistically</a>
+    <ul>
+      <li><a href="#Options-and-args">Options and args</a></li>
+      <li><a href="#convention">convention</a></li>
+      <li><a href="#load">load...</a></li>
+      <li><a href="#cryptogram">cryptogram</a></li>
+    </ul>
+  </li>
+</ul>
+<h2>Code Index:</h2>
+<!-- BEGIN CODE INDEX --><a name="code-index"></a>
+<ul>
+<li><a href="#_score-">package main</a>
+<ul>
+<li><a href="#_score-">_score</a></li>
+</ul>
+</li>
+<li><a href="#__END__-">__END__</a></li>
+<li><a href="#EOF-">EOF</a></li>
+</ul>
+<!-- END CODE INDEX -->
+
+
+<pre>   1 #! perl -lw
+   2 <span class="c"># prep aid to solving Chu-Carrol&#39;s cryptogram statistically</span>
+   3 
+   4 
+</pre>
+<h1 id="aid-to-solving-cryptograms-statistically">aid to solving cryptograms statistically</h1>
+
+<p>I was annoyed that a mathematician&#39;s introduction to Crytanalysis</p>
+
+<p>http://scienceblogs.com/goodmath/2008/08/introducing_cryptanalysis.php</p>
+
+<p>was in the worked example largely wordsmithing and inadequately statistical. While the crypto puzzle fans have tools that run on MSWindows, I don&#39;t by choice. So I hacked together the following. I added Getopt to suppress later enhancements by default for presenting this code to Boston.PM.</p>
+
+<p>This script does word counts only, to see the common words.</p>
+
+<h2 id="Options-and-args">Options and args</h2>
+
+
+<pre>  30 
+  31 <span class="k">use</span> <span class="w">warnings</span><span class="sc">;</span>
+  32 <span class="k">use</span> <span class="w">strict</span><span class="sc">;</span>
+  33 
+  34 <span class="k">use</span> <span class="w">List::Util</span> <span class="q">qw/max/</span><span class="sc">;</span>
+  35 <span class="k">use</span> <span class="w">Getopt::Long</span><span class="sc">;</span>
+  36 <span class="k">my</span> <span class="s">(</span><span class="i">$verbose</span><span class="cm">,</span>  <span class="i">$file</span><span class="cm">,</span>  <span class="i">$dump</span><span class="cm">,</span><span class="s">)</span><span class="sc">;</span>
+  37 <span class="i">GetOptions</span><span class="s">(</span>
+  38            <span class="q">&quot;file=s&quot;</span>  <span class="cm">=&gt;</span> \<span class="i">$file</span><span class="cm">,</span>       <span class="c"># solve a different example</span>
+  39            <span class="q">&quot;verbose&quot;</span> <span class="cm">=&gt;</span> \<span class="i">$verbose</span><span class="cm">,</span>    <span class="c"># flag</span>
+  40            <span class="q">&quot;dump&quot;</span>    <span class="cm">=&gt;</span> \<span class="i">$dump</span><span class="cm">,</span>    <span class="c"># flag</span>
+  41           <span class="s">)</span><span class="sc">;</span>
+  42 
+  43 
+  44 
+</pre>
+<h2 id="convention">convention</h2>
+
+<p>since lower case is easier to read as natural language and upper case is easier to see non-liguistic patterns, it is conventional to write the enciphered text in upper case, eg WSSHU FDVH and clear text in all hower case as in this paragraph. (in military circles, red pencil or ink is used for cleartext, if only to ensure worksheets with clear is burned.)</p>
+
+
+<pre>  51 
+  52 
+  53 
+  54 <span class="c"># printf &quot;%s=&gt;&#39;%s&#39;, &quot;,$_,$Xlate{$_} for sort keys %Xlate ;</span>
+  55 
+  56 
+  57 
+  58 
+</pre>
+<h2 id="load">load...</h2>
+
+<p>The Chu-Carroll cryptogram is appended to the source so read from data.</p>
+
+
+<pre>  64 
+  65 <span class="c"># slurp ... must be in {} or after dict load</span>
+  66 
+  67 <span class="k">my</span> <span class="i">$all</span> = <span class="k">do</span> <span class="s">{</span> <span class="k">local</span> <span class="i">$/</span><span class="sc">;</span> <span class="q">&lt;DATA&gt;</span><span class="sc">;</span> <span class="s">}</span><span class="sc">;</span>
+  68 
+  69 <span class="k">if</span> <span class="s">(</span><span class="i">@ARGV</span><span class="s">)</span>
+  70 <span class="s">{</span>
+  71     <span class="k">local</span> <span class="i">$/</span><span class="sc">;</span>
+  72     <span class="i">$all</span> = &lt;&gt;<span class="sc">;</span>
+  73 <span class="s">}</span>
+  74 
+  75 <span class="c"># enforce convention</span>
+  76 <span class="i">$all</span> =~ <span class="q">y/a-z/A-Z/</span><span class="sc">;</span>
+  77 
+  78 
+  79 <span class="k">if</span> <span class="s">(</span><span class="i">$dump</span><span class="s">)</span><span class="s">{</span>
+  80     <span class="k">print</span> <span class="i">$all</span><span class="sc">;</span>
+  81     <span class="k">exit</span><span class="sc">;</span>
+  82 <span class="s">}</span>
+  83 
+  84 
+  85 
+  86 <span class="k">my</span> <span class="i">%Count</span><span class="sc">;</span>    <span class="c"># used repeatedly</span>
+  87 
+  88 
+  89 
+  90 
+  91 
+  92 
+  93 
+  94 
+  95     <span class="k">my</span> <span class="i">@Words</span> = <span class="k">split</span> <span class="q">/[\W]/</span><span class="cm">,</span> <span class="i">$all</span><span class="sc">;</span>
+  96     <span class="i">$Count</span>{<span class="i">$_</span>}++ <span class="k">for</span> <span class="i">@Words</span><span class="sc">;</span>
+  97 
+  98 
+  99 
+ 100     <span class="k">my</span> <span class="i">$n</span>=<span class="n">30</span><span class="sc">;</span>
+ 101     <span class="k">my</span> <span class="i">$seen</span>=<span class="n">0</span><span class="sc">;</span>
+ 102 
+ 103     <span class="c"># _score is length * count, except 20*count if length==1</span>
+ 104     <span class="c"># because the words A, I, and plural &#39;S are very important</span>
+<a name="_score-"></a> 105     <span class="k">sub </span><span class="m">_score</span> <span class="s">{</span><span class="k">my</span> <span class="i">$w</span> = <span class="k">shift</span><span class="sc">;</span> 
+ 106                 <span class="k">return</span> <span class="i">$Count</span>{<span class="i">$w</span>}*<span class="s">(</span><span class="n">1</span>==<span class="k">length</span><span class="s">(</span><span class="i">$w</span><span class="s">)</span> ? <span class="n">20</span> <span class="co">:</span> <span class="k">length</span><span class="s">(</span><span class="i">$w</span><span class="s">)</span><span class="s">)</span><span class="sc">;</span> <span class="s">}</span><span class="sc">;</span>
+ 107 
+ 108     <span class="k">for</span> <span class="k">my</span> <span class="i">$w</span> <span class="s">(</span>
+ 109         <span class="k">sort</span> <span class="s">{</span> <span class="n">+1</span> * <span class="s">(</span> <span class="i">_score</span><span class="s">(</span><span class="i">$b</span><span class="s">)</span> &lt;=&gt; <span class="i">_score</span><span class="s">(</span><span class="i">$a</span><span class="s">)</span> <span class="s">)</span> <span class="s">}</span>
+ 110         <span class="k">grep</span> <span class="s">{</span>
+ 111             <span class="q">/\w/</span>
+ 112 
+ 113               <span class="c">#  ... and $Count{$_}&gt;1</span>
+ 114         <span class="s">}</span> <span class="k">keys</span> <span class="i">%Count</span>
+ 115       <span class="s">)</span>
+ 116     <span class="s">{</span>
+ 117         
+ 118 
+ 119         <span class="k">print</span> <span class="k">sprintf</span><span class="s">(</span><span class="q">&quot;%-12s\t%3s\t%3s&quot;</span><span class="cm">,</span> <span class="q">&#39;word&#39;</span><span class="cm">,</span> <span class="q">&#39;Count&#39;</span><span class="cm">,</span> <span class="q">&#39;length&#39;</span> <span class="s">)</span>
+ 120             <span class="k">unless</span> <span class="i">$seen</span>++<span class="sc">;</span>
+ 121         <span class="k">print</span> <span class="k">sprintf</span><span class="s">(</span><span class="q">&quot;%-12s\t%3d\t%3d&quot;</span><span class="cm">,</span> <span class="i">$w</span><span class="cm">,</span> <span class="i">$Count</span>{<span class="i">$w</span>}<span class="cm">,</span> <span class="k">length</span><span class="s">(</span><span class="i">$w</span><span class="s">)</span> <span class="s">)</span><span class="sc">;</span>
+ 122 
+ 123 
+ 124 
+ 125         <span class="k">last</span> <span class="k">if</span> <span class="i">$n</span>-- == <span class="n">0</span><span class="sc">;</span>
+ 126     <span class="s">}</span>
+ 127 
+ 128 
+ 129 
+ 130 
+ 131 
+ 132 
+ 133 
+ 134 
+ 135 
+ 136 
+</pre>
+<h2 id="cryptogram">cryptogram</h2>
+
+
+<pre> 140 
+<a name="__END__-"></a> 141 <span class="k">__END__</span>
+ 142 <span class="q">b czfbczc bh bu gqlvh hbxz hl uhgih vd xt lkp qrly. lpz hjbpy hjgh b jgaz</span>
+ 143 <span class="q">plhbfzc bp xt hbxz qilkubpy hjz qrlyludjziz bu hjgh hjziz giz g kjlrz</span>
+ 144 <span class="q">rlh lm hziibmbf ufbzpfz qrlyu lvh hjziz: ligf, djgitpyvrg, gzhblrlyt,</span>
+ 145 <span class="q">evuh hl pgxz g mzk. qvh hjziz bu plh pzgirt ul xvfj lvh hjziz czcbfghzc</span>
+ 146 <span class="q">hl xghj - gpc bp dgihbfvrgi hl hjz xbuvuz lm xghj. b hjbpw hjgh hjgh bu</span>
+ 147 <span class="q">g cgxp ujgxz, qzfgvuz bp xt zodzibzpfz, lpz lm hjz xluh frzgi kgtu lm</span>
+ 148 <span class="q">bczphbmtbpy g figfwdlh bu hjilvyj xghj. pl xghhzi hjz udzfbmbf uvqezfh,</span>
+ 149 <span class="q">hjz figfwdlhu grkgtu zbhjzi galbc li ufizk vd hjz xghj. kjzhjzi bh&#39;u</span>
+ 150 <span class="q">hjz &quot;xzifvit fgvuzu gvhbux&quot; mlrwu, hjz azrbwlauwbgpu, fizghblpbuhu,</span>
+ 151 <span class="q">grh-xzcbfbpz svgfwu, izdvqrbfgp dlrruhziu, li ufbzphlrlybuhu - tlv fgp</span>
+ 152 <span class="q">grkgtu izflypbnz hjz figfwdlhu qt hjzbi xghj. ul b gx ylbpy hl cl xt</span>
+ 153 <span class="q">qzuh hl dilabcz g albfz lm xghjzxghbfgr ugpbht - qlhj qt</span>
+ 154 <span class="q">ujlkbpy kjgh&#39;u kilpy kbhj hjz qgc xghj urld dvxdzc lvh qt hjz rllpbzu,</span>
+ 155 <span class="q">gpc qt ujlkbpy jlk yllc xghj kliwu.</span>
+ 156 
+<a name="EOF-"></a></pre></body>
+
+</html>
+
+
