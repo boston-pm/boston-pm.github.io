@@ -113,7 +113,7 @@ gives me confidence in this person's opinions) and also included new
 or new to me options and tools, and specifically enthused over **Brendan
 Gregg's invention: FlameGraphs.**
 
-Brendan Gregg invented these to make sense of profile stack samples of
+**Brendan Gregg** invented these to make sense of profile stack samples of
 MySQL, which produced so much data that he had to invent a new way to
 visualize ... with Perl, naturally. Tim Bunce has bundled and enhanced
 FlameGraphs into CPAN NYTProf, but it's usable with any profiler
@@ -143,7 +143,7 @@ Links
 * Used in [CPAN Devel::NYTProf](https://metacpan.org/pod/distribution/Devel-NYTProf/bin/nytprofhtml)
     - [blog announce by Tim Bunce](https://blog.timbunce.org/2013/04/08/nytprof-v5-flaming-precision/)
 ![J Evans's debugging tools cover](./images/Debugging-tools-cover-50pc.png)
-* [Julia Evans](https://wizardzines.com/) Debugging and general dev blogs & debug zines - where i found the first links
+* [**Julia Evans**](https://wizardzines.com/) Debugging and general dev blogs & debug zines - where i found the first links
     to the above - highly recommended
     -  [zines](https://wizardzines.com/) -> [debugging linux](http://jvns.ca/debugging-zine.pdf) from last week, direct inspiration for this talk
 
@@ -170,7 +170,7 @@ Tim will examine best practices for testing Modern Perl, including a tutorial on
  
 ![Tim King](./images/portrait-tim-king.png)
 
-[Tim King](http://www.theperlshop.com/about#tim-king) is Lead Developer at
+[**Tim King**](http://www.theperlshop.com/about#tim-king) is Lead Developer at
 [The Perl Shop](http://www.theperlshop.com/). Tim got his start writing
 real-time embedded software for high-speed centrifuges the 1980’s and
 went on to do embedded software for **Kurzweil Music Systems** and
@@ -219,7 +219,7 @@ that is helping.
 > Finally, I'll take stock of where we're at so far using latest benchmark results: what we can do about as well as Perl 5, where Perl 5 comes out faster, and where Rakudo Perl 6 comes out ahead."
 
 ![J Worthington portrait](./images/Worthington.jpg){ width=20%} 
-[Jonathan Worthington](https://twitter.com/jnthnwrthngtn) is MoarVM and Rakudo Perl 6 compiler architect. 
+[**Jonathan Worthington**](https://twitter.com/jnthnwrthngtn) is MoarVM and Rakudo Perl 6 compiler architect. 
 Co-founder of Edument in Czech Republic. 
 Like cooking/eating Indian food, craft beer, and seeing the world.
  
@@ -273,7 +273,7 @@ Demos Explained -
  
 ## November 10, 2015 - "Get Ready To Party" (Perl 6 is almost here: Part 2)
 
-*Larry Wall* (appearing by tape delay)
+**Larry Wall** (appearing by tape delay)
 
 Continuing our season series for the December 2015 launch of Perl 6.0.0 ...
 
@@ -285,7 +285,7 @@ It was the pre-announcement of the "yes *this* Christmas" release.
 
 ## October 13, 2015 "Perl 6 - A Dynamic Language for Mere Mortals" (Perl 6 is almost here: Part 1) - Ovid
  
-This month Boston.pm presents a recorded talk by Ovid (Curtis Poe)
+This month Boston.pm presents a recorded talk by **Ovid (Curtis Poe)**
 with live code examples prepared and demonstrated by Bill Ricker. 
 Ovid describes his talk as, "[Perl 6](http://perl6.org/) is a great language,
 but sometimes the enthusiasts talk about the crazy, scary things you
@@ -317,9 +317,9 @@ technical articles. His testing modules ship in the Perl core.
 Checking out what's new in the newest stable Perl 5. (& lightning survey of latest Modern Perl developments )
  
  
-## August 11, 2015 - Social for Ronald Kimball
+## August 11, 2015 - Social for **Ronald Kimball**
 
-Ronald Kimball, former Boston.PM "Facilitator" (=leader; 1999-2008) is
+**Ronald Kimball**, former Boston.PM "Facilitator" (=leader; 1999-2008) is
 relocating out of state. Current and former habitués of Boston.PM will
 gather at Sunset Grill and Tap in Allston on our usual Second Tuesday
 to send him off in style. There will be swag.
@@ -348,10 +348,9 @@ A few years ago it was
 memory cards contain a micro controller that can be reprogrammed. In
 this talk Federico hacks "some hardware to see if we can get to the CPU
 on an SD card. Any automation in Perl, of course :)"
- 
- 
- 
-[Federico Lucifredi](http://www.oreilly.com/pub/au/5017) was the
+
+
+[**Federico Lucifredi**](http://www.oreilly.com/pub/au/5017) was the
 maintainer of the `man` suite, the primary documentation-delivery tool
 under Linux, a graduate of Boston College and Harvard University, and
 the Ubuntu Server Product Manager at Canonical. He is a frequent speaker
@@ -374,12 +373,12 @@ Join us for some food and to chat about Perl and whatever else.
 
 ## Tuesday, April 14 "fREW: Miscellaneous Debris: Docker, DBIC, and Dogma"
 
-*Axel "fREW" Schmidt*
+**Axel "fREW" Schmidt**
  
 ![Docker logo](./images/Docker-logo-011.png){ width=50% } 
 
-Prolific CPAN author "[fREW](http://search.cpan.org/~frew/) " Schmidt will share his *^Miscellaneous Debris^*:
- 
+Prolific CPAN author "[fREW](http://search.cpan.org/~frew/)" Schmidt will share his *^Miscellaneous Debris^*:
+
 * [Docker](https://www.docker.com/whatisdocker/)
 * Tools (vim, zsh, more)
 * [DBIC](https://metacpan.org/pod/DBIx::Class) and [DBIC Helpers](https://metacpan.org/pod/DBIx::Class::Helpers)
@@ -399,9 +398,8 @@ and [DBIx::Class::Helpers](https://metacpan.org/pod/DBIx::Class::Helpers)
 [Video](https://www.youtube.com/watch?v=bq4B6m3a0H8)(youtube) 
 [[file/view/Net__AMQP__RabbitMQ Presentation/543820114/Net__AMQP__RabbitMQ Presentation|Slides]] (pdf)
  
-  Mike Stemle, Jr. discusses his experiences at ThinkGeek working on and using [Net::AMQP::RabbitMQ](https://metacpan.org/pod/Net::AMQP::RabbitMQ), an interface library to [RabbitMQ](https://en.wikipedia.org/wiki/RabbitMQ) , an open source message broker that implements the Advanced Message Queuing Protocol (AMQP).
- 
- 
+**Mike Stemle, Jr.** discusses his experiences at ThinkGeek working on and using [Net::AMQP::RabbitMQ](https://metacpan.org/pod/Net::AMQP::RabbitMQ), an interface library to [RabbitMQ](https://en.wikipedia.org/wiki/RabbitMQ) , an open source message broker that implements the Advanced Message Queuing Protocol (AMQP).
+
 Being a Perl Shop is hard sometimes, and as a result you sometimes
 miss out on some of the super-awesome third party support that other -
 some would say, weaker (but of course we wouldn’t say that, we’re
@@ -422,7 +420,7 @@ they’ll be everywhere.
 
 ![Portrait of Mike Stemle](./images/Mike_Stemle.jpeg){ width=50% } 
 
-Mike Stemle, Jr. is a Sr. Software Engineer with more than 16
+**Mike Stemle, Jr.** is a Sr. Software Engineer with more than 16
 years of professional software experience. He’s worked in early
 social media, telecom, advertising, e-commerce, and billing. He’s
 written things as small as the first ever web message board for
@@ -445,10 +443,10 @@ You can find out more about Mike Stemle, Jr. here:
 * [Twitter](https://twitter.com/manchicken)
 * [Blog](http://www.manchicken.com/)
 
- 
+
 ## February 10, 2015 - CANCELED
- 
- 
+
+
 ## January 13, 2015 - Review of 2014 Advent Calendar and Releases - Speaker: B.Ricker & Greek chorus
  
 Highlights from various Perl advent calendars and similar postings over
@@ -563,7 +561,7 @@ private CPAN repository gives you a stable platform for making consistent
 builds and managing upgrades for all your Perl modules.
 
 In this session, you'll learn how to use
-[Pinto](https://metacpan.org/pod/Pinto) to create a private CPAN and
+**[Pinto](https://metacpan.org/pod/Pinto)** to create a private CPAN and
 build your applications with the right modules, every time. You'll learn
 about the dangers of the public CPAN and how a private CPAN can help
 mitigate those risks. Finally, we'll cover some of the newest features
@@ -572,7 +570,7 @@ up and running quickly.
 
 [Stratopan](https://stratopan.com/about) is a startup founded by the speaker that provides "Private CPAN repositories securely hosted in the cloud." So Pinto is the tool that facilitates creating a private repository, and Stratopan lets you outsource the hosting of that repository.
 
-[Jeffrey Ryan Thalhammer](https://www.google.com/search?client=ubuntu&channel=fs&q=Jeffrey%20Ryan%20Thalhammer&ie=utf-8&oe=utf-8) is a respected software developer, prolific open source contributor, and tech community leader. Author of Perl::Critic and Pinto, used by thousands of developers. Co-founder of Stratopan and Co-organizer of the San Francisco Perl Mongers. He consults under the brand [Imaginative Software Systems](https://www.linkedin.com/company/467266).
+**[Jeffrey Ryan Thalhammer](https://www.google.com/search?client=ubuntu&channel=fs&q=Jeffrey%20Ryan%20Thalhammer&ie=utf-8&oe=utf-8)** is a respected software developer, prolific open source contributor, and tech community leader. Author of **Perl::Critic** and **Pinto**, used by thousands of developers. Co-founder of Stratopan and Co-organizer of the San Francisco Perl Mongers. He consults under the brand [Imaginative Software Systems](https://www.linkedin.com/company/467266).
 
 
 ## August, 2014 - skipped
@@ -608,7 +606,7 @@ Two short talks:
 
 ### Ricky Morse presents automation of web browsers with Selenium::Remote::Driver.
 
-[Selenium](https://www.seleniumhq.org) "is a test tool that allows
+**[Selenium](https://www.seleniumhq.org)** "is a test tool that allows
 you to write automated web application UI tests in any programming
 language against any HTTP website using any mainstream JavaScript-enabled
 browser. This module is an implementation of the client for the Remote
@@ -634,7 +632,7 @@ driver that Selenium provides." - [pod](https://metacpan.org/pod/Selenium::Remot
 ## May, 2014 - Ricardo Signes' 1.21 Gigawatts
 
 
-Ricardo Signes (pre-recorded in NY, with live Q&A via Hangouts)
+**Ricardo Signes** (pre-recorded in NY, with _live_ Q&A via Hangouts)
 
 A collection of the speaker's lightening talks, in the spirit of a highlight reel. 
 We replayed a recording of [Ricardo's talk to NY.pm](https://www.youtube.com/watch?v=iG4fQUrkyK8), 
@@ -657,7 +655,7 @@ We had a partially successful experiment with a "Hangout On Air" to broadcast th
  
 And the bio:
  
-Ricardo Signes is the current project manager for Perl 5, a maintainer of
+**Ricardo Signes** is the current project manager for Perl 5, a maintainer of
 the CPAN toolchain, part of the Moose development team, and a frequent
 contributor of other free code to the CPAN. He likes to talk about
 code almost as much as he likes to write it. He lives in Bethlehem,
@@ -683,15 +681,16 @@ Choice of :
   TIME: 7:00 – 10:00 PM
   ROOM: E51-372
   SPEAKER: Bill and chorus
- 
+
   (notes to appear later)
- 
- 
+
+(*Narrator: notes did NOT appear later.*)
+
 ## February, 2014 - Parsing weird LRECL data - Uri G "The PerlHunter"
 
 *Parsing the weirdest fixed-record-length format you've ever seen!*
 
- 
+
 "at my new job i have created a parser for a very clunky fixed record
 size format. it took longer than anticipated for various reasons. i have
 a parser module, some db tables to help in real world stuff, a bunch of
@@ -712,9 +711,9 @@ A recap of the DFW Perl Mongers Deduplication Hackathon
 
 
 
-SPEAKERS: Joel Berger, Tommy Butler, Yanick Champoux, Bruce Gray, Tim King
+SPEAKERS: **Joel Berger, Tommy Butler, Yanick Champoux, Bruce Gray, Tim King**
 
-MODERATOR: Tom Metro
+MODERATOR: **Tom Metro**
 
  
 How fast can Perl find duplicate files on a 100 GB file system? That's the
@@ -740,10 +739,10 @@ The original [DFW.pm meeting recording](http://www.youtube.com/watch?v=HvqqRFGMZ
 
 You'll find Bruce Gray's Perl 6 entry discussed at time range 17:29 -
 35:30. Joel Berger, who won for lowest memory, fewest lines of code,
-and best Perl::Critic score, introduces himself at 10:54 - 12:48, and
+and best **Perl::Critic** score, introduces himself at 10:54 - 12:48, and
 then discusses his code at 1:06:10 - 1:21:01.
 
-Tim, who won for best documentation, most features, and best effort,
+Tim, who won for **best documentation, most features, and best effort,**
 discusses his code after Bruce, but I don't have the time index.
 
 In a [separate video](http://www.youtube.com/watch?v=7MNuNupAvvg),
@@ -828,7 +827,7 @@ and general news sources:
 
 ## September 10 - Patching and Updating a CPAN Module - Bill R
 
-*Bill Ricker and Tom Metro (remotely)*
+**Bill Ricker** and **Tom Metro** (*remotely*)
 
 Boston.pm adopted one of Damian's PBP modules, Config::Std. It was broken by Perl 5.18's security patch to randomize hash ordering. Debian Unstable reported the [https://rt.cpan.org/Ticket/Display.html?id=85956 bug] (glad to know they're doing Perl 5.18 and packaging Config::Std!) and provided a patch. Ricky made sure the patch didn't invalidate Damian's design.<br /> <br /> 
 
@@ -837,7 +836,7 @@ Boston.pm adopted one of Damian's PBP modules, Config::Std. It was broken by Per
 ## July 9 Inline::Java (Perl and Java, together at last ?)
 
 
-*William Cox and David Larochelle on Using Inline::Java with Perl*
+**William Cox** and **David Larochelle** on Using **`Inline::Java`** with Perl
 
 This talk is a report on inquiry begun on the [mailing list](http://www.mail-archive.com/boston-pm@mail.pm.org/index.html#07176)
 [slides @G](https://docs.google.com/presentation/d/1nWaw6ER0yuh0dtHWDVETaGLe1GFCQ71kynyeN_-VEmM)
@@ -868,7 +867,7 @@ Some data points for "good enough:"
 
 ## May 14, 2013, MIT E51-376 
 
-*Greg London*, [**Parse::Gnaw**](https://metacpan.org/dist/Parse-Gnaw/view/lib/Parse/Gnaw.pod)
+**Greg London**, [**Parse::Gnaw**](https://metacpan.org/dist/Parse-Gnaw/view/lib/Parse/Gnaw.pod)
 
 > It is a revamping of the module. The previous version had
 some issues like blowing up on recursive grammars.
@@ -885,13 +884,13 @@ some issues like blowing up on recursive grammars.
 
 ### Embedded Perl with Federico
 
-Federico Lucifredi continues his quest to build a hardware-assisted automagic hard-drive wiper, using perl in an embedded device. Shiny hardware! Demo! Code! 
+**Federico Lucifredi** continues his quest to build a hardware-assisted automagic hard-drive wiper, using perl in an embedded device. Shiny hardware! Demo! Code! 
 
 ## March - canceled 
  
 ## February 12 - Uri releases a module
 
-Uri Guttman spoke on how to release a module to CPAN. 
+**Uri Guttman** spoke on how to release a module to CPAN. 
 Uri showed us how his old to him new to CPAN module is packaged to go.
 
 This is our chance to heckle Uri. Be there! It's fun!
@@ -900,11 +899,7 @@ This is our chance to heckle Uri. Be there! It's fun!
 
 # 2012
 
-## December 11, 2012, E51-372 
-
-## speaker Scott Mattocks
-
-### topic  “treat your code like a member of the dev team.”
+## December 11, 2012 - Scott Mattocks - “treat your code like a member of the dev team.”
 
 “You expect your developers to communicate well; you should expect
 your code to communicate well. You expect your developers to continue
@@ -924,7 +919,7 @@ benefit from, let me know and I will start rewriting the code blocks.”
 
 ## October 9, 2012,  E51-372 
 
-David Larochelle  [Carton](http://search.cpan.org/perldoc?Carton) and [Perlbrew](http://search.cpan.org/~gugod/App-perlbrew-0.52/lib/App/perlbrew.pm)
+**David Larochelle**  [Carton](http://search.cpan.org/perldoc?Carton) and [Perlbrew](http://search.cpan.org/~gugod/App-perlbrew-0.52/lib/App/perlbrew.pm)
 
  
 ## September 11, 2012,  E51-372 
@@ -937,16 +932,14 @@ Adam Russell, PDL - The Perl Data Language
 [PDL](http://search.cpan.org/search?mode=all&query=pdl)
 
 
-## May 8, 2012, E51-372 
-
-*Ricky Morse Getting Started with Plack/PSGI*
+## May 8, 2012 - Ricky Morse - Getting Started with Plack/PSGI
 
 This talk will be a short overview of developing simple Plack/PSGI websites and making them run in CGI or proxy environments.
 
 
 
 
-## April 10,  E51-372 - Revisiting the Dread CGI -- The Uri 
+## April 10 - Revisiting the Dread CGI -- The Uri 
 
 CGI refactored before and after 
 
@@ -958,9 +951,9 @@ As many of you have known and seen, Uri Guttman will do code review on the fly w
 
 ## Tuesday March 3/13 (day *before* Pi Day )
 
-*Scripting Ubuntu in Landscape* -- Federico Lucifredi
+*Scripting Ubuntu in Landscape* -- **Federico Lucifredi**
 
-Canonical's systems management and monitoring tool, Landscape (Landscape.canonical.com) has multiple facilities for scripting to the system administrator' content -- facilities that can be used with any of the usual array of scripting language choices.  We will take a quick look at scripting the managed clients, then we delve into programming the Landscape API to script automation tasks from the shell, in effect, scripting the server, and how this allows custom integration of multiple tools.
+Canonical's systems management and monitoring tool, **Landscape** (Landscape.canonical.com) has multiple facilities for scripting to the system administrator' content -- facilities that can be used with any of the usual array of scripting language choices.  We will take a quick look at scripting the managed clients, then we delve into programming the Landscape API to script automation tasks from the shell, in effect, scripting the server, and how this allows custom integration of multiple tools.
 
 
 ## FEBRUARY IS CANCELED
@@ -969,7 +962,7 @@ Apparently something else happens on 2/14, important in the dominant culture.
 
 ## January 10, 2012  E51-376 - DoS CVE
 
-David Larochelle explained the "new" multi-language web Denial of Service (DoS) threat that doesn't affect Perl (but affects Python & PHP). 
+**David Larochelle ** explained the "new" multi-language web Denial of Service (DoS) threat that doesn't affect Perl (but affects Python & PHP). 
 
 References - search for 
 
@@ -983,47 +976,49 @@ References - search for
 
 ## December 13th 2011 SOCIAL Cambridge Brewing Co.
 
-## Tuesday November 8th     E51-372
+## November 8th     E51-372
 
 Perl community news.  Also any lightning talks.
 
-## Tuesday October 11;     E51-372
+## Tuesday October 11 - Thorium 
 
-Sean Quinlan presenting his and Adam Flott's new configuration management framework [Thorium](https://metacpan.org/pod/Thorium). (Meeting sponsored by CIDC, Sean was hiring.)
+**Sean Quinlan** presenting his and **Adam Flott**'s new configuration management framework [Thorium](https://metacpan.org/pod/Thorium). (Meeting sponsored by CIDC, Sean was hiring.)
 
 
-## Tuesday September 13    E51-372   
+## September 13       
 
 Perl community news. 
+
 Follow-up list of links <http://article.gmane.org/gmane.comp.lang.perl.perl-mongers.boston/5473> 
+
 and lightning talk:
-* Jerrad : no clobber;
+
+**Jerrad** : `no clobber;`
 
 ## July 13, 2011    E51-372
 
-Perl 5.14
+**Perl 5.14**
+
 Note for summer we're in a different room.
 
 
-## August 9, 2011 7:00 p.m. – 10:00 p.m. E51-372
+## August 9, 2011 7:00 p.m. – 10:00 p.m. 
 
 Social meeting 
 
-## June 14, 7:00 p.m. – 10:00 p.m.  E51-*372*
+## June 14 - Steve Scaffidi - `AnyEvent` lessons-leaned
 
-Steve Scaffidi - YAPC preview -  - AnyEvent lessons-leaned
+a  YAPC preview
 
-
-## May 17th 2011 *social meeting*
-
-Randal "Merlyn" Schwartz
+## May 17th 2011 *social meeting* Randal "Merlyn" Schwartz
 
 ## May 17th 2011 *tech meeting*
 
-Uri presents Perl Code Generation Techniques, aka
-       when perl begat perl
-               or
-       the bible on code generation
+**Uri** presents Perl Code Generation Techniques, aka
+
+>       when perl begat perl  
+>               or  
+>       the bible on code generation
 
 
 
@@ -1034,7 +1029,7 @@ Uri presents Perl Code Generation Techniques, aka
 ## March 8, 2011    E51-376  
 
 
-## Feb 8th 2011 *social meeting*
+## Feb 8th 2011 social meeting for Tad McClellan
 
 uri writes on list,
 
@@ -1050,42 +1045,35 @@ they have very nice reviews on the usual food sites.
 
 
 
-## January 11, 2011   E51-376
+## January 11, 2011 - Solving a real cryptogram with Perl - Bill R
 
-Bill presented Using Perl 5.10 and Perl6 Rakudo on a cryptogram  
+**Bill Ricker** presented Using **Perl 5.10** and **Perl6 aka Rakudo** on a cryptogram.
+
+The cryptogram solved was an [actual Civil War military message](http://blu.org/meetings/2011/09/nyt-codes-of-war-vicksburg-etc.flipbook/) from the Siege of Vicksburg (_arguably the more important victory on July 4, 1863_) recently re-discovered in a museum.
+
+The [Perl 5.10 and P6/Rakudo demos](http://blu.org/meetings/2011/09/vicksburg-demo.flipbook/#page/n0) were previews of September 2011's [BLU Crypotology History vignette](http://blu.org/cgi-bin/calendar/2011-sep).
+
 
 # 2010
 
-## Tuesday December 14th, 2010
+## December 14th, 2010
 
-Bob Rodgers presented Graphics in Perl, using Bio::Perl for hobby use, and generating !SVGs from bio data.
+**Bob Rodgers** presented _Graphics in Perl,_ using **Bio::Perl** for hobby use, and generating SVGs from bio data.
 
-## Tuesday November 9th, MIT E51-376 7pm
+## Tuesday November 9th, Social meeting
 
-Social meeting
+## October 12th, Open mike / Stone soup
 
-## Tuesday October 12th, MIT E51-376 7pm
+## September 14th, "Rakudo Star - a useful, usable, 'early adopter's distribution of Perl 6"
 
-Open mike / Stone soup
-
-## Tuesday September 14th, MIT E51-376 7pm
-
-"Rakudo Star - a useful, usable, 'early adopter's distribution of Perl 6"
-
- "Rumors of my death are greatly exaggerated" -- Mark Twain 
+> "Rumors of my death are greatly exaggerated" -- Mark Twain 
 
 Curious what the Perl community has been up to lately? Come see Perl 6's recent preview release.
-
-
 
 Since July, Perl Mongers groups around the world are doing demo nights to build and exercise Rakudo Star.  Boston.PM's turn is September 14th, MIT  E51-376 7:30pm (refreshments in hallway at 7). {This is the night before BLU's PGP night, second Tuesday is as late as it gets this month.}  We'll install it and show what it can do. We may discuss what more the final release candidate will do, and if  enough non-regulars turn up, we can discuss what's in 5.12 that's not in the 5.8.4 or older that's still on many commercial Unix systems 
 
 
-
-
-
-
-> Announce: Rakudo Star - a useful, usable, "early adopter" distribution of Perl 6
+> Announce: Rakudo Star - a useful, usable, "early adopter" distribution of Perl 6  
 > Submitted by pmichaud on Thu, 07/29/2010 - 05:18
 
 > On behalf of the Rakudo and Perl 6 development teams, I'm happy to announce the July 2010 release of "Rakudo Star", a useful and usable distribution of Perl 6. 
@@ -1120,120 +1108,114 @@ Since July, Perl Mongers groups around the world are doing demo nights to build 
 - <http://parrot.org/>
 
 
-## August 10, 2010 E51-376 
+## August 10, 2010 - Acmeist
 
-Nick Patch will present some of Ingy döt Net's recent Acmeist projects, TestML and JSYNC, and his experience porting them to Perl 6 with Ingy. Detailed abstract to follow. (for now see Ingy's notes <http://blogs.perl.org/users/ingy_dot_net/2010/07/rakudos-really-really-release-ready.html>) 
-
-
-## July 13, 2010  E51-376
-
-* Steve S (hercynium) 'Getting out of CPAN dependency hell, and staying out.'
-
-http://perl.scaffidi.net/home/cpanhell
-
-## June 8, 2010  E51-376
-
-Postponed to July
-
-## May 11, 2010  E51-376
-
-* Federico doing disk clear with Perl and hardware
-
-## April 13  E51-376
-
-*  Adam - Enlightenment gui api in Perl
-** Quick Enlightenment window manager and library introduction  (http://www.enlightenment.org/ )
-** Binding the Enlightenment Foundation Libraries to Perl With XS and Why XS Wasn't as Scary As I Thought  (http://search.cpan.org/dist/EFL/ )
-** Cutting Corners With Dist::Zilla and Releasing to CPAN  (http://search.cpan.org/dist/Dist-Zilla/ )
+**Nick Patch** will present some of **Ingy döt Net**'s recent **Acmeist** projects, **TestML** and **JSYNC**, and his experience porting them to **Perl 6** with Ingy. Detailed abstract to follow. (for now see Ingy's notes <http://blogs.perl.org/users/ingy_dot_net/2010/07/rakudos-really-really-release-ready.html>) 
 
 
-## March 9  E51-376
+## July 13, 2010  - CPAN Dependency ?
 
-* Bill and ensemble - maintaining a CPAN module
+* **Steve S** (**`hercynium`**) _'Getting out of CPAN dependency hell, and staying out.'_
 
-Boston.pm acting through Bill Ricker with Tom Metro as backup have adopted Damian Conway's module  [Config::Std](http://search.cpan.org/dist/Config-Std/), which has a long RT bug queue most of which are fixed in CPAN but not closed, some documentation gaps, and a few real bugs. Bill will report on what steps are needed to enable that, and we'll see progress as a demo. 
+<http://perl.scaffidi.net/home/cpanhell>
 
-folks are encouraged to bring a laptop preferably with git or a diff capable of creating patch files so you can contribute to fixing perldoc.
+## June 8, 2010  Postponed to July
 
-## February 9  E51-376
+## May 11, 2010  - Federico does Hardware with Perl 
 
-Controlling git with Perl. Steve S
+**Federico Lucifredi** doing disk clear with Perl and hardware
+
+## April 13  - Adam - Enlightenment GUI
+
+*  **Adam** - **Enlightenment** gui api in Perl  
+
+    - **Quick Enlightenment** window manager and library introduction  <http://www.enlightenment.org/>  
+    - Binding the Enlightenment Foundation Libraries to Perl With XS and Why XS Wasn't as Scary As I Thought  <http://search.cpan.org/dist/EFL/>  
+    - Cutting Corners With **Dist::Zilla** and Releasing to CPAN  <http://search.cpan.org/dist/Dist-Zilla/>
+
+
+## March 9  - Bill R. & _al_ - Maintaining a CPAN Module
+
+* Bill and ensemble - maintaining a CPAN module, `Config::Std`
+
+**Boston.pm** acting through Bill Ricker with Tom Metro as backup have adopted **Damian Conway**'s module  [**Config::Std**](http://search.cpan.org/dist/Config-Std/), which has a long RT bug queue most of which are fixed in CPAN but not closed, some documentation gaps, and a few real bugs. Bill will report on what steps are needed to enable that, and we'll see progress as a demo. 
+
+Folks are encouraged to bring a laptop preferably with git or a diff capable of creating patch files so you can contribute to fixing perldoc.
+
+## February 9  - Controlling git with Perl - Steve S
 
 the conclusion of our source / revision control series. With added Perl goodness !
 
     * gitolite
     * gitweb
 
-## January  12, 2010  E51-376
+## January  12, 2010  - Building _mvhub_, a web directory of social services
 
 
-* *mvhub*, web directory of social services 
-- perl some modules launchpad bzr for ngo See:
-**http://launchpad.net/mvhub
-**http://northshoreport.org
+* *mvhub*, web directory of social services  
+    - perl, some modules, launchpad, bzr, for ngo 
+    - See:  
+        - http://launchpad.net/mvhub
+        - http://northshoreport.org
 
 * Modules to touch on:
-** Devel::Cover
-** WWW::Mechanize
-** HTML::Template
-** CGI::Application
-** Lingua::Stem::En
-* Presenters 
-** Dan MacNeil, Lee Goodrich, Steve S ???
+    - Devel::Cover
+    - WWW::Mechanize
+    - HTML::Template
+    - CGI::Application
+    - Lingua::Stem::En
+* Presenters  
+    - Dan MacNeil, Lee Goodrich, Steve S ???
 
 # 2009
 
-## December 8, 2009  E51-376 
+## December 8, 2009  - Stone Soup / Lightning talks 
 
-**Topic -  Stone Soup / Lightning talks / or the dreaded PowerPointKaraoke**
+_or the dreaded PowerPointKaraoke_
 
 list of good perl stuff on that page remains available for filler talks
 
 
-## November 10, 2009  E51-376 
-
-* RT 3.8 end Extensions
+## November 10 -  RT 3.8 end Extensions
 
 
-## October 13, 2009  E51-3    
+## October 13, Using Benchmark.pm for comparing two templates.
 
-* Using Benchmark.pm for comparing two templates.
-* Steve S & Uri G
-  
+**Steve S & Uri G**
 
-##  Tuesday, Sept 8th, 2009, 7:15 E51-376
 
-* Open Street Map and Perl 
+##  Sept 8th - Open Street Map and Perl - Shankar Viswanathan & Lars Ahlzen
 
 Tuesday is a day early this week, and the 8th is as early as the Boston Perl Mongers can fall. After the as late as possible Labor Day, this is about pessimal. However we do it anyway. We have our usual room for fall.
 
-Our speakers are Shankar Viswanathan and Lars Ahlzen from the Open Street Map project. 
+Our speakers are **Shankar Viswanathan** and **Lars Ahlzen** from the **Open Street Map** project. 
  <http://www.osm.org>
 
-## July 14 7:15 E51-376
+## July 14 - YAPC recap
 
-* YAPC recap
-** <http://yapc10.org/yn2009/wiki?node=PresentationSlides>
-** <http://www.google.com/search?hl=en&safe=on&q=yapc%3A%3Ana%3A%3A2009+slides&aq=f&oq=&aqi=>
+* YAPC recap  
+    - <http://yapc10.org/yn2009/wiki?node=PresentationSlides>
+    - [Google:yapc::na::2009 slides](http://www.google.com/search?hl=en&safe=on&q=yapc%3A%3Ana%3A%3A2009+slides&aq=f&oq=&aqi=)
 
 
-##  June 9 7:15 E51-376
+##  June 9 - IDE tools for Perl
 
-* a survey of Perl IDE tools. 
-** Uri suggests Emacs perl mode. 
-**  a survey of all IDE/editor options -
-**  who wants to present Eclipse? [Padre Perl IDE](http://padre.perlide.org/) ? Komodo?
+* a survey of Perl IDE tools.  
+    - **Uri** suggests Emacs perl mode. 
+    - a survey of all IDE/editor options -
+    - who wants to present Eclipse? [Padre Perl IDE](http://padre.perlide.org/) ? Komodo?
 
-## May 12, 7:15 PM - MIT E51-376
+## May 12 - Jonathan Finger
 
 * *perl as an aid in developing embedded systems software*
 * a domain specific language 
-* *Jonathan Finger*
+* ****
 
-##  April 14, 7:15 PM - MIT    E51-376   _back in our *home* room_     
+##  April 1 - Git primer and workshop - Steve Scaffidi
 
-* *Git primer and workshop*
-* *Steve Scaffidi* 
+MIT    E51-376   _back in our *home* room_     
+
+
  
 My idea is pretty simple - I would like to do a tutorial-style workshop
 where people can follow along on their laptops to use git and see it in
@@ -1247,35 +1229,34 @@ I would cover the following:
 * Working with others with git, the traditional way (~20 min)
 
 
-##  March 10, 2009, 7:15 ROOM E51-335 
+##  March 10 - Embedded Perl with Federico Lucifredi
 
-* *Embedded Perl - Hacking the WD Mybook 2 with Perl*
-* *Federico Lucifredi*
-      o Building a cheap and very compact Linux NAS appliance
-      o Polishing it with Perl glue
+* _Embedded Perl - Hacking the WD Mybook 2 with Perl_  
+      - Building a cheap and very compact Linux NAS appliance
+      - Polishing it with Perl glue
 
 > "I am using Perl glue to put together a cheap and small Linux NAS from the Western Digital MyBook II - there are a bunch of hackers doing this, but I wanted mine to have a certain "detail" and so some scripting here and there was required to make it happen - obviously in Perl.
 
 > "It may be too optimistic, and certainly smaller in scale, but the WDMBII is starting to spawn a little community movement similar to the Linksys WRT54G." 
 
-## February 10, 2009 7:15 room  E51-335 
+## February 10 - Parse::Gnaw - Greg London
 
-[Parse::Gnaw](http://search.cpan.org/search?mode=all&query=Parse%3A%3AGnaw)  
-*Greg London*
-
-**  how to create grammars 
-** how the internals actually work
+* [Parse::Gnaw](http://search.cpan.org/search?mode=all&query=Parse%3A%3AGnaw)  
+    - how to create grammars  
+    - how the internals actually work  
 
 "I should have a fairly stable version of Parse::Gnaw by (then)."
 
 
 
-## January 13, 2009 7:15 room _E51-376  one last time_
+## January 13, 2009  - "Table Driven Testing" - Uri G
 
-*Table Driven Testing* - *Uri*
-As seen in [Sort::Maker](http://search.cpan.org/src/URI/Sort-Maker-0.06/t/common.pm)
+room _E51-376  one last time_
 
-"and i keep saying i will also be covering template::simple's compiled
+
+As seen in **Uri**'s **[`Sort::Maker`](http://search.cpan.org/src/URI/Sort-Maker-0.06/t/common.pm)**
+
+> "and i keep saying i will also be covering `template::simple`'s compiled
 template features. between that and the table driven testing, i can
 waste^Wfill up plenty of time." - uri
 
@@ -1292,34 +1273,40 @@ RedBones Wins. No meeting at MIT this month. Meet at RedBones, usual 7-7:15 time
 55 Chester St Somerville, MA 02144 (617) 628-2200 
 
 
-## November *18*, 2008, 7:15  E51-376 
+## November *18*, 2008 -  "Magic Numbers & Un/Pack / a `use.perl.org` magical mystery tour"
 
 * Note *date - week late* since 2nd Tuesday is a *Holiday*
 * [Advent Calendar](http://perladvent.pm.org) PSA / Jerrad gave a public service announcement on the Advent Calendar project. Volunteer! get writing! aka advent.pm.org 
 * time_t, magic numbers, old school bit-hacks, and Perl. 
 
-Bill Ricker gave a talk meandering through un/pack(), time_t, magic numbers, and
-old skul bit-banging entitled  "Magic Numbers & Un/Pack / a use.perl.org magical mystery tour". 
-Slides are posted at (remove spaces)
-`http : / / world . std . com / ~wdr / x / pm/magic/magic_pack_tour.pdf`
-This Free-software generated PDF (!OOo 2.3) should be viewed with a
-genuine Adobe reader as Evince and Xpdf get the overlays wrong. Perl
-scripts are in same directory as the html as is a tarball.
+**Bill Ricker* gave a talk meandering through un/pack(), time_t, magic numbers, and
+old _skul)_ bit-banging entitled  "_Magic Numbers & Un/Pack / a_ `use.perl.org` _magical mystery tour_". 
+[Slides pdf](./documents/magic_pack_tour.pdf)†
+[Scripts tar gz](./scripts/magic_pack_tour.tar.gz)
 
-To answer the Question from the floor, Ilya'o'clock willbe just before
+†(*This Free-software generated PDF (OOo 2.3) may need to be viewed with a
+genuine Adobe reader, because Evince and Xpdf get the overlays wrong.*)
+
+
+
+To answer the Question from the floor, `Ilya'o'clock` will be just before
 Solstice and just before our normal date for January.
 
+```
  ILYA  Sat Dec 20 02:32:33 2008 GMT . Fri Dec 19 21:32:33 2008 ET
  Ilya  Tue Jan 13 11:22:09 2009 GMT . Tue Jan 13 06:22:09 2009 ET
+```
 
 
-
-Refreshments provided by our kind sponsor CIDC.com ; be Sure to
+Refreshments provided by our kind sponsor **CIDC.com** ; be Sure to
 mention Boston.PM when you send them a resume.
 
-## October 14, 2008, 7:15 *E51-149*
+(*Narrator: [Magical Mystery Tour](https://en.wikipedia.org/wiki/Magical_Mystery_Tour) is an obscure Boomer cultural reference. Mystery Tour itself was a mostly British cultural reference.*)
 
-Stone Soup / Lightning talks / or the dreaded PowerPointKaraoke
+## October 14, - Stone Soup / Lightning talks 
+
+_or the dreaded PowerPointKaraoke_
+
     - [c2fit](http://search.cpan.org/search?query=c2fit&mode=module) and [fitnesse](http://fitnesse.org/FitNesse.OneMinuteDescription)
     - [Parse::RecDescent](http://search.cpan.org/search?mode=all&query=parse-recdescent) to validate config syntax or complex parse legacy data
     - [Global banking crisis ](http://venturebeat.com/2008/10/10/the-sequoia-rip-good-times-presentation-get-your-copy-here/)
@@ -1327,10 +1314,9 @@ Stone Soup / Lightning talks / or the dreaded PowerPointKaraoke
 We didn't wind up forcing PowerPointKaraoke on anyone, so the list of good perl stuff on that page remains available for filler talks
 
 
-## September 9, 2008, 7.15  Tech Meeting E51-376 
+## September 9 - Easy cryptanalysis with tr, s, and /usr/dict/word - Bill Ricker
 
-* CIDC, refreshment sponsor, wants your resume. Tell 'em Boston.PM sent you if you oblige.
-* Easy cryptanalysis with tr, s, and /usr/dict/word. Bill Ricker
+* **CIDC**, refreshment sponsor, wants your resume. Tell 'em Boston.PM sent you if you oblige.
 
 ## August 12, 2008, Tech Meeting E51-376
 
@@ -1362,7 +1348,7 @@ Bob Rogers gave a talk on Advanced Control Structures in Parrot.
 ## April 8, Tuesday, Tech Meeting
 
 
-Ronald Kimball gave a presentation on doing a weighted shuffle.
+**Ronald Kimball** gave a presentation on doing a weighted shuffle.
 
 ## February 12, Tuesday, Tech Meeting
 
@@ -1374,7 +1360,7 @@ Martin Owens presented [XML::Validate::XSD](http://search.cpan.org/~doctormo/Dat
 
 Mitchell Charity gave a brief presentation on his idea to quickly bootstrap a Perl 6 implementation via Ruby.
 
-Ronald Kimball led a long discussion of new features in [Perl 5.10.0](https://perldoc.perl.org/5.10.0/perldelta).
+**Ronald Kimball** led a long discussion of new features in [Perl 5.10.0](https://perldoc.perl.org/5.10.0/perldelta).
 
 Bernardo Rechea presented his CD-ripping program that uses some of the new 5.10 features.
 
@@ -1389,16 +1375,16 @@ Technical recruiting firm JohnGalt Staffing bought us a round of drinks.
 ## October 9, Tuesday, Tech Meeting
 
 
-Ronald Kimball presented several fun obfuscations found on Perl Monks.
+**Ronald Kimball** presented several fun obfuscations found on Perl Monks.
 
 Jerrad Pierce discussed the upcoming [Perl Advent Calendar](https://perladvent.org/) for [2008](https://perladvent.org/2008/). 
 
 ## September 11, Tuesday, Tech Meeting
 
 
-Ronald Kimball gave an overview of [**ack**](https://beyondgrep.com).
+**Ronald Kimball** gave an overview of [**ack**](https://beyondgrep.com).
 
-Sean Quinlan gave an introductory talk on [HTML::Mason](https://metacpan.org/pod/HTML::Mason). 
+Sean Quinlan** gave an introductory talk on [HTML::Mason](https://metacpan.org/pod/HTML::Mason). 
 
 We had open discussions on several topics, including Perl job opportunities, academic interest in Perl, and the state of Perl 6.
 
@@ -1413,7 +1399,7 @@ programmers to fill positions with its clients.
 ## July 10, Tuesday, Tech Meeting
 
 
-Kee Hinckley gave a presentation titled "Object Oriented Design on the Fly - OR- Programming Without a Net"
+**Kee Hinckley** gave a presentation titled "Object Oriented Design on the Fly - OR- Programming Without a Net"
 
   It's the wrong way to work, but what techniques can you use to build a
   reusable object framework when the schedule gives you no time to design
@@ -1422,11 +1408,11 @@ Kee Hinckley gave a presentation titled "Object Oriented Design on the Fly - OR-
 ## June 12, Tuesday, Tech Meeting
 
 
-Ronald Kimball gave an introductory talk on Toolkit::Template, based on his experience using it over the past month.
+**Ronald Kimball** gave an introductory talk on Toolkit::Template, based on his experience using it over the past month.
 
-Uri Guttman gave an informal presentation on his CMS::Simple and Template::Simple modules.
+*Uri Guttman** gave an informal presentation on his CMS::Simple and Template::Simple modules.
 
-Ronald Kimball also offered a quick look at [LOLCode](http://www.lolcode.com).
+**Ronald Kimball** also offered a quick look at [LOLCode](http://www.lolcode.com).
 
 This was our first tech meeting sponsored by 
 Cambridge Interactive Development Corp!  
