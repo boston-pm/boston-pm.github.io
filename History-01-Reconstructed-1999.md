@@ -300,7 +300,7 @@ add features to make them more powerful.
 
 
 **Uri** has arranged a couple lightning talks for us.  
-I (*Ronald J Kimball*) will be giving a lightning talk on my proposal for a new syntax for `L<>` in POD, and I believe Uri will be giving a lightning talk entitled "the 'instant' Stem
+I (***Ronald J Kimball***) will be giving a lightning talk on my proposal for a new syntax for `L<>` in POD, and I believe Uri will be giving a lightning talk entitled "the 'instant' Stem
 cookbook".
 
 
@@ -407,16 +407,17 @@ I presented cryptosolve.pl, a program I'd written
 that solves basic cryptograms.
 
 The program (and a bunch of input files) are now available at
-http://thayer.dartmouth.edu/~rjk/perlwords/ (*404*)
+http://thayer.dartmouth.edu/~rjk/perlwords/ (*404; modern URL:*)
+<https://www.tamias.net/rjk/perl/words/>
 
 Download it, play around with it, send me comments or questions!  I've made
 a few minor changes since the meeting, but haven't worked on the major
 suggestions yet.
 
 
-## Social Meeting Tuesday, April 16
+## Social Meeting Tuesday, April 16 - the Burren in Davis Sq., 
 
-the Burren in Davis Sq., from 7pm until whenever.  Under 21 welcome.
+from 7pm until whenever.  Under 21 welcome.
 
 <http://www.burren.com/>
 
@@ -425,15 +426,15 @@ the Burren in Davis Sq., from 7pm until whenever.  Under 21 welcome.
 Jon Gunnip will be unable to attend tomorrow night's tech meeting.  Watch
 for his Ruby talk at a future meeting.
 
-Instead, Mitchell Charity will give a short presentation on Inline, from
+Instead, **Mitchell Charity** will give a short presentation on Inline, from
 the point of view of "We should glue orthogonal objects together using C
 APIs and Inline, instead of the current practice of over-stuffing C
 extensions."
 
-http://www.vendian.org/mncharity/dir3/inline/
+<http://www.vendian.org/mncharity/dir3/inline/>
 
 
-We'll also have Dan Sugalski's update on the status of Perl6.
+We'll also have **Dan Sugalski**'s update on the status of **Perl6**.
 
 ## February
 
@@ -451,7 +452,7 @@ interpreter.
 
 ## Tech Meeting Dec 11
 
-Jesse Vincent will be giving a presentation on RT.  Here's his blurb:
+**Jesse Vincent** will be giving a presentation on **RT**.  Here's his blurb:
 
 >  RT is an enterprise-grade ticketing system built in perl.  It's used by a
 couple thousand sites around the world to track bugs, manage customer
@@ -476,7 +477,7 @@ Afterwards, I'll have an obfuscation or some such to share.
 
 About 20 people attended the tech meeting at Boston.com last night.
 
-Jesse Vincent presented RT, his enterprise-grade ticketing system built in
+**Jesse Vincent** presented RT, his enterprise-grade ticketing system built in
 Perl.  He gave an overview of the system, showed it in use at rt.cpan.org,
 and discussed issues including module dependencies, managing a large
 project, and dealing with spam to the mail gateway.
@@ -484,12 +485,12 @@ project, and dealing with spam to the mail gateway.
 For more on RT, go to <http://www.fsck.com/projects/rt/>
 
 
-I presented a JAPH of mine that animates letters swapping around until they
+I (***Ronald***) presented a JAPH of mine that animates letters swapping around until they
 form the usual phrase.  Tip: if your script produces no output, check the
 line endings.  ;)
 
 You can see the JAPH on Perl Monks at
-http://www.perlmonks.org/index.pl?node_id=77154
+<http://www.perlmonks.org/index.pl?node_id=77154>
 
 
 Thanks to everyone who attended, and to Boston.com for hosting.  Next
@@ -499,29 +500,29 @@ haven't been able to come to the Tuesday meetings.
 ## Tech Meeting, Nov 13
 
 
-Greg London has offered to give a talk on his parser and profiler modules,
-Parse::Nibbler.  "The last tweak on version 1.08 has it parsing verilog at
+**Greg London** has offered to give a talk on his parser and profiler modules,
+**`Parse::Nibbler`**.  "The last tweak on version 1.08 has it parsing verilog at
 1140 lines per second.  The profiler is a module I wrote to attempt to
 track down subroutine usage and timing in the parser."
 
 I've also found a very interesting obfuscation on Perl Monks for us to
 enjoy.
 
-- Ronald
+- **Ronald**
 
-Greg London presented Parse::Nibbler, his parsing module written in pure
+**Greg London** presented Parse::Nibbler, his parsing module written in pure
 Perl.  See his previously sent followup message for more details.
 
 I presented an obfuscation by Marcus Post.  The code is a stereogram which,
 when executed, rewrites itself to contain a new image!  You can find this
 obfuscation on Perl Monks:
 
-http://www.perlmonks.org/index.pl?node_id=118799
+<http://www.perlmonks.org/index.pl?node_id=118799>
 
 
 ## Tech Meeting, Oct 23
 
-Dan Sugalski will be giving his presentation of Parrot, originally
+**Dan Sugalski** will be giving his presentation of Parrot, originally
 scheduled for last month's meeting.  Parrot will be the core of the Perl 6
 interpreter.  See <http://www.parrotcode.org/> for more information about
 Parrot.
@@ -551,7 +552,7 @@ everyone who has been affected by this morning's tragedy.
 
 ## Tech Meeting, Damian Conway, July 9th, Perl 6
 
-Okay, I've tabulated the votes for Damian's presentation.  It looks like
+Okay, I've tabulated the votes for **Damian**'s presentation.  It looks like
 the practical won out over the fantastical (although with Damian you'll
 always get some of both) and the winning topic is...
 
@@ -580,7 +581,7 @@ the social meeting on Sunday, July 8.  Damian will be there too!
 
 --
 
-Now that we've all had time to recover from Damian Conway's
+Now that we've all had time to recover from **Damian Conway**'s
 information-packed presentation at last Monday's tech meeting, here's a
 followup on the meeting.
 
@@ -610,12 +611,12 @@ who showed up for being there.
 
 ## Social July 8th, 2001 - Uri's house - with Damian Conway and Michael Schwern
 
-Sponsored by Damian Conway's Advanced Object Oriented Perl class July 10-11, arranged by Uri, which were a paid event at Kendall Sq Marriott. <https://web.archive.org/web/20010813111827/www.sysarch.com/Perl/OOP_class.html>
+Sponsored by **Damian Conway's Advanced Object Oriented Perl class** July 10-11, arranged by **Uri,** which were a paid event at **Kendall Sq Marriott**. <https://web.archive.org/web/20010813111827/www.sysarch.com/Perl/OOP_class.html>
 
 ## Tech Meeting, Jun 5 
 
 
-Uri Guttman will give us a presentation on Stem, his Perl-based general
+**Uri Guttman** will give us a presentation on **Stem**, his Perl-based general
 purpose networking toolkit:
 
   How to Use and Configure Stem
@@ -630,10 +631,10 @@ Uri will also be presenting Stem at YAPC.
 ## Tech Meeting Tues May 1 
 
 
-Kirrily "Skud" Robert and Shane Landrum will be presenting Reefknot, a
+**Kirrily "Skud" Robert** and **Shane Landrum** will be presenting **Reefknot,** a
 shared calendaring project.  An abstract of this talk is included below.
 
-Also, Chris Nandor will tell us about the current state of MacPerl.  With
+Also, **Chris Nandor** will tell us about the current state of **MacPerl**.  With
 the recent releases of both perl5.6.1 and Mac OS X, there's a lot going on!
 
 
@@ -699,7 +700,7 @@ srl
 > Shane R. Landrum         slandrum at cs.smith.edu 
 
 
-##  Tech Meeting Apr 17  
+##  Tech Meeting Apr 17  - Time::Schedule - Ronald Kimball
 
 > Boston.pm will be having a technical meeting this coming Tuesday, April 17,
 > at the offices of Boston.com, starting at 7:30 pm.
@@ -713,7 +714,7 @@ srl
 
 Good news!  I will be presenting the aforementioned scheduling package.
 
-This package contains two modules, Time::Schedule and Time::Schedule::Item,
+This package contains two modules, **Time::Schedule** and **Time::Schedule::Item**,
 which work together to create a schedule.  The Time::Schedule object has
 limits on the number of items that may be scheduled within a certain time
 period (i.e. no more than three items every hour or six items every three
@@ -743,7 +744,7 @@ Ronald
 ## Tech Meeting Tues March 13  
 
 
-James Freeman will be presenting PISE, rescheduled from the previous
+**James Freeman** will be presenting **PISE**, rescheduled from the previous
 meeting.  PISE is a system for creating web interfaces to command line
 tools via XML.
 
@@ -755,7 +756,7 @@ discussing on the list.  Does anyone know how it works?  :)
 Another successful meeting at Boston.com!  We had about 20 people at the
 meeting last Tuesday.
 
-James Freeman presented presented PISE, a system written in Perl for
+**James Freeman** presented presented PISE, a system written in Perl for
 creating web interfaces to command line tools using XML templates.  The
 system has some very nice features, such as forking a process to execute
 the command line in case it will take a long time to finish.  It was noted
@@ -765,7 +766,7 @@ While James was setting up, I played with the nifty features of the
 Boston.pm projector, such as pointers, underlining, and zoom.  Reading the
 manual really does pay off!  :)
 
-After the presentation, we discussed the short DeCSS code that was recently
+After the presentation, we discussed the short **DeCSS** code that was recently
 posted to the list.  I reviewed a thread on the Fun With Perl list, that
 resulted in the code shrinking from 526 characters to 472.  I wasn't able
 to explain the algorithm used in the code, though.
@@ -804,12 +805,12 @@ interfaces we create.)
 Boston Perl Mongers is having a technical meeting this Tuesday, February
 13, **at the offices of Boston.com** near South Station, starting at 7pm.
 
-Andrew Langmead will be posting directions.
+**Andrew Langmead** will be posting directions.
 
-The topic for the meeting is practical applications of XML.  James Freeman
-will present the open source software package Pise (Pasteur Institute
-Software Environment).  An abstract of this talk is included below.  Mike
-MacHenry will present Any2XML, a set of modules that will allow extraction
+The topic for the meeting is practical applications of XML.  **James Freeman**
+will present the open source software package **Pise** (**Pasteur Institute
+Software Environment**).  An abstract of this talk is included below.  **Mike
+MacHenry** will present **Any2XML**, a set of modules that will allow extraction
 of selected data from any text file into one or more XML documents using a
 template which is also an XML document.
 
@@ -822,9 +823,9 @@ Pise (Pasteur Institute Software Environment)
 
 <http://www-alt.pasteur.fr/~letondal/Pise/>
 
-Abstract of James Freeman's presentation:
+**Abstract of James Freeman's presentation:**
 
-There is a growing field called Bioinformatics, that can be defined as
+There is a growing field called ***Bioinformatics,*** that can be defined as
 understanding complex biological systems through the use of experiments
 tied with computer-based data storage, tracking, and analysis.  Software
 written in this field is usually written to run on the Unix command
@@ -833,7 +834,7 @@ new tool confusing, difficult, and consuming time better spent in the
 lab.  As a result a local programmer in the lab is tasked to wrap the
 command line into a cgi-bin script with the usual html input and html
 output pages.  PISE (Pasteur Institute Software Environment,
-http://www-alt.pasteur.fr/~letondal/Pise/), written by Catherine
+<http://www-alt.pasteur.fr/~letondal/Pise/>), written by Catherine
 Letondal, has been created to automate this process by writing a system
 to parse a single XML definition of the command line tool.  Parsing this
 XML definition the PISE system automatically generates an html form, a
@@ -851,14 +852,14 @@ next tech meeting.
 Last month's tech meeting was held on Tuesday, Feb 13 at the offices of
 Boston.com, shortly before the mailing list went down.
 
-Mike MacHenry presented Any2XML, a set of modules for extracting data from
+**Mike MacHenry** presented **Any2XML**, a set of modules for extracting data from
 any text file into one or more XML documents using a template which is also
 an XML document.  Mike explained the whole process and showed various
 examples.
 
 Mike's presentation led to an involved discussion of XML.
 
-Elaine gave away several programming books, to the amusement of everyone in
+**Elaine** gave away several programming books, to the amusement of everyone in
 the room.  ;)
 
 I presented an obfuscation by Colonel Panic of perlmonks.org, which was
@@ -877,13 +878,13 @@ to follow.
 # The Focalex, Inc Era  2000-03-06 - 2001-01-17
 
 
-Focalex, Inc provided meeting space and sponsored pizza.
+**Focalex, Inc** provided meeting space and sponsored pizza.
 
 Pizza and beverages were provided.
 
-Focalex offices were in Newton Highlands, but short walk to MBTA D stop of same name.
+Focalex offices were in Newton Highlands, but short walk to MBTA D stop of same name (and parking!).
 
-The size of the group grew, but Focalex added cubicles as their staff grew so the meeting space shrank.  There was a white wall, but no projector, so we were borrowing projectors monthly until Nov 2001 when an older one was "permanently loaned".
+The size of the group grew, while Focalex added cubicles as their staff grew, so the meeting space shrank.  There was a white wall, but no projector, so we were borrowing projectors (or brining paper listings!) monthly until Nov 2001 when an older one was "permanently loaned".
 
 ## Tech Meeting Wed, Jan 17, 2001 - Last meeting at Focalex, Inc
 
@@ -891,14 +892,16 @@ I'm afraid I do not have a topic in mind for this meeting.  If you would
 like to give a presentation on something related to Perl, please let us
 know!  (It could be a feature of Perl, a favored module, some code you've
 written, etc.)  I have a program that solves word ladders that may be
-interesting.
+interesting. ([script](https://www.tamias.net/rjk/perl/words/))
 
 
 Anyway, we'll review some obfuscated code, discuss random things, and have
 a good time whatever happens.  Pizza and beverages will be provided.
 
 
-Ronald
+- Ronald
+
+***END OF AN ERRA***
 
 # 2000
 
@@ -942,14 +945,14 @@ announced at the meeting.
 
 - Ronald
 
-## Tech Meeting Monday! May 8
+## Tech Meeting Monday! May 8 - Automated Poetry - Ronald Kimball
 
 
 
-I will be presenting the sonnet generator I wrote for The Perl Journal's
-Poetry Contest.
+I will be presenting the sonnet generator I wrote for 
+[The Perl Journal's Poetry Contest](https://www.foo.be/docs/tpj/issues/vol5_1/tpj0501-0012.html).
 
-http://www.itknowledge.com/tpj/contest-poetry.html
+<http://www.itknowledge.com/tpj/contest-poetry.html>
 
 First, I'd like to thank Focalex for hosting the Tech meeting again, and
 all the Mongers who attended for my presentation of my sonnet generator.
@@ -973,7 +976,8 @@ all the Mongers who attended for my presentation of my sonnet generator.
 
 You may find all the files relevant to sonnet.pl here:
 
-http://linguist.dartmouth.edu/~rjk/perlpoetry/ (*404*)
+http://linguist.dartmouth.edu/~rjk/perlpoetry/ (*404; modern URL:*)
+<https://www.tamias.net/rjk/perl/poetry/>
 
 including the main program, the data file generator, and all the data
 files.  Have fun!
@@ -1004,17 +1008,17 @@ Ronald
 **Walt Mankowski** of **PHL.pm** brought tales from the first day of ArsDigita boot
 camp!
 
-## 19th February Super Social
+## 19th February Super Social - Joy of Winter - Elaine's 
 
 In the spirit of the **Joy of Winter** :) We are hosting a *very* special
 February Social meeting on Saturday 19 February 2000...some of the
 features are...
 
 - **Lincoln Stein** - network programming tutorial
-- Joseph Hall 
-- Abigail
+- **Joseph Hall**
+- **Abigail**
 - *Secret Mystery Guest of the Most Anointed Order who will be the newest member of the Boston.pm*
-    - (*revealed as Jarkko Hietaniemi just moved here from Finland*)
+    - (*revealed as **Jarkko Hietaniemi** just moved here from Finland*)
 
 Addison-Wesley will be there with books for attendees [ hey, ORA isn't
 	the only publisher in town :) ]
@@ -1114,7 +1118,7 @@ more later,
 
 uri
 
-## Social Dinner, Sun Jan 16th, at CBC
+## Social Dinner, Sun Jan 16th, at CBC - with ziggy
 
 ziggy is coming to town this weekend and i am organizing a social dinner
 for sunday night.
@@ -1122,7 +1126,7 @@ for sunday night.
 uri
 
 For those of you who are wondering 'wtf is a ziggy?', the person in
-question is Adam Turoff, leader of the phl.pm and a very nice guy. 
+question is **Adam Turoff**, leader of the **phl.pm** and a very nice guy. 
 
 e.
 
@@ -1177,14 +1181,14 @@ uri
 the only topic mentioned so far is **event.pm**. any others are welcome. bring code to review, modules
 you wish to learn/teach, etc.
 
-## 1999-12-05 		Boston.pm paintball outing
+## 1999-12-05 - (anti)Social -Boston.pm paintball outing
 
 Alright folks,
 
 	I'm on the phone with the paintball field now, and I'm going to
 need a final show of hands to get everything finalized.  To recap:
 
-	We will be playing at Friendly Fire Paintball, located at 108 Grove Street
+	We will be playing at **Friendly Fire Paintball**, located at 108 Grove Street
 in Upton, MA.  Cost is $25.00 for a rental mask, gun, CO2, and hip
 belt.  Paint is sold separately.
 
@@ -1202,7 +1206,7 @@ Any more questions, feel free to email me.
 
 -Andrew
 
-Andrew Stanley
+**Andrew Stanley**
 
 
 ## Nov 1999 Socials -- Joseph Hall and Randal Schwartz
@@ -1251,8 +1255,8 @@ uri
 ## 1999-10-20 		Discussion list moved to hfb.pm.org
 
 > Greetings!  About a week ago, the old Boston.pm mailing list at
-`darkridge.com` went down.  Now, thanks to Chris Nandor and Ben Hockenhull,
-we have a brand new list at `hfb.pm.org`!  To send mail to our new list,
+`darkridge.com` went down.  Now, thanks to **Chris Nandor and Ben Hockenhull**,
+we have a brand new list at **`hfb.pm.org`**!  To send mail to our new list,
 address it to `boston-pm at hfb.pm.org` .
 
 > We've done our best to create the new mailing list with the most up-to-date
@@ -1302,13 +1306,13 @@ during O'Reilly's Perl Tutorials in Boston
 
 ##  1998-01-30 		Boston.pm founded by Chris Nandor
 
-Boston.pm was a very early member of the Perl Mongers network of user-groups, after [`brian d foy`](https://en.wikipedia.org/wiki/Brian_d_foy) formed both New York Perl Mongers ([NY.pm](http://www.meetup.com/The-New-York-Perl-Meetup-Group/), at TPC, August 1997) and [Perl Mongers](https://www.pm.org/) (registered 1998; merged with TPF & YAS 2000/2001).
+Boston.pm was a very early member of the Perl Mongers network of user-groups, after [**`brian d foy`**](https://en.wikipedia.org/wiki/Brian_d_foy) formed both **New York Perl Mongers** ([NY.pm](http://www.meetup.com/The-New-York-Perl-Meetup-Group/), at TPC, August 1997) and [**Perl Mongers**](https://www.pm.org/) (registered 1998; merged with TPF & YAS 2000/2001).
 
-Chris Nandor (called "Pudge", in honor of "Pudge" Fiske) was one of the earliest developers of [Slash software (a Perl codebase)](https://en.wikipedia.org/wiki/Slash_%28software%29) at [Slashdot](https://en.wikipedia.org/wiki/Slashdot) with founder Rob "CmdrTaco" Malda, after Andover.net acquisition mid-1999. 
+**Chris Nandor** (called "**Pudge**", in honor of "Pudge" Fiske) was one of the earliest developers of [Slash software (a Perl codebase)](https://en.wikipedia.org/wiki/Slash_%28software%29) at [Slashdot](https://en.wikipedia.org/wiki/Slashdot) with founder Rob "CmdrTaco" Malda, after Andover.net acquisition mid-1999. 
 
 Chris "Pudge" Nandor  is distinguished by having entries at [imdb](https://www.imdb.com/name/nm2852573/bio) , [github](https://github.com/pudge), [Linkedin](https://www.linkedin.com/in/chrisnandor), [PerlMaven](https://perlmaven.com/chris-nandor) - recognizing [White Camel Award 2000](https://www.perl.org/advocacy/white_camel/2000.html) for Perl Advocacy, [wikipedia](https://en.wikipedia.org/wiki/Electoral_fraud#In_Major_League_Baseball's_All_Star_Game), and 15 minutes of fame as half-time entertainment in the [GOP Debate](https://www.seattletimes.com/seattle-news/putting-politics-to-music-makes-arlington-man-star-of-the-cnn-youtube-debate/). 
 
-Chris would also later co-author the [MacPerl](http://dev.macperl.org/) book.
+Chris would also later co-author the [**MacPerl**](http://dev.macperl.org/) book.
 
 
 

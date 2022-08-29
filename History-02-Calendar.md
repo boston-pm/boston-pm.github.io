@@ -1804,7 +1804,7 @@ Only a few people showed up, so we went straight to Boston Beer Works for drinks
 **Bill Ricker** started us off by presenting some scripts he's written for analyzing and creating cryptograms, interspersed with interesting tidbits from the history of cryptography.
 
 **Ronald J Kimball** followed with some scripts he's written for solving cryptograms.  We also
-discussed some of the shortcomings to his brute force approach, particularly the problem of proper nouns.
+discussed some of the shortcomings to his brute force approach, particularly the problem of proper nouns. ([script](https://www.tamias.net/rjk/perl/ppt/))
 
 **Tim Kohl** then reviewed a short script that finds words whose digital sums add up
 to 666.  (e.g. cat = 3+1+20 = 24)  Except it really looks for 111, because
