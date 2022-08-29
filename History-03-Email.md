@@ -68,6 +68,8 @@ I’m a bit of a digital pack-rat, so I will be showing a tool that I developed 
 
 (So if you're looking for ways to capture unstructured (no API) data from the web with Perl, this talk is for you.) ​
 
+[slides](http://pukku.com/bostonpm/2017-04-tumblr/index.html)
+
 **Ricky Morse** has been using Perl for various things since the late 90s.
 
 (*Deferred from Feb 14th  Valentines Day to March 14th Pi(e) Day ... and also the latest 2nd Tuesday falls, so two months in a row, BLU.org 3rd Wednesday Linux/Unix meeting fell the day after Boston.PM, twice since not a leap year.*)
@@ -324,9 +326,10 @@ Same **Boston.PM.org** address thanks to Perl.ORG
 
 **September 11th: Ricky Morse - Perl 6 and Typesetting Formal Announcements**
 
+or, ***Ringing halfsheets with Perl 6***
+
 
 *Meetings resume !         September at the usual place*
-
 
 After ringing a bell for 45 minutes to 3 hours, you kind of want
 people to know you did it, and what you did it for. Ricky uses Perl 6
@@ -335,7 +338,7 @@ Old North ringing room, for tourists to see.
 
 Ricky sensibly doesn't want to retype or copy-paste what's already
 somewhere on-line, so he uses Perl 6 to pull the data from a database
-as XML, and then typeset the half sheets. This is using **Perl6, GROFF,**
+as XML, and then typeset the half sheets. This is using **Perl6, [GROFF](https://en.wikipedia.org/wiki/Groff_%28software%29),**
 and **C6PAN Modules** `Template::Mustache`, `XML::XPath`, and `HTTP::User
 Agent`.
 
@@ -426,7 +429,7 @@ Ricky Morse will review the highlights of several of the Perl community Advent c
 
 Following up on Mark Fowler's Perl Advent 2017 review in October, Ricky takes on 3 of Advent calendars of 2018. 
 
-MIT E51 First floor, room 151 for winter/spring 
+[menu of select calendar pages](http://pukku.com/bostonpm/2019-01-advent-roundup/index.html)
 
 ## February skipped
 
@@ -520,7 +523,9 @@ Legend has it that you can [learn Perl in 2.5 hours](https://qntm.org/files/perl
 
 ## February 11th - Traditional Annual Advent Calendar Retrospective - Ricky Morse
 
-sampling the best of the Perl-ish Advent Calendars of 2019.  MIT E51 room number TBD. 7ish pm.
+sampling the best of the Perl-ish Advent Calendars of 2019.  
+
+[menu of select calendar pages](http://pukku.com/bostonpm/2020-02-advent-roundup/index.html)
 
 **LAST MEETING AT MIT - END OF AN ERA **
 
@@ -549,6 +554,11 @@ Boston.PM will try a virtual meeting for September 8th
 
 Topic: **What did you do on your summer vacation?**  *WFH & staycation (with Perl¹)?*
 
+
+* **Ricky Morse**, 10 minutes on `Set::Tiny` `Email::Stuffer` and `Text::CXV_XS` [notes](http://pukku.com/bostonpm/2020-09-10minutes/index.html)
+*  (*Narrator: Anyone else remember what they shared? No followups on list.*)
+
+
 Where: JITSI 
 
 ¹ or other compatible, interesting FLOSS too
@@ -556,6 +566,7 @@ Where: JITSI
 NOTE – This is as early as 2nd Tuesday can fall and is the day after the long Labor Day Weekend, so it will feel very Monday and not very Tuesday, let alone 2nd Tuesday !
 
 We will use the Jitsi Meet service.
+
 
 (If you need to hear my rant about why Zoom’s “fixes” are inadequate, ask me off-list.)
 

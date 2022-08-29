@@ -66,9 +66,9 @@ The primary announcement channels are MeetUp, Twitter, and Announce mailing-list
 
 Boston.pm has two email lists supported by center Perl Mongers. Mailman list management has the official archives being password protected, visible only to list members. **HOWEVER NOTE** that both lists are logged by one or more popular archival websites that have subscribed to the lists, so these lists are effectively public.
 
-* [Announce list](https://mail.pm.org/mailman/listinfo/boston-pm-announce) is moderated, intended for meeting & social announcements and cancellations and other such things. [Unofficial Public Archive](https://www.mail-archive.com/boston-pm-announce@mail.pm.org/info.html)
+* [Announce list](https://mail.pm.org/mailman/listinfo/boston-pm-announce) is moderated, intended for meeting & social announcements and cancellations and other such things. [Unofficial Public Archive, 2008-present](https://www.mail-archive.com/boston-pm-announce@mail.pm.org/info.html) 
 
-* [Discuss list](https://mail.pm.org/mailman/listinfo/boston-pm) is un-moderated, available for discussion of Perl-ish topics, discussions before and after meetings, etc. [Unofficial Public Archive](https://www.mail-archive.com/boston-pm@pm.org/info.html)
+* [Discuss list](https://mail.pm.org/mailman/listinfo/boston-pm) is un-moderated, available for discussion of Perl-ish topics, discussions before and after meetings, etc. [Unofficial Public Archive, 2002-2018](https://www.mail-archive.com/boston-pm@pm.org/info.html) (*2002-2008 there was a single list, that history is here.*)
 
 
 Before posting jobs to the list, please check our [Job Posting Policy](JobPostingPolicy.html).

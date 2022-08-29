@@ -185,7 +185,9 @@ risk managed refactoring, all through an agile process.
 ## May 10th - Canceled
 
 
-## April 12th Richard "Ricky" Morse - i18n and HTML with Perl
+## April 12th Richard "Ricky" Morse - i18n and the Web, with Perl
+
+[slideshow](http://pukku.com/bostonpm/2016-04-i18n/index.html)
 
 Some short observations, including code, on dealing with a multi-lingual
 website. Mention, and possibly discussion, will be made of [Plack](https://metacpan.org/pod/Plack),
@@ -500,7 +502,7 @@ h/t Some Calendar recommendations by Jerrad Pierce.
 # 2014
 
 
-## December 9  - "Stirring the Hive with a Perl Stick : Hadoop and Perl" - Charles Hardin
+## December 9, 2014  - "Stirring the Hive with a Perl Stick : Hadoop and Perl" - Charles Hardin
 
 LOCATION: [EIG](http://enduranceinternational.com/our-careers/our-locations/burlington), [10 Corporate Dr #300, Burlington, MA 01803](https://www.google.com/maps/place/Endurance+Int
 ernational+Group/@42.495802,-71.193531,17z)
@@ -523,7 +525,7 @@ This meeting is being hosted by EIG, Sean and Charles's employer.
 v=HF_l8fhOPWw) and you can submit questions via IRC or Hangouts Q&A.)
  
  
-## November, 2014 -  Mojo, Moo, DBIC - providing a service bridge to Google Apps API - Sean Quinlan
+## November  -  Mojo, Moo, DBIC - providing a service bridge to Google Apps API - Sean Quinlan
 
 ![google-apps-for-work-logo.png](./images/google-apps-for-work-logo.png)
  
@@ -533,7 +535,7 @@ to implement a service bridge between the Google Apps API at Endurance Internati
 a leading web and email hosting provider.
 
 
-## October, 2014 - ShellShock CGI and Perl DoS bugs - Bill Ricker
+## October  - ShellShock CGI and Perl DoS bugs - Bill Ricker
 
 ![Shellshock bug logo](./images/shellshock-red.png)
 
@@ -551,7 +553,7 @@ and Mac are not entirely immune to this Linux bug.
 
 
 
-## September, 2014 - Creating And Managing a Private CPAN with Pinto & Stratopan [Jeffrey Thalhammer](http://search.cpan.org/~thaljef/)
+## September - Creating And Managing a Private CPAN with Pinto & Stratopan [Jeffrey Thalhammer](http://search.cpan.org/~thaljef/)
 
 If you use Perl, then you have probably wrestled with CPAN. Shifting
 dependencies, incompatible interfaces, and test failures in CPAN modules
@@ -573,11 +575,11 @@ up and running quickly.
 **[Jeffrey Ryan Thalhammer](https://www.google.com/search?client=ubuntu&channel=fs&q=Jeffrey%20Ryan%20Thalhammer&ie=utf-8&oe=utf-8)** is a respected software developer, prolific open source contributor, and tech community leader. Author of **Perl::Critic** and **Pinto**, used by thousands of developers. Co-founder of Stratopan and Co-organizer of the San Francisco Perl Mongers. He consults under the brand [Imaginative Software Systems](https://www.linkedin.com/company/467266).
 
 
-## August, 2014 - skipped
+## August - skipped
 
 Skipped for summer vacations.
 
-## July, 2014 - Offensive & Defensive Web User Identity -  Zak Zebrowski
+## July - Offensive & Defensive Web User Identity -  Zak Zebrowski
 
 (Zak appeared remotely via Hangouts)
 
@@ -600,11 +602,13 @@ submit questions via IRC.)
 database analysis. He is interested in all things Perl, and enjoys
 teaching. He loves being outside when he's not programming.
  
-## June, 2014 - Selenium; Perl 5.20
+## June - Selenium; Perl 5.20
  
 Two short talks:
 
-### Ricky Morse presents automation of web browsers with Selenium::Remote::Driver.
+### Ricky Morse - presents automation of web browsers with Selenium::Remote::Driver.
+
+[slideshow](http://pukku.com/bostonpm/2014-06-selenium/index.html)
 
 **[Selenium](https://www.seleniumhq.org)** "is a test tool that allows
 you to write automated web application UI tests in any programming
@@ -629,7 +633,7 @@ driver that Selenium provides." - [pod](https://metacpan.org/pod/Selenium::Remot
 *  **List::Util** [New Maintainer's blog](http://leonerds-code.blogspot.co.il/2014/06/listutil-additions-in-perl-520.html); [KV Lists](<https://metacpan.org/pod/List::Util#KEY-VALUE-PAIR-LIST-FUNCTIONS>)
 *  **New easy OO CSV** Text::[CSV_XS](http://search.cpan.org/~hmbrand/Text-CSV_XS-1.09/CSV_XS.pm#csv) (see also his [NLPW2014 video](https://www.youtube.com/watch?v=24LGPZ5ODAw) not viewed at meeting)
  
-## May, 2014 - Ricardo Signes' 1.21 Gigawatts
+## May - Ricardo Signes' 1.21 Gigawatts
 
 
 **Ricardo Signes** (pre-recorded in NY, with _live_ Q&A via Hangouts)
@@ -663,7 +667,7 @@ Pennsylvania, and works at Pobox.com, where he spends his days trying
 to cope with the horrors of email.
  
 
-## April, 2014 - DBIx::Class & Data::Query & Deck (Video replay)
+## April - DBIx::Class & Data::Query & Deck (Video replay)
  
 Video replay presentation with group discussion as emergency substitute. 
 (Our group discussion adds value to anything!)
@@ -675,7 +679,7 @@ Choice of :
 * **Deck, experimental language**, TPM Feb, Chris Reuter
 * **"Building Scalable, Distributed Job Queues with Redis and Redis::Client"** (from 2012) Mike Friedman.
 
-## March, 2014 - Interesting Small Scripts
+## March - Interesting Small Scripts
  TOPIC: Interesting Small Scripts
   DATE: March 11, 2014
   TIME: 7:00 – 10:00 PM
@@ -686,7 +690,7 @@ Choice of :
 
 (*Narrator: notes did NOT appear later.*)
 
-## February, 2014 - Parsing weird LRECL data - Uri G "The PerlHunter"
+## February - Parsing weird LRECL data - Uri G "The PerlHunter"
 
 *Parsing the weirdest fixed-record-length format you've ever seen!*
 
@@ -705,10 +709,13 @@ Followup discussion in
 [mailinglist](http://mail.pm.org/mailman/listinfo/boston-pm) 
  
 
-## January, 2014 - Deduplication Hackathon - Panel
+## January, 2014 - Deduplication and some modules 
 
-A recap of the DFW Perl Mongers Deduplication Hackathon
+### Ricky Morse - a short look at Data::Section and XML::XSLT
 
+[example](http://pukku.com/bostonpm/2014-01-xslt/bostonpm.html)
+
+### A recap panel re the **DFW Perl Mongers Deduplication Hackathon**
 
 
 SPEAKERS: **Joel Berger, Tommy Butler, Yanick Champoux, Bruce Gray, Tim King**
@@ -1279,8 +1286,8 @@ RedBones Wins. No meeting at MIT this month. Meet at RedBones, usual 7-7:15 time
 * [Advent Calendar](http://perladvent.pm.org) PSA / Jerrad gave a public service announcement on the Advent Calendar project. Volunteer! get writing! aka advent.pm.org 
 * time_t, magic numbers, old school bit-hacks, and Perl. 
 
-**Bill Ricker* gave a talk meandering through un/pack(), time_t, magic numbers, and
-old _skul)_ bit-banging entitled  "_Magic Numbers & Un/Pack / a_ `use.perl.org` _magical mystery tour_". 
+**Bill Ricker** gave a talk meandering through un/pack(), time_t, magic numbers, and
+old _skul_ bit-banging entitled  "_Magic Numbers & Un/Pack_ : _a_ `use.perl.org` _magical mystery tour_". 
 [Slides pdf](./documents/magic_pack_tour.pdf)†
 [Scripts tar gz](./scripts/magic_pack_tour.tar.gz)
 
@@ -1307,16 +1314,16 @@ mention Boston.PM when you send them a resume.
 
 _or the dreaded PowerPointKaraoke_
 
-    - [c2fit](http://search.cpan.org/search?query=c2fit&mode=module) and [fitnesse](http://fitnesse.org/FitNesse.OneMinuteDescription)
-    - [Parse::RecDescent](http://search.cpan.org/search?mode=all&query=parse-recdescent) to validate config syntax or complex parse legacy data
-    - [Global banking crisis ](http://venturebeat.com/2008/10/10/the-sequoia-rip-good-times-presentation-get-your-copy-here/)
+- [c2fit](http://search.cpan.org/search?query=c2fit&mode=module) and [fitnesse](http://fitnesse.org/FitNesse.OneMinuteDescription)
+- [Parse::RecDescent](http://search.cpan.org/search?mode=all&query=parse-recdescent) to validate config syntax or complex parse legacy data
+- [Global banking crisis ](http://venturebeat.com/2008/10/10/the-sequoia-rip-good-times-presentation-get-your-copy-here/)
 
 We didn't wind up forcing PowerPointKaraoke on anyone, so the list of good perl stuff on that page remains available for filler talks
 
 
-## September 9 - Easy cryptanalysis with tr, s, and /usr/dict/word - Bill Ricker
+## September 9 - Easy cryptanalysis with `tr`, `s`, and `/usr/dict/word` - Bill Ricker
 
-Using Perl to solve a simple substitution cipher.
+Using Perl to solve a simple substitution cipher cryptogram.
 
 
 First, collect simple [word-counts](./scripts/words-count.pl.html) - small repeated and long non-repeated words.
@@ -1359,7 +1366,7 @@ Finally [iterate guessing letter translations](./scripts/chu.pl.html), with hint
 
 ## August 12, 2008, Tech Meeting E51-376
 
-Jerrad Pierce
+**Jerrad Pierce**
 
 * Topic (1) [Perl Module Advent Calendar](http://perladvent.pm.org/) call for authors 
 * Topic (2) Data::JavaScript code review / repair-a-thon [Data::JavaScript](http://search.cpan.org/search?query=Data-JavaScript&mode=module)
@@ -1367,7 +1374,7 @@ Jerrad Pierce
 ## July 15, 2008, Tech Meeting E51-376 (*3*rd Tuesday)
 
 * Topic: Ack-athon 
-    - Uri and Bill have been working on Andy Lester's [ACK](https://beyondgrep.com) coders-grep tool, and this will be a collaborative redesign of the inner loop.
+    - **Uri** and **Bill** have been working on **Andy Lester**'s [ACK](https://beyondgrep.com) coders-grep tool ([CPAN](https://metacpan.org/pod/App::Ack)), and this will be a collaborative redesign of the inner loop.
 * Due to 4th of July holiday weekend being popular for straddling vacations, and the 8th being earliest possible 2nd Tuesday, we're pushing out a week. 
 
 
@@ -1377,12 +1384,12 @@ Jerrad Pierce
 ## June 10, Tuesday, Tech Meeting
 
 
-Uri Guttman will present a quiz exploring people's thoughts on programming.
+**Uri Guttman** will present a quiz exploring people's thoughts on programming.
 
 ## May 13, Tuesday, Tech Meeting
 
 
-Bob Rogers gave a talk on Advanced Control Structures in Parrot.
+**Bob Rogers** gave a talk on **Advanced Control Structures in Parrot**.
 
 ## April 8, Tuesday, Tech Meeting
 
@@ -1392,16 +1399,16 @@ Bob Rogers gave a talk on Advanced Control Structures in Parrot.
 ## February 12, Tuesday, Tech Meeting
 
 
-Martin Owens presented [XML::Validate::XSD](http://search.cpan.org/~doctormo/Data-Validate-XSD-1.03/).  
+**Martin Owens** presented [XML::Validate::XSD](http://search.cpan.org/~doctormo/Data-Validate-XSD-1.03/).  
 
 ## January 8, Tuesday, Tech Meeting
 
 
-Mitchell Charity gave a brief presentation on his idea to quickly bootstrap a Perl 6 implementation via Ruby.
+**Mitchell Charity** gave a brief presentation on his idea to quickly bootstrap a **Perl 6** implementation via **Ruby.**
 
 **Ronald Kimball** led a long discussion of new features in [Perl 5.10.0](https://perldoc.perl.org/5.10.0/perldelta).
 
-Bernardo Rechea presented his CD-ripping program that uses some of the new 5.10 features.
+**Bernardo Rechea** presented his **CD-ripping** program that uses some of the **new 5.10** features.
 
 # 2007
 
@@ -1409,21 +1416,21 @@ Bernardo Rechea presented his CD-ripping program that uses some of the new 5.10 
 
 [Boston Beer Works](http://www.beerworks.net)
 
-Technical recruiting firm JohnGalt Staffing bought us a round of drinks.
+Technical recruiting firm **JohnGalt Staffing** bought us a round of drinks.
 
 ## October 9, Tuesday, Tech Meeting
 
 
 **Ronald Kimball** presented several fun obfuscations found on Perl Monks.
 
-Jerrad Pierce discussed the upcoming [Perl Advent Calendar](https://perladvent.org/) for [2008](https://perladvent.org/2008/). 
+**Jerrad Pierce** discussed the upcoming [Perl Advent Calendar](https://perladvent.org/) for [2008](https://perladvent.org/2008/). 
 
 ## September 11, Tuesday, Tech Meeting
 
 
 **Ronald Kimball** gave an overview of [**ack**](https://beyondgrep.com).
 
-Sean Quinlan** gave an introductory talk on [HTML::Mason](https://metacpan.org/pod/HTML::Mason). 
+**Sean Quinlan** gave an introductory talk on [HTML::Mason](https://metacpan.org/pod/HTML::Mason). 
 
 We had open discussions on several topics, including Perl job opportunities, academic interest in Perl, and the state of Perl 6.
 
@@ -1431,14 +1438,14 @@ We had open discussions on several topics, including Perl job opportunities, aca
 
 [Cambridge Brewing Company](http://www.cambrew.com)
 
-The appetizers for this meeting were sponsored by JohnGalt
-Staffing, a technical recruiting firm that is looking for talented Perl
+The appetizers for this meeting were sponsored by **JohnGalt Staffing**, 
+a technical recruiting firm that is looking for talented Perl
 programmers to fill positions with its clients. 
 
 ## July 10, Tuesday, Tech Meeting
 
 
-**Kee Hinckley** gave a presentation titled "Object Oriented Design on the Fly - OR- Programming Without a Net"
+**Kee Hinckley** gave a presentation titled _"Object Oriented Design on the Fly - OR- Programming Without a Net"_
 
   It's the wrong way to work, but what techniques can you use to build a
   reusable object framework when the schedule gives you no time to design
@@ -1447,15 +1454,15 @@ programmers to fill positions with its clients.
 ## June 12, Tuesday, Tech Meeting
 
 
-**Ronald Kimball** gave an introductory talk on Toolkit::Template, based on his experience using it over the past month.
+**Ronald Kimball** gave an introductory talk on [`Template::Toolkit`](https://metacpan.org/pod/Template::Toolkit), based on his experience using it over the past month.
 
-*Uri Guttman** gave an informal presentation on his CMS::Simple and Template::Simple modules.
+**Uri Guttman** gave an informal presentation on his [`CMS::Simple`](https://metacpan.org/pod/CMS::Simple) and [`Template::Simple`](https://metacpan.org/pod/Template::Simple) modules.
 
 **Ronald Kimball** also offered a quick look at [LOLCode](http://www.lolcode.com).
 
 This was our first tech meeting sponsored by 
-Cambridge Interactive Development Corp!  
-(Sean Quinlan began the meeting by talking about what CIDC does 
+**Cambridge Interactive Development Corp!**  
+(**Sean Quinlan** began the meeting by talking about what **CIDC** does 
 and the Perl positions they're looking to fill.)  
 Thanks CIDC!     
 
@@ -1463,7 +1470,7 @@ Thanks CIDC!
 ## May 8, Tuesday, Tech Meeting
 
 
-Greg London gave a talk based on his book, [Bounty Hunters (Metaphors for Fair Intellectual Property Laws)](http://www.Greg London.com/bountyhunters/). 
+**Greg London** gave a talk based on his book, [Bounty Hunters (Metaphors for Fair Intellectual Property Laws)](http://www.Greg London.com/bountyhunters/). 
 
 > The metaphors we use to describe the abstract concept of intellectual
 works bring along their own set of baggage. The metaphor of "property"
@@ -1522,9 +1529,13 @@ We finished with a discussion about the state of Perl 6.
 
 **Uri Guttman** presented his mail filtering system, which uses Mail::Procmail, white-listing, and some simple spam filtering.
 
-Our YAPC volunteer committee presented their plans for the [New England Perl Workshop NEPW], to be held March 10, 2007 at Northeastern University.
+Our YAPC volunteer committee presented their plans for the _"New England Perl Workshop NEPW"_, to be held March 10, 2007 at Northeastern University.
 
-*Narrator: It didn't happen.*
+* <https://news.perlfoundation.org/post/save_the_date_new_england_perl>
+* <https://web.archive.org/web/20070207061424/http://www.neperlworkshop.org/>
+
+
+*Narrator: It didn't happen. We looked at some facilities and tried to come to terms but it wasn't practical on short planning cycle.*
 
 ## November 16, Tuesday, Tech Meeting
 
@@ -1543,6 +1554,25 @@ starting with a simple but inefficient brute force approach and ending with
 one with optimizations and heuristics to make it nice and speedy.
 
 **Bill Ricker** showed us his script for solving doublets, aka word ladders.
+
+Making Word ladders or doublets is finding a sequence single letter edits that will transform one word to another where all the intermediate states are also words. E.g.,  `cat=>cot=>dot=>dog` and `grass=>grabs=>crabs=>cribs=>cries=>cried=>creed=>greed =>green`
+
+```
+perl -I. ./search2.pl one two
+
+*Found* one=>owe=>ewe=>eye=>rye=>roe=>toe=>too =>two
+*Found* one=>owe=>awe=>aye=>rye=>roe=>toe=>too =>two
+*Found* one=>ore=>ere=>eye=>rye=>roe=>toe=>too =>two
+*Found* one=>ore=>are=>aye=>rye=>roe=>toe=>too =>two
+
+```
+
+* [doublets.txt](./scripts/doublets/doublets.txt) Sample output 
+* helper module [MyCanon.pm.html](./scripts/doublets/MyCanon.pm.html) [.pm](./scripts/doublets/MyCanon.pm)  
+* debug trace of 3-letter words that are adjacent, building dictionary for one->two [one-two-1.txt](./scripts/doublets/one-two-1.txt)
+* script [search2.pl.html](./scripts/doublets/search2.pl.html) [.pl](./scripts/doublets/search2.pl) 
+
+
 
 ## September 25, Monday, Special Tech Meeting
 
