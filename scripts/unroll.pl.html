@@ -1,0 +1,270 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>unroll.pl</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:wdr@islay.(none)" />
+</head>
+
+<link rel="stylesheet" href="style.css" type="text/css" /><body>
+<a name="-top-"></a>
+<h1>unroll.pl</h1>
+
+
+
+<ul id="index">
+  <li><a href="#unroll---a-Twitter-thread-unroll-er-for-offline-storage">unroll - a Twitter thread unroll-er for offline storage</a>
+    <ul>
+      <li><a href="#usage">usage</a></li>
+      <li><a href="#Modules-used">Modules used</a></li>
+    </ul>
+  </li>
+</ul>
+
+
+<pre>   1 #!/usr/bin/env perl
+   2 <span class="k">use</span> <span class="v">5.14.1</span><span class="sc">;</span>
+   3 <span class="k">use</span> <span class="w">warnings</span><span class="sc">;</span>
+   4 <span class="k">use</span> <span class="w">utf8</span><span class="sc">;</span>
+   5 <span class="k">use</span> <span class="k">open</span> <span class="q">qw/:std :utf8/</span><span class="sc">;</span>
+   6 
+</pre>
+<h1 id="unroll---a-Twitter-thread-unroll-er-for-offline-storage">unroll - a Twitter thread unroll-er for offline storage</h1>
+
+<h2 id="usage">usage</h2>
+
+<ul>
+
+<pre><code>    (. ./env.sh; perl ./unroll.pl 1524045502714728449 
+    
+    Boston Perl Mongers TONIGHT Tuesday, May 10, 2022 7:30 PM to 9:30 PM EDT (Every 2nd Tuesday of the month) (on JITSI)
+    
+    Using Perl&#39;s Twitter::API</code></pre>
+
+</ul>
+
+<h2 id="Modules-used">Modules used</h2>
+
+<dl>
+
+<dt id="Twitter::API"><a href="https://metacpan.org/pod/Twitter::API">Twitter::API</a></dt>
+<dd>
+
+<p>The useful wrapper of Twitter&#39;s API.</p>
+
+</dd>
+<dt id="Data::Dump"><a href="https://metacpan.org/pod/Data::Dump">Data::Dump</a></dt>
+<dd>
+
+<p>using only <code>pp</code> for pretty-printing debug dumps of nested HoAoH structures.</p>
+
+</dd>
+<dt id="Try::Tiny"><a href="https://metacpan.org/pod/Try::Tiny">Try::Tiny</a></dt>
+<dd>
+
+<p>Everyone&#39;s favorite error handler, needed as remote API&#39;s can choke up.</p>
+
+</dd>
+<dt id="constant"><a href="https://metacpan.org/pod/constant">constant</a></dt>
+<dd>
+
+<p>To allow an <code>if DEBUG</code> symbol</p>
+
+</dd>
+</dl>
+
+
+<pre>  47 
+  48 <span class="k">use</span> <span class="w">Twitter::API</span><span class="sc">;</span>
+  49 <span class="k">use</span> <span class="w">Data::Dump</span> <span class="q">qw/pp/</span><span class="sc">;</span>
+  50 <span class="k">use</span> <span class="w">Twitter::API::Util</span> <span class="q">&#39;is_twitter_api_error&#39;</span><span class="sc">;</span>
+  51 <span class="k">use</span> <span class="w">Try::Tiny</span><span class="sc">;</span>
+  52 <span class="k">use</span> <span class="w">constant</span> <span class="s">{</span> <span class="w">DEBUG</span><span class="cm">=&gt;</span><span class="n">0</span><span class="cm">,</span> <span class="s">}</span> <span class="sc">;</span>
+  53 
+</pre>
+<p>Before using any twitter API application you must use OATH to authorize API access with your account.</p>
+
+<p>See <a href="https://metacpan.org/release/MMIMS/Twitter-API-1.0006/source/examples/oauth_desktop.pl">oauth_desktop.pl</a> in the <code>Twitter::API</code> distribution for details.</p>
+
+<p>A permanent application should create it&#39;s own application key, but test apps may use the <code>Twitter::API</code> module&#39;s own.</p>
+
+<p>The application can read the four security parameters from a protected config file or process environment. This demo reads from ENV.</p>
+
+
+<pre>  69 
+  70 <span class="k">my</span> <span class="i">$client</span> = <span class="w">Twitter::API</span><span class="w">-&gt;new_with_traits</span><span class="s">(</span>
+  71     <span class="w">traits</span> <span class="cm">=&gt;</span> <span class="s">[</span> <span class="q">qw/ApiMethods RateLimiting DecodeHtmlEntities NormalizeBooleans/</span> <span class="s">]</span><span class="cm">,</span>
+  72     <span class="w">consumer_key</span>        <span class="cm">=&gt;</span> <span class="i">$ENV</span>{<span class="w">CONSUMER_KEY</span>}<span class="cm">,</span>
+  73     <span class="w">consumer_secret</span>     <span class="cm">=&gt;</span> <span class="i">$ENV</span>{<span class="w">CONSUMER_SECRET</span>}<span class="cm">,</span>
+  74     <span class="w">access_token</span>        <span class="cm">=&gt;</span> <span class="i">$ENV</span>{<span class="w">ACCESS_TOKEN</span>}<span class="cm">,</span>
+  75     <span class="w">access_token_secret</span> <span class="cm">=&gt;</span> <span class="i">$ENV</span>{<span class="w">ACCESS_TOKEN_SECRET</span>}<span class="cm">,</span>
+  76 <span class="s">)</span><span class="sc">;</span>
+  77 
+  78 <span class="k">my</span> <span class="i">$r</span> = <span class="i">$client</span><span class="i">-&gt;verify_credentials</span><span class="sc">;</span>
+  79 <span class="c"># say &quot;$$r{screen_name} is authorized&quot;;</span>
+  80 
+  81 <span class="k">my</span> <span class="i">$mentions</span> = <span class="i">$client</span><span class="i">-&gt;mentions</span><span class="sc">;</span>
+  82 <span class="c"># for my $status ( @$mentions ) {</span>
+  83 <span class="k">my</span> <span class="i">$status</span><span class="sc">;</span> 
+  84 
+</pre>
+<p>The sole command-line argument is a Twitter status number, which is the =<b>last</b> tweet in a chain from which to unroll backwards.</p>
+
+<p>The imediate purpose for this unroller was to have a non-caching, not-tracking unroll of a historical project&#39;s thread on <b>#ordainedslavery</b>, Mass Bay Puritan preachers who owned human beings.</p>
+
+<p>The 101st entry in the thread is the default start in this script <code><a href="https://twiter.com/elevennames/status/1509876985744355329">https://twiter.com/elevennames/status/1509876985744355329</a></code></p>
+
+<p>As a bonus in addition to doing an unroll, this script will also take a heuristic attempt to make a Town index, so it collects tweets in a reversing list <code>@Keepers</code> and an HoA <code>%Towns</code>.</p>
+
+<p><code>$id</code> is the tweet to next process, starting with the starting point (tail) from argument or default.</p>
+
+
+<pre> 103 
+ 104 <span class="k">my</span> <span class="i">$id</span>= <span class="k">shift</span> <span class="i">@ARGV</span> // <span class="n">1509876985744355329</span><span class="sc">;</span> <span class="c"># Latest end of thread, should be a parameter</span>
+ 105 
+ 106 <span class="k">my</span> <span class="i">@Keepers</span><span class="sc">;</span>
+ 107 <span class="k">my</span> <span class="i">%Towns</span><span class="sc">;</span>
+ 108 
+</pre>
+<p>Loop logic is simple, continue looking up <code>$id</code> and chaining until at begining.</p>
+
+
+<pre> 114 
+ 115 <span class="k">while</span> <span class="s">(</span><span class="i">$id</span><span class="s">)</span> <span class="s">{</span>
+ 116 
+ 117     <span class="i">try</span> <span class="s">{</span>
+ 118         <span class="i">$status</span> = <span class="i">$client</span><span class="i">-&gt;show_status</span><span class="s">(</span><span class="i">$id</span><span class="cm">,</span> <span class="s">{</span> <span class="w">cache</span><span class="cm">=&gt;</span><span class="q">&#39;none&#39;</span><span class="cm">,</span> <span class="w">tweet_mode</span><span class="cm">=&gt;</span><span class="q">&#39;extended&#39;</span> <span class="s">}</span> <span class="s">)</span><span class="sc">;</span>
+ 119         <span class="k">say</span> <span class="k">ref</span> <span class="i">$status</span> <span class="k">if</span> <span class="w">DEBUG</span><span class="sc">;</span>
+ 120     <span class="s">}</span>
+ 121     <span class="k">catch</span> <span class="s">{</span>
+ 122         <span class="k">die</span> <span class="i">$_</span> <span class="k">unless</span> <span class="i">is_twitter_api_error</span><span class="s">(</span><span class="i">$_</span><span class="s">)</span><span class="sc">;</span>
+ 123      
+ 124         <span class="c"># The error object includes plenty of information</span>
+ 125         <span class="k">say</span> <span class="i">$_</span><span class="i">-&gt;http_request</span><span class="i">-&gt;as_string</span><span class="sc">;</span>
+ 126         <span class="k">say</span> <span class="i">$_</span><span class="i">-&gt;http_response</span><span class="i">-&gt;as_string</span><span class="sc">;</span>
+ 127         <span class="k">say</span> <span class="q">&#39;No use retrying right away&#39;</span> <span class="k">if</span> <span class="i">$_</span><span class="i">-&gt;is_permanent_error</span><span class="sc">;</span>
+ 128         <span class="k">if</span> <span class="s">(</span> <span class="i">$_</span><span class="i">-&gt;is_token_error</span> <span class="s">)</span> <span class="s">{</span>
+ 129             <span class="k">say</span> <span class="q">&quot;There&#39;s something wrong with this token.&quot;</span>
+ 130         <span class="s">}</span>
+ 131         <span class="k">if</span> <span class="s">(</span> <span class="i">$_</span><span class="i">-&gt;twitter_error_code</span> == <span class="n">326</span> <span class="s">)</span> <span class="s">{</span>
+ 132             <span class="k">say</span> <span class="q">&quot;Oops! Twitter thinks you&#39;re spam bot!&quot;</span><span class="sc">;</span>
+ 133         <span class="s">}</span>
+ 134 
+ 135     <span class="s">}</span><span class="sc">;</span>
+ 136 
+ 137     <span class="c"># say $status-&gt;{user}-&gt;{screen_name}, q(: ), $status-&gt;{full_text};</span>
+ 138 
+</pre>
+<p><code>$s-&gt;{full_text}</code> is the message body needed.</p>
+
+<p>Heuristically grab serial number, names of prelate, town from the tweet.</p>
+
+<p>Hash-tags that apply to the whole series are skipped but otherise likely indicate the town.</p>
+
+<p>User mentions are likely a Historical Society account, and indicate a town.</p>
+
+<p>This heuristic section is tuned to the specific use and would be greatly simplified for generic use! For use on a conversational thread, would want to capture user names (handle and/or display), but since purpose was unrolling soliloquoy thread, that isn&#39;t done here.</p>
+
+
+<pre> 154 
+ 155     <span class="c"># What to save</span>
+ 156     <span class="k">my</span> <span class="i">@Temp</span> = <span class="s">(</span><span class="i">$status</span>-&gt;{<span class="w">full_text</span>}<span class="s">)</span><span class="sc">;</span>
+ 157 
+ 158     <span class="c"># grab post number, and lead name if possible.</span>
+ 159     <span class="c"># NOT case-insensitive to avoid needing stop-words</span>
+ 160     <span class="k">my</span> <span class="s">(</span><span class="i">$num</span><span class="cm">,</span> <span class="i">$reverend</span><span class="s">)</span> = <span class="s">(</span><span class="i">$status</span>-&gt;{<span class="w">full_text</span>}<span class="s">)</span> =~ <span class="q">/ (?: ^ | \s)  (\d+(?: [.][0-9]+)? ) [.]? \s+ ((?: Rev[erend]*[.]? \s* )? (?: Mr[.]? \s*)?  (?: [[:upper:]][[:word:]]+ \s* )+ )? /xsm</span><span class="sc">;</span>
+ 161     <span class="i">$num</span> //= <span class="q">q(??)</span><span class="sc">;</span>
+ 162     <span class="i">$reverend</span> //= <span class="q">q()</span><span class="sc">;</span>
+ 163     <span class="k">say</span> <span class="i">pp</span><span class="s">(</span><span class="i">$status</span><span class="s">)</span> <span class="k">if</span>  <span class="i">$num</span> <span class="k">eq</span> <span class="q">q(??)</span> <span class="k">or</span> <span class="s">(</span>! <span class="k">defined</span> <span class="i">$reverend</span> <span class="k">and</span> <span class="i">$num</span> !~ <span class="q">/\d+[.]\d+/</span><span class="s">)</span><span class="sc">;</span>
+ 164 
+ 165     <span class="k">if</span> <span class="s">(</span><span class="i">$status</span>-&gt;{<span class="w">entities</span>}-&gt;{<span class="w">hashtags</span>}<span class="s">)</span> <span class="s">{</span>
+ 166         <span class="k">my</span> <span class="i">@tags</span> = <span class="k">grep</span> <span class="s">{</span><span class="k">not</span> <span class="i">$_</span> =~ <span class="q">m/slavery/</span> <span class="s">}</span> 
+ 167                 <span class="k">map</span> <span class="s">{</span><span class="i">$_</span>-&gt;{<span class="w">text</span>}<span class="s">}</span>
+ 168                      <span class="i">$status</span>-&gt;{<span class="w">entities</span>}-&gt;{<span class="w">hashtags</span>}<span class="i">-&gt;@*</span> <span class="sc">;</span>
+ 169         <span class="k">unshift</span> <span class="i">$Towns</span>{<span class="i">$_</span>}<span class="i">-&gt;@*</span><span class="cm">,</span> <span class="q">&quot;$num. $reverend&quot;</span> <span class="k">for</span> <span class="i">@tags</span><span class="sc">;</span>
+ 170 
+ 171         <span class="s">}</span>
+ 172     <span class="k">if</span> <span class="s">(</span> <span class="k">scalar</span> <span class="i">$status</span>-&gt;{<span class="w">entities</span>}-&gt;{<span class="w">user_mentions</span>}<span class="i">-&gt;@*</span> <span class="s">)</span><span class="s">{</span>
+ 173         <span class="k">push</span> <span class="i">$Towns</span>{<span class="i">$_</span>}<span class="i">-&gt;@*</span><span class="cm">,</span> <span class="q">&quot;$num. $reverend&quot;</span> <span class="k">for</span> <span class="k">map</span> <span class="s">{</span><span class="i">$_</span>-&gt;{<span class="w">screen_name</span>}<span class="s">}</span> <span class="i">$status</span>-&gt;{<span class="w">entities</span>}-&gt;{<span class="w">user_mentions</span>}<span class="i">-&gt;@*</span> 
+ 174 
+ 175     <span class="s">}</span>
+ 176     
+</pre>
+<p>Annoyingly, pictures (&quot;media&quot;) and links (&quot;urls&quot;) are in two different forks of the nested HoAo? structure.</p>
+
+
+<pre> 182 
+ 183     <span class="c"># Need to use extended_entities to see &gt; 1 photo.</span>
+ 184     <span class="c"># Expanded URLs all have /1, not /1 .. /4, so need media_url instead.</span>
+ 185 
+ 186 
+ 187     <span class="k">if</span> <span class="s">(</span><span class="i">$status</span>-&gt;{<span class="w">extended_entities</span>}-&gt;{<span class="w">media</span>}<span class="s">)</span><span class="s">{</span>
+ 188         <span class="c"># say &quot;Media &quot;, $_-&gt;{media_url} for $status-&gt;{extended_entities}-&gt;{media}-&gt;@* ;</span>
+ 189         <span class="k">push</span> <span class="i">@Temp</span><span class="cm">,</span> <span class="i">$_</span>-&gt;{<span class="w">media_url</span>}   <span class="k">for</span> <span class="i">$status</span>-&gt;{<span class="w">extended_entities</span>}-&gt;{<span class="w">media</span>}<span class="i">-&gt;@*</span> <span class="sc">;</span>
+ 190     <span class="s">}</span>
+ 191 
+ 192     <span class="c"># But links are ok in plain entities.</span>
+ 193     <span class="k">if</span> <span class="s">(</span><span class="i">$status</span>-&gt;{<span class="w">entities</span>}-&gt;{<span class="w">urls</span>}<span class="s">)</span><span class="s">{</span>
+ 194         <span class="c"># say &quot;Link &quot;, $_-&gt;{expanded_url} for $status-&gt;{entities}-&gt;{urls}-&gt;@* ;</span>
+ 195         <span class="k">push</span> <span class="i">@Temp</span><span class="cm">,</span> <span class="i">$_</span>-&gt;{<span class="w">expanded_url</span>} <span class="k">for</span> <span class="i">$status</span>-&gt;{<span class="w">entities</span>}-&gt;{<span class="w">urls</span>}<span class="i">-&gt;@*</span> <span class="sc">;</span>
+ 196     <span class="s">}</span>
+ 197 
+</pre>
+<p>Re-establish our loop invariant.</p>
+
+<p>(Debug code here will dump the tail tweet and bail on the loop; good for debugging heurisic collection.)</p>
+
+
+<pre> 207 
+ 208     <span class="c"># loop chaining</span>
+ 209     <span class="i">$id</span> = <span class="i">$status</span>-&gt;{<span class="w">in_reply_to_status_id</span>} // <span class="k">undef</span><span class="sc">;</span>
+ 210     <span class="k">say</span> <span class="q">&quot;PREVIOUS $id&quot;</span> <span class="k">if</span> <span class="w">DEBUG</span><span class="sc">;</span>
+ 211         
+ 212     <span class="k">say</span> <span class="i">pp</span><span class="s">(</span><span class="i">$status</span><span class="s">)</span> <span class="k">if</span>  <span class="w">DEBUG</span><span class="sc">;</span>
+ 213 
+ 214     <span class="k">last</span> <span class="k">if</span> <span class="w">DEBUG</span><span class="sc">;</span>
+ 215 
+</pre>
+<p>by <code>unshift</code>inging onto <code>@Keepers</code>, the list of tweets is reversed as its collected. (If we <code>push</code>d, we&#39;d have to do a <code>pop</code> loop or explicit <code>reverse</code>.)</p>
+
+<p>Effect is as if we&#39;d done <code>unshift @Keepers, [ &quot;full text&quot;, &quot;url&quot;, ...];</code></p>
+
+
+<pre> 224 
+ 225     <span class="k">unshift</span> <span class="i">@Keepers</span><span class="cm">,</span> \<span class="i">@Temp</span><span class="sc">;</span>
+ 226 <span class="s">}</span> <span class="c"># While</span>
+ 227 
+</pre>
+<p>First output is the <code>%Town</code> index, which is produced in sorted order.</p>
+
+<p>This uses the modern postfix-deref notation.</p>
+
+
+<pre> 235 
+ 236 <span class="c"># Give town index</span>
+ 237 <span class="k">for</span> <span class="k">my</span> <span class="i">$town</span>  <span class="s">(</span><span class="k">sort</span> <span class="k">keys</span> <span class="i">%Towns</span> <span class="s">)</span> <span class="s">{</span>
+ 238     <span class="k">my</span> <span class="i">$aref</span> = <span class="i">$Towns</span>{<span class="i">$town</span>}<span class="sc">;</span>
+ 239     <span class="k">say</span> <span class="q">&quot;$town: &quot;</span><span class="cm">,</span><span class="k">join</span><span class="s">(</span><span class="q">q(, )</span><span class="cm">,</span> <span class="i">$aref</span><span class="i">-&gt;@*</span> <span class="s">)</span><span class="sc">;</span>
+ 240 
+ 241 <span class="s">}</span>
+ 242 
+ 243 
+</pre>
+<p>And finally, print the message thread, in original sequence, full text with saved media links.</p>
+
+
+<pre> 250 
+ 251 <span class="c"># Give full list in order</span>
+ 252 <span class="c"># say pp \@Keepers;</span>
+ 253 <span class="k">say</span> <span class="q">&quot;\n\n&quot;</span><span class="sc">;</span>
+ 254 
+ 255 <span class="k">for</span> <span class="k">my</span> <span class="i">$kept</span> <span class="s">(</span><span class="i">@Keepers</span><span class="s">)</span><span class="s">{</span>
+ 256     <span class="k">say</span> <span class="i">$_</span> <span class="k">for</span> <span class="i">$kept</span><span class="i">-&gt;@*</span><span class="sc">;</span>
+ 257     <span class="k">say</span> <span class="q">&quot;&quot;</span><span class="sc">;</span>
+ 258 <span class="s">}</span>
+</pre></body>
+
+</html>
+
+

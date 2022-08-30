@@ -56,7 +56,7 @@ Also, FWIW, "Six things … about … " was an au courant cultural reference at 
 [Perl 6 Advent article by bdf on Object Hashes](https://perl6advent.wordpress.com/2016/12/03/day-3-object-hashes/)
 [P6PT](https://github.com/briandfoy/Perl6PowerTools)
 [Slides for (first) 6 Things about Perl 6 at NY.pm (prequel for above talk)](http://slideshare.net/brian_d_foy/6-things-about-perl-6)
-see Brian also as [@LearningPerl6->LearningRaku  (twitter.com)](https://twitter.com/LearningRaku) and [@briandfoy_perl](https://twitter.com/briandfoy_perl)
+see Brian also as [(ex)LearningPerl6->\@LearningRaku  (twitter.com)](https://twitter.com/LearningRaku) and [\@briandfoy_perl](https://twitter.com/briandfoy_perl)
 
 ## February postponed to March postponed to April
 
@@ -303,14 +303,14 @@ So temporarily boston.pm.org DNS points to a 404-ish page :-(
 (4) Meantime, our Twitter, Facebook, G+ (*ominous music*), MeetUp, LinkedIn, and these
 two Mailing Lists provide redundant communications.
 
-- [TW](https://twitter.com/BostonPM)
+- [TW![icon](./images/Twitter-icon.png){#tw height=20 }](https://twitter.com/BostonPM)
 - [FB](https://www.facebook.com/profile.php?id=134089120681)
-- [G+ communities (archived)](https://web.archive.org/web/20190402054751/https://plus.google.com/communities/113462745547836195580)
-- [G+ (archived)](https://web.archive.org/web/20190322054828/https://plus.google.com/114663318510475261282)
-- [MU](https://www.meetup.com/Boston-pm/)
-- [LI](https://www.linkedin.com/groups/41363)
-- [Announce list](https://mail.pm.org/mailman/listinfo/boston-pm-announce)
-- [discuss list](https://mail.pm.org/mailman/listinfo/boston-pm)
+- [G+ communities (archived)![icon](./images/Google-plus-icon.png)](https://web.archive.org/web/20190402054751/https://plus.google.com/communities/113462745547836195580)
+- [G+ (archived)![icon](./images/Google-plus-icon.png)](https://web.archive.org/web/20190322054828/https://plus.google.com/114663318510475261282)
+- [MU![icon](./images/Meetup-icon.png){#mu height=20 }](https://www.meetup.com/Boston-pm/)
+- [LI![icon](./images/Linkedin-icon.png){#lin height=20 }](https://www.linkedin.com/groups/41363)
+- [Announce list![icon](./images/Mail-icon.png){#ml height=30 }](https://mail.pm.org/mailman/listinfo/boston-pm-announce)
+- [discuss list![icon](./images/Mail-icon.png){#ml height=30 }](https://mail.pm.org/mailman/listinfo/boston-pm)
 
 
 ## Sun, Sep 9, 2018 at 8:51 PM Bill Ricker  wrote:
@@ -441,13 +441,13 @@ We stumbled on a video talk that provides a fast-forward review of how Perl's OO
 
 ## April 9 - Introducing Test2 (Chad Granum) - Ricky Morse (moderator)
 
-Test2 is a replacement for many of the Test modules, which comes 
+[Test2](https://metacpan.org/pod/Test2) is a replacement for many of the Test modules, which comes 
 with advanced comparison features, and a version of Ruby’s “SPEC” DSL.
 
-Ricky screened Chad Granum’s 2018 Perl Conference talk where 
+Ricky screened **Chad Granum**’s [2018 Perl Conference talk](https://www.youtube.com/watch?v=b2xIfBdcqb0) where 
 he introduces the Test2 suite of modules. 
 
-In addition, Ricky already had a bunch of tests written using Test2, 
+In addition, **Ricky** already had a bunch of tests written using Test2, 
 which he showed from his iPad.
 
 
@@ -457,15 +457,33 @@ which he showed from his iPad.
 
 Curious about how to handle different color spaces in Perl?
 
-Bill Ricker will show how he improved RBG palette help for Ack3 using the HSL colorspace model and CPAN module that does HSL<->RGB transform. 
+**Bill Ricker** will show how he improved RBG palette help for [**Ack3**](https://beyondgrep.com) using the HSL colorspace model and CPAN module that does HSL<->RGB transform.
 
-![Color Cylinders model](./images/Color_cylinders.png)
+Ack uses an  module [**`Term::ANSIColor`**](https://metacpan.org/pod/Term::ANSIColor) that uses base-6 colors from 000 to 555 . 
+`ack --help-rgb-colors` will display all possible colors.
+The palette display was formerly laid-out as convenient for the code loop, not for the viewer's comprehension.
+
+Reorganizing it according to a geometric color model makes it easier to see the various gradients between color coordinates. **Bill Ricker** used [**`Convert::Color::HSL`**](https://metacpan.org/pod/Convert::Color::HSL) to prototype a new palette-help, as seen in new [Ack3 code](https://github.com/beyondgrep/ack3/blob/dev/dev/generate-rgb-codes.pl).
+
+
+_The HSL model is very similar to the HSV model, with subtle distinction between "Luminance" and "Value" in the third, vertical coordinate:_
+
+![Color Cylinders model](./images/Color_cylinders.png){ width=50%}
+
+![Ack3 HSL model for background colors](./images/May-2019-ack3-676x380.webp.png)
+
+[test_HSL.pl(html)](./images/test_HSL.pl.html) [(.pl)](./images/test_HSL.pl)
 
 ## June 11, E51-376 (Back to 3rd Floor) ¨Perl begat Perl¨ - Uri Guttman
 
-They say only Perl can parse Perl, but Perl can also generate Perl. In "Perl begat Perl", a preview of a talk Uri will present at this year's Perl Conference, he will discuss how you can generate Perl inside Perl and then call eval on the code. Uri will explain why you might want to to use this technique, and illustrate it with good and bad examples.
+They say only Perl can parse Perl, but Perl can also generate Perl. In "***Perl begat Perl***", a preview of a talk Uri will present at this year's Perl Conference, he will discuss how you can generate Perl inside Perl and then call eval on the code. Uri will explain why you might want to to use this technique, and illustrate it with good and bad examples.
 
 **Uri Guttman** is a founding member of Boston Perl Mongers, a long time presence in the Perl community, and founder/owner of Stem Systems, a Perl consultancy, and known as "The Perl Hunter," a recruiter specializing in placing Perl talent.
+
+[TPC Video of same talk](https://www.youtube.com/watch?v=eMW1hCpP2Is) has abstract -
+
+> Have you ever wondered why some CPAN modules actually generate Perl code to be eval'ed? Some of the reasons are simplicity but most often it is for getting faster running code. The key Perl feature used is eval on strings (the dangerous eval, not the safe eval of blocks). Newbies are always warned not to use string eval but this talk will show you why and how to use it for your benefit. Simple and common examples will be shown that anyone can use. Then more complex examples from existing CPAN modules (two of which are by the speaker) will be covered. They use Perl code generation for major speed gains (including 4x in one case).
+
 
 NOTE:  Back to 3rd floor!
 
@@ -477,21 +495,22 @@ NOTE:  Back to 3rd floor!
 
 ## August - no meeting. 
 
-## ???  D3 Visualization and Perl in Jupyter notebooks - Adam Russell
+## Nevermore - thrice-canceled -  D3 Visualization and Perl in Jupyter notebooks - Adam Russell
 
-*This was rescheduled a few times, i do not have record of when we actually did get this presentation?*
+(*Narrator: This was announced on list, rescheduled a few times, and was never presented. 
+It is included in history since (a) it was announced and (b) it's neat technology.*)
 
-"Jupyter Notebook (formerly IPython Notebooks) is a web-based interactive computational environment for creating Jupyter notebook documents" <https://en.wikipedia.org/wiki/Project_Jupyter#Jupyter_Notebook>
+"**Jupyter Notebook** (formerly IPython Notebooks) is a web-based interactive computational environment for creating Jupyter notebook documents" <https://en.wikipedia.org/wiki/Project_Jupyter#Jupyter_Notebook>
 
-Adam has integrated a Perl kernel with the D3.js visualization library for repeatable explainable reusable sharable dataviz.
-
-
-d3.js, Data Driven Documents, a JavaScript library for live web graphics based on changing data <https://en.wikipedia.org/wiki/D3.js>
+**Adam Russell**has integrated a **Perl kernel** with the **D3.js** visualization library for repeatable explainable reusable sharable dataviz.
 
 
-"How Jupyter Notebooks Will Improve Your Computational Life" "The Jupyter Notebook is a browser-based command shell for interactive computing in several languages" <https://wp.sanger.ac.uk/barrettgroup/2016/03/10/how-jupyter-notebooks-will-improve-your-computational-life/>
+**d3.js, Data Driven Documents**, is a JavaScript library for live web graphics based on changing data <https://en.wikipedia.org/wiki/D3.js>
 
-(Both P5 and P6 kernels for Jupyter Notebooks exist!) 
+
+_"How Jupyter Notebooks Will Improve Your Computational Life"_ "The Jupyter Notebook is a browser-based command shell for interactive computing in several languages" <https://wp.sanger.ac.uk/barrettgroup/2016/03/10/how-jupyter-notebooks-will-improve-your-computational-life/>
+
+(Both Perl5 and P6=**Raku lang** kernels for Jupyter Notebooks exist!) 
 
 ## October 8, MIT E51-376 - Conference Video Review - Sawyer X: future of Perl
 
@@ -606,24 +625,24 @@ News: CPAN announces they're sunsetting rt.cpan.org since diminishing usage; bet
 
 ## February 9th - virtual office hours
 
-Suggested topics 
+**Suggested topics:**
 
 
-* perl.com got hijacked. It's gotten (mostly) un-hijacked. 
-[The Hijacking of Perl.com](https://www.perl.com/article/the-hijacking-of-perl-com/) `brian d foy` official commentary;
-["Hackers Control Perl.com Domain Months Before Hijack" - SecurityWeek](https://www.securityweek.com/hackers-control-perlcom-domain-months-hijack);
-[The Perl NOC](https://log.perl.org/2021/01/perlcom-hijacked.html) NOC Log;
-[Perl-clutching hijackers appear to have seized control of 33-year-old programming language's .com domain](https://www.theregister.com/2021/01/28/perl_hijacking/) *snarky IT news site has a chuckle*.
+* **perl.com** got hijacked. It's gotten (mostly) un-hijacked.  
+    - [_"The Hijacking of Perl.com"_](https://www.perl.com/article/the-hijacking-of-perl-com/) `brian d foy` official commentary;
+    - [_"Hackers Control Perl.com Domain Months Before Hijack"_ - SecurityWeek](https://www.securityweek.com/hackers-control-perlcom-domain-months-hijack) *industry converage*;
+    - [The Perl NOC](https://log.perl.org/2021/01/perlcom-hijacked.html) NOC Log;
+    - "[_Perl-clutching hijackers appear to have seized control of 33-year-old programming language's .com domain_](https://www.theregister.com/2021/01/28/perl_hijacking/)" - *snarky IT news site TheReg has a chuckle*.
 
 
 
-* brian d foy – "Looking forward to Perl 7", for Oslo Perl Mongers, Streamed 5 days ago <https://www.youtube.com/watch?v=TiGxe3wYhD8>
+* **brian d foy** – "***Looking forward to Perl 7***", for Oslo Perl Mongers, Streamed 5 days ago <https://www.youtube.com/watch?v=TiGxe3wYhD8>
 
-*  FYI, Perl 5.34.0 is releasing this spring; the new Steering Council is (still) (re)considering the proposal for Perl 7.
-   - 5.33/34 looks likely to have experimental feature try, catch keywords   (following syntax of PEVAN's module `Syntax::Keyword::Try`)
+*  FYI, ***Perl 5.34.0*** is releasing this spring; the new Steering Council is (still) (re)considering the proposal for Perl 7.
+   - 5.33/34 looks likely to have experimental feature try, catch keywords   (following syntax of (**Paul Evans** PEVAN's module **`Syntax::Keyword::Try`**)
    - (5.32 added `isa` to core, and chained comparisons :`if ( $x < $y <= $z )...` )
 
-* Paul Evans ("LeoNerd", PEVANS) - Writing a Perl Core Feature - [Part 1](https://leonerds-code.blogspot.com/2021/02/writing-perl-core-feature-part-1.html) & [Part 2](https://leonerds-code.blogspot.com/2021/02/writing-perl-core-feature-part-2.html).
+* **Paul Evans** ("LeoNerd", PEVANS) - Writing a Perl Core Feature - [Part 1](https://leonerds-code.blogspot.com/2021/02/writing-perl-core-feature-part-1.html) & [Part 2](https://leonerds-code.blogspot.com/2021/02/writing-perl-core-feature-part-2.html).
 
 ## March 9th, 2021 7pm Online -  Mark Gardner -  “Better Perl: Subroutine Signatures and Type Validation.” 
 
@@ -641,7 +660,7 @@ Based on the blog post at [phoenixtrap](https://phoenixtrap.com/index.php/2021/0
 
 Summary: In this presentation, Mojolicious Core Team member Joel Berger will discuss some of the features of the recent Mojolicious 9.0 release and how they can improve your web (and async) applications.
 
-Joel Berger is a Mojolicious Core Team member. He has a Ph.D. in Instrumentation Physics from the University of Illinois at Chicago and works at ServerCentral Turing Group. He lives in Chicago with his wife and 2 year old son. 
+**Joel Berger** is a **Mojolicious** Core Team member. He has a Ph.D. in Instrumentation Physics from the University of Illinois at Chicago and works at ServerCentral Turing Group. He lives in Chicago with his wife and 2 year old son. 
 
 ```
 ---------- Forwarded message ---------
@@ -656,13 +675,13 @@ looking for a good way to contribute to Mojo (or just to open source)
 without coding that would be a great way to do it!
 ```
 
-(*My own comment is that an easily taught/comprehended Async framework is something i've been looking for since reading Dijkstra, Hoare, and ADA 35+ years ago. Rendezvous wasn't it.*)
+(*My own comment is that an easily taught/comprehended Async framework is something i've been looking for since reading Dijkstra, Hoare, and ADA 35+ years ago. Rendezvous wasn't it. -- Bill*)
 
 ## Charlotte PM : Wed 28th, : Command Line Adventures in Perl - 2021 Edition - Jason Crome  (Joint Virtual Meeting)
 
 *Our first Joint Virtual Meeting*
 
-Boston.PM is invited to join Charlotte PM's virtual meeting this Wednesday night, April 28th, 6PM EDT.
+Boston.PM is invited to join **Charlotte PM**'s virtual meeting this Wednesday night, April 28th, 6PM EDT.
 
 **Command Line Adventures in Perl - 2021 Edition**
  
@@ -674,7 +693,7 @@ Command line interfaces are an important part of managing many modern applicatio
 
 Once again, Boston PM will join forces with Charlotte PM for a virtual meeting.
 
-**3 Not-So-Wise Men: Recent Misadventures**  …in which Brian Wisti, Gizmo Mathboy, and Yanick recount their recent (mis-)adventures with Perl, Markdown, JavaScript, and more to build blogs, games, Twitter posts, and other tools that are part of their everyday lives.
+**3 Not-So-Wise Men: Recent Misadventures**  …in which **Brian Wisti, Gizmo Mathboy, and Yanick** recount their recent (mis-)adventures with **Perl, Markdown, JavaScript,** and more to build blogs, games, Twitter posts, and other tools that are part of their everyday lives.
 
 You’ll laugh, you’ll cry, you’ll question your life choices before all is said and done. There is something for everyone here, and it will be truly fun and entertaining 
 
@@ -684,9 +703,9 @@ Wed, May 26, 2021, 6:00 PM EDT
 
 *Boston.pm and Charlotte.PM invited to BLU.org's virtual meeting*
 
-Description: Jon "maddog" Hall discusses what customers really look for
+Description: **Jon "maddog" Hall** discusses what customers really look for
 Details at <http://blu.org/cgi-bin/calendar/2021-jun>
-Organizer: Boston Linux + UNIX
+Organizer: [**Boston Linux + UNIX**](http://blu.org/)
 
 *(If you don't recognize the name ... Jon is a pundit and sometimes board member on things Linux and FLOSS; he was the manager at DEC who was the first to give Linus some hardware for porting Linux. We can thank him that it's portable !)*
 
@@ -698,31 +717,34 @@ Organizer: Boston Linux + UNIX
 
 *Hosted by Jason C. & Charlotte Perl Mongers*
 
-Join us on June 30th for a special event featuring Rob "CmdrTaco" Malda, founder of Slashdot, as he talks about the quirkiness of Perl that led them to build Slashcode using our favorite language, the challenges of scaling Slashdot in the early days, and how they built up a system to deal with bad actors. We will leave time for Q&A at the end, but feel free to send your questions in advance of the talk.
+Join us on June 30th for a special event featuring **Rob "CmdrTaco" Malda,** founder of **Slashdot,** as he talks about the quirkiness of Perl that led them to build Slashcode using our favorite language, the challenges of scaling Slashdot in the early days, and how they built up a system to deal with bad actors. We will leave time for Q&A at the end, but feel free to send your questions in advance of the talk.
 
 **Rob Malda, aka CmdrTaco,** founded Slashdot in his dorm room at Hope College in the late 1990s, and with that, broke new ground in news aggregation and social content moderation. He's also the host of Geeks in Space, and a a maker of wooden pens.
 
-Thanks to Knowmad (https://knowmad.com) for sponsoring our Zoom presence for this meeting, and to Boston.pm for cohosting the meeting with us. (*And thanks to Charlotte PM for arranging this and inviting us!*)
+Thanks to **Knowmad** (https://knowmad.com) for sponsoring our Zoom presence for this meeting, and to Boston.pm for cohosting the meeting with us. (*And thanks to Charlotte PM for arranging this and inviting us!*)
 
 NOTE: Our speaker has asked that you leave your cameras on for this event. Also, he has a hard stop at 7:30, so please be prompt. There will be time for socializing after the talk. Look forward to seeing you all! 
+
+
+(*Historical note: SlashDot was - still is! - an early Social Media website; it's platform SlashCode was Perl. [Boston.PM's founder Chris "Pudge" Nandor](./History-01-Reconstructed-1999.html#the-innocent-era---prior-to-regular-meetings) was an early employee after it got investment.*)
 
 ## Summer skipped as usual
 
 Noted other meetings Calendar
 
-* Wednesday, August 11, 2021  -  Github Actions — Purdue Perl Mongers (HackLafayette)
+* Wednesday, August 11, 2021  -  **Github Actions** — **Purdue** Perl Mongers (**HackLafayette**)
 > Derrick will introduce us to GitHub Actions, which help you automate your projects
-https://twitter.com/JacobyDave/status/1424792673551065092
-https://www.meetup.com/hacklafayette/events/jdxwsrycclbpb/
+[TW![icon](./images/Twitter-icon.png){#tw height=20 }](https://twitter.com/JacobyDave/status/1424792673551065092)
+[MU![icon](./images/Meetup-icon.png){#mu height=20 }](https://www.meetup.com/hacklafayette/events/jdxwsrycclbpb/)
 
 
-* Wednesday, August 18, 2021 at 06:30 pm Boston Linux Unix (BLU.org) - Rocky Linux
+* Wednesday, August 18, 2021 at 06:30 pm Boston Linux Unix ([BLU.org](http://blu.org/)) - Rocky Linux
 
 > Rocky Linux - Overview of the official release of Rocky Linux
 > Rocky Linux is a community enterprise operating system designed to be 100% bug-for-bug compatible with Red Hat Enterprise Linux (RHEL), now that CentOS has shifted direction.
 > The first release of Rocky Linux is now available.
 > Our guests provide an overview of the new release, and discuss both installing a new Rocky server and upgrading/migrating an existing CentOS server to Rocky.
-http://blu.org/cgi-bin/calendar/2021-aug
+<http://blu.org/cgi-bin/calendar/2021-aug>
 
 * Wednesday August 25 - Charlotte PM hosting joint meeting - config roundtable
 
@@ -742,27 +764,27 @@ Boston.PM is invited to join BLU.org on 3d Wednesday, as I'll be giving the annu
 
 **Why you should take a good look at Flutter for all platforms!**
 
-Flutter has come a long ways since its was first introduced a few years ago. Yes, even though Google is still in the driver’s seat for Flutter and Dart development, more and more of the contributions are coming from the community.
+[**Flutter**](https://flutter.dev) has come a long ways since its was first introduced a few years ago. Yes, even though Google is still in the driver’s seat for Flutter and Dart development, more and more of the contributions are coming from the community.
 
 Google is highly committed to continuing to make Flutter the go-to SDK for user interfaces of all kinds. Of course it still does Mobile well (ios/android/fuchsia), but recently, major releases for Flutter on Web, Flutter on Desktop (linux, windows, macos), and Dart on every platform (including compiling go-like to a single binary with everything included) have continued to please the crowds.
 
 Many large organizations have adopted Flutter, and some app-store apps have had literally millions of downloads.
 
-I’ll be talking about the Past, Present, and Future of Flutter and Dart.
+I’ll be talking about the **Past, Present, and Future of Flutter and Dart.**
 
 Topics covered:
 
-   What is Flutter anyway, and why Dart?
-   How does it compare to other multi-platform UI SDKs?
-   Flutter/Dart – past, present, future
-   Platforms Notable adopters
-   Q&A if there’s time
+  - What is Flutter anyway, and why Dart?
+  - How does it compare to other multi-platform UI SDKs?
+  - Flutter/Dart – past, present, future
+  - Platforms Notable adopters
+  - Q&A if there’s time
 
 Where - Online event hosted by Charlotte.PM
 
 When - Wed, Aug 25, 2021, 6:00 PM ET 
 
-(*This repeated for [BLU in Feb 2022](http://blu.org/cgi-bin/calendar/2022-feb) which will have archived video and slides*)
+(*This repeated for [BLU in Feb 2022](http://blu.org/cgi-bin/calendar/2022-feb) which will have archived **video** and **slides**.*)
 
 ## No Tuesday in November
 
@@ -795,7 +817,7 @@ Abstract
 [BLU notes](http://blu.org/cgi-bin/calendar/2021-dec)
 "Budget Build Redux: Building a Box on a Budget with the AMD Ryzen 5600Gl"
 
-"Shankar gives a technical overview of the newly released AMD Ryzen 4 series CPU; Kurt reviews the earlier Budget Build system discussed previously at the August 2020 BLU meeting, based on AMD's Ryzen 3 CPU; and Brian discusses his newest Budget Build system, based on the new AMD Ryzen 4 CPU."
+"**Shankar Viswanathan** gives a technical overview of the newly released AMD Ryzen 4 series CPU; Kurt reviews the earlier Budget Build system discussed previously at the August 2020 BLU meeting, based on AMD's Ryzen 3 CPU; and **Brian DeLacey** discusses his newest Budget Build system, based on the new AMD Ryzen 4 CPU."
 
 # 2022
 
@@ -821,23 +843,26 @@ With special guest appearance of Boston.pm member emeritus **Federico Lucifredi*
 
 ##  Wednesday, February 23, 2022 - Developing a caching plugin for HTTP::Tiny - Mark Gardner 
 
-In 2015, Mark Gardner developed a caching subclass of `LWP::UserAgent`. This month, he is going to talk about his journey in converting that to a plugin using perlancar's `HTTP::Tiny::Plugin`.
+In 2015, Mark Gardner developed a caching subclass of **`LWP::UserAgent`**. This month, he is going to talk about his journey in converting that to a plugin using **perlancar's `HTTP::Tiny::Plugin`**.
 
 **Mark Gardner** is a professional Perl developer with over twenty-five years experience in various industries including pharmaceuticals, e-commerce, and web hosting. For the past year he’s been writing weekly at phoenixtrap.com about Perl-related topics, helping other developers engineer modern, disciplined applications with confidence.
 
 ## March 8th - Virtual Round Table 
 
-## April 12th - Downloading AO3 bookmarks for offline reading
+## April 12th - Downloading AO3 bookmarks for offline reading - Ricky Morse
 
 "continuation of my 'let me make sure I can entertain myself when I'm 90' series."
-Ricky Morse
+
+**Ricky Morse**
 
 Ricky has previously shown us Perl scripts to make offline backups of various media he'd like to see again (without relying on the continued solvency of Archive.org).
 This will be another variation.
 
-## Wed May 4th (with Charlotte PM) - Semantically-Friendly DB Searches
+[notes](http://pukku.com/bostonpm/2022-04-download-ao3/index.html)
 
-In her quest for more-readable code, D Ruth Holloway has been working on some [DBIx::Class](https://metacpan.org/pod/DBIx::Class) [Dancer2](https://metacpan.org/pod/Dancer2) plugins for smoother, more semantically-friendly database searches. As a preview to her TPRC::Houston talk in June, come see these modules, and learn how to use them to make your own database queries faster, smarter, and easier to read.
+## Wed May 4th (with Charlotte PM) - Semantically-Friendly DB Searches - D Ruth Holloway
+
+In her quest for more-readable code, **D Ruth Holloway** has been working on some [DBIx::Class](https://metacpan.org/pod/DBIx::Class) [Dancer2](https://metacpan.org/pod/Dancer2) plugins for smoother, more semantically-friendly database searches. As a preview to her TPRC::Houston talk in June, come see these modules, and learn how to use them to make your own database queries faster, smarter, and easier to read.
 
 (*This was a Preview of [Conference Talk re-titled "The Database Dance - DBIX and Dancer treachery to increase performance"](https://www.youtube.com/watch?v=o4H_DpewCws), which has following abstract.*)
 
@@ -849,9 +874,15 @@ In her quest for more-readable code, D Ruth Holloway has been working on some [D
 
 ## May 10th Using Perl's Twitter::API - Bill R
 
-Bill Ricker, inspired by Ricky's talk on archival web scraping last month, revisits the Twitter::API.
+**Bill Ricker**, inspired by Ricky's talk on archival web scraping last month, revisits the
+**[`Twitter::API`](https://metacpan.org/pod/Twitter::API)**.
 
 One script is a daemon used to automatically retweet useful announcements posted to a monitored Twitter account. The other will archive a Twitter thread in text format (and can safely be re-run when the tread gets longer). It avoids depending on a 3rd party service, which use tracking, ads, and might disappear, to host the archived thread.
+
+(My sample script is quite tuned to the [thread](https://twiter.com/elevennames/status/1509876985744355329) I wished to archive, as it heuristically extracts proper nouns.)
+
+[unroll.pl.html](./scripts/unroll.pl.html) [.pl](./scripts/unroll.pl)
+	
 
 ***ADD SCRIPT***
 
