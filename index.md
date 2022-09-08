@@ -75,15 +75,33 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 # Schedule
 
-## Tuesday, Sept 13, Boston PM - tentatively Perl 5.036 notes?
+## Tuesday, Sept 13, 7pm ET &#127482;&#127480; Boston PM - (tentatively) What's new in Perl 5.036 
 
-## Weds, Sept ??, BLU - Annual Cryptology News + History - Quantum Crypto update - Bill R
+A group discussion of the latest [`perldelta`](https://perldoc.perl.org/5.36.0/perldelta).
+
+This is a JitSi meeting. The secure URL will be computed next week by this command
+
+```
+perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'
+```
+(and will likely be posted here just in time)
+
+
+
+(And next month we'll have coming attractions!)
+
+
+## Weds, Sept 21, BLU - Annual Cryptology News + History - Quantum Crypto update - Bill R
 
 Boston.PM's Bill Ricker will as usually be the entertainment for the [BLU September meeting ](http://blu.org/cgi-bin/calendar/2022-sep). The tradition of an annual Cryptography/Cryptananlsis/Cryptology News Update and Historical Vignette originated with hosting a PGP Key-signing part, but has survived that ceremony. I have done about [half of the talks](http://blu.org/cgi-bin/calendar/speakers/b-ricker1); most of those meetings have attached YouTube video and slide materials. (*The audio quality is perhaps dubious prior to the Plague era as BLU had a camera but not a wireless mic.*)
 
-The featured news story in 2022 will be update on progress (& controversy) on Post Quantum Cryptography and Quantum Cryptanalysis.
+The featured news story in 2022 will be update on progress (& controversy) on Post-Quantum Cryptography and Quantum Cryptanalysis (and how that's different from Quantum Cryptography).
 
-## Weds? Sept ??, Charlotte PM
+## Weds Sept 28, 6pm ET Charlotte PM co-host with Charlotte Python
+
+In person meeting, co-host with Charlotte Python MeetUp; **stream** possibilities are **TBD**, title TBA.
+Check [MeetUp](https://www.meetup.com/charlotte-pm/events/) (or [Py](https://www.meetup.com/python-charlotte/)) for late breaking details.
+
 
 ## Tuesday, Oct 11, Boston PM: Ovid+LeoNerd on Corinna - OO in Perl5 Core
 
@@ -117,10 +135,10 @@ Damian Conway posted an [exultation](https://dev.to/ovid/bringing-modern-oo-to-p
 
 [Jitsi](https://meet.jit.si) is a Free/Libre OSS project sponsored by 8x8 (an Atlassian spin-off). It is the freemium base for their added-value corporate meeting & VOIP platform. As FLOSS, it can be self-hosted; they provide a free demo server. We will currently be using the free demo server, but may migrate to a hosted server (where we can set defaults, privileges).
 
-Natick FOSS group has a [4-page Jitsi Help .pdf file](http://www.millermicro.com/FOSSUserGroupJitsi.pdf), and you can practice beforehand.  (They meet 1st Thursdays, online, early afternoon.)
- Update to file ^ : Firefox latest versions 78+ support multicast, so are safer than before. Chrome/Chromium/FF78+ all plausible now.
+Natick FOSS group has an updated [5-page Jitsi Help .pdf file](http://runeman.org/articles/natick-foss/jitsi/jitsi-2022-09-05.pdf), and you can practice beforehand.  (They meet 1st Thursdays, online, early afternoon - (semi)retired users.)
 
-One can use plain web mode, but you can install the browser plug-in if you like (recommended if sharing slides or terminal). There are also iOS (iPhone/iPad) and Android apps which work well.
+
+One can use plain web mode, but you can install the browser plug-in if you like (recommended if sharing slides or terminal). There are also iOS (iPhone/iPad) and Android Jitsi [apps](https://jitsi.org/downloads/) which work well.
 
 
 [JITSI keyboard shortcuts](https://jitsi.github.io/handbook/docs/user-guide/keyboard-shortcuts)
