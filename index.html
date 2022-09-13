@@ -153,8 +153,12 @@ Sept 13, 7pm ET 🇺🇸 Boston PM - (tentatively) What’s new in Perl
 href="https://perldoc.perl.org/5.36.0/perldelta"><code>perldelta</code></a>.</p>
 <p>This is a JitSi meeting. The secure URL will be computed next week by
 this command</p>
-<pre><code>perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le &#39;print strftime &quot;%Y/%m/%d week %U&quot;, localtime; $date=strftime &quot;Y%Y W%U&quot;, localtime; print $date; print  &quot;https://meet.jit.si/BostonPM-&quot;.substr(sha1_hex(&quot;BostonPM&quot;.$date),0,12);&#39;</code></pre>
-<p>(and will likely be posted here just in time)</p>
+<pre><code>perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le &#39;print strftime &quot;%Y/%m/%d week %U&quot;, localtime; $date=strftime &quot;Y%Y W%U&quot;, localtime; print $date; print  &quot;https://meet.jit.si/BostonPM-&quot;.substr(sha1_hex(&quot;BostonPM&quot;.$date),0,12);&#39;
+2022/09/13 week 37
+Y2022 W37
+https://meet.jit.si/BostonPM-593c3b51c7be
+</code></pre>
+<p>(and <del>will likely be</del> was posted here just in time)</p>
 <p>(And next month we’ll have coming attractions!)</p>
 <h2
 id="weds-sept-21-blu---annual-cryptology-news-history---quantum-crypto-update---bill-r">Weds,
@@ -221,9 +225,20 @@ Product RFC</a>. <a
 href="https://dev.to/ovid/bringing-modern-oo-to-perl-51ak">His 2021
 editorial</a> explains the difference between Moose (<em>et al</em>),
 Stevan Little’s Moxie, and Corinna.</p>
-<p>Damian Conway posted an <a
-href="https://dev.to/ovid/bringing-modern-oo-to-perl-51ak">exultation</a>
-last month for the P5P approval of the Stage 1 MVP RFC.</p>
+<p><strong><em>Damian Conway</em></strong> posted an exultation for the
+(January 2022) P5P approval of the Stage 1 MVP RFC <em>but i can’t find
+it again</em>. His previous writings endorsing the project are</p>
+<ul>
+<li><a
+href="http://blogs.perl.org/users/damian_conway/2021/12/a-not-so-simple-matter-of-privacy.html">A
+(not so) simple matter of privacy 2021-DEC</a>,</li>
+<li><a
+href="http://blogs.perl.org/users/damian_conway/2021/11/a-dream-resyntaxed.html">A
+dream resyntaxed 2021-Nov</a></li>
+<li><a
+href="http://blogs.perl.org/users/damian_conway/2021/08/a-dream-realized.html">A
+dream realized 2021-Aug</a></li>
+</ul>
 <p>† <em>Corinna</em> is a classical allusion in connection to Curtis’s
 pseudonym <em>Ovid</em>, which explains the classical (and otherwise
 potentially NSFW) image on the MVP RFC tweet.</p>

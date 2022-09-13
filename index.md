@@ -83,8 +83,12 @@ This is a JitSi meeting. The secure URL will be computed next week by this comma
 
 ```
 perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'
+2022/09/13 week 37
+Y2022 W37
+https://meet.jit.si/BostonPM-593c3b51c7be
+
 ```
-(and will likely be posted here just in time)
+(and ~~will likely be~~ was posted here just in time)
 
 
 
@@ -119,7 +123,11 @@ Ovid's recent writing on Corinna are [on his blog](https://ovid.github.io/tags/c
 
 The [Corinna project](https://github.com/Ovid/Cor) has a  [wiki](https://github.com/Ovid/Cor/wiki) and the [RFC](https://github.com/Ovid/Cor#rfc) that proposed adding Corinna to Perl 5 Core, and the P5P-accepted Stage 1 [Minimal Viable Product RFC](https://github.com/Ovid/Cor/blob/master/rfc/mvp.md). [His 2021 editorial](https://dev.to/ovid/bringing-modern-oo-to-perl-51ak) explains the difference between Moose (*et al*), Stevan Little's Moxie, and Corinna.
 
-Damian Conway posted an [exultation](https://dev.to/ovid/bringing-modern-oo-to-perl-51ak) last month for the P5P approval of the Stage 1 MVP RFC.
+***Damian Conway*** posted an exultation for the (January 2022) P5P approval of the Stage 1 MVP RFC _but i can't find it again_. His previous writings endorsing the project are
+
+* [A (not so) simple matter of privacy 2021-DEC](http://blogs.perl.org/users/damian_conway/2021/12/a-not-so-simple-matter-of-privacy.html), 
+* [A dream resyntaxed 2021-Nov](http://blogs.perl.org/users/damian_conway/2021/11/a-dream-resyntaxed.html)
+* [A dream realized 2021-Aug](http://blogs.perl.org/users/damian_conway/2021/08/a-dream-realized.html)
 
 † _Corinna_ is a classical allusion in connection to Curtis's pseudonym _Ovid_, which explains the classical (and otherwise potentially NSFW) image on the MVP RFC tweet.
 
