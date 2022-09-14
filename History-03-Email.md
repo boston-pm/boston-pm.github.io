@@ -902,6 +902,31 @@ SeaFile and LibreOffice Online together provide most of the functionality of Goo
 
 ## June July August Canceled for Summer
 
+## 2d Tuesday, Sept 13, What's new in Perl 5.036 
+
+A group discussion of the latest [`perldelta`](https://perldoc.perl.org/5.36.0/perldelta) - which prepares for October's future of Perl OO.
+
+We reviewed
+
+* <https://stackoverflow.blog/2022/09/08/this-is-not-your-grandfathers-perl/>
+* [PumpKing RJBS musings](https://rjbs.cloud/blog/2022/05/perl-5.36/)
+* [`perldelta`](https://perldoc.perl.org/5.36.0/perldelta)
+
+***Highlights***
+
+* signatures graduate from experimental
+* `try` + `catch` + `finally` + `defer`
+* `use v5.36`  is (almost) sufficient boilerplate (almost = new experimentals need `use` )
+* n-at-a-time iteration
+* `builtin::` Experimental namespace
+
+
+***Other Mentions***
+
+* [Petit Parser](https://petitparser.github.io/) vs Marpa parser ([CPAN](https://metacpan.org/dist/Marpa-R2/view/pod/Marpa_R2.pod), [academic paper](https://arxiv.org/abs/1910.08129), [home](https://jeffreykegler.github.io/Marpa-web-site/) )
+* [DiffTool that knows what you mean](https://hackaday.com/2022/09/10/diff-tool-knows-what-you-mean/)
+* The D language has a [Schwartz_Sort](https://dlang.org/library/std/algorithm/sorting/schwartz_sort.html) ... which they did NOT tell Randal [when he interviewed them.](https://twit.tv/shows/floss-weekly/episodes/311)
+ 
 
 # Historical BOILERPLATE
 

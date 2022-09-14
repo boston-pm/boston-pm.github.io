@@ -75,25 +75,6 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 # Schedule
 
-## Tuesday, Sept 13, 7pm ET &#127482;&#127480; Boston PM - (tentatively) What's new in Perl 5.036 
-
-A group discussion of the latest [`perldelta`](https://perldoc.perl.org/5.36.0/perldelta).
-
-This is a JitSi meeting. The secure URL will be computed next week by this command
-
-```
-perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'
-2022/09/13 week 37
-Y2022 W37
-https://meet.jit.si/BostonPM-593c3b51c7be
-
-```
-(and ~~will likely be~~ was posted here just in time)
-
-
-
-(And next month we'll have coming attractions!)
-
 
 ## Weds, Sept 21, BLU - Annual Cryptology News + History - Quantum Crypto update - Bill R
 
@@ -107,7 +88,7 @@ In person meeting, co-host with Charlotte Python MeetUp; **stream** possibilitie
 Check [MeetUp](https://www.meetup.com/charlotte-pm/events/) (or [Py](https://www.meetup.com/python-charlotte/)) for late breaking details.
 
 
-## Tuesday, Oct 11, Boston PM: Ovid+LeoNerd on Corinna - OO in Perl5 Core
+## Tuesday, Oct 11, 7pm ET &#127482;&#127480; Boston PM: Ovid+LeoNerd on Corinna - OO in Perl5 Core
 
 We'll have live remote guests **Curtis *"Ovid"* Poe** and **Paul "[`PEVANS`](https://metacpan.org/author/PEVANS)/[`LeoNerd`](http://www.leonerd.org.uk/)" Evans**.
 
@@ -130,6 +111,14 @@ The [Corinna project](https://github.com/Ovid/Cor) has a  [wiki](https://github.
 * [A dream realized 2021-Aug](http://blogs.perl.org/users/damian_conway/2021/08/a-dream-realized.html)
 
 † _Corinna_ is a classical allusion in connection to Curtis's pseudonym _Ovid_, which explains the classical (and otherwise potentially NSFW) image on the MVP RFC tweet.
+
+This is a JitSi meeting. The secure URL will be computed by this command (valid only during that week):
+
+```
+perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'
+
+```
+(and will likely be posted here just in time)
 
 # BoilerPlate
 
