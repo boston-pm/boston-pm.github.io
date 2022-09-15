@@ -82,10 +82,17 @@ Boston.PM's Bill Ricker will as usually be the entertainment for the [BLU Septem
 
 The featured news story in 2022 will be update on progress (& controversy) on Post-Quantum Cryptography and Quantum Cryptanalysis (and how that's different from Quantum Cryptography).
 
-## Weds Sept 28, 6pm ET Charlotte PM co-host with Charlotte Python
+## Weds Sept 28, 6pm ET Charlotte PM "Office Hours" co-hosted with Charlotte Python
 
-In person meeting, co-host with Charlotte Python MeetUp; **stream** possibilities are **TBD**, title TBA.
-Check [MeetUp](https://www.meetup.com/charlotte-pm/events/) (or [Py](https://www.meetup.com/python-charlotte/)) for late breaking details.
+In person meeting, co-host with Charlotte Python MeetUp; **no hybrid stream** this month.
+[MeetUp](https://www.meetup.com/charlotte-pm/events/288492557/) (or [Py](https://www.meetup.com/python-charlotte/)) for late breaking details.
+
+Charlotte Perl Mongers and the Charlotte Python Meetup are co-hosting office hours, September 28th at 6pm at Optimist Hall. Bring your code, questions, and whatever you're learning or working on. We'll talk about what's new in the Perl and Python communities, and about anything else our attendees find interesting. There will be opportunity for the cross-pollination of ideas, to discuss problems plaguing each community, and to learn a bit about what's fun and different in each other's languages.
+
+Users of all skill levels are welcome, and professional networking is encouraged.
+
+Food and beverages will be available for purchase. Look for the plastic staves with the Perl and Python logos on them.
+
 
 
 ## Tuesday, Oct 11, 7pm ET &#127482;&#127480; Boston PM: Ovid+LeoNerd on Corinna - OO in Perl5 Core
@@ -119,6 +126,11 @@ perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week 
 
 ```
 (and will likely be posted here just in time)
+
+## Weds Oct 26th, 6pm ET - Charlotte PM
+
+Details TBA, but streaming is planned for Oct..
+
 
 # BoilerPlate
 
