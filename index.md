@@ -76,7 +76,28 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 # Schedule
 
 
-## Tuesday, Oct 11, 7pm ET &#127482;&#127480; Boston PM: Ovid+LeoNerd on Corinna - OO in Perl5 Core
+## Tuesday, Oct 11, 7pm ET &#127482;&#127480; Boston PM: OPEN DISCUSSION
+
+
+This is a JitSi meeting. The secure URL will be computed by this command (valid only during that week):
+
+```
+perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'
+
+```
+(and will likely be posted here just in time).
+
+(See [Boilerplate](./index.html/#boilerplate) below for additional how-to etc.)
+
+
+## Weds Oct 26th, 6pm ET - Charlotte PM
+
+Details TBA, but streaming is planned for Oct..
+
+
+
+
+## TBD - Ovid+LeoNerd on Corinna - OO in Perl5 Core
 
 We'll have live remote guests **Curtis *"Ovid"* Poe** and **Paul "[`PEVANS`](https://metacpan.org/author/PEVANS)/[`LeoNerd`](http://www.leonerd.org.uk/)" Evans**.
 
@@ -108,10 +129,7 @@ perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week 
 ```
 (and will likely be posted here just in time)
 
-## Weds Oct 26th, 6pm ET - Charlotte PM
-
-Details TBA, but streaming is planned for Oct..
-
+(See [Boilerplate](./index.html/#boilerplate) below for additional how-to etc.)
 
 # BoilerPlate
 
