@@ -84,8 +84,12 @@ This is a JitSi meeting. The secure URL will be computed by this command (valid 
 ```
 perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'
 
+2022/10/11 week 41
+Y2022 W41
+https://meet.jit.si/BostonPM-61ced91fa749
+
 ```
-(and will likely be posted here just in time).
+(and ~~will likely be~~ _is_ posted here just in time).
 
 (See [Boilerplate](./index.html/#boilerplate) below for additional how-to etc.)
 
@@ -124,7 +128,7 @@ The [Corinna project](https://github.com/Ovid/Cor) has a  [wiki](https://github.
 This is a JitSi meeting. The secure URL will be computed by this command (valid only during that week):
 
 ```
-perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'
+perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'  
 
 ```
 (and will likely be posted here just in time)
