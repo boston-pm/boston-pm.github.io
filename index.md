@@ -76,32 +76,30 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 # Schedule
 
 
-## Tuesday, Oct 11, 7pm ET &#127482;&#127480; Boston PM: OPEN DISCUSSION
-
-
-This is a JitSi meeting. The secure URL will be computed by this command (valid only during that week):
-
-```
-perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'
-
-2022/10/11 week 41
-Y2022 W41
-https://meet.jit.si/BostonPM-61ced91fa749
-
-```
-(and ~~will likely be~~ _is_ posted here just in time).
-
-(See [Boilerplate](./index.html/#boilerplate) below for additional how-to etc.)
-
-
-## Weds Oct 26th, 6pm ET - Charlotte PM
-
-Details TBA, but streaming is planned for Oct..
 
 
 
+## Weds Oct 26th, 6pm ET  &#127482;&#127480;  - Charlotte PM - Baking backend: a study - Yanick
+
+Writing backends doesn't have to be a pain in, well, there too.
+
+Yanick will share how he's building the backend of smol -- a site showcasing painted miniatures -- leveraging sveltekit, svelte-query, openapi and JSON:API to achieve maximal self-documentation and consistency with as little boilerplate as possible. We'll see how the backend endpoints are built, how they can be documented as painlessly as possible, and how they can be plugged in on the fronting web application with minimal effort and no code duplication.
+
+(warning: presentation contains no Perl. But there will be a healthy helping of TIMTOWTDI)
+
+Yanick has been using Perl for, uh, let's go for "a while". Erstwhile member of the core Dancer team, past co-editor of the Perl Weekly, ex-contributor to the Perl Review, he has 103 distributions to his name on CPAN, which is frankly a tad excessive. He works at Infinity Interactive.
+
+[RSVP on MeetUp](https://www.meetup.com/charlotte-pm/events/289085740/) or PM to get Zoom virtual meeting URL.
+
+## Tuesday Nov 8th - NO MEETING
+
+8th is the earliest that 2nd Tuesday can fall; it's also the latest that the Tuesday after the First Monday in November can fall, and so is Mid-Terms Election in USA  &#127482;&#127480;  .
+
+Instead, we'll have a meeting sometime before Xmas whenever is good for the speakers.
 
 ## TBD - Ovid+LeoNerd on Corinna - OO in Perl5 Core
+
+_Our scheduled October presentation was postponed because the speakers had sudden conflicts. We'll take whatever non-Holiday they can schedule, probably Tues Weds Thurs._
 
 We'll have live remote guests **Curtis *"Ovid"* Poe** and **Paul "[`PEVANS`](https://metacpan.org/author/PEVANS)/[`LeoNerd`](http://www.leonerd.org.uk/)" Evans**.
 

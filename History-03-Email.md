@@ -926,7 +926,13 @@ We reviewed
 * [Petit Parser](https://petitparser.github.io/) vs Marpa parser ([CPAN](https://metacpan.org/dist/Marpa-R2/view/pod/Marpa_R2.pod), [academic paper](https://arxiv.org/abs/1910.08129), [home](https://jeffreykegler.github.io/Marpa-web-site/) )
 * [DiffTool that knows what you mean](https://hackaday.com/2022/09/10/diff-tool-knows-what-you-mean/)
 * The D language has a [Schwartz_Sort](https://dlang.org/library/std/algorithm/sorting/schwartz_sort.html) ... which they did NOT tell Randal [when he interviewed them.](https://twit.tv/shows/floss-weekly/episodes/311)
- 
+
+## Tuesday, Oct 11, 7pm ET &#127482;&#127480; Boston PM: OPEN DISCUSSION
+
+A good discussion was had but i didn't take notes.
+
+Randal (Merlyn) , Dan (swagg boi), Jerrad, Bill.
+
 
 # Historical BOILERPLATE
 
