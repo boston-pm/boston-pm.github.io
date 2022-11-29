@@ -91,6 +91,11 @@ Yanick has been using Perl for, uh, let's go for "a while". Erstwhile member of 
 
 [RSVP on MeetUp](https://www.meetup.com/charlotte-pm/events/289085740/) or PM to get Zoom virtual meeting URL.
 
+
+Yanick Champoux shares: «Slides are at <https://techblog.babyl.ca/opus/talks/smol-backend/#/>.»
+
+
+
 ## Tuesday Nov 8th - NO MEETING
 
 8th is the earliest that 2nd Tuesday can fall; it's also the latest that the Tuesday after the First Monday in November can fall, and so is Mid-Terms Election in USA  &#127482;&#127480;  .

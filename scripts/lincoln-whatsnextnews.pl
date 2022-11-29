@@ -28,9 +28,9 @@ use strict;
 use List::MoreUtils qw{part none };
 use List::Util qw{sum};
 use feature 'postderef'; #5.020; 
-no warnings 'experimental::postderef';
+# no warnings 'experimental::postderef';
  use feature 'signatures' ; #5.020; 
-no warnings 'experimental::signatures';
+ # no warnings 'experimental::signatures';
 
 # set up
 my %BlindVal=_blinds();
