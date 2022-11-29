@@ -158,7 +158,7 @@ sub _route($BLIND,$encdec){ #5.022 experimental::signatures
 # (  just enough for this message )
 sub _abitraries{
 return ( 
- bologne =>'Pres of U.S.'
+ bologne =>'Pres of U.S.',
  emma => '9am', flood=>'12', 
  galway=>'Richmond',
  paradise => 'Col.' , 
