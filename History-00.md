@@ -1,7 +1,7 @@
 % History Annals
 % Boston Perl Mongers ![](./images/pmgeekbookbigt.gif){#logo.float_r width=30% }
   Ronald J Kimball & Bill Ricker
-% 1998-2022
+% 1998-2023
 
 
 Boston Perl Mongers history is divided into three parts, like Gaul.

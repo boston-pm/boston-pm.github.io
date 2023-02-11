@@ -1,3 +1,5 @@
+# USAGE
+# git diff --name-only | xargs -I% ./make %
 #
 # pandoc -s -o ext4magic.html --css pandoc.css   -f markdown  ext4magic.md 
 # set -x

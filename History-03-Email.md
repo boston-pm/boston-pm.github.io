@@ -1,7 +1,7 @@
 % Recent History 2017-present ![](./images/Logo.jpg){#logo .float_r width=30% }
 % Boston Perl Mongers
   Bill Ricker (& allied groups)
-% 2017-2022
+% 2017-2023
 # Boston.PM 
 
 Boston Perl Mongers history is divided into three parts, like Gaul.
@@ -933,6 +933,11 @@ A good discussion was had but i didn't take notes.
 
 Randal (Merlyn) , Dan (swagg boi), Jerrad, Bill.
 
+## no meetings Nov-Dec
+
+# 2023
+
+## no meetings January
 
 # Historical BOILERPLATE
 
