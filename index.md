@@ -1,6 +1,6 @@
 % Boston Perl Mongers  ![](./images/Logo.jpg){#logo .float_r width=30% }
 % 
-% 2022
+% 2023
 
 
 
@@ -75,46 +75,45 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 # Schedule
 
+**Since we're having speakers from the UK the next two months, we'll be starting 6:30pm ET so that we're at least *starting* on Tuesday for them.**
+
+## Tuesday, February 14th &#x1F498; , 6:30 PM &#127482;&#127480; Boston PM: `match::smart`, `match::simple` - Toby Inkster (live)
+
+With P5P actively moving forward from deprecation to Warning and eventual removal of the v5.10 SmartMatch `~~` operator -- for good reason, it was underspecified, nondeterministic, and outright dangerious -- there's a question for those who found a subset of its capabilities useful. Prolific module author [Toby Inkster](https://metacpan.org/author/TOBYINK) provides a safe, deterministic subset of smart-match in `[match-simple](https://metacpan.org/dist/match-simple)` distribution which provides  `[match::simple](https://metacpan.org/pod/match::simple)` and `[match::smart](https://metacpan.org/pod/match::smart)`  with optional [XS accelerator](https://metacpan.org/dist/match-simple-XS).
+
+(*with apologies to anyone who has other plans that &#x1F498; evening. this is the risk of 2d Tuesday scheduling.*)
+
+This is a JitSi meeting. The secure URL will be computed by this command (valid only during that week):
+
+```
+perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'  
+
+```
+(and will likely be posted here just in time, but to avoid spammers, won't be posted on public social media)
+
+(See [Boilerplate](./index.html/#boilerplate) below for additional how-to etc.)
+
+## BACKUP TOPICS 
+
+* Using `MP3::Tag` `Syntax::Keyword::Try` etc to make playable audio archives with legible titles (`PerlHack/audio/mp3info.pl`)
+* ??
+
+## Tuesday, March 14th (π day), 6:30 &#127482;&#127480;  Boston PM: Ovid(tape)+LeoNerd(live) on Corinna - OO in Perl5 Core
 
 
+We'll have **Curtis *"Ovid"* Poe** on the strategy of Corinna project and **Paul "[`PEVANS`](https://metacpan.org/author/PEVANS)/[`LeoNerd`](http://www.leonerd.org.uk/)" Evans**, Perl Steering Committe and `Object::Pad implementor`, live for the practicalities and Q&A.
 
-
-## Weds Oct 26th, 6pm ET  &#127482;&#127480;  - Charlotte PM - Baking backend: a study - Yanick
-
-Writing backends doesn't have to be a pain in, well, there too.
-
-Yanick will share how he's building the backend of smol -- a site showcasing painted miniatures -- leveraging sveltekit, svelte-query, openapi and JSON:API to achieve maximal self-documentation and consistency with as little boilerplate as possible. We'll see how the backend endpoints are built, how they can be documented as painlessly as possible, and how they can be plugged in on the fronting web application with minimal effort and no code duplication.
-
-(warning: presentation contains no Perl. But there will be a healthy helping of TIMTOWTDI)
-
-Yanick has been using Perl for, uh, let's go for "a while". Erstwhile member of the core Dancer team, past co-editor of the Perl Weekly, ex-contributor to the Perl Review, he has 103 distributions to his name on CPAN, which is frankly a tad excessive. He works at Infinity Interactive.
-
-[RSVP on MeetUp](https://www.meetup.com/charlotte-pm/events/289085740/) or PM to get Zoom virtual meeting URL.
-
-
-Yanick Champoux shares: «Slides are at <https://techblog.babyl.ca/opus/talks/smol-backend/#/>.»
-
-
-
-## Tuesday Nov 8th - NO MEETING
-
-8th is the earliest that 2nd Tuesday can fall; it's also the latest that the Tuesday after the First Monday in November can fall, and so is Mid-Terms Election in USA  &#127482;&#127480;  .
-
-Instead, we'll have a meeting sometime before Xmas whenever is good for the speakers.
-
-## TBD - Ovid+LeoNerd on Corinna - OO in Perl5 Core
-
-_Our scheduled October presentation was postponed because the speakers had sudden conflicts. We'll take whatever non-Holiday they can schedule, probably Tues Weds Thurs._
-
-We'll have live remote guests **Curtis *"Ovid"* Poe** and **Paul "[`PEVANS`](https://metacpan.org/author/PEVANS)/[`LeoNerd`](http://www.leonerd.org.uk/)" Evans**.
+Last summer, Ovid posted exciting news -
 
 > "For #perl devs wondering how the Corinna #oop project is going, @cpan_pevans
-is now working on stage 1 of the accepted portion of the RFC. I've put that in the repo so you can follow along"  
+is now working on stage 1 of the accepted portion of the RFC. I've put that in the [repo](https://github.com/Ovid/Cor/blob/master/rfc/mvp.md) so you can follow along"  
 > [`@OvidPerl` 2022-08-18](https://twitter.com/OvidPerl/status/1560305460707827715)
+
+Just last week, Ovid and Paul again shared exciting news: P5P's development release Perl 5.37.9 will contain `use feature 'class';`, it has been merged.
 
 Ovid is the architect and Paul is the lead developer for adding a new object-oriented system called Corinna† (formerly & confusingly "Cor" into Perl 5 Core. They've had an open community process to develop an RFC or proposal and prototype, but until recently, without commitment for the Perl 5 Porters (P5P) to actually implement it in Perl 5. Over the summer, P5P have approved the initial Stage 1 integration into Perl Core. While we've had 20+ years of new OO packages for Perl5 since 5.0, this is the first actual (as opposed to proposed) overhaul of the *core* OO system in Perl 5.
 
-PEVANS's compatible, non-Core, prototype is [Object::Pad](https://metacpan.org/dist/Object-Pad).
+PEVANS's non-Core, prototype is [Object::Pad](https://metacpan.org/dist/Object-Pad), which can be conditionally imported in compatibility mode via [Feature::Compat::Class](https://metacpan.org/pod/Feature::Compat::Class).
 
 Ovid's recent writing on Corinna are [on his blog](https://ovid.github.io/tags/corinna.html).
 
@@ -134,7 +133,7 @@ This is a JitSi meeting. The secure URL will be computed by this command (valid 
 perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'  
 
 ```
-(and will likely be posted here just in time)
+(and will likely be posted here just in time, but to avoid spammers, won't be posted on public social media)
 
 (See [Boilerplate](./index.html/#boilerplate) below for additional how-to etc.)
 

@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="" />
-  <meta name="dcterms.date" content="2022-01-01" />
+  <meta name="dcterms.date" content="2023-01-01" />
   <title>Boston.pm – Boston Perl Mongers </title>
   <style>
     code{white-space: pre-wrap;}
@@ -31,7 +31,7 @@
 <h1 class="title">Boston Perl Mongers <img src="./images/Logo.jpg"
 id="logo" class="float_r" style="width:30.0%" /></h1>
 <p class="author"></p>
-<p class="date">2022</p>
+<p class="date">2023</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -145,52 +145,69 @@ that history is here.</em>)</p></li>
 <p>Before posting jobs to the list, please check our <a
 href="JobPostingPolicy.html">Job Posting Policy</a>.</p>
 <h1 id="schedule">Schedule</h1>
+<p><strong>Since we’re having speakers from the UK the next two months,
+we’ll be starting 6:30pm ET so that we’re at least <em>starting</em> on
+Tuesday for them.</strong></p>
 <h2
-id="weds-oct-26th-6pm-et---charlotte-pm---baking-backend-a-study---yanick">Weds
-Oct 26th, 6pm ET 🇺🇸 - Charlotte PM - Baking backend: a study -
-Yanick</h2>
-<p>Writing backends doesn’t have to be a pain in, well, there too.</p>
-<p>Yanick will share how he’s building the backend of smol – a site
-showcasing painted miniatures – leveraging sveltekit, svelte-query,
-openapi and JSON:API to achieve maximal self-documentation and
-consistency with as little boilerplate as possible. We’ll see how the
-backend endpoints are built, how they can be documented as painlessly as
-possible, and how they can be plugged in on the fronting web application
-with minimal effort and no code duplication.</p>
-<p>(warning: presentation contains no Perl. But there will be a healthy
-helping of TIMTOWTDI)</p>
-<p>Yanick has been using Perl for, uh, let’s go for “a while”. Erstwhile
-member of the core Dancer team, past co-editor of the Perl Weekly,
-ex-contributor to the Perl Review, he has 103 distributions to his name
-on CPAN, which is frankly a tad excessive. He works at Infinity
-Interactive.</p>
-<p><a href="https://www.meetup.com/charlotte-pm/events/289085740/">RSVP
-on MeetUp</a> or PM to get Zoom virtual meeting URL.</p>
-<h2 id="tuesday-nov-8th---no-meeting">Tuesday Nov 8th - NO MEETING</h2>
-<p>8th is the earliest that 2nd Tuesday can fall; it’s also the latest
-that the Tuesday after the First Monday in November can fall, and so is
-Mid-Terms Election in USA 🇺🇸 .</p>
-<p>Instead, we’ll have a meeting sometime before Xmas whenever is good
-for the speakers.</p>
-<h2 id="tbd---ovidleonerd-on-corinna---oo-in-perl5-core">TBD -
-Ovid+LeoNerd on Corinna - OO in Perl5 Core</h2>
-<p><em>Our scheduled October presentation was postponed because the
-speakers had sudden conflicts. We’ll take whatever non-Holiday they can
-schedule, probably Tues Weds Thurs.</em></p>
-<p>We’ll have live remote guests <strong>Curtis <em>“Ovid”</em>
-Poe</strong> and <strong>Paul “<a
+id="tuesday-february-14th-630-pm-boston-pm-matchsmart-matchsimple---toby-inkster-live">Tuesday,
+February 14th 💘 , 6:30 PM 🇺🇸 Boston PM: <code>match::smart</code>,
+<code>match::simple</code> - Toby Inkster (live)</h2>
+<p>With P5P actively moving forward from deprecation to Warning and
+eventual removal of the v5.10 SmartMatch <code>~~</code> operator – for
+good reason, it was underspecified, nondeterministic, and outright
+dangerious – there’s a question for those who found a subset of its
+capabilities useful. Prolific module author <a
+href="https://metacpan.org/author/TOBYINK">Toby Inkster</a> provides a
+safe, deterministic subset of smart-match in
+<code>[match-simple](https://metacpan.org/dist/match-simple)</code>
+distribution which provides
+<code>[match::simple](https://metacpan.org/pod/match::simple)</code> and
+<code>[match::smart](https://metacpan.org/pod/match::smart)</code> with
+optional <a href="https://metacpan.org/dist/match-simple-XS">XS
+accelerator</a>.</p>
+<p>(<em>with apologies to anyone who has other plans that 💘 evening.
+this is the risk of 2d Tuesday scheduling.</em>)</p>
+<p>This is a JitSi meeting. The secure URL will be computed by this
+command (valid only during that week):</p>
+<pre><code>perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le &#39;print strftime &quot;%Y/%m/%d week %U&quot;, localtime; $date=strftime &quot;Y%Y W%U&quot;, localtime; print $date; print  &quot;https://meet.jit.si/BostonPM-&quot;.substr(sha1_hex(&quot;BostonPM&quot;.$date),0,12);&#39;  
+</code></pre>
+<p>(and will likely be posted here just in time, but to avoid spammers,
+won’t be posted on public social media)</p>
+<p>(See <a href="./index.html/#boilerplate">Boilerplate</a> below for
+additional how-to etc.)</p>
+<h2 id="backup-topics">BACKUP TOPICS</h2>
+<ul>
+<li>Using <code>MP3::Tag</code> <code>Syntax::Keyword::Try</code> etc to
+make playable audio archives with legible titles
+(<code>PerlHack/audio/mp3info.pl</code>)</li>
+<li>??</li>
+</ul>
+<h2
+id="tuesday-march-14th-π-day-630-boston-pm-ovidtapeleonerdlive-on-corinna---oo-in-perl5-core">Tuesday,
+March 14th (π day), 6:30 🇺🇸 Boston PM: Ovid(tape)+LeoNerd(live) on
+Corinna - OO in Perl5 Core</h2>
+<p>We’ll have <strong>Curtis <em>“Ovid”</em> Poe</strong> on the
+strategy of Corinna project and <strong>Paul “<a
 href="https://metacpan.org/author/PEVANS"><code>PEVANS</code></a>/<a
 href="http://www.leonerd.org.uk/"><code>LeoNerd</code></a>”
-Evans</strong>.</p>
+Evans</strong>, Perl Steering Committe and
+<code>Object::Pad implementor</code>, live for the practicalities and
+Q&amp;A.</p>
+<p>Last summer, Ovid posted exciting news -</p>
 <blockquote>
 <p>“For #perl devs wondering how the Corinna #oop project is going,
 <span class="citation" data-cites="cpan_pevans">@cpan_pevans</span> is
 now working on stage 1 of the accepted portion of the RFC. I’ve put that
-in the repo so you can follow along”<br />
+in the <a
+href="https://github.com/Ovid/Cor/blob/master/rfc/mvp.md">repo</a> so
+you can follow along”<br />
 <a
 href="https://twitter.com/OvidPerl/status/1560305460707827715"><code>@OvidPerl</code>
 2022-08-18</a></p>
 </blockquote>
+<p>Just last week, Ovid and Paul again shared exciting news: P5P’s
+development release Perl 5.37.9 will contain
+<code>use feature 'class';</code>, it has been merged.</p>
 <p>Ovid is the architect and Paul is the lead developer for adding a new
 object-oriented system called Corinna† (formerly &amp; confusingly “Cor”
 into Perl 5 Core. They’ve had an open community process to develop an
@@ -200,8 +217,10 @@ the summer, P5P have approved the initial Stage 1 integration into Perl
 Core. While we’ve had 20+ years of new OO packages for Perl5 since 5.0,
 this is the first actual (as opposed to proposed) overhaul of the
 <em>core</em> OO system in Perl 5.</p>
-<p>PEVANS’s compatible, non-Core, prototype is <a
-href="https://metacpan.org/dist/Object-Pad">Object::Pad</a>.</p>
+<p>PEVANS’s non-Core, prototype is <a
+href="https://metacpan.org/dist/Object-Pad">Object::Pad</a>, which can
+be conditionally imported in compatibility mode via <a
+href="https://metacpan.org/pod/Feature::Compat::Class">Feature::Compat::Class</a>.</p>
 <p>Ovid’s recent writing on Corinna are <a
 href="https://ovid.github.io/tags/corinna.html">on his blog</a>.</p>
 <p>The <a href="https://github.com/Ovid/Cor">Corinna project</a> has a
@@ -234,7 +253,8 @@ potentially NSFW) image on the MVP RFC tweet.</p>
 command (valid only during that week):</p>
 <pre><code>perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le &#39;print strftime &quot;%Y/%m/%d week %U&quot;, localtime; $date=strftime &quot;Y%Y W%U&quot;, localtime; print $date; print  &quot;https://meet.jit.si/BostonPM-&quot;.substr(sha1_hex(&quot;BostonPM&quot;.$date),0,12);&#39;  
 </code></pre>
-<p>(and will likely be posted here just in time)</p>
+<p>(and will likely be posted here just in time, but to avoid spammers,
+won’t be posted on public social media)</p>
 <p>(See <a href="./index.html/#boilerplate">Boilerplate</a> below for
 additional how-to etc.)</p>
 <h1 id="boilerplate">BoilerPlate</h1>

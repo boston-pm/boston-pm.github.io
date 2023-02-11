@@ -933,6 +933,20 @@ A good discussion was had but i didn't take notes.
 
 Randal (Merlyn) , Dan (swagg boi), Jerrad, Bill.
 
+## Wednesday Oct 26th, 6pm ET  &#127482;&#127480;  - Charlotte PM - Baking backend: a study - Yanick
+
+Writing backends doesn't have to be a pain in, well, there too.
+
+Yanick ~will~ share*d* how he's building the backend of **smol** -- a site showcasing painted miniatures -- leveraging **sveltekit**, **svelte-query**, **openapi** and **JSON:API** to achieve maximal self-documentation and consistency with as little boilerplate as possible. We'll see how the backend endpoints are built, how they can be documented as painlessly as possible, and how they can be plugged in on the fronting web application with minimal effort and no code duplication.
+
+(*warning: presentation contains no Perl. But there will be a healthy helping of TIMTOWTDI*)
+
+Yanick has been using Perl for, uh, let's go for "a while". Erstwhile member of the core Dancer team, past co-editor of the Perl Weekly, ex-contributor to the Perl Review, he has 103 distributions to his name on CPAN, which is frankly a tad excessive. He works at Infinity Interactive.
+
+
+Yanick Champoux shares: «Slides are at <https://techblog.babyl.ca/opus/talks/smol-backend/#/>.»
+
+
 ## no meetings Nov-Dec
 
 # 2023
