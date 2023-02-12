@@ -51,6 +51,7 @@ Boston-PM has presence on the following socials -
 * [MeetUp](https://www.meetup.com/boston-pm/)![icon](./images/Meetup-icon.png){#mu height=20 }
 * [LinkedIn](https://www.linkedin.com/groups/41363/)![icon](./images/Linkedin-icon.png){#lin height=20 }
 * [Twitter](https://twitter.com/BostonPM)![icon](./images/Twitter-icon.png){#tw height=20 }
+* Fediverse/Mastodon - _likely coming soon!_
 * [Facebook Page](https://www.facebook.com/bostonpm/)
 * [FaceBook Group](https://www.facebook.com/groups/131595281237)
 * [YouTube](https://www.youtube.com/channel/UCY0sL_ILd6JUixlppAQlgsA/videos) (historical only at this time)
