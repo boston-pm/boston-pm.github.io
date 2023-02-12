@@ -99,7 +99,7 @@ perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week 
 * Using `MP3::Tag` `Syntax::Keyword::Try` etc to make playable audio archives with legible titles (`PerlHack/audio/mp3info.pl`)
 * ??
 
-## Tuesday, March 14th (π day), 6:30 &#127482;&#127480;  Boston PM: Ovid(tape)+LeoNerd(live) on Corinna - OO in Perl5 Core
+## Tuesday, March 14th (π day = &#x1F967; day), 6:30 &#127482;&#127480;  Boston PM: Ovid(tape)+LeoNerd(live) on Corinna - OO in Perl5 Core
 
 
 We'll have **Curtis *"Ovid"* Poe** on the strategy of Corinna project and **Paul "[`PEVANS`](https://metacpan.org/author/PEVANS)/[`LeoNerd`](http://www.leonerd.org.uk/)" Evans**, Perl Steering Committe and `Object::Pad implementor`, live for the practicalities and Q&A.
