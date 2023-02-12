@@ -80,7 +80,7 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 ## Tuesday, February 14th &#x1F498; , 6:30 PM &#127482;&#127480; Boston PM: `match::smart`, `match::simple` - Toby Inkster (live)
 
-With P5P actively moving forward from deprecation to Warning and eventual removal of the v5.10 SmartMatch `~~` operator -- for good reason, it was underspecified, nondeterministic, and outright dangerious -- there's a question for those who found a subset of its capabilities useful. Prolific module author [Toby Inkster](https://metacpan.org/author/TOBYINK) provides a safe, deterministic subset of smart-match in `[match-simple](https://metacpan.org/dist/match-simple)` distribution which provides  `[match::simple](https://metacpan.org/pod/match::simple)` and `[match::smart](https://metacpan.org/pod/match::smart)`  with optional [XS accelerator](https://metacpan.org/dist/match-simple-XS).
+With P5P actively moving forward from deprecation to Warning and eventual removal of the v5.10 SmartMatch `~~` operator -- for good reason, it was underspecified, nondeterministic, and outright dangerious -- there's a question for those who found a subset of its capabilities useful. Prolific module author [Toby Inkster](https://metacpan.org/author/TOBYINK) provides a safe, deterministic subset of smart-match in [`match-simple`](https://metacpan.org/dist/match-simple)` distribution which provides  [`match::simple`](https://metacpan.org/pod/match::simple) and [`match::smart`](https://metacpan.org/pod/match::smart)  with optional [XS accelerator](https://metacpan.org/dist/match-simple-XS).
 
 (*with apologies to anyone who has other plans that &#x1F498; evening. this is the risk of 2d Tuesday scheduling.*)
 
