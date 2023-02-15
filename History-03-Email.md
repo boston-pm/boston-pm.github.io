@@ -953,6 +953,46 @@ Yanick Champoux shares: «Slides are at <https://techblog.babyl.ca/opus/talks/sm
 
 ## no meetings January
 
+
+## Tuesday, February 14th &#x1F498; , 6:30 PM &#127482;&#127480; Boston PM: `match::smart`, `match::simple` - Toby Inkster (live)
+
+With P5P actively moving forward from deprecation to Warning and eventual removal of the v5.10 SmartMatch `~~` operator -- for good reason, it was underspecified, nondeterministic, and outright dangerious -- there's a question for those who found a subset of its capabilities useful. Prolific module author [Toby Inkster](https://metacpan.org/author/TOBYINK) provides a safe, deterministic subset of smart-match in [`match-simple`](https://metacpan.org/dist/match-simple) distribution which provides  [`match::simple`](https://metacpan.org/pod/match::simple) and [`match::smart`](https://metacpan.org/pod/match::smart)  with optional [XS accelerator](https://metacpan.org/dist/match-simple-XS).
+
+(*with apologies to anyone who has other plans that &#x1F498; evening. this is the risk of 2d Tuesday scheduling.*)
+
+**Toby Inkster** is a consultant for The Perl Shop. 
+He has been working as a software developer for over 20 years, 
+focusing on databases, the Web, and the places where they overlap. 
+Toby has contributed to popular Perl open source libraries such as 
+the light-weight object-oriented programming tool Moo,
+as well as being the lead developer of Type::Tiny. 
+He has an interest in the Semantic Web was an invited expert to the W3C RDFa 
+Working Group. He also enjoys cooking and likes cats.
+
+`match::simple` and `match::smart` are survivable substitutes for the deprecated `~~` smartmatch operator, either as a fake operator or as a callable routine renamed to caller's convenience.  The 'simple' variant has predictable semantics; the 'smart' variant emulates (nearly) the full inconceivable complexity of the deprecated `~~`, which provide a survival path for some code.
+
+
+```
+use v5.10;
+use match::simple;
+ 
+if ( $this |M| $that ) {
+   say "$this matches $that";
+}
+```
+
+When asked if he also provided a substitute for the `given ... when ...` keywords, he replied not currently (syntax module he'd used has been deprecated), but it's not hard to do, e.g.:
+
+![2023-02-14-Screenshot-2](images/2023-02-14-Screenshot-2.png)
+
+---
+
+## CSV Utilities (ad hoc topic, February)
+
+In discussion after, Jerrad discussed CLI utilities 
+`csv-grep`, `csv-munge-row`,  etc from **[`App::CSVUtils`](https://metacpan.org/pod/App::CSVUtils)**
+
+
 # Historical BOILERPLATE
 
 (*This is the boilerplate as used fall 2020 - spring 2022.
