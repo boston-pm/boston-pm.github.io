@@ -84,7 +84,7 @@ With P5P actively moving forward from deprecation to Warning and eventual remova
 
 (*with apologies to anyone who has other plans that &#x1F498; evening. this is the risk of 2d Tuesday scheduling.*)
 
-Toby Inkster is a consultant for The Perl Shop. 
+**Toby Inkster** is a consultant for The Perl Shop. 
 He has been working as a software developer for over 20 years, 
 focusing on databases, the Web, and the places where they overlap. 
 Toby has contributed to popular Perl open source libraries such as 
@@ -92,6 +92,29 @@ the light-weight object-oriented programming tool Moo,
 as well as being the lead developer of Type::Tiny. 
 He has an interest in the Semantic Web was an invited expert to the W3C RDFa 
 Working Group. He also enjoys cooking and likes cats.
+
+`match::simple` and `match::smart` are survivable substitutes for the deprecated `~~` smartmatch operator, either as a fake operator or as a callable routine renamed to caller's convenience.  The 'simple' variant has predictable semantics; the 'smart' variant emulates (nearly) the full inconceivable complexity of the deprecated `~~`, which provide a survival path for some code.
+
+
+```
+use v5.10;
+use match::simple;
+ 
+if ( $this |M| $that ) {
+   say "$this matches $that";
+}
+```
+
+When asked if he also provided a substitute for the `given ... when ...` keywords, he replied not currently (syntax module he'd used has been deprecated), but it's not hard to do, e.g.:
+
+![2023-02-14-Screenshot-2](images/2023-02-14-Screenshot-2.png)
+
+---
+
+## CSV Utilities
+
+In discussion after, Jerrad discussed CLI utilities 
+`csv-grep`, `csv-munge-row`,  etc from **[`App::CSVUtils`](https://metacpan.org/pod/App::CSVUtils)**
 
 This is a JitSi meeting. The secure URL will be computed by this command (valid only during that week):
 
