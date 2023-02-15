@@ -84,6 +84,15 @@ With P5P actively moving forward from deprecation to Warning and eventual remova
 
 (*with apologies to anyone who has other plans that &#x1F498; evening. this is the risk of 2d Tuesday scheduling.*)
 
+Toby Inkster is a consultant for The Perl Shop. 
+He has been working as a software developer for over 20 years, 
+focusing on databases, the Web, and the places where they overlap. 
+Toby has contributed to popular Perl open source libraries such as 
+the light-weight object-oriented programming tool Moo,
+as well as being the lead developer of Type::Tiny. 
+He has an interest in the Semantic Web was an invited expert to the W3C RDFa 
+Working Group. He also enjoys cooking and likes cats.
+
 This is a JitSi meeting. The secure URL will be computed by this command (valid only during that week):
 
 ```
