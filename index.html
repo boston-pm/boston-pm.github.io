@@ -10,117 +10,276 @@
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="pandoc.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Boston Perl Mongers <img src="./images/Logo.jpg" id="logo" class="float_r" style="width:30.0%" /></h1>
+<h1 class="title">Boston Perl Mongers <img src="./images/Logo.jpg"
+id="logo" class="float_r" style="width:30.0%" /></h1>
 <p class="author"></p>
 <p class="date">2023</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
-<li><a href="#meetings">Meetings</a></li>
-<li><a href="#communications">Communications</a></li>
-<li><a href="#schedule">Schedule</a></li>
-<li><a href="#boilerplate">BoilerPlate</a></li>
+<li><a href="#meetings" id="toc-meetings">Meetings</a></li>
+<li><a href="#communications"
+id="toc-communications">Communications</a></li>
+<li><a href="#schedule" id="toc-schedule">Schedule</a></li>
+<li><a href="#boilerplate" id="toc-boilerplate">BoilerPlate</a></li>
 </ul>
 </nav>
-<p>Boston.pm is the Boston chapter of the international <a href="https://www.pm.org/">Perl Mongers</a> collection of <a href="https://www.perl.org">Perl</a> user groups, founded in 1998.</p>
-<p>The group welcomes anyone to join our mailing list and attend our meetings.</p>
+<p>Boston.pm is the Boston chapter of the international <a
+href="https://www.pm.org/">Perl Mongers</a> collection of <a
+href="https://www.perl.org">Perl</a> user groups, founded in 1998.</p>
+<p>The group welcomes anyone to join our mailing list and attend our
+meetings.</p>
 <h1 id="meetings">Meetings</h1>
 <h2 id="technical-meeting-series">Technical Meeting Series</h2>
-<p>Boston PM has had in-person technical meetings in the Greater Boston area for 20+ years (pre-plague).</p>
-<p>For a calendar of up-coming meetings, see below at <a href="#schedule">Schedule</a>.</p>
-<p>For past calendar and annals of history, see the <a href="History-00.html">History</a> pages.</p>
-<p>In the Virtual Meeting world, Boston PM participates in three sets of meetings:</p>
+<p>Boston PM has had in-person technical meetings in the Greater Boston
+area for 20+ years (pre-plague).</p>
+<p>For a calendar of up-coming meetings, see below at <a
+href="#schedule">Schedule</a>.</p>
+<p>For past calendar and annals of history, see the <a
+href="History-00.html">History</a> pages.</p>
+<p>In the Virtual Meeting world, Boston PM participates in three sets of
+meetings:</p>
 <ul>
-<li><p>Meetings arranged and hosted by Boston.PM are in <a href="https://meet.Jit.si">meet.Jit.si</a> and on 2d Tuesday. See below at Schedule and BoilerPlate for details.</p></li>
-<li><p>Meetings arranged and hosted by <a href="https://www.meetup.com/charlotte-pm/">Charlotte.PM</a> are in Zoom and on Last Wednesdays. Boston.pm provides publicity and attendees for these meetings. Charlotte records these.</p></li>
-<li><p>Meetings hosted by Boston Linux Unix (<a href="http://blu.org" class="uri">http://blu.org</a>) are in <a href="https://meet.Jit.si">Jitsi</a> and on 3d Wednesday. These are POSIX or hardware related, not Perl related. BLU records these and publishes on YouTube.</p>
+<li><p>Meetings arranged and hosted by Boston.PM are in <a
+href="https://meet.Jit.si">meet.Jit.si</a> and on 2d Tuesday. See below
+at Schedule and BoilerPlate for details.</p></li>
+<li><p>Meetings arranged and hosted by <a
+href="https://www.meetup.com/charlotte-pm/">Charlotte.PM</a> are in Zoom
+and on Last Wednesdays. Boston.pm provides publicity and attendees for
+these meetings. Charlotte records these.</p></li>
+<li><p>Meetings hosted by Boston Linux Unix (<a href="http://blu.org"
+class="uri">http://blu.org</a>) are in <a
+href="https://meet.Jit.si">Jitsi</a> and on 3d Wednesday. These are
+POSIX or hardware related, not Perl related. BLU records these and
+publishes on YouTube.</p>
 <ul>
-<li>Bill Ricker, Boston.pm facilitator, regularly invites Boston.PM to his <a href="https://blu.org/">BLU</a> presentations and others we think will be of interest. These tend to be POSIX as opposed to Perl, though both Bill and Federico Lucifredi tend to have some Perl in support of their projects.</li>
+<li>Bill Ricker, Boston.pm facilitator, regularly invites Boston.PM to
+his <a href="https://blu.org/">BLU</a> presentations and others we think
+will be of interest. These tend to be POSIX as opposed to Perl, though
+both Bill and Federico Lucifredi tend to have some Perl in support of
+their projects.</li>
 </ul></li>
 </ul>
-<p>(A few of our older, in-person Boston.pm meetings (2014-2015) are on <a href="https://www.youtube.com/channel/UCY0sL_ILd6JUixlppAQlgsA/videos">YouTube</a> mostly when we had a remote speaker via YouTube/Hangouts, but we haven’t been adding to this collection.)</p>
+<p>(A few of our older, in-person Boston.pm meetings (2014-2015) are on
+<a
+href="https://www.youtube.com/channel/UCY0sL_ILd6JUixlppAQlgsA/videos">YouTube</a>
+mostly when we had a remote speaker via YouTube/Hangouts, but we haven’t
+been adding to this collection.)</p>
 <h2 id="social-meetings">Social Meetings</h2>
-<p>In normal times, Boston.pm does non-technical, social meetings. Typically this involves a restaurant or bar but could be a coffee-shop, public park, house-party, whatever.</p>
-<p>There is no regular schedule. Typically these are negotiated among interested folks on the Discuss mailing-list.</p>
+<p>In normal times, Boston.pm does non-technical, social meetings.
+Typically this involves a restaurant or bar but could be a coffee-shop,
+public park, house-party, whatever.</p>
+<p>There is no regular schedule. Typically these are negotiated among
+interested folks on the Discuss mailing-list.</p>
 <h1 id="communications">Communications</h1>
 <h2 id="social-media">Social Media</h2>
 <p>Boston-PM has presence on the following socials -</p>
 <ul>
-<li><a href="https://www.meetup.com/boston-pm/">MeetUp</a><img src="./images/Meetup-icon.png" id="mu" height="20" alt="icon" /></li>
-<li><a href="https://www.linkedin.com/groups/41363/">LinkedIn</a><img src="./images/Linkedin-icon.png" id="lin" height="20" alt="icon" /></li>
-<li><a href="https://twitter.com/BostonPM">Twitter</a><img src="./images/Twitter-icon.png" id="tw" height="20" alt="icon" /></li>
+<li><a href="https://www.meetup.com/boston-pm/">MeetUp</a><img
+src="./images/Meetup-icon.png" id="mu" height="20" alt="icon" /></li>
+<li><a href="https://www.linkedin.com/groups/41363/">LinkedIn</a><img
+src="./images/Linkedin-icon.png" id="lin" height="20" alt="icon" /></li>
+<li><a href="https://twitter.com/BostonPM">Twitter</a><img
+src="./images/Twitter-icon.png" id="tw" height="20" alt="icon" /></li>
 <li>Fediverse/Mastodon - <em>likely coming soon!</em></li>
 <li><a href="https://www.facebook.com/bostonpm/">Facebook Page</a></li>
-<li><a href="https://www.facebook.com/groups/131595281237">FaceBook Group</a></li>
-<li><a href="https://www.youtube.com/channel/UCY0sL_ILd6JUixlppAQlgsA/videos">YouTube</a> (historical only at this time)</li>
-<li>Perl Weekly <a href="https://perlweekly.com/">newsletter <img src="./images/Mail-icon.png" id="pwnl" height="20" alt="icon" /></a>, <a href="https://perlweekly.com/perlweekly.ical">iCal calendar</a>, <a href="https://perlweekly.com/perlweekly.rss"><img src="./images/feed-icon32x32.png" id="rss" height="20" alt="RSS" /></a>; and their <a href="https://twitter.com/PerlWeekly">Twitter <img src="./images/Twitter-icon.png" id="pwtw" height="20" alt="icon" /></a> may promote select items of ours. <br /> <a href="https://perlweekly.com/"><img src="./images/perl_weekly_234x60.png" /></a></li>
-<li><a href="http://www.bugc.org">The Boston-area User Group Calendar</a> “Since 1997”</li>
+<li><a href="https://www.facebook.com/groups/131595281237">FaceBook
+Group</a></li>
+<li><a
+href="https://www.youtube.com/channel/UCY0sL_ILd6JUixlppAQlgsA/videos">YouTube</a>
+(historical only at this time)</li>
+<li>Perl Weekly <a href="https://perlweekly.com/">newsletter <img
+src="./images/Mail-icon.png" id="pwnl" height="20" alt="icon" /></a>, <a
+href="https://perlweekly.com/perlweekly.ical">iCal calendar</a>, <a
+href="https://perlweekly.com/perlweekly.rss"><img
+src="./images/feed-icon32x32.png" id="rss" height="20" alt="RSS" /></a>;
+and their <a href="https://twitter.com/PerlWeekly">Twitter <img
+src="./images/Twitter-icon.png" id="pwtw" height="20" alt="icon" /></a>
+may promote select items of ours. <br /> <a
+href="https://perlweekly.com/"><img
+src="./images/perl_weekly_234x60.png" /></a></li>
+<li><a href="http://www.bugc.org">The Boston-area User Group
+Calendar</a> “Since 1997”</li>
 </ul>
-<p>The primary announcement channels are MeetUp, Twitter, and Announce mailing-list.</p>
-<h2 id="mailing-lists-icon">Mailing Lists <img src="./images/Mail-icon.png" id="ml" height="30" alt="icon" /></h2>
+<p>The primary announcement channels are MeetUp, Twitter, and Announce
+mailing-list.</p>
+<h2 id="mailing-lists-icon">Mailing Lists <img
+src="./images/Mail-icon.png" id="ml" height="30" alt="icon" /></h2>
 <p>(<em>Are Mailing Lists Anti-Social media?</em>)</p>
-<p>Boston.pm has two email lists supported by center Perl Mongers. Mailman list management has the official archives being password protected, visible only to list members. <strong>HOWEVER NOTE</strong> that both lists are logged by one or more popular archival websites that have subscribed to the lists, so these lists are effectively public.</p>
+<p>Boston.pm has two email lists supported by center Perl Mongers.
+Mailman list management has the official archives being password
+protected, visible only to list members. <strong>HOWEVER NOTE</strong>
+that both lists are logged by one or more popular archival websites that
+have subscribed to the lists, so these lists are effectively public.</p>
 <ul>
-<li><p><a href="https://mail.pm.org/mailman/listinfo/boston-pm-announce">Announce list</a> is moderated, intended for meeting &amp; social announcements and cancellations and other such things. <a href="https://www.mail-archive.com/boston-pm-announce@mail.pm.org/info.html">Unofficial Public Archive, 2008-present</a></p></li>
-<li><p><a href="https://mail.pm.org/mailman/listinfo/boston-pm">Discuss list</a> is un-moderated, available for discussion of Perl-ish topics, discussions before and after meetings, etc. <a href="https://www.mail-archive.com/boston-pm@pm.org/info.html">Unofficial Public Archive, 2002-2018</a> (<em>2002-2008 there was a single list, that history is here.</em>)</p></li>
+<li><p><a
+href="https://mail.pm.org/mailman/listinfo/boston-pm-announce">Announce
+list</a> is moderated, intended for meeting &amp; social announcements
+and cancellations and other such things. <a
+href="https://www.mail-archive.com/boston-pm-announce@mail.pm.org/info.html">Unofficial
+Public Archive, 2008-present</a></p></li>
+<li><p><a href="https://mail.pm.org/mailman/listinfo/boston-pm">Discuss
+list</a> is un-moderated, available for discussion of Perl-ish topics,
+discussions before and after meetings, etc. <a
+href="https://www.mail-archive.com/boston-pm@pm.org/info.html">Unofficial
+Public Archive, 2002-2018</a> (<em>2002-2008 there was a single list,
+that history is here.</em>)</p></li>
 </ul>
-<p>Before posting jobs to the list, please check our <a href="JobPostingPolicy.html">Job Posting Policy</a>.</p>
+<p>Before posting jobs to the list, please check our <a
+href="JobPostingPolicy.html">Job Posting Policy</a>.</p>
 <h1 id="schedule">Schedule</h1>
-<p><strong>Since we’re having speakers from the UK the next two months, we’ll be starting 6:30pm ET so that we’re at least <em>starting</em> on Tuesday for them.</strong></p>
-<h2 id="tuesday-march-14th-π-day-day-630-boston-pm-ovidtapeleonerdlive-on-corinna---oo-in-perl5-core">Tuesday, March 14th (π day = 🥧 day), 6:30 🇺🇸 Boston PM: Ovid(tape)+LeoNerd(live) on Corinna - OO in Perl5 Core</h2>
-<p>We’ll have <strong>Curtis <em>“Ovid”</em> Poe</strong> on the strategy of Corinna project and <strong>Paul “<a href="https://metacpan.org/author/PEVANS"><code>PEVANS</code></a>/<a href="http://www.leonerd.org.uk/"><code>LeoNerd</code></a>” Evans</strong>, Perl Steering Committe and <code>Object::Pad implementor</code>, live for the practicalities and Q&amp;A.</p>
+<p><strong>Since we’re having speakers from the UK the next two months,
+we’ll be starting 6:30pm ET DST (UTC-04) so that we’re at least
+<em>starting</em> on Tuesday for them.</strong></p>
+<h2
+id="tuesday-march-14th-π-day-day-630-edtutc-04-boston-pm-ovidtapeleonerdlive-on-corinna---oo-in-perl5-core">Tuesday,
+March 14th (π day = 🥧 day), 6:30 🇺🇸 EDT(UTC-04) Boston PM:
+Ovid(tape)+LeoNerd(live) on Corinna - OO in Perl5 Core</h2>
+<p>We’ll have <strong>Curtis <em>“Ovid”</em> Poe</strong> on the
+strategy of Corinna project (<em>by the magic of tape delay</em>) and
+<strong>Paul “<a
+href="https://metacpan.org/author/PEVANS"><code>PEVANS</code></a>/<a
+href="http://www.leonerd.org.uk/"><code>LeoNerd</code></a>”
+Evans</strong>, Perl Steering Committe and
+<code>Object::Pad implementor</code>, <strong>live</strong> for the
+practicalities and Q&amp;A.</p>
 <p>Last summer, Ovid posted exciting news -</p>
 <blockquote>
-<p>“For #perl devs wondering how the Corinna #oop project is going, <span class="citation" data-cites="cpan_pevans">@cpan_pevans</span> is now working on stage 1 of the accepted portion of the RFC. I’ve put that in the <a href="https://github.com/Ovid/Cor/blob/master/rfc/mvp.md">repo</a> so you can follow along”<br />
-<a href="https://twitter.com/OvidPerl/status/1560305460707827715"><code>@OvidPerl</code> 2022-08-18</a></p>
+<p>“For #perl devs wondering how the Corinna #oop project is going,
+<span class="citation" data-cites="cpan_pevans">@cpan_pevans</span> is
+now working on stage 1 of the accepted portion of the RFC. I’ve put that
+in the <a
+href="https://github.com/Ovid/Cor/blob/master/rfc/mvp.md">repo</a> so
+you can follow along”<br />
+<a
+href="https://twitter.com/OvidPerl/status/1560305460707827715"><code>@OvidPerl</code>
+2022-08-18</a></p>
 </blockquote>
-<p>Just recently in mid February 2023, Ovid and Paul again shared exciting news: P5P’s upcoming development release Perl 5.37.9 (alpha/beta for 5.40.0) will contain<br />
+<p>Just recently in mid February 2023, Ovid and Paul again shared
+exciting news: P5P’s upcoming development release Perl 5.37.9
+(alpha/beta for 5.40.0) will contain<br />
 <strong><code>use feature 'class';</code></strong><br />
 It has been merged.</p>
-<p>Ovid is the architect and Paul is the lead developer for adding a new object-oriented system called Corinna† (formerly &amp; confusingly “Cor” into Perl 5 Core. They’ve had an open community process to develop an RFC or proposal and prototype, but until recently, without commitment for the Perl 5 Porters (P5P) to actually implement it in Perl 5. Over the summer, P5P have approved the initial Stage 1 integration into Perl Core. While we’ve had 20+ years of new OO packages for Perl5 since 5.0, this is the first actual (as opposed to proposed) overhaul of the <em>core</em> OO system in Perl 5.</p>
-<p>PEVANS’s non-Core, prototype is <a href="https://metacpan.org/dist/Object-Pad">Object::Pad</a>, which can be conditionally imported in compatibility mode via <a href="https://metacpan.org/pod/Feature::Compat::Class">Feature::Compat::Class</a>.</p>
-<p>Ovid’s recent writing on Corinna are <a href="https://ovid.github.io/tags/corinna.html">on his blog</a>.</p>
-<p>The <a href="https://github.com/Ovid/Cor">Corinna project</a> has a <a href="https://github.com/Ovid/Cor/wiki">wiki</a> and the <a href="https://github.com/Ovid/Cor#rfc">RFC</a> that proposed adding Corinna to Perl 5 Core, and the P5P-accepted Stage 1 <a href="https://github.com/Ovid/Cor/blob/master/rfc/mvp.md">Minimal Viable Product RFC</a>. <a href="https://dev.to/ovid/bringing-modern-oo-to-perl-51ak">His 2021 editorial</a> explains the difference between Moose (<em>et al</em>), Stevan Little’s Moxie, and Corinna.</p>
-<p><strong><em>Damian Conway</em></strong> posted an exultation for the (January 2022) P5P approval of the Stage 1 MVP RFC <em>but i can’t find it again</em>. His previous writings endorsing the project are</p>
+<p>Ovid is the architect and Paul is the lead developer for adding a new
+object-oriented system called Corinna† (formerly &amp; confusingly “Cor”
+into Perl 5 Core. They’ve had an open community process to develop an
+RFC or proposal and prototype, but until recently, without commitment
+for the Perl 5 Porters (P5P) to actually implement it in Perl 5. Over
+the summer, P5P have approved the initial Stage 1 integration into Perl
+Core. While we’ve had 20+ years of new OO packages for Perl5 since 5.0,
+this is the first actual (as opposed to proposed) overhaul of the
+<em>core</em> OO system in Perl 5.</p>
+<p>PEVANS’s non-Core, prototype is <a
+href="https://metacpan.org/dist/Object-Pad">Object::Pad</a>, which can
+be conditionally imported in compatibility mode via <a
+href="https://metacpan.org/pod/Feature::Compat::Class">Feature::Compat::Class</a>.</p>
+<p>Ovid’s recent writing on Corinna are <a
+href="https://ovid.github.io/tags/corinna.html">on his blog</a>.</p>
+<p>The <a href="https://github.com/Ovid/Cor">Corinna project</a> has a
+<a href="https://github.com/Ovid/Cor/wiki">wiki</a> and the <a
+href="https://github.com/Ovid/Cor#rfc">RFC</a> that proposed adding
+Corinna to Perl 5 Core, and the P5P-accepted Stage 1 <a
+href="https://github.com/Ovid/Cor/blob/master/rfc/mvp.md">Minimal Viable
+Product RFC</a>. <a
+href="https://dev.to/ovid/bringing-modern-oo-to-perl-51ak">His 2021
+editorial</a> explains the difference between Moose (<em>et al</em>),
+Stevan Little’s Moxie, and Corinna.</p>
+<p><strong><em>Damian Conway</em></strong> posted an exultation for the
+(January 2022) P5P approval of the Stage 1 MVP RFC <em>but i can’t find
+it again</em>. His previous writings endorsing the project are</p>
 <ul>
-<li><a href="http://blogs.perl.org/users/damian_conway/2021/12/a-not-so-simple-matter-of-privacy.html">A (not so) simple matter of privacy 2021-DEC</a>,</li>
-<li><a href="http://blogs.perl.org/users/damian_conway/2021/11/a-dream-resyntaxed.html">A dream resyntaxed 2021-Nov</a></li>
-<li><a href="http://blogs.perl.org/users/damian_conway/2021/08/a-dream-realized.html">A dream realized 2021-Aug</a></li>
+<li><a
+href="http://blogs.perl.org/users/damian_conway/2021/12/a-not-so-simple-matter-of-privacy.html">A
+(not so) simple matter of privacy 2021-DEC</a>,</li>
+<li><a
+href="http://blogs.perl.org/users/damian_conway/2021/11/a-dream-resyntaxed.html">A
+dream resyntaxed 2021-Nov</a></li>
+<li><a
+href="http://blogs.perl.org/users/damian_conway/2021/08/a-dream-realized.html">A
+dream realized 2021-Aug</a></li>
 </ul>
-<p>† <em>Corinna</em> is a classical allusion in connection to Curtis’s pseudonym <em>Ovid</em>, which explains the classical (and otherwise potentially NSFW) image on the MVP RFC tweet.</p>
+<p>† <em>Corinna</em> is a classical allusion in connection to Curtis’s
+pseudonym <em>Ovid</em>, which explains the classical (and otherwise
+potentially NSFW) image on the MVP RFC tweet.</p>
 <hr />
-<p>This is a JitSi meeting. The secure URL will be computed by this command (valid only during that week):</p>
+<p>This is a JitSi meeting. The secure URL will be computed by this
+command (valid only during that week):</p>
 <pre><code>perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le &#39;print strftime &quot;%Y/%m/%d week %U&quot;, localtime; $date=strftime &quot;Y%Y W%U&quot;, localtime; print $date; print  &quot;https://meet.jit.si/BostonPM-&quot;.substr(sha1_hex(&quot;BostonPM&quot;.$date),0,12);&#39;  
 </code></pre>
-<p>(and will likely be posted here just in time, but to avoid spammers, won’t be posted on public social media)</p>
-<p>(See <a href="./index.html/#boilerplate">Boilerplate</a> below for additional how-to etc.)</p>
+<p>(and will likely be posted here just in time, but to avoid spammers,
+won’t be posted on public social media)</p>
+<p>(See <a href="./index.html/#boilerplate">Boilerplate</a> below for
+additional how-to etc.)</p>
 <h2 id="backup-topics">BACKUP TOPICS</h2>
 <ul>
-<li>Using <code>MP3::Tag</code> <code>Syntax::Keyword::Try</code> etc to make playable audio archives with legible titles (<code>PerlHack/audio/mp3info.pl</code>)</li>
+<li>Using <code>MP3::Tag</code> <code>Syntax::Keyword::Try</code> etc to
+make playable audio archives with legible titles
+(<code>PerlHack/audio/mp3info.pl</code>)</li>
 <li>??</li>
 </ul>
 <h1 id="boilerplate">BoilerPlate</h1>
 <ul>
-<li>Meetings hosted by Boston.PM are in <a href="https://meet.Jit.si">meet.Jit.si</a> and on 2d Tuesday.</li>
-<li>Meetings hosted by <a href="https://www.meetup.com/charlotte-pm/">Charlotte.PM</a> are in Zoom and on Last Wednesdays.</li>
-<li>Meetings hosted by Boston Linux Unix (<a href="http://blu.org" class="uri">http://blu.org</a>) are in Jitsi and on 3d Wednesday.</li>
+<li>Meetings hosted by Boston.PM are in <a
+href="https://meet.Jit.si">meet.Jit.si</a> and on 2d Tuesday.</li>
+<li>Meetings hosted by <a
+href="https://www.meetup.com/charlotte-pm/">Charlotte.PM</a> are in Zoom
+and on Last Wednesdays.</li>
+<li>Meetings hosted by Boston Linux Unix (<a href="http://blu.org"
+class="uri">http://blu.org</a>) are in Jitsi and on 3d Wednesday.</li>
 </ul>
-<p>(<em>If you need to hear my rant about why Zoom’s “fixes” are inadequate, ask me off-list. Or watch my BLU Cryptology History &amp; News annual report for the last decade.</em>)</p>
+<p>(<em>If you need to hear my rant about why Zoom’s “fixes” are
+inadequate, ask me off-list. Or watch my BLU Cryptology History &amp;
+News annual report for the last decade.</em>)</p>
 <h2 id="jitsi-notes">JITSI notes</h2>
-<p><a href="https://meet.jit.si">Jitsi</a> is a Free/Libre OSS project sponsored by 8x8 (an Atlassian spin-off). It is the freemium base for their added-value corporate meeting &amp; VOIP platform. As FLOSS, it can be self-hosted; they provide a free demo server. We will currently be using the free demo server, but may migrate to a hosted server (where we can set defaults, privileges).</p>
-<p>Natick FOSS group has an updated <a href="http://runeman.org/articles/natick-foss/jitsi/jitsi-2022-09-05.pdf">5-page Jitsi Help .pdf file</a>, and you can practice beforehand. (They meet 1st Thursdays, online, early afternoon - (semi)retired users.)</p>
-<p>One can use plain web mode, but you can install the browser plug-in if you like (recommended if sharing slides or terminal). There are also iOS (iPhone/iPad) and Android Jitsi <a href="https://jitsi.org/downloads/">apps</a> which work well (not for screen-share from Android). Screen-sharing may require a browser with paranoid modes off, e.g. Firefox Private Window or Chromium Temporary Profile.</p>
-<p><a href="https://jitsi.github.io/handbook/docs/user-guide/keyboard-shortcuts">JITSI keyboard shortcuts</a></p>
-<p>JITSI scales fine to more people in face-sharing Brady-Bunch / Hollywood Squares mode than you can easily see at once (30ish) and if folks turn off their cameras when just listening/talking, i.e. when not commenting/presenting, it scales much higher. (If we later get more folks than will comfortably fit in Jitsi, we can set up a stream to YouTubeLive or some other platform … or upgrade to a proper panelist platform feeding a stream, but the “seminar” quality of Jitsi is fine for our level of anarchy.)</p>
-<p>I will routinely mute those not presenting so you’ll usually need to unmute to comment. Hint: Space-bar is push to talk, M is mute/unmute (on phone/tablet it’s the skeuomorphic microphone, avoid the handset hangup button!).</p>
+<p><a href="https://meet.jit.si">Jitsi</a> is a Free/Libre OSS project
+sponsored by 8x8 (an Atlassian spin-off). It is the freemium base for
+their added-value corporate meeting &amp; VOIP platform. As FLOSS, it
+can be self-hosted; they provide a free demo server. We will currently
+be using the free demo server, but may migrate to a hosted server (where
+we can set defaults, privileges).</p>
+<p>Natick FOSS group has an updated <a
+href="http://runeman.org/articles/natick-foss/jitsi/jitsi-2022-09-05.pdf">5-page
+Jitsi Help .pdf file</a>, and you can practice beforehand. (They meet
+1st Thursdays, online, early afternoon - (semi)retired users.)</p>
+<p>One can use plain web mode, but you can install the browser plug-in
+if you like (recommended if sharing slides or terminal). There are also
+iOS (iPhone/iPad) and Android Jitsi <a
+href="https://jitsi.org/downloads/">apps</a> which work well (not for
+screen-share from Android). Screen-sharing may require a browser with
+paranoid modes off, e.g. Firefox Private Window or Chromium Temporary
+Profile.</p>
+<p><a
+href="https://jitsi.github.io/handbook/docs/user-guide/keyboard-shortcuts">JITSI
+keyboard shortcuts</a></p>
+<p>JITSI scales fine to more people in face-sharing Brady-Bunch /
+Hollywood Squares mode than you can easily see at once (30ish) and if
+folks turn off their cameras when just listening/talking, i.e. when not
+commenting/presenting, it scales much higher. (If we later get more
+folks than will comfortably fit in Jitsi, we can set up a stream to
+YouTubeLive or some other platform … or upgrade to a proper panelist
+platform feeding a stream, but the “seminar” quality of Jitsi is fine
+for our level of anarchy.)</p>
+<p>I will routinely mute those not presenting so you’ll usually need to
+unmute to comment. Hint: Space-bar is push to talk, M is mute/unmute (on
+phone/tablet it’s the skeuomorphic microphone, avoid the handset hangup
+button!).</p>
 </body>
 </html>

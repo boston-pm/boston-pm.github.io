@@ -76,14 +76,14 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 # Schedule
 
-**Since we're having speakers from the UK the next two months, we'll be starting 6:30pm ET so that we're at least *starting* on Tuesday for them.**
+**Since we're having speakers from the UK the next two months, we'll be starting 6:30pm ET DST (UTC-04) so that we're at least *starting* on Tuesday for them.**
 
 
 
-## Tuesday, March 14th (π day = &#x1F967; day), 6:30 &#127482;&#127480;  Boston PM: Ovid(tape)+LeoNerd(live) on Corinna - OO in Perl5 Core
+## Tuesday, March 14th (π day = &#x1F967; day), 6:30 &#127482;&#127480; EDT(UTC-04)  Boston PM: Ovid(tape)+LeoNerd(live) on Corinna - OO in Perl5 Core
 
 
-We'll have **Curtis *"Ovid"* Poe** on the strategy of Corinna project and **Paul "[`PEVANS`](https://metacpan.org/author/PEVANS)/[`LeoNerd`](http://www.leonerd.org.uk/)" Evans**, Perl Steering Committe and `Object::Pad implementor`, live for the practicalities and Q&A.
+We'll have **Curtis *"Ovid"* Poe** on the strategy of Corinna project (_by the magic of tape delay_) and **Paul "[`PEVANS`](https://metacpan.org/author/PEVANS)/[`LeoNerd`](http://www.leonerd.org.uk/)" Evans**, Perl Steering Committe and `Object::Pad implementor`, **live** for the practicalities and Q&A.
 
 Last summer, Ovid posted exciting news -
 
