@@ -83,7 +83,7 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 ## Tuesday, March 14th (π day = &#x1F967; day), 6:30 &#127482;&#127480; EDT(UTC-04)  Boston PM: Ovid(tape)+LeoNerd(live) on Corinna - OO in Perl5 Core
 
 
-We'll have **Curtis *"Ovid"* Poe** on the strategy of Corinna project (_by the magic of tape delay_) and **Paul "[`PEVANS`](https://metacpan.org/author/PEVANS)/[`LeoNerd`](http://www.leonerd.org.uk/)" Evans**, Perl Steering Committe and `Object::Pad implementor`, **live** for the practicalities and Q&A.
+We'll have **Curtis *"Ovid"* Poe** on the strategy of Corinna project (_by the magic of tape delay_) and **Paul "[`PEVANS`](https://metacpan.org/author/PEVANS)/[`LeoNerd`](http://www.leonerd.org.uk/)" Evans**, Perl Steering Committe and `Object::Pad implementor`, ***LIVE*** for the practicalities and Q&A.
 
 Last summer, Ovid posted exciting news -
 
