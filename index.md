@@ -76,40 +76,13 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 # Schedule
 
-**Since we're having speakers from the UK the next two months, we'll be starting 6:30pm ET DST (UTC-04) so that we're at least *starting* on Tuesday for them.**
+_Previous meetings' minutes are recorded at the bottom of the [latest history file](./History-03-Email.html)._
+
+## April 11th, T B D 
+
+(Might be the backup topic)
 
 
-
-## Tuesday, March 14th (π day = &#x1F967; day), 6:30 &#127482;&#127480; EDT(UTC-04)  Boston PM: Ovid(tape)+LeoNerd(live) on Corinna - OO in Perl5 Core
-
-
-We'll have **Curtis *"Ovid"* Poe** on the strategy of Corinna project (_by the magic of tape delay_) and **Paul "[`PEVANS`](https://metacpan.org/author/PEVANS)/[`LeoNerd`](http://www.leonerd.org.uk/)" Evans**, Perl Steering Committe and `Object::Pad implementor`, ***LIVE*** for the practicalities and Q&A.
-
-Last summer, Ovid posted exciting news -
-
-> "For #perl devs wondering how the Corinna #oop project is going, @cpan_pevans
-is now working on stage 1 of the accepted portion of the RFC. I've put that in the [repo](https://github.com/Ovid/Cor/blob/master/rfc/mvp.md) so you can follow along"  
-> [`@OvidPerl` 2022-08-18](https://twitter.com/OvidPerl/status/1560305460707827715)
-
-Just recently in mid February 2023, Ovid and Paul again shared exciting news: P5P's upcoming development release Perl 5.37.9 (alpha/beta for 5.40.0) will contain  
- **`use feature 'class';`**  
-It has been merged.
-
-Ovid is the architect and Paul is the lead developer for adding a new object-oriented system called Corinna† (formerly & confusingly "Cor" into Perl 5 Core. They've had an open community process to develop an RFC or proposal and prototype, but until recently, without commitment for the Perl 5 Porters (P5P) to actually implement it in Perl 5. Over the summer, P5P have approved the initial Stage 1 integration into Perl Core. While we've had 20+ years of new OO packages for Perl5 since 5.0, this is the first actual (as opposed to proposed) overhaul of the *core* OO system in Perl 5.
-
-PEVANS's non-Core, prototype is [Object::Pad](https://metacpan.org/dist/Object-Pad), which can be conditionally imported in compatibility mode via [Feature::Compat::Class](https://metacpan.org/pod/Feature::Compat::Class).
-
-Ovid's recent writing on Corinna are [on his blog](https://ovid.github.io/tags/corinna.html).
-
-The [Corinna project](https://github.com/Ovid/Cor) has a  [wiki](https://github.com/Ovid/Cor/wiki) and the [RFC](https://github.com/Ovid/Cor#rfc) that proposed adding Corinna to Perl 5 Core, and the P5P-accepted Stage 1 [Minimal Viable Product RFC](https://github.com/Ovid/Cor/blob/master/rfc/mvp.md). [His 2021 editorial](https://dev.to/ovid/bringing-modern-oo-to-perl-51ak) explains the difference between Moose (*et al*), Stevan Little's Moxie, and Corinna.
-
-***Damian Conway*** posted an exultation for the (January 2022) P5P approval of the Stage 1 MVP RFC _but i can't find it again_. His previous writings endorsing the project are
-
-* [A (not so) simple matter of privacy 2021-DEC](http://blogs.perl.org/users/damian_conway/2021/12/a-not-so-simple-matter-of-privacy.html), 
-* [A dream resyntaxed 2021-Nov](http://blogs.perl.org/users/damian_conway/2021/11/a-dream-resyntaxed.html)
-* [A dream realized 2021-Aug](http://blogs.perl.org/users/damian_conway/2021/08/a-dream-realized.html)
-
-† _Corinna_ is a classical allusion in connection to Curtis's pseudonym _Ovid_, which explains the classical (and otherwise potentially NSFW) image on the MVP RFC tweet.
 
 ------------
 

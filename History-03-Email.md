@@ -819,6 +819,37 @@ Abstract
 
 "**Shankar Viswanathan** gives a technical overview of the newly released AMD Ryzen 4 series CPU; Kurt reviews the earlier Budget Build system discussed previously at the August 2020 BLU meeting, based on AMD's Ryzen 3 CPU; and **Brian DeLacey** discusses his newest Budget Build system, based on the new AMD Ryzen 4 CPU."
 
+
+----------------------------
+
+# Historical BOILERPLATE 2020-2022
+
+(*This is the boilerplate as used fall 2020 - spring 2022.
+Current boilerplate is below announced schedule [on homepage](index.html#boilerplate).*)
+
+* Meetings hosted by Boston.PM are in [meet.Jit.si](https://meet.Jit.si) and on 2d Tuesday.
+* Meetings hosted by [Charlotte.PM](https://www.meetup.com/charlotte-pm/) are in Zoom and on Last Wednesdays.
+* Meetings hosted by Boston Linux Unix (<http://blu.org>) are in Jitsi and on 3d Wednesday.
+
+  (If you need to hear my rant about why Zoom’s “fixes” are inadequate, ask me off-list.)
+  Jitsi is a Free/Libre OSS project sponsored by 8x8 (an Atlassian spin-off). It is the freemium base for their added-value corporate meeting & VOIP platform. As FLOSS, it can be self-hosted; they provide a free demo server. We will currently be using the free demo server, but may migrate to a hosted server (where we can set defaults, privileges).
+  Natick FOSS group has a [4-page Jitsi Help .pdf file](http://www.millermicro.com/FOSSUserGroupJitsi.pdf), and you can practice beforehand.  (They meet 1st Thursdays, online, early afternoon.)
+ Update to file ^ : Firefox latest versions 78+ support multicast, so are safer than before. Chrome/Chromium/FF78+ all plausible now.
+
+One can use plain web mode, but you can install the browser plug-in if you like (recommended if sharing slides or terminal). There are also iOS (iPhone/iPad) and Android apps which work well.
+
+
+JITSI keyboard shortcuts - <https://jitsi.github.io/handbook/docs/user-guide/keyboard-shortcuts>
+
+JITSI scales fine to more people in face-sharing Brady-Bunch / Hollywood Squares mode than you can easily see at once (30ish) and if folks turn off their cameras when just listening/talking, i.e. when not commenting/presenting, it scales much higher. (If we later get more folks than will comfortably fit in Jitsi, we can set up a stream to YouTubeLive or some other platform … or upgrade to a proper panelist platform feeding a stream, but the “seminar” quality of Jitsi is fine for our level of anarchy.)
+
+I will routinely mute those not presenting so you’ll usually need to unmute to comment. Hint: Space-bar is push to talk, M is mute/unmute (on phone/tablet it’s the skeuomorphic microphone, avoid the handset hangup button!).
+
+As now seen on [Perl Weekly newsletter](https://perlweekly.com/) Perl weekly ![234x60.png](./images/perl_weekly_234x60.png){#pwnl height=30 width=117} and their [Events Calendar](https://perlweekly.com/events.html) - which you can import via the live [iCal calendar](https://perlweekly.com/perlweekly.ical) -- at least in months that i plan ahead (not this month). 
+
+----------
+
+
 # 2022
 
 ## January 11th - Boston.pm Virutal Round Table 
@@ -992,28 +1023,69 @@ When asked if he also provided a substitute for the `given ... when ...` keyword
 In discussion after, Jerrad discussed CLI utilities 
 `csv-grep`, `csv-munge-row`,  etc from **[`App::CSVUtils`](https://metacpan.org/pod/App::CSVUtils)**
 
+---
 
-# Historical BOILERPLATE
-
-(*This is the boilerplate as used fall 2020 - spring 2022.
-Current boilerplate is below announced schedule [on homepage](index.html#boilerplate).*)
-
-* Meetings hosted by Boston.PM are in [meet.Jit.si](https://meet.Jit.si) and on 2d Tuesday.
-* Meetings hosted by [Charlotte.PM](https://www.meetup.com/charlotte-pm/) are in Zoom and on Last Wednesdays.
-* Meetings hosted by Boston Linux Unix (<http://blu.org>) are in Jitsi and on 3d Wednesday.
-
-  (If you need to hear my rant about why Zoom’s “fixes” are inadequate, ask me off-list.)
-  Jitsi is a Free/Libre OSS project sponsored by 8x8 (an Atlassian spin-off). It is the freemium base for their added-value corporate meeting & VOIP platform. As FLOSS, it can be self-hosted; they provide a free demo server. We will currently be using the free demo server, but may migrate to a hosted server (where we can set defaults, privileges).
-  Natick FOSS group has a [4-page Jitsi Help .pdf file](http://www.millermicro.com/FOSSUserGroupJitsi.pdf), and you can practice beforehand.  (They meet 1st Thursdays, online, early afternoon.)
- Update to file ^ : Firefox latest versions 78+ support multicast, so are safer than before. Chrome/Chromium/FF78+ all plausible now.
-
-One can use plain web mode, but you can install the browser plug-in if you like (recommended if sharing slides or terminal). There are also iOS (iPhone/iPad) and Android apps which work well.
+## Tuesday, March 14th (π day = &#x1F967; day), 6:30 &#127482;&#127480; EDT(UTC-04)  Boston PM: Ovid(tape)+LeoNerd(live) on Corinna - OO in Perl5 Core
 
 
-JITSI keyboard shortcuts - <https://jitsi.github.io/handbook/docs/user-guide/keyboard-shortcuts>
+We'll have **Curtis *"Ovid"* Poe** on the strategy of Corinna project (_by the magic of tape delay_) and **Paul "[`PEVANS`](https://metacpan.org/author/PEVANS)/[`LeoNerd`](http://www.leonerd.org.uk/)" Evans**, Perl Steering Committe and `Object::Pad implementor`, ***LIVE*** for the practicalities and Q&A.
 
-JITSI scales fine to more people in face-sharing Brady-Bunch / Hollywood Squares mode than you can easily see at once (30ish) and if folks turn off their cameras when just listening/talking, i.e. when not commenting/presenting, it scales much higher. (If we later get more folks than will comfortably fit in Jitsi, we can set up a stream to YouTubeLive or some other platform … or upgrade to a proper panelist platform feeding a stream, but the “seminar” quality of Jitsi is fine for our level of anarchy.)
+Last summer, Ovid posted exciting news -
 
-I will routinely mute those not presenting so you’ll usually need to unmute to comment. Hint: Space-bar is push to talk, M is mute/unmute (on phone/tablet it’s the skeuomorphic microphone, avoid the handset hangup button!).
+> "For #perl devs wondering how the Corinna #oop project is going, @cpan_pevans
+is now working on stage 1 of the accepted portion of the RFC. I've put that in the [repo](https://github.com/Ovid/Cor/blob/master/rfc/mvp.md) so you can follow along"  
+> [`@OvidPerl` 2022-08-18](https://twitter.com/OvidPerl/status/1560305460707827715)
 
-As now seen on [Perl Weekly newsletter](https://perlweekly.com/) Perl weekly ![234x60.png](./images/perl_weekly_234x60.png){#pwnl height=30 width=117} and their [Events Calendar](https://perlweekly.com/events.html) - which you can import via the live [iCal calendar](https://perlweekly.com/perlweekly.ical) -- at least in months that i plan ahead (not this month). 
+Just recently in mid February 2023, Ovid and Paul again shared exciting news: P5P's upcoming development release Perl 5.37.9 (alpha/beta for 5.40.0) will contain  
+ **`use feature 'class';`**  
+It has been merged.
+
+Ovid is the architect and Paul is the lead developer for adding a new object-oriented system called Corinna† (formerly & confusingly "Cor" into Perl 5 Core. They've had an open community process to develop an RFC or proposal and prototype, but until recently, without commitment for the Perl 5 Porters (P5P) to actually implement it in Perl 5. Over the summer, P5P have approved the initial Stage 1 integration into Perl Core. While we've had 20+ years of new OO packages for Perl5 since 5.0, this is the first actual (as opposed to proposed) overhaul of the *core* OO system in Perl 5.
+
+PEVANS's non-Core, prototype is [Object::Pad](https://metacpan.org/dist/Object-Pad), which can be conditionally imported in compatibility mode via [Feature::Compat::Class](https://metacpan.org/pod/Feature::Compat::Class).
+
+Ovid's recent writing on Corinna are [on his blog](https://ovid.github.io/tags/corinna.html).
+
+The [Corinna project](https://github.com/Ovid/Cor) has a  [wiki](https://github.com/Ovid/Cor/wiki) and the [RFC](https://github.com/Ovid/Cor#rfc) that proposed adding Corinna to Perl 5 Core, and the P5P-accepted Stage 1 [Minimal Viable Product RFC](https://github.com/Ovid/Cor/blob/master/rfc/mvp.md). [His 2021 editorial](https://dev.to/ovid/bringing-modern-oo-to-perl-51ak) explains the difference between Moose (*et al*), Stevan Little's Moxie, and Corinna.
+
+***Damian Conway*** posted an exultation for the (January 2022) P5P approval of the Stage 1 MVP RFC _but i can't find it again_. His previous writings endorsing the project are
+
+* [A (not so) simple matter of privacy 2021-DEC](http://blogs.perl.org/users/damian_conway/2021/12/a-not-so-simple-matter-of-privacy.html), 
+* [A dream resyntaxed 2021-Nov](http://blogs.perl.org/users/damian_conway/2021/11/a-dream-resyntaxed.html)
+* [A dream realized 2021-Aug](http://blogs.perl.org/users/damian_conway/2021/08/a-dream-realized.html)
+
+† _Corinna_ is a classical allusion in connection to Curtis's pseudonym _Ovid_, which explains the classical (and otherwise potentially NSFW) image on the MVP RFC tweet.
+
+### minutes
+
+attending
+
+* Bill R
+* PaulEvans/LeoNerd (~co-~presenter)
+* Ricky M
+* Jonathan F
+* Kripa
+* Tom M
+* zaki
+
+### media
+
+* [Ovid Cor Video (2021) FOSDEM - purpose and design](https://youtu.be/kSZO-aJg4dM) 2 years ago
+(alternative somewhat more recent [2022 video](https://youtu.be/5lSdBSCkFGs) is only slightly different but has audio dropouts )
+
+* [Paul's Slides on implementation Status](https://go.leonerd.org.uk/corinna-and-feature-class-2023)
+
+### CPAN references
+
+To get the latest Dev Perl (before 5.38.0 arrives in May), `perlbrew install perl-blead` .
+
+* 5.37.9 [perldelta](https://metacpan.org/release/ETHER/perl-5.37.9/view/pod/perldelta.pod) giving `use feature 'class';`.  [perlclass](https://metacpan.org/pod/release/ETHER/perl-5.37.9/pod/perlclass.pod) [perlclassguts](https://metacpan.org/pod/release/ETHER/perl-5.37.9/pod/perlclassguts.pod)
+
+* [`Object::Pad`](https://metacpan.org/pod/Object::Pad) for prototypical moving target.
+* [`Feature::Compat::Class`](https://metacpan.org/pod/Feature::Compat::Class) for stable version usable in older Perls (5.18+).
+* also [`Feature::Compat::Try`](https://metacpan.org/pod/Feature::Compat::Try), [`Feature::Compat::Defer`](https://metacpan.org/pod/Feature::Compat::Defer)
+* [`Struct::Dumb`](https://metacpan.org/pod/Struct::Dumb) automatically `uses feature 'class';` at Perl 5.37.9 and above. `Struct::Dumb` is already used in a [number of modules](https://metacpan.org/module/Struct::Dumb/requires).
+
+* [Cor(inna) Wiki](https://github.com/Ovid/Cor/wiki)
+
+----------------------------
