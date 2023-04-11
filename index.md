@@ -78,7 +78,9 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 _Previous meetings' minutes are recorded at the bottom of the [latest history file](./History-03-Email.html)._
 
-## April 11th, T B D 
+## April 11th, No Meeting 
+
+## May 9th, T B D
 
 (Might be the backup topic)
 

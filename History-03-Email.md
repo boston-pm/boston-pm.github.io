@@ -1089,3 +1089,9 @@ To get the latest Dev Perl (before 5.38.0 arrives in May), `perlbrew install per
 * [Cor(inna) Wiki](https://github.com/Ovid/Cor/wiki)
 
 ----------------------------
+
+## April 11th, no meeting 
+
+----------------------
+
+
