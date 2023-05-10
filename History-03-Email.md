@@ -1095,3 +1095,28 @@ To get the latest Dev Perl (before 5.38.0 arrives in May), `perlbrew install per
 ----------------------
 
 
+## May 9th, Using `MP3::Tag` & `Syntax::Keyword::Try` etc to make playable audio archives with legible titles 
+
+In pre-meeting **Jarred** discussed [SIGBlovik: The Association for Computational Heresy](http://sigbovik.org/), a parody computer science special-interest group, which has paper and [video](https://www.youtube.com/results?search_query=sigbovik) proceedings, in particular [ GradIEEEnt half decent: The hidden power of imprecise lines ](https://www.youtube.com/watch?v=Ae9EKCyI1xU). And [**Randal**](https://www.youtube.com/c/RandalLSchwartzonDartandFlutter) previewed the release of [Dart 3.0](https://en.wikipedia.org/wiki/Dart_%28programming_language%29)/[Flutter 3.10](https://en.wikipedia.org/wiki/Flutter_%28software%29) later this week.
+
+Since I (Bill) failed to cancel the meeting or line up something better, we dove into my Backup Topic.
+
+### Using `MP3::Tag` & `Syntax::Keyword::Try` etc to make playable audio archives with legible titles 
+
+This [script (Tidy html)](./scripts/mp3info.pl.html) ([`mp3info.pl` (raw)](./scripts/mp3info.pl)) exists to (a) scratch an immediate itch and (b) experiment with a few modules. No claim is made to best usage of any of these features! The Itch was scratched, and pudding was proofed.
+
+The Itch was that in moving old podcast files off a modest M.2 SSD to archival spinning rust drive (which is normally kept Read-only mounted for safety), I did not want to rely on Rhythmbox or other music/pod player being sane about browsing/playing a read-only drive where it couldn't mark things PLAYED. I did need to move most of my older mp3, ogg, etc collection that wasn't "in queue" to larger passive storage to make space. But i didn't want to lose the ability to search by track title etc, which usually aren't fully encoded in filenames. As i expected, there's a CPAN module for accessing mp3 etc meta-data tags. So it should be trivial to recursively write HTML indices for directories containing MP3s, with links that will play a file, right? 
+
+(_more commentary is in the linked file._)
+
+### CPAN references
+
+* [`MP3::Tag`](https://metacpan.org/pod/MP3::Tag)
+* [`URI::Encode`](https://metacpan.org/pod/URI::Encode)
+* [`Path::Tiny`](https://metacpan.org/pod/Path::Tiny)
+* [`File::Stat`](https://metacpan.org/pod/File::Stat)
+* [`Readonly`](https://metacpan.org/pod/Readonly)
+* [`Syntax::Keyword::Try`](https://metacpan.org/pod/Syntax::Keyword::Try) [`:experimental`](https://metacpan.org/pod/Syntax::Keyword::Try#Experimental-Features)
+
+-----
+

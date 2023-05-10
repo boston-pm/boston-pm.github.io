@@ -1440,5 +1440,64 @@ Wiki</a></p></li>
 <hr />
 <h2 id="april-11th-no-meeting">April 11th, no meeting</h2>
 <hr />
+<h2
+id="may-9th-using-mp3tag-syntaxkeywordtry-etc-to-make-playable-audio-archives-with-legible-titles">May
+9th, Using <code>MP3::Tag</code> &amp; <code>Syntax::Keyword::Try</code>
+etc to make playable audio archives with legible titles</h2>
+<p>In pre-meeting <strong>Jarred</strong> discussed <a
+href="http://sigbovik.org/">SIGBlovik: The Association for Computational
+Heresy</a>, a parody computer science special-interest group, which has
+paper and <a
+href="https://www.youtube.com/results?search_query=sigbovik">video</a>
+proceedings, in particular <a
+href="https://www.youtube.com/watch?v=Ae9EKCyI1xU">GradIEEEnt half
+decent: The hidden power of imprecise lines</a>. And <a
+href="https://www.youtube.com/c/RandalLSchwartzonDartandFlutter"><strong>Randal</strong></a>
+previewed the release of <a
+href="https://en.wikipedia.org/wiki/Dart_%28programming_language%29">Dart
+3.0</a>/<a
+href="https://en.wikipedia.org/wiki/Flutter_%28software%29">Flutter
+3.10</a> later this week.</p>
+<p>Since I (Bill) failed to cancel the meeting or line up something
+better, we dove into my Backup Topic.</p>
+<h3
+id="using-mp3tag-syntaxkeywordtry-etc-to-make-playable-audio-archives-with-legible-titles">Using
+<code>MP3::Tag</code> &amp; <code>Syntax::Keyword::Try</code> etc to
+make playable audio archives with legible titles</h3>
+<p>This <a href="./scripts/mp3info.pl.html">script (Tidy html)</a> (<a
+href="./scripts/mp3info.pl"><code>mp3info.pl</code> (raw)</a>) exists to
+(a) scratch an immediate itch and (b) experiment with a few modules. No
+claim is made to best usage of any of these features! The Itch was
+scratched, and pudding was proofed.</p>
+<p>The Itch was that in moving old podcast files off a modest M.2 SSD to
+archival spinning rust drive (which is normally kept Read-only mounted
+for safety), I did not want to rely on Rhythmbox or other music/pod
+player being sane about browsing/playing a read-only drive where it
+couldn’t mark things PLAYED. I did need to move most of my older mp3,
+ogg, etc collection that wasn’t “in queue” to larger passive storage to
+make space. But i didn’t want to lose the ability to search by track
+title etc, which usually aren’t fully encoded in filenames. As i
+expected, there’s a CPAN module for accessing mp3 etc meta-data tags. So
+it should be trivial to recursively write HTML indices for directories
+containing MP3s, with links that will play a file, right?</p>
+<p>(<em>more commentary is in the linked file.</em>)</p>
+<h3 id="cpan-references-1">CPAN references</h3>
+<ul>
+<li><a
+href="https://metacpan.org/pod/MP3::Tag"><code>MP3::Tag</code></a></li>
+<li><a
+href="https://metacpan.org/pod/URI::Encode"><code>URI::Encode</code></a></li>
+<li><a
+href="https://metacpan.org/pod/Path::Tiny"><code>Path::Tiny</code></a></li>
+<li><a
+href="https://metacpan.org/pod/File::Stat"><code>File::Stat</code></a></li>
+<li><a
+href="https://metacpan.org/pod/Readonly"><code>Readonly</code></a></li>
+<li><a
+href="https://metacpan.org/pod/Syntax::Keyword::Try"><code>Syntax::Keyword::Try</code></a>
+<a
+href="https://metacpan.org/pod/Syntax::Keyword::Try#Experimental-Features"><code>:experimental</code></a></li>
+</ul>
+<hr />
 </body>
 </html>

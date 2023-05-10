@@ -78,11 +78,9 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 _Previous meetings' minutes are recorded at the bottom of the [latest history file](./History-03-Email.html)._
 
-## April 11th, No Meeting 
+## June 8th, T B D
 
-## May 9th, T B D
-
-(Might be the backup topic)
+(As early as 2d Tuesday falls in the month.)
 
 
 
@@ -99,10 +97,6 @@ perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week 
 (See [Boilerplate](./index.html/#boilerplate) below for additional how-to etc.)
 
 
-## BACKUP TOPICS 
-
-* Using `MP3::Tag` `Syntax::Keyword::Try` etc to make playable audio archives with legible titles (`PerlHack/audio/mp3info.pl`)
-* ??
 
 
 # BoilerPlate
