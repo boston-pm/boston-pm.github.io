@@ -78,10 +78,9 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 _Previous meetings' minutes are recorded at the bottom of the [latest history file](./History-03-Email.html)._
 
-## June 8th, T B D
+## July 11th, CPAN Previews - Async Graphics
 
-(As early as 2d Tuesday falls in the month.)
-
+A set of modules using interesting combination of techniques showed up in Git - not yet on CPAN. We'll look under the hood.
 
 
 ------------
