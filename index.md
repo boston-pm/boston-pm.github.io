@@ -78,9 +78,11 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 _Previous meetings' minutes are recorded at the bottom of the [latest history file](./History-03-Email.html)._
 
-## July 11th, 7pm ET &#127482;&#127480; (07-12-00:00Z UTC) CPAN Previews - Async Graphics
+## September 12th, 2023 - NO MEETING - SUMMER HIATUS CONTINUES
 
-A set of modules using interesting combination of techniques showed up in Git - not yet on CPAN. We'll look under the hood.
+## October 11th, 2023 - something.
+
+If nothing else we'll discuss interesting TPRC videos, but i hope to have a module or something to discuss.
 
 
 ------------

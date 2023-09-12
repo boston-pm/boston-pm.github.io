@@ -1120,3 +1120,8 @@ The Itch was that in moving old podcast files off a modest M.2 SSD to archival s
 
 -----
 
+## June ... September 2023 - No meetings, Summer hiatus 
+
+_A proposed July meeting on Async Graphics didn't happen because RealLife™ intervened._
+
+----
