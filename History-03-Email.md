@@ -1125,3 +1125,26 @@ The Itch was that in moving old podcast files off a modest M.2 SSD to archival s
 _A proposed July meeting on Async Graphics didn't happen because RealLife™ intervened._
 
 ----
+
+## October  11th - un-meeting 
+## November Cancelled
+
+
+## December 12, 2023 - Informal Meeting
+
+(I don't have notes on what Perl News was discussed)
+
+# 2024
+
+## Tuesday, January 9th 7 PM &#127482;&#127480; - un-meeting
+
+**The most Perl-compatible RE engine remains Perl**. [Wikipedia](https://en.wikipedia.org/wiki/Comparison_of_regular_expression_engines#Part_1) has a two-part table of features. 
+
+Randal "Merlyn" Schwartz reports that he's naturally a guest on the newly re-reborn **Floss Weekly** show, now hosted via HackaDay.
+
+[RSS](http://feeds.libsyn.com/499093/rss)
+[#765](https://flossweekly.libsyn.com/episode-765-that-ship-sailed-and-sank) 
+as seen on [Fediverse](https://schleuss.online/@itnewsbot/111728848176983347) → [Hackaday](https://hackaday.com/2024/01/09/floss-weekly-episode-765-that-ship-sailed-and-sank/) 
+
+> **FLOSS Weekly Episode 765: That Ship Sailed… and Sank** - This week Jonathan Bennett and Aaron Newcomb talk with Randal Schwartz, the longest running host of FLOSS Weekly, Perl’s biggest cheerleader, and now Dart and Flutter expert. What’s new with Randal since his last FLOSS Weekly episode in May 2020? Why should you look at Dart and Flutter? And how do you avoid becoming a security martyr?) …
+
