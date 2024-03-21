@@ -1,7 +1,7 @@
 % Recent History 2017-present ![](./images/Logo.jpg){#logo .float_r width=30% }
 % Boston Perl Mongers
   Bill Ricker (& allied groups)
-% 2017-2023
+% 2017-2024
 # Boston.PM 
 
 Boston Perl Mongers history is divided into three parts, like Gaul.
@@ -1148,3 +1148,10 @@ as seen on [Fediverse](https://schleuss.online/@itnewsbot/111728848176983347) �
 
 > **FLOSS Weekly Episode 765: That Ship Sailed… and Sank** - This week Jonathan Bennett and Aaron Newcomb talk with Randal Schwartz, the longest running host of FLOSS Weekly, Perl’s biggest cheerleader, and now Dart and Flutter expert. What’s new with Randal since his last FLOSS Weekly episode in May 2020? Why should you look at Dart and Flutter? And how do you avoid becoming a security martyr?) …
 
+## Tuesday, February 13th, 2024 - canceled due to impending blizzard
+
+that missed 30 miles south, alas
+
+## Tuesday, March 12th, 2024 - cancled due to health
+
+sorry, Bill couldn't.

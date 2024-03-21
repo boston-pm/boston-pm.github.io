@@ -1,6 +1,6 @@
 % Boston Perl Mongers  ![](./images/Logo.jpg){#logo .float_r width=30% }
 % 
-% 2023
+% 2024
 
 
 
@@ -78,11 +78,13 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 _Previous meetings' minutes are recorded at the bottom of the [latest history file](./History-03-Email.html)._
 
-## February 13th, 2024 - un-meeting or tech topic?
+## April 9th, 2024 - No meeting
 
+If I'm able to chase the Eclipse, I won't be holding a meeting the next evening.
 
-If nothing else we could discuss interesting TPRC videos, but i hope to have a module or something to discuss.
+## May 14th, 2024 - NEXT MEETING ?
 
+Anyone have a topic?
 
 ------------
 
