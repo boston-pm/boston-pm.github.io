@@ -78,7 +78,7 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 _Previous meetings' minutes are recorded at the bottom of the [latest history file](./History-03-Email.html)._
 
-## April 9th, 2024 - Meeting!
+## April 9th, 2024 - Meeting!  7.30 EDT 
 
 While I was able to chase the Eclipse, I didn't get caught in traffic, so can hold meeting.
 
@@ -106,7 +106,7 @@ perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week 
 # BoilerPlate
 
 * Meetings hosted by Boston.PM are in [meet.Jit.si](https://meet.Jit.si) and on 2d Tuesday.
-* Meetings hosted by [Charlotte.PM](https://www.meetup.com/charlotte-pm/) are in Zoom and on Last Wednesdays.
+* Topic starts at 7:30 PM EDT; gathering from 7pm.
 * Meetings hosted by Boston Linux Unix (<http://blu.org>) are in Jitsi and on 3d Wednesday.
 
 (*If you need to hear my rant about why Zoom’s “fixes” are inadequate, ask me off-list. Or watch my BLU Cryptology History & News annual report for the last decade.*)
