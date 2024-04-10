@@ -78,13 +78,9 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 _Previous meetings' minutes are recorded at the bottom of the [latest history file](./History-03-Email.html)._
 
-## April 9th, 2024 - Meeting!  7.30 EDT 
 
-While I was able to chase the Eclipse, I didn't get caught in traffic, so can hold meeting.
 
-The tentative topic is a recent CPAN upload that makes good use of the new experimental built-in  Class syntax.
-
-## May 14th, 2024 - NEXT MEETING
+## May 14th, 2024 - NEXT MEETING - 7.30 EDT topic start (7.00 gathering chatter)
 
 Anyone have a topic?
 

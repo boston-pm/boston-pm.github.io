@@ -1155,3 +1155,81 @@ that missed 30 miles south, alas
 ## Tuesday, March 12th, 2024 - cancled due to health
 
 sorry, Bill couldn't.
+
+## Tuesday, April 9th, 2024 - using new Class syntax
+
+While I was able to chase the Eclipse, I didn't get caught in traffic, so surprise, meeting held.
+
+The topic is Dave Cross's recent CPAN upload [**Amazon::Sites**](https://metacpan.org/pod/Amazon::Sites ) [0.1.6](https://metacpan.org/release/DAVECROSS/Amazon-Sites-0.1.6/source/README.md) that makes good use of the Ovid=Curtis and PEVANS=Leonerd's new experimental built-in  [`feature class` syntax](https://perldoc.perl.org/feature#The-'class'-feature) (via the compatible wrapper [Feature::Compat::Class](https://metacpan.org/pod/Feature::Compat::Class)) and `signatures` to make a real-world useful CPAN ojbect using latest Perl features. Dave Cross got some help in FB "The Perl Community" :
+
+[Request for Help](https://www.facebook.com/groups/perlcommunity/posts/1639477536859866/)
+
+> **Dave Cross**  
+> I released a new CPAN module called `Amazon::Sites`. It uses `Feature::Compat::Class` and subroutine signatures. And CPAN testers tells me that it is failing to compile on Perl 5.24. It looks like the failure is because of my use of signatures - but they were introduced in Perl 5.20, so I can't see what the problem is.
+
+> **Leon Timmermans**  
+> Yeah, if you want to use signatures in `Object::Pad` methods you need 5.26. This issue is not solvable as earlier perls don't provide the underlaying primitives needed to implement this.
+
+[Exposed compatibility issue in CPAN PAUSE](https://www.facebook.com/groups/perlcommunity/posts/1643221256485494/)
+
+> **Dave Cross**  
+> More about the `Amazon::Sites` module I was asking for help with recently.  
+[https://perlhacks.com/2024/03/amazon-links-and-buttons/](https://perlhacks.com/2024/03/amazon-links-and-buttons/)
+
+
+> **Joshua S. Day**  
+> @ **Dave Cross** I notice that you have a class inside a package by the same name. Is there a reason the whole file isn't just a class?
+
+> **Dave Cross** Author Admin  
+> **Joshua S. Day** It's because the `PAUSE` indexer hasn't kept up with the new OO syntax and doesn't (yet) recognise the "class" keyword as introducing a package.
+> See https://github.com/andk/pause/issues/436
+> …
+> My first attempt at uploading the module failed for this reason. I got email from **Neil Bowers** explaining the problem and he raised the ticket above.
+> I'm not expecting anything to change until after the Perl Toolchain Summit next month
+
+It's a very simple set of 2 classes (a collection class and a single-thing instances class) that solves a real problem without needing features that aren't in the experimental core `feature class` yet.
+
+### When is a JAPH not a JAPH
+
+**Fediverse (Mastodon etc) has `#perl` activity**.  A delightful not-just-a-JAPH showed up today.
+
+[Serpent7776 2024-04-09](https://mastodon.social/@Serpent7776/112242749915834369)
+
+> Definitely don't run this random #perl code
+
+```
+my@a=sub{my@a=@_;
+map{(-10, -12, 86, 56, -82, -5, -82, 1, 73, 54, -13, -70)[$_]+$a[$_]} 0..11
+}->((unpack("C*", 'rm -rf')) x 2);my@w=(0x64, 0x61, 0x79);
+print eval "'" . pack("C*", @a) . pack("C*", @w) . "\n'";
+```
+
+[Apr 09, 2024, 14:47](https://mastodon.social/@Serpent7776/112242749915834369)
+
+_yes it looks scary, but that's just raw characters being reprocessed to pring something friendly._
+
+This reminded Randal of a [JAPH he perpetrated](https://www.perlmonks.org/?node_id=1198781) a long time ago, the `oh, turtleneck Phrase Jar!`, which abused `tr` to transpose an anagram rather than transliterate.
+
+### Eclipse 2024 discussion
+And we of course compared our **Eclipse experiences** the prior day.  I (Bill) opted for 97% in Mom's driveway — celebrating memory of her taking me to Grandfather's for Eclipse of 1963 — and concentrated on the experience rather than photography but got a [few photos](https://pixelfed.social/i/web/post/683385129870968035).  I got 140 minutes between 1st and 4th contact.  The 3% Maximum period was perhaps longer than Totality for those there, and was differently fascinating; the remnant sliver seemingly rotated **around** the shadow as the shadow slowly shifted across the sun's disk from pseudo-2nd-contact to pseudo-3rd-contact. NASA posted an image showing this from [Washington DC](https://nasa.tumblr.com/post/747233450847862785/follow-follow-the-sun-and-which-way-the-wind).
+![Eclipse-washington-monument-nasa](images/Eclipse-washington-monument-nasa.png)
+
+  NOAA as usual posted an animation of the eclipse [Penumbra (the broader partial eclipse shadow) crossing the continent](https://vis.social/@joemurph/112237534904015218) [hires Y-T](https://www.youtube.com/watch?v=MoDBHIlY9FA)
+[Friends of Nasa](https://www.friendsofnasa.org/2024/04/solar-eclipse-2024-high-res-orbital.html) has some low-orbit close-ups too, as does [space.com](https://www.space.com/solar-eclipse-2024-satellite-moon-shadow-video-photos). 
+
+Space(.)com pub'd a NASA image shot from [ISS that's a "closeup" of Quebec + Maine](https://www.space.com/solar-eclipse-2024-satellite-moon-shadow-video-photos) in shadow (Penumbra; Totality or Umbra is the thin densest core).
+
++----------------------------+------------------------------+
+|E                           |                             S|
++----------------------------+------------------------------+
+|                                                           |
+|![ISS-view-Canada+Maine](images/ISS-view-Canada+Maine.jpg) |
++----------------------------+------------------------------+
+|N                           |                             W|
++----------------------------+------------------------------+
+
+> «Astronauts on the International Space Station snapped this photo of the moon's shadow on covering portions of the Canadian provinces of Quebec and New Brunswick and the American state of Maine from its orbit 261 miles above Earth during the April 8,2024 total solar eclipse.  > (Image credit: NASA)»
+
+(pov is looking South East over Quebec to Maritimes and New England; PEI&NS/NB upper-left, Cape Cod is at the edge of the clouds to right. 
+Gaspé peninsula center left is where I enjoyed the [Eclipse of 1972](https://en.wikipedia.org/wiki/Solar_eclipse_of_July_10%2C_1972). When the Gaspé is the most populous spot for an Eclipse ... )
+

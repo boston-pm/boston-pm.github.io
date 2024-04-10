@@ -1541,5 +1541,150 @@ February 13th, 2024 - canceled due to impending blizzard</h2>
 <h2 id="tuesday-march-12th-2024---cancled-due-to-health">Tuesday, March
 12th, 2024 - cancled due to health</h2>
 <p>sorry, Bill couldn’t.</p>
+<h2 id="tuesday-april-9th-2024---using-new-class-syntax">Tuesday, April
+9th, 2024 - using new Class syntax</h2>
+<p>While I was able to chase the Eclipse, I didn’t get caught in
+traffic, so surprise, meeting held.</p>
+<p>The topic is Dave Cross’s recent CPAN upload <a
+href="https://metacpan.org/pod/Amazon::Sites"><strong>Amazon::Sites</strong></a>
+<a
+href="https://metacpan.org/release/DAVECROSS/Amazon-Sites-0.1.6/source/README.md">0.1.6</a>
+that makes good use of the Ovid=Curtis and PEVANS=Leonerd’s new
+experimental built-in <a
+href="https://perldoc.perl.org/feature#The-&#39;class&#39;-feature"><code>feature class</code>
+syntax</a> (via the compatible wrapper <a
+href="https://metacpan.org/pod/Feature::Compat::Class">Feature::Compat::Class</a>)
+and <code>signatures</code> to make a real-world useful CPAN ojbect
+using latest Perl features. Dave Cross got some help in FB “The Perl
+Community” :</p>
+<p><a
+href="https://www.facebook.com/groups/perlcommunity/posts/1639477536859866/">Request
+for Help</a></p>
+<blockquote>
+<p><strong>Dave Cross</strong><br />
+I released a new CPAN module called <code>Amazon::Sites</code>. It uses
+<code>Feature::Compat::Class</code> and subroutine signatures. And CPAN
+testers tells me that it is failing to compile on Perl 5.24. It looks
+like the failure is because of my use of signatures - but they were
+introduced in Perl 5.20, so I can’t see what the problem is.</p>
+</blockquote>
+<blockquote>
+<p><strong>Leon Timmermans</strong><br />
+Yeah, if you want to use signatures in <code>Object::Pad</code> methods
+you need 5.26. This issue is not solvable as earlier perls don’t provide
+the underlaying primitives needed to implement this.</p>
+</blockquote>
+<p><a
+href="https://www.facebook.com/groups/perlcommunity/posts/1643221256485494/">Exposed
+compatibility issue in CPAN PAUSE</a></p>
+<blockquote>
+<p><strong>Dave Cross</strong><br />
+More about the <code>Amazon::Sites</code> module I was asking for help
+with recently.<br />
+<a
+href="https://perlhacks.com/2024/03/amazon-links-and-buttons/">https://perlhacks.com/2024/03/amazon-links-and-buttons/</a></p>
+</blockquote>
+<blockquote>
+<p><strong>Joshua S. Day</strong><br />
+@ <strong>Dave Cross</strong> I notice that you have a class inside a
+package by the same name. Is there a reason the whole file isn’t just a
+class?</p>
+</blockquote>
+<blockquote>
+<p><strong>Dave Cross</strong> Author Admin<br />
+<strong>Joshua S. Day</strong> It’s because the <code>PAUSE</code>
+indexer hasn’t kept up with the new OO syntax and doesn’t (yet)
+recognise the “class” keyword as introducing a package. See
+https://github.com/andk/pause/issues/436 … My first attempt at uploading
+the module failed for this reason. I got email from <strong>Neil
+Bowers</strong> explaining the problem and he raised the ticket above.
+I’m not expecting anything to change until after the Perl Toolchain
+Summit next month</p>
+</blockquote>
+<p>It’s a very simple set of 2 classes (a collection class and a
+single-thing instances class) that solves a real problem without needing
+features that aren’t in the experimental core <code>feature class</code>
+yet.</p>
+<h3 id="when-is-a-japh-not-a-japh">When is a JAPH not a JAPH</h3>
+<p><strong>Fediverse (Mastodon etc) has <code>#perl</code>
+activity</strong>. A delightful not-just-a-JAPH showed up today.</p>
+<p><a
+href="https://mastodon.social/@Serpent7776/112242749915834369">Serpent7776
+2024-04-09</a></p>
+<blockquote>
+<p>Definitely don’t run this random #perl code</p>
+</blockquote>
+<pre><code>my@a=sub{my@a=@_;
+map{(-10, -12, 86, 56, -82, -5, -82, 1, 73, 54, -13, -70)[$_]+$a[$_]} 0..11
+}-&gt;((unpack(&quot;C*&quot;, &#39;rm -rf&#39;)) x 2);my@w=(0x64, 0x61, 0x79);
+print eval &quot;&#39;&quot; . pack(&quot;C*&quot;, @a) . pack(&quot;C*&quot;, @w) . &quot;\n&#39;&quot;;</code></pre>
+<p><a href="https://mastodon.social/@Serpent7776/112242749915834369">Apr
+09, 2024, 14:47</a></p>
+<p><em>yes it looks scary, but that’s just raw characters being
+reprocessed to pring something friendly.</em></p>
+<p>This reminded Randal of a <a
+href="https://www.perlmonks.org/?node_id=1198781">JAPH he
+perpetrated</a> a long time ago, the
+<code>oh, turtleneck Phrase Jar!</code>, which abused <code>tr</code> to
+transpose an anagram rather than transliterate.</p>
+<h3 id="eclipse-2024-discussion">Eclipse 2024 discussion</h3>
+<p>And we of course compared our <strong>Eclipse experiences</strong>
+the prior day. I (Bill) opted for 97% in Mom’s driveway — celebrating
+memory of her taking me to Grandfather’s for Eclipse of 1963 — and
+concentrated on the experience rather than photography but got a <a
+href="https://pixelfed.social/i/web/post/683385129870968035">few
+photos</a>. I got 140 minutes between 1st and 4th contact. The 3%
+Maximum period was perhaps longer than Totality for those there, and was
+differently fascinating; the remnant sliver seemingly rotated
+<strong>around</strong> the shadow as the shadow slowly shifted across
+the sun’s disk from pseudo-2nd-contact to pseudo-3rd-contact. NASA
+posted an image showing this from <a
+href="https://nasa.tumblr.com/post/747233450847862785/follow-follow-the-sun-and-which-way-the-wind">Washington
+DC</a>. <img src="images/Eclipse-washington-monument-nasa.png"
+alt="Eclipse-washington-monument-nasa" /></p>
+<p>NOAA as usual posted an animation of the eclipse <a
+href="https://vis.social/@joemurph/112237534904015218">Penumbra (the
+broader partial eclipse shadow) crossing the continent</a> <a
+href="https://www.youtube.com/watch?v=MoDBHIlY9FA">hires Y-T</a> <a
+href="https://www.friendsofnasa.org/2024/04/solar-eclipse-2024-high-res-orbital.html">Friends
+of Nasa</a> has some low-orbit close-ups too, as does <a
+href="https://www.space.com/solar-eclipse-2024-satellite-moon-shadow-video-photos">space.com</a>.</p>
+<p>Space(.)com pub’d a NASA image shot from <a
+href="https://www.space.com/solar-eclipse-2024-satellite-moon-shadow-video-photos">ISS
+that’s a “closeup” of Quebec + Maine</a> in shadow (Penumbra; Totality
+or Umbra is the thin densest core).</p>
+<table style="width:83%;">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>E</td>
+<td><pre><code>                        S</code></pre></td>
+</tr>
+<tr class="even">
+<td colspan="2"><img src="images/ISS-view-Canada+Maine.jpg" title="fig:"
+alt="ISS-view-Canada+Maine" /></td>
+</tr>
+<tr class="odd">
+<td>N</td>
+<td><pre><code>                        W</code></pre></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>«Astronauts on the International Space Station snapped this photo of
+the moon’s shadow on covering portions of the Canadian provinces of
+Quebec and New Brunswick and the American state of Maine from its orbit
+261 miles above Earth during the April 8,2024 total solar eclipse. &gt;
+(Image credit: NASA)»</p>
+</blockquote>
+<p>(pov is looking South East over Quebec to Maritimes and New England;
+PEI&amp;NS/NB upper-left, Cape Cod is at the edge of the clouds to
+right. Gaspé peninsula center left is where I enjoyed the <a
+href="https://en.wikipedia.org/wiki/Solar_eclipse_of_July_10%2C_1972">Eclipse
+of 1972</a>. When the Gaspé is the most populous spot for an Eclipse …
+)</p>
 </body>
 </html>
