@@ -24,7 +24,8 @@ body {
 
 a {
   color: #0645ad;
-  text-decoration: none;
+  text-decoration: underline blue; /* affordances */
+  /* text-decoration: none; */)
 }
 
 a:visited {
@@ -125,6 +126,7 @@ hr {
 
 pre, code, kbd, samp {
   color: #000;
+  background-color: #f0f0f0;
   font-family: monospace, monospace;
   _font-family: 'courier new', monospace;
   font-size: 0.98em;

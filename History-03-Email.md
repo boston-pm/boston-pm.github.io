@@ -2,6 +2,7 @@
 % Boston Perl Mongers
   Bill Ricker (& allied groups)
 % 2017-2024
+
 # Boston.PM 
 
 Boston Perl Mongers history is divided into three parts, like Gaul.
@@ -1210,6 +1211,10 @@ _yes it looks scary, but that's just raw characters being reprocessed to pring s
 
 This reminded Randal of a [JAPH he perpetrated](https://www.perlmonks.org/?node_id=1198781) a long time ago, the `oh, turtleneck Phrase Jar!`, which abused `tr` to transpose an anagram rather than transliterate.
 
+
+----
+
+
 ### Eclipse 2024 discussion
 And we of course compared our **Eclipse experiences** the prior day.  I (Bill) opted for 97% in Mom's driveway — celebrating memory of her taking me to Grandfather's for Eclipse of 1963 — and concentrated on the experience rather than photography but got a [few photos](https://pixelfed.social/i/web/post/683385129870968035).  I got 140 minutes between 1st and 4th contact.  The 3% Maximum period was perhaps longer than Totality for those there, and was differently fascinating; the remnant sliver seemingly rotated **around** the shadow as the shadow slowly shifted across the sun's disk from pseudo-2nd-contact to pseudo-3rd-contact. NASA posted an image showing this from [Washington DC](https://nasa.tumblr.com/post/747233450847862785/follow-follow-the-sun-and-which-way-the-wind).
 ![Eclipse-washington-monument-nasa](images/Eclipse-washington-monument-nasa.png)
@@ -1233,3 +1238,64 @@ Space(.)com pub'd a NASA image shot from [ISS that's a "closeup" of Quebec + Mai
 (pov is looking South East over Quebec to Maritimes and New England; PEI&NS/NB upper-left, Cape Cod is at the edge of the clouds to right. 
 Gaspé peninsula center left is where I enjoyed the [Eclipse of 1972](https://en.wikipedia.org/wiki/Solar_eclipse_of_July_10%2C_1972). When the Gaspé is the most populous spot for an Eclipse ... )
 
+----
+
+## Tuesday May 14th, 2024 
+
+* Attending: Bill, Ricky, ~~Randal?~~, Chuba.
+
+
+* Stringy Eval redux ![prohibited-stringy-eval-cheese-pizza](images/prohibited-stringy-eval-cheese-pizza.png) - Paul Cochrane [Mastodon/Fediverse/AP](https://fosstodon.org/@peateasea@mastodon.social/112325534497525886) ⇒ [Avoiding stringy eval in Perl](https://peateasea.de/avoiding-stringy-eval-in-perl/)
+
+* Why do 6-digit confirmation codes (2FA etc) seem to \^always\^ have patterns?
+    * would [`Poker::Eval`](https://metacpan.org/dist/Poker-Eval) help? Not really.
+    * can use [`String::LCSS`](https://metacpan.org/pod/String::LCSS) to find sequences, and plain Perl for finding pairs/threes
+    * [`codes-poker.pl`](./scripts/codes-poker.pl.html)
+    * with only ten digits (vs 1-9,10,J,Q,A = 13 values=digits in Poker) and 6 cards, no pair and no sequence (allowing run of 3+ ala Gin Poker aka Gin Rummy) is very unlikely.
+    * Unlike Gin or (Whiskey) Poker, not allowing reordering cards in hand to form sequences s (but non-adjacent pairs, trebles ok  `152595` treble but not sequence or repetition); for mnemonic value in a 2FA confirm code, must be a sequence in the random digits as given. So `345655` is sequence of four, pair 5, repetition of 5, but `345556` is only sequence of 3 with treble 5.
+
+```
+$ perl codes-poker.pl 2>&1 | less
+1000
+123455 = rep:2:55,seq:5:12345,pair ;
+123123 = rep:3:123,seq:3:123,pair,pair,pair ;
+123456 = seq:6:123456 ;
+246890 = seq:3:890 ;
+246870 = seq:4:2468 ;
+152595 = three ;
+345655 = rep:2:55,seq:4:3456,three ;
+345556 = rep:3:555,seq:3:345,three ;
+        # first random hand:
+019227 = rep:2:22,seq:2:01,pair ;
+…
+597386 = nothing ;
+…
+402701 = seq:2:01,pair ;
+105743 = seq:2:10 ;
+200816 = rep:2:00,pair ;
+527139 = seq:2:13 ;
+405750 = seq:2:57,pair,pair ;
+
+15 nothings; 0.015
+```
+
+* OpenCage has subscription API amalgamating open geo data; inexpensive geocoding.
+    * [Fediverse post](https://fosstodon.org/@opencage@en.osm.town/112417428472786162) on GeoWeirdness in Catalonia, reminded me of their existence.
+    * [demo](https://opencagedata.com/demo)
+    * annotations provide one-stop shopping for many "what would i ask for next" answers!
+    * [API docs](https://opencagedata.com/api#annotations)
+    * [CPAN](https://metacpan.org/search?q=opencage)
+        *  [`Geo::Coder::OpenCage`](https://metacpan.org/pod/Geo::Coder::OpenCage)
+        *  [`Geo::Coder::Many::OpenCage`](https://metacpan.org/pod/Geo::Coder::Many::OpenCage) 
+           *  plugin for [`Geo::Coder::Many`](https://metacpan.org/dist/Geo-Coder-Many) 
+        * [Perl specific tutorial!](https://opencagedata.com/tutorials/geocode-in-perl)
+        * [PerlAdvent 2016](https://perladvent.org/2016/2016-12-08.html) would be why I'd heard of them before.
+        * I'd prefer OpenCage to [`Geo::What3Words`](https://metacpan.org/pod/Geo::What3Words), as that requires agreeing to would-be monopolist API key TOS (if I see any reason to even use w3w).
+    * API key use for testing is free but with tight rate limit; very reasonable prices for supported "Production" used, scaling by usage needed. Seems fair.
+
+* Other: Non-technical or at least not Perl
+    * Russian tourism during Glasnost
+    * Astronomical App for photographers to line up the Washington Monument photo in last month's Other.
+    * [Centimeter resolution GPS](https://n1vux.github.io/articles/Geodetic/RTK-experiments.html) on a hobby budget.
+
+----

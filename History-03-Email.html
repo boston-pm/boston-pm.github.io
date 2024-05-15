@@ -1627,6 +1627,7 @@ href="https://www.perlmonks.org/?node_id=1198781">JAPH he
 perpetrated</a> a long time ago, the
 <code>oh, turtleneck Phrase Jar!</code>, which abused <code>tr</code> to
 transpose an anagram rather than transliterate.</p>
+<hr />
 <h3 id="eclipse-2024-discussion">Eclipse 2024 discussion</h3>
 <p>And we of course compared our <strong>Eclipse experiences</strong>
 the prior day. I (Bill) opted for 97% in Mom’s driveway — celebrating
@@ -1686,5 +1687,105 @@ right. Gaspé peninsula center left is where I enjoyed the <a
 href="https://en.wikipedia.org/wiki/Solar_eclipse_of_July_10%2C_1972">Eclipse
 of 1972</a>. When the Gaspé is the most populous spot for an Eclipse …
 )</p>
+<hr />
+<h2 id="tuesday-may-14th-2024">Tuesday May 14th, 2024</h2>
+<ul>
+<li><p>Attending: Bill, Ricky, <del>Randal?</del>, Chuba.</p></li>
+<li><p>Stringy Eval redux <img
+src="images/prohibited-stringy-eval-cheese-pizza.png"
+alt="prohibited-stringy-eval-cheese-pizza" /> - Paul Cochrane <a
+href="https://fosstodon.org/@peateasea@mastodon.social/112325534497525886">Mastodon/Fediverse/AP</a>
+⇒ <a href="https://peateasea.de/avoiding-stringy-eval-in-perl/">Avoiding
+stringy eval in Perl</a></p></li>
+<li><p>Why do 6-digit confirmation codes (2FA etc) seem to ^always^ have
+patterns?</p>
+<ul>
+<li>would <a
+href="https://metacpan.org/dist/Poker-Eval"><code>Poker::Eval</code></a>
+help? Not really.</li>
+<li>can use <a
+href="https://metacpan.org/pod/String::LCSS"><code>String::LCSS</code></a>
+to find sequences, and plain Perl for finding pairs/threes</li>
+<li><a
+href="./scripts/codes-poker.pl.html"><code>codes-poker.pl</code></a></li>
+<li>with only ten digits (vs 1-9,10,J,Q,A = 13 values=digits in Poker)
+and 6 cards, no pair and no sequence (allowing run of 3+ ala Gin Poker
+aka Gin Rummy) is very unlikely.</li>
+<li>Unlike Gin or (Whiskey) Poker, not allowing reordering cards in hand
+to form sequences s (but non-adjacent pairs, trebles ok
+<code>152595</code> treble but not sequence or repetition); for mnemonic
+value in a 2FA confirm code, must be a sequence in the random digits as
+given. So <code>345655</code> is sequence of four, pair 5, repetition of
+5, but <code>345556</code> is only sequence of 3 with treble 5.</li>
+</ul></li>
+</ul>
+<pre><code>$ perl codes-poker.pl 2&gt;&amp;1 | less
+1000
+123455 = rep:2:55,seq:5:12345,pair ;
+123123 = rep:3:123,seq:3:123,pair,pair,pair ;
+123456 = seq:6:123456 ;
+246890 = seq:3:890 ;
+246870 = seq:4:2468 ;
+152595 = three ;
+345655 = rep:2:55,seq:4:3456,three ;
+345556 = rep:3:555,seq:3:345,three ;
+        # first random hand:
+019227 = rep:2:22,seq:2:01,pair ;
+…
+597386 = nothing ;
+…
+402701 = seq:2:01,pair ;
+105743 = seq:2:10 ;
+200816 = rep:2:00,pair ;
+527139 = seq:2:13 ;
+405750 = seq:2:57,pair,pair ;
+
+15 nothings; 0.015</code></pre>
+<ul>
+<li>OpenCage has subscription API amalgamating open geo data;
+inexpensive geocoding.
+<ul>
+<li><a
+href="https://fosstodon.org/@opencage@en.osm.town/112417428472786162">Fediverse
+post</a> on GeoWeirdness in Catalonia, reminded me of their
+existence.</li>
+<li><a href="https://opencagedata.com/demo">demo</a></li>
+<li>annotations provide one-stop shopping for many “what would i ask for
+next” answers!</li>
+<li><a href="https://opencagedata.com/api#annotations">API docs</a></li>
+<li><a href="https://metacpan.org/search?q=opencage">CPAN</a>
+<ul>
+<li><a
+href="https://metacpan.org/pod/Geo::Coder::OpenCage"><code>Geo::Coder::OpenCage</code></a></li>
+<li><a
+href="https://metacpan.org/pod/Geo::Coder::Many::OpenCage"><code>Geo::Coder::Many::OpenCage</code></a>
+<ul>
+<li>plugin for <a
+href="https://metacpan.org/dist/Geo-Coder-Many"><code>Geo::Coder::Many</code></a></li>
+</ul></li>
+<li><a href="https://opencagedata.com/tutorials/geocode-in-perl">Perl
+specific tutorial!</a></li>
+<li><a href="https://perladvent.org/2016/2016-12-08.html">PerlAdvent
+2016</a> would be why I’d heard of them before.</li>
+<li>I’d prefer OpenCage to <a
+href="https://metacpan.org/pod/Geo::What3Words"><code>Geo::What3Words</code></a>,
+as that requires agreeing to would-be monopolist API key TOS (if I see
+any reason to even use w3w).</li>
+</ul></li>
+<li>API key use for testing is free but with tight rate limit; very
+reasonable prices for supported “Production” used, scaling by usage
+needed. Seems fair.</li>
+</ul></li>
+<li>Other: Non-technical or at least not Perl
+<ul>
+<li>Russian tourism during Glasnost</li>
+<li>Astronomical App for photographers to line up the Washington
+Monument photo in last month’s Other.</li>
+<li><a
+href="https://n1vux.github.io/articles/Geodetic/RTK-experiments.html">Centimeter
+resolution GPS</a> on a hobby budget.</li>
+</ul></li>
+</ul>
+<hr />
 </body>
 </html>
