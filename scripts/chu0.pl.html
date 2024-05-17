@@ -1,0 +1,411 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>chu0.pl</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:wdr@spey.(none)" />
+</head>
+
+<link rel="stylesheet" href="mp3-style.css" type="text/css" /><body>
+<a name="-top-"></a>
+<h1>chu0.pl</h1>
+
+
+
+<ul id="index">
+  <li><a href="#aid-to-solving-cryptograms-statistically">aid to solving cryptograms statistically</a>
+    <ul>
+      <li><a href="#Options-and-args">Options and args</a></li>
+      <li><a href="#Limitations">Limitations</a></li>
+      <li><a href="#shape-dictionary-WordsByShape-and-ordercannon">shape dictionary %WordsByShape and ordercannon()</a></li>
+      <li><a href="#Xlate-and-convention-show-guesses-in-normal-form">%Xlate and convention; show guesses in normal form</a></li>
+      <li><a href="#load">load...</a></li>
+      <li><a href="#wordsLike-and--W">wordsLike() and -W</a></li>
+      <li><a href="#Simple-frequency-counts">Simple frequency counts</a></li>
+      <li><a href="#X-Digraph-or-pairs-or-contact-frequency-table">-X Digraph or pairs or &#39;contact&#39; frequency table</a></li>
+    </ul>
+  </li>
+</ul>
+<h2>Code Index:</h2>
+<!-- BEGIN CODE INDEX --><a name="code-index"></a>
+<ul>
+<li><a href="#wordsLike-">package main</a>
+<ul>
+<li><a href="#wordsLike-">wordsLike</a></li>
+<li><a href="#ordercannon-">ordercannon</a></li>
+</ul>
+</li>
+<li><a href="#__END__-">__END__</a></li>
+<li><a href="#EOF-">EOF</a></li>
+</ul>
+<!-- END CODE INDEX -->
+
+
+<pre>#! perl -lw
+<span class="c"># aid to solving Chu-Carrol&#39;s cryptogram statistically</span>
+
+</pre>
+<h1 id="aid-to-solving-cryptograms-statistically">aid to solving cryptograms statistically</h1>
+
+<p>I was annoyed that a mathematician&#39;s introduction to Crytanalysis</p>
+
+<p>http://scienceblogs.com/goodmath/2008/08/introducing_cryptanalysis.php</p>
+
+<p>was in the worked example largely wordsmithing and inadequately statistical. While the crypto puzzle fans have tools that run on MSWindows, I don&#39;t by choice. So I hacked together the following. I added Getopt to suppress later enhancements by default for presenting this code to Boston.PM.</p>
+
+<h2 id="Options-and-args">Options and args</h2>
+
+<dl>
+
+<dt id="XaYbZc----guess-cipher-X-represents-cheartext-a-etc">XaYbZc -- guess cipher X represents cheartext &#39;a&#39; etc.</dt>
+<dd>
+
+</dd>
+<dt id="X----adds-a-table-of-digraph-or-contact-frequency">-X -- adds a table of digraph or contact frequency</dt>
+<dd>
+
+</dd>
+<dt id="file-filename----solve-a-different-cryptogram">-file=filename -- solve a different cryptogram</dt>
+<dd>
+
+</dd>
+<dt id="verbose">-verbose</dt>
+<dd>
+
+<p>May not be used, most if not all debug is #&#39;d instead.</p>
+
+</dd>
+<dt id="W----list-words-partly-solved-with-unique-or-few-dictionary-matches">-W -- list words partly solved with unique or few dictionary matches.</dt>
+<dd>
+
+</dd>
+</dl>
+
+<h2 id="Limitations">Limitations</h2>
+
+<p>This is for <b>Simple Substitution</b> which no one uses but simpleton schoolboys and pedantic scholars like us. The <code>-W</code> words option as coded requires word breaks, and the <code>-X</code> pairs table option has most value if neither word breaks nor doubled letters are suppressed. This serves as a simple demonstration as to why the final generations of professional pencil and paper codes and ciphers required obscuring punctuation, word breaks, Capitalization, and doubled letters, all of which would be restored on a best effort basis by the decipering code clerk using common sense and the intrinsic redundancy of natural language.</p>
+
+
+<pre>
+
+<span class="k">use</span> <span class="w">warnings</span><span class="sc">;</span>
+<span class="k">use</span> <span class="w">strict</span><span class="sc">;</span>
+
+<span class="k">use</span> <span class="w">List::Util</span> <span class="q">qw/max/</span><span class="sc">;</span>
+  <span class="k">use</span> <span class="w">Getopt::Long</span><span class="sc">;</span>
+  <span class="k">my</span> <span class="s">(</span><span class="i">$verbose</span><span class="cm">,</span><span class="i">$pairs</span><span class="cm">,</span><span class="i">$file</span><span class="cm">,</span><span class="i">$words</span><span class="cm">,</span><span class="i">$cheat</span><span class="cm">,</span><span class="s">)</span><span class="sc">;</span>
+  <span class="w">GetOptions</span> <span class="s">(</span>		<span class="q">&quot;X&quot;</span> <span class="cm">=&gt;</span> \<span class="i">$pairs</span><span class="cm">,</span>		<span class="c"># digraph or contact frequency</span>
+                       	<span class="q">&quot;file=s&quot;</span>   <span class="cm">=&gt;</span> \<span class="i">$file</span><span class="cm">,</span>   <span class="c"># solve a different example </span>
+			<span class="q">&quot;verbose&quot;</span>  <span class="cm">=&gt;</span> \<span class="i">$verbose</span><span class="cm">,</span>  <span class="c"># flag</span>
+			<span class="q">&quot;W&quot;</span>  <span class="cm">=&gt;</span>  \<span class="i">$words</span><span class="cm">,</span>       <span class="c"># highlight words indicated</span>
+			<span class="q">&quot;xyzzy&quot;</span> <span class="cm">=&gt;</span> \<span class="i">$cheat</span><span class="cm">,</span>     <span class="c"># you wouldn&#39;t !!</span>
+		<span class="s">)</span><span class="sc">;</span>
+
+
+</pre>
+<h2 id="shape-dictionary-WordsByShape-and-ordercannon">shape dictionary %WordsByShape and ordercannon()</h2>
+
+<p>Cryptographers classify words by positions of same or different letters. Words &quot;the&quot; and &quot;car&quot; are both of type 123, since no letter is reused, while &quot;aardvark&quot; is 11234125. The ordercannon() function allows for words more than 9 unique letters, so it interpolates dots to distinguish .1.1. from .11. . The %WordsByShape hash indexes words in a dictionary by these ordercannon() strings and holds array of matching words. So</p>
+
+<p><code> &#39;1.2.2.3.4&#39; =</code> [ &#39;upper&#39;, ...] &gt;</p>
+
+<p>as would <code>$WordsByShape{ ordercannon(&#39;HCCRE&#39;) } # rot13 </code></p>
+
+<p>This scheme is amenable to optimization. This isn&#39;t, except the dictionary is only built when it will be used (-W).</p>
+
+
+<pre>
+
+<span class="k">my</span> <span class="i">%WordsByShape</span><span class="sc">;</span>
+
+<span class="k">if</span> <span class="s">(</span><span class="i">$words</span><span class="s">)</span> <span class="s">{</span>  
+  <span class="k">my</span> <span class="i">$fn</span> = <span class="q">q(/usr/share/dict/words)</span><span class="sc">;</span>
+  <span class="k">my</span> <span class="i">$dict</span> <span class="sc">;</span>
+  <span class="k">open</span> <span class="i">$dict</span><span class="cm">,</span> <span class="i">$fn</span> <span class="k">or</span> <span class="k">die</span> <span class="i">$!</span><span class="sc">;</span>
+  <span class="k">while</span> <span class="s">(</span><span class="q">&lt;$dict&gt;</span><span class="s">)</span> <span class="s">{</span>
+    <span class="k">chomp</span><span class="sc">;</span>
+    <span class="k">next</span> <span class="k">if</span> <span class="q">/\W|[A-Z]/</span><span class="sc">;</span> <span class="c"># skip compounds and Proper</span>
+    <span class="k">push</span> <span class="i">@</span>{<span class="i">$WordsByShape</span>{<span class="i">ordercannon</span><span class="s">(</span><span class="i">$_</span><span class="s">)</span>}}<span class="cm">,</span><span class="i">$_</span><span class="sc">;</span>
+  <span class="s">}</span>
+
+ <span class="c">#use Data::Dumper;</span>
+ <span class="c">#print Dumper(%WordsByShape);</span>
+ <span class="c">#exit</span>
+<span class="s">}</span>
+
+</pre>
+<h2 id="Xlate-and-convention-show-guesses-in-normal-form">%Xlate and convention; show guesses in normal form</h2>
+
+<p>since lower case is easier to read as natural language and upper case is easier to see non-liguistic patterns, it is conventional to write the enciphered text in upper case, eg WSSHU FDVH and clear text in all hower case as in this paragraph. (in military circles, red pencil or ink is used for cleartext, if only to ensure worksheets with clear is burned.)</p>
+
+<p>Hash %Xlate is keyed by single uppercase cipher letters with values as the matching lower case cleartext letter.</p>
+
+<p>The current hash is printed CRYPT over / clear under in both XYZ and abc orders at the top of the output. $XYZ and $abc are lists of the solved letters, in similar sequence. $XYZ2, $abc2 are likewise, but the other sequence. Then print the un-matched letters.</p>
+
+
+<pre>
+
+<span class="k">my</span> <span class="i">%Xlate</span> = <span class="k">split</span> <span class="q">//</span><span class="cm">,</span> <span class="k">shift</span> <span class="i">@ARGV</span><span class="sc">;</span>
+
+<span class="k">if</span> <span class="s">(</span><span class="i">$cheat</span><span class="s">)</span> <span class="s">{</span>
+ <span class="i">@Xlate</span>{<span class="k">split</span> <span class="q">//</span><span class="cm">,</span>   <span class="q">&quot;XVCTYHKQMZLGBUJI&quot;</span>  } 
+	= <span class="s">(</span><span class="k">split</span> <span class="q">//</span><span class="cm">,</span> <span class="k">scalar</span> <span class="k">reverse</span> <span class="q">&quot;rhsiaoefbwtgydum&quot;</span><span class="s">)</span><span class="sc">;</span>
+
+<span class="s">}</span>
+<span class="c"># printf &quot;%s=&gt;&#39;%s&#39;, &quot;,$_,$Xlate{$_} for sort keys %Xlate ;</span>
+       <span class="k">my</span><span class="s">(</span><span class="i">$XYZ</span><span class="cm">,</span><span class="i">$abc</span><span class="s">)</span>=<span class="s">(</span><span class="s">(</span><span class="k">join</span> <span class="q">q{}</span><span class="cm">,</span>
+                                <span class="k">sort</span> <span class="s">{</span><span class="i">$Xlate</span>{<span class="i">$a</span>} <span class="k">cmp</span> <span class="i">$Xlate</span>{<span class="i">$b</span>}<span class="s">}</span> 
+					<span class="k">keys</span>  <span class="i">%Xlate</span> <span class="s">)</span><span class="cm">,</span>
+                      <span class="s">(</span><span class="k">join</span> <span class="q">q{}</span><span class="cm">,</span> 
+                         <span class="i">@Xlate</span>{ <span class="k">sort</span> <span class="s">{</span><span class="i">$Xlate</span>{<span class="i">$a</span>} <span class="k">cmp</span> <span class="i">$Xlate</span>{<span class="i">$b</span>}<span class="s">}</span> 
+					<span class="k">keys</span> <span class="i">%Xlate</span> } <span class="s">)</span>
+                         <span class="s">)</span> <span class="sc">;</span>
+       <span class="k">my</span><span class="s">(</span><span class="i">$XYZ2</span><span class="cm">,</span><span class="i">$abc2</span><span class="s">)</span>=<span class="s">(</span><span class="s">(</span><span class="k">join</span> <span class="q">q{}</span><span class="cm">,</span>
+                                <span class="k">sort</span>
+				  <span class="k">keys</span>  <span class="i">%Xlate</span> <span class="s">)</span><span class="cm">,</span>
+                      <span class="s">(</span><span class="k">join</span> <span class="q">q{}</span><span class="cm">,</span> 
+                         <span class="i">@Xlate</span>{ <span class="k">sort</span> 
+				 <span class="k">keys</span> <span class="i">%Xlate</span> } <span class="s">)</span>
+                         <span class="s">)</span> <span class="sc">;</span>
+
+
+<span class="k">printf</span> <span class="q">&quot;\n  %s\t%s =&gt;\n=&gt;%s\t%s \n&quot;</span><span class="cm">,</span><span class="i">$XYZ</span><span class="cm">,</span> <span class="i">$XYZ2</span><span class="cm">,</span> <span class="i">$abc</span><span class="cm">,</span><span class="i">$abc2</span><span class="sc">;</span>
+
+<span class="k">my</span> <span class="i">$alphabet</span> = <span class="k">join</span> <span class="q">q{}</span><span class="cm">,</span> <span class="q">&#39;a&#39;</span>..<span class="q">&#39;z&#39;</span><span class="sc">;</span>
+<span class="k">my</span> <span class="i">$ALPHABET</span> = <span class="k">join</span> <span class="q">q{}</span><span class="cm">,</span> <span class="q">&#39;A&#39;</span>..<span class="q">&#39;Z&#39;</span><span class="sc">;</span>
+
+<span class="k">if</span> <span class="s">(</span><span class="k">keys</span> <span class="i">%Xlate</span><span class="s">)</span> <span class="s">{</span>
+	<span class="i">$alphabet</span> =~ <span class="q">s/ @{[ q{[} . join( q{}, values %Xlate ) . q{]} ]} //xg</span><span class="sc">;</span>
+	<span class="i">$ALPHABET</span> =~ <span class="q">s/ @{[ q{[} . join( q{},  keys  %Xlate ) . q{]} ]} //xg</span><span class="sc">;</span>
+	<span class="k">print</span> <span class="q">&quot;\n unsolved: $ALPHABET; not found: $alphabet \n &quot;</span><span class="sc">;</span>
+<span class="s">}</span>
+
+</pre>
+<h2 id="load">load...</h2>
+
+<p>The Chu-Carroll cryptogram is appended to the source so read from data.</p>
+
+
+<pre>
+
+<span class="c"># slurp ... must be in {} or after dict load</span>
+
+<span class="k">my</span> <span class="i">$all</span> = <span class="k">do</span> <span class="s">{</span> <span class="k">local</span> <span class="i">$/</span><span class="sc">;</span> <span class="q">&lt;DATA&gt;</span><span class="sc">;</span> <span class="s">}</span><span class="sc">;</span>
+
+<span class="k">if</span> <span class="s">(</span><span class="i">@ARGV</span><span class="s">)</span>
+<span class="s">{</span>
+   <span class="k">local</span> <span class="i">$/</span><span class="sc">;</span>
+   <span class="i">$all</span> = &lt;&gt;<span class="sc">;</span>
+<span class="s">}</span>
+
+<span class="c"># enforce convention</span>
+<span class="i">$all</span> =~ <span class="q">y/a-z/A-Z/</span><span class="sc">;</span>
+
+<span class="c"># print $all;  # -- will do this later</span>
+
+
+<span class="k">my</span> <span class="i">%Count</span><span class="sc">;</span> <span class="c"># used repeatedly</span>
+
+
+</pre>
+<h2 id="wordsLike-and--W">wordsLike() and -W</h2>
+
+<p>if -W is specified, any words that are sufficiently deciphered that the unmatched clear letters and ordercannon() find only one or a handful in the dictionary, they are output next.</p>
+
+<p>If there a lot of strange, useless words suggested and others with no matches it&#39;s a hint that some of the guessed letters are wrong. Try</p>
+
+<dl>
+
+<dt id="W-Ui"><b> <code>-W Ui</code> </b></dt>
+<dd>
+
+</dd>
+</dl>
+
+<p>to see this.</p>
+
+
+<pre>
+
+<a name="wordsLike-"></a><span class="k">sub </span><span class="m">wordsLike</span>
+<span class="s">{</span>
+    <span class="k">my</span> <span class="i">$partial</span>=<span class="k">shift</span><span class="sc">;</span>
+    <span class="k">my</span> <span class="i">$cannon</span>=<span class="i">ordercannon</span><span class="s">(</span><span class="i">$partial</span><span class="s">)</span><span class="sc">;</span>
+    <span class="c"># print &quot;$partial =&gt; $cannon&quot;;</span>
+
+    <span class="i">$partial</span>=~ <span class="q">s/[A-Z]/./g</span>  <span class="k">if</span> !<span class="i">$abc</span><span class="sc">;</span><span class="sc">;</span>
+    <span class="i">$partial</span>=~ <span class="q">s/[A-Z]/[^$abc]/g</span> <span class="k">if</span> <span class="i">$abc</span><span class="sc">;</span>  <span class="c">## letters not yet matched</span>
+    <span class="c"># print &quot;$partial =&gt; $cannon&quot;;</span>
+    
+    <span class="k">local</span> <span class="i">$&quot;</span>=<span class="q">q(,)</span><span class="sc">;</span>
+    <span class="k">my</span> <span class="i">@W</span> = <span class="i">@</span>{<span class="i">$WordsByShape</span>{<span class="i">$cannon</span>} ||<span class="s">[</span><span class="s">]</span> }<span class="sc">;</span>
+    <span class="c"># print &quot;&lt;&lt;@W&gt;&gt;&quot;;</span>
+
+    <span class="i">@W</span> = <span class="k">grep</span> <span class="q">/^$partial$/i</span><span class="cm">,</span> <span class="i">@W</span><span class="sc">;</span>
+    
+    <span class="k">if</span> <span class="s">(</span><span class="i">$partial</span> =~ <span class="q">s/s$/s?/</span><span class="s">)</span>
+      <span class="s">{</span>
+     <span class="i">$cannon</span> =~ <span class="q">s/\d+[.]$//</span> <span class="sc">;</span>
+      <span class="c"># plurals is optional</span>
+
+      <span class="k">push</span> <span class="i">@W</span><span class="cm">,</span><span class="i">$_</span> 
+         <span class="k">for</span> <span class="k">grep</span> <span class="q">/^$partial$/i</span><span class="cm">,</span><span class="i">@</span>{<span class="i">$WordsByShape</span>{<span class="i">$cannon</span> }}<span class="sc">;</span>
+        <span class="c"># unshift @W, $partial;</span>
+        <span class="c">#unshift  @W, $cannon;</span>
+       <span class="s">}</span>
+    <span class="c"># print &quot;&lt;&lt;&lt;@W&gt;&gt;&gt;&quot;;</span>
+    <span class="c"># unshift %Xlate@W, $partial;</span>
+    <span class="c">#unshift  @W, $cannon;</span>
+    <span class="k">return</span> <span class="k">wantarray</span> ? <span class="i">@W</span> <span class="co">:</span> <span class="q">&quot;@W&quot;</span><span class="sc">;</span>
+<span class="s">}</span>
+
+
+<span class="k">if</span> <span class="s">(</span><span class="i">$words</span><span class="s">)</span> <span class="s">{</span>
+<span class="k">print</span> <span class="q">&quot;\n -W : show candidate words&quot;</span><span class="sc">;</span>
+
+<span class="k">my</span> <span class="i">@Words</span> = <span class="k">split</span> <span class="q">/[\W]/</span><span class="cm">,</span><span class="i">$all</span><span class="sc">;</span>
+<span class="k">my</span> <span class="i">$n</span>=<span class="n">10</span><span class="sc">;</span>
+<span class="i">$Count</span>{<span class="i">$_</span>}++ <span class="k">for</span> <span class="i">@Words</span><span class="sc">;</span>
+<span class="k">for</span> <span class="k">my</span> <span class="i">$w</span> <span class="s">(</span><span class="k">sort</span> <span class="s">{</span><span class="n">+1</span> *  <span class="s">(</span><span class="i">$Count</span>{<span class="i">$b</span>} &lt;=&gt; <span class="i">$Count</span>{<span class="i">$a</span>}<span class="s">)</span>  <span class="s">}</span> 
+           <span class="k">grep</span> <span class="s">{</span><span class="q">/\w/</span>    
+                    <span class="c">#  ... and $Count{$_}&gt;1</span>
+                <span class="s">}</span> <span class="k">keys</span> <span class="i">%Count</span>
+            <span class="s">)</span>
+    <span class="s">{</span>
+    <span class="k">my</span> <span class="i">$tmp</span> = <span class="i">$w</span><span class="sc">;</span>
+    <span class="k">eval</span> <span class="q">&quot;\$tmp =~ tr/$XYZ/$abc/&quot;</span><span class="sc">;</span>
+       <span class="k">die</span> <span class="i">$@</span> <span class="k">if</span> <span class="i">$@</span><span class="sc">;</span>
+    <span class="k">next</span> <span class="k">unless</span> <span class="i">$tmp</span> =~ <span class="q">/[A-Z]/</span><span class="sc">;</span>  <span class="c">## still in play? ignore solved</span>
+    <span class="k">next</span> <span class="k">unless</span> <span class="i">$tmp</span> =~ <span class="q">/[a-z]/</span>  <span class="c">## any info?</span>
+		<span class="k">or</span> <span class="k">length</span><span class="s">(</span><span class="i">$tmp</span><span class="s">)</span> &lt;= <span class="n">2</span><span class="sc">;</span> <span class="c"># or trivial</span>
+   <span class="k">my</span> <span class="i">@W</span> = <span class="i">wordsLike</span><span class="s">(</span><span class="i">$tmp</span><span class="s">)</span><span class="sc">;</span>
+   <span class="k">next</span> <span class="k">if</span> <span class="i">@W</span> &gt; <span class="n">30</span><span class="sc">;</span>
+
+     <span class="k">local</span>  <span class="i">$&quot;</span> = <span class="q">q&#39;,&#39;</span> <span class="sc">;</span>
+
+  <span class="k">printf</span> <span class="q">&quot;%12s &#39;%12s&#39; %-6d : %-40s\n&quot;</span><span class="cm">,</span>
+    <span class="i">$w</span><span class="cm">,</span>
+    <span class="i">$tmp</span><span class="cm">,</span>
+    <span class="i">$Count</span>{<span class="i">$w</span>}<span class="cm">,</span>
+    <span class="i">$tmp</span>=~<span class="q">/[A-Z]/</span> ? <span class="k">substr</span><span class="s">(</span><span class="q">&quot;@W&quot;</span><span class="cm">,</span><span class="n">0</span><span class="cm">,</span><span class="n">40</span><span class="s">)</span> <span class="co">:</span> <span class="q">&quot;&quot;</span> <span class="sc">;</span>
+
+    <span class="k">last</span> <span class="k">if</span> <span class="i">$n</span>-- == <span class="n">0</span><span class="sc">;</span>
+    <span class="s">}</span>
+<span class="s">}</span>
+
+</pre>
+<h2 id="Simple-frequency-counts">Simple frequency counts</h2>
+
+<p>The frequency in decreasing order should approximate</p>
+
+<pre><code>ETAOIN SHRDLU</code></pre>
+
+<p>which are famous as columns one and two on the Linotype(tm) keyboard. But note *approximately*. And this and other statistical comments assume a cleartext in unstilted English.</p>
+
+
+<pre>
+<span class="i">%Count</span> =<span class="s">(</span><span class="s">)</span><span class="sc">;</span>
+
+<span class="k">my</span> <span class="i">@Letters</span> = <span class="k">split</span> <span class="q">//</span><span class="cm">,</span><span class="i">$all</span><span class="sc">;</span>
+<span class="i">$Count</span>{<span class="i">$_</span>}++ <span class="k">for</span> <span class="i">@Letters</span><span class="sc">;</span>
+<span class="k">my</span> <span class="i">$cut</span> = <span class="n">0</span><span class="sc">;</span> <span class="c"># (max values %Count)/5;  # no cut if wrapping</span>
+
+<span class="k">my</span> <span class="i">$i</span>=<span class="n">0</span><span class="sc">;</span>
+<span class="k">printf</span> <span class="q">&quot;%s%s %s %-3d&quot;</span><span class="cm">,</span>
+      <span class="s">(</span><span class="i">$i</span>++%<span class="n">8</span> ? <span class="q">&#39; &#39;</span> <span class="co">:</span> <span class="q">&quot;\n &quot;</span> <span class="s">)</span><span class="cm">,</span>
+      <span class="i">$_</span><span class="cm">,</span>
+      <span class="i">$Xlate</span>{<span class="i">$_</span>}||<span class="q">q{ }</span><span class="cm">,</span>
+      <span class="i">$Count</span>{<span class="i">$_</span>}<span class="cm">,</span>
+  <span class="k">for</span> <span class="k">sort</span> <span class="s">{</span><span class="n">1</span>*<span class="s">(</span><span class="i">$Count</span>{<span class="i">$b</span>} &lt;=&gt; <span class="i">$Count</span>{<span class="i">$a</span>}<span class="s">)</span><span class="s">}</span>
+     <span class="k">grep</span> <span class="s">{</span><span class="q">/\w/</span> <span class="k">and</span> <span class="i">$Count</span>{<span class="i">$_</span>}&gt;<span class="i">$cut</span><span class="s">}</span> <span class="k">keys</span> <span class="i">%Count</span><span class="sc">;</span>
+<span class="k">printf</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span>
+
+</pre>
+<h2 id="X-Digraph-or-pairs-or-contact-frequency-table">-X Digraph or pairs or &#39;contact&#39; frequency table</h2>
+
+<p>First letters of pairs are down the left; second letters are along the top. Guessed cheartext as usual is lower case and makes a broken copy of the edge keys.</p>
+
+<p>Zero counts are suppressed for clarity. Zeroes on the main Diagonal are plotted as &#39;/&#39;. Double letters in the ciphertext have a number on the main diagonal, so look for gaps in the line of /s for the telltale doubles.</p>
+
+<p>Pairs like &#39;_X&#39; and &#39;X_&#39; are cipher X as respectively first letter (follows a space or other nonword) and last letter of a word (precedes a space or punctuation). Clear &#39;t&#39; should be popular both as &#39;_t&#39; and &#39;t_&#39; and &#39;th&#39; but not &#39;ht&#39;. Initial &#39;_e&#39; is less common than terminal &#39;e_&#39;. Both &#39;tt&#39; and &#39;ee&#39; may occur.</p>
+
+
+<pre>
+<span class="i">%Count</span> =<span class="s">(</span><span class="s">)</span><span class="sc">;</span>
+<span class="k">my</span> <span class="i">$temp</span>=<span class="q">&quot; $all &quot;</span><span class="sc">;</span>
+
+<span class="k">if</span> <span class="s">(</span><span class="i">$pairs</span><span class="s">)</span><span class="s">{</span>
+ <span class="k">print</span> <span class="q">&quot;\n-X Digraph or pairs or &#39;contact&#39; frequency table&quot;</span><span class="sc">;</span>
+<span class="i">$temp</span>=~  <span class="q">tr/A-Z/_/cs</span><span class="sc">;</span>
+<span class="c"># print $temp;</span>
+<span class="c"># print length($temp);</span>
+<span class="i">$Count</span>{<span class="i">$_</span>}++ <span class="k">for</span> <span class="s">(</span><span class="i">$temp</span> =~    <span class="q">m/(..)/g</span><span class="s">)</span><span class="sc">;</span>
+<span class="i">$temp</span> =~ <span class="q">s/^.//</span><span class="sc">;</span>
+<span class="i">$Count</span>{<span class="i">$_</span>}++ <span class="k">for</span> <span class="s">(</span> <span class="i">$temp</span> =~ <span class="q">m/(..)/g</span><span class="s">)</span><span class="sc">;</span>
+<span class="k">my</span> <span class="i">$nn</span><span class="sc">;</span> <span class="i">$nn</span> += <span class="i">$Count</span>{<span class="i">$_</span>} <span class="k">for</span> <span class="k">keys</span> <span class="i">%Count</span><span class="sc">;</span>
+<span class="c"># print $nn;</span>
+<span class="k">my</span> <span class="i">@L</span> = <span class="s">(</span><span class="q">&#39;_&#39;</span><span class="cm">,</span> <span class="q">&#39;A&#39;</span>..<span class="q">&#39;Z&#39;</span><span class="s">)</span><span class="sc">;</span>
+<span class="k">print</span> <span class="q">&#39;v&gt; &#39;</span><span class="cm">,</span><span class="k">join</span><span class="s">(</span><span class="q">&#39;  &#39;</span><span class="cm">,</span><span class="i">@L</span><span class="s">)</span><span class="sc">;</span>
+<span class="k">print</span> <span class="q">&#39;   &#39;</span><span class="cm">,</span><span class="k">join</span><span class="s">(</span><span class="q">&#39;  &#39;</span><span class="cm">,</span><span class="k">map</span> <span class="s">{</span><span class="i">$Xlate</span>{<span class="i">$_</span>}||<span class="q">q[ ]</span><span class="s">}</span> <span class="i">@L</span><span class="s">)</span><span class="sc">;</span>
+<span class="k">for</span> <span class="k">my</span> <span class="i">$c</span> <span class="s">(</span><span class="i">@L</span><span class="s">)</span> <span class="s">{</span>
+	<span class="k">printf</span> <span class="q">&quot;%s%s|&quot;</span><span class="cm">,</span><span class="i">$c</span><span class="cm">,</span> <span class="s">(</span><span class="i">$Xlate</span>{<span class="i">$c</span>}||<span class="q">q[ ]</span><span class="s">)</span><span class="sc">;</span>
+	<span class="k">printf</span> <span class="q">&quot;%2s &quot;</span><span class="cm">,</span> <span class="s">(</span> <span class="i">$Count</span>{<span class="q">&quot;$c$_&quot;</span>}
+                                ? <span class="s">(</span><span class="s">(</span><span class="i">$Count</span>{<span class="q">&quot;$c$_&quot;</span>} &gt; <span class="n">99</span><span class="s">)</span> ? <span class="q">&#39;**&#39;</span> <span class="co">:</span> <span class="i">$Count</span>{<span class="q">&quot;$c$_&quot;</span>} <span class="s">)</span> 
+				<span class="co">:</span> <span class="s">(</span><span class="i">$c</span> <span class="k">eq</span> <span class="i">$_</span> ? <span class="q">q{ \\}</span><span class="co">:</span> <span class="q">q{  }</span><span class="s">)</span> <span class="s">)</span>
+			<span class="k">for</span> <span class="i">@L</span><span class="sc">;</span>
+	<span class="k">printf</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span>
+<span class="s">}</span>
+<span class="k">printf</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span>
+<span class="s">}</span>
+
+<span class="c">#      ($i++%8 ? &#39; &#39; : &quot;\n &quot; ),	</span>
+<span class="c">#      $_,</span>
+<span class="c">#      &#39;&#39; , # $Xlate{$_}||q{ },</span>
+<span class="c">#      $Count{$_},</span>
+<span class="c">#  for sort # {-1*($Count{$b} &lt;=&gt; $Count{$a})}</span>
+<span class="c">#     grep {/\w/ and $Count{$_}&gt;$cut} keys %Count;</span>
+<span class="k">printf</span> <span class="q">&quot;\n&quot;</span><span class="sc">;</span>
+
+
+
+<span class="k">eval</span> <span class="q">&quot; tr/$XYZ/$abc/ &quot;</span> <span class="k">for</span> <span class="s">(</span><span class="i">$all</span><span class="s">)</span><span class="sc">;</span>
+    <span class="k">die</span> <span class="i">$@</span> <span class="k">if</span> <span class="i">$@</span><span class="sc">;</span>
+
+<span class="k">if</span> <span class="s">(</span><span class="n">0</span> &amp;&amp; <span class="i">$cheat</span><span class="s">)</span> <span class="s">{</span>
+ <span class="i">$all</span> =~ <span class="q">y(HZLGBUJIPFXVCTYKQDMW)</span>
+         <span class="q">         (teoaishrncmudygwbpfk)</span><span class="sc">;</span>
+<span class="s">}</span>
+<span class="k">print</span> <span class="i">$all</span><span class="sc">;</span>
+
+<a name="ordercannon-"></a><span class="k">sub </span><span class="m">ordercannon</span> <span class="s">{</span>
+  <span class="k">my</span> <span class="i">$w</span> = <span class="k">shift</span><span class="sc">;</span>
+  <span class="k">my</span> <span class="s">(</span><span class="i">%C</span><span class="cm">,</span> <span class="i">$n</span><span class="s">)</span><span class="sc">;</span>
+  <span class="i">$w</span> =~ <span class="q">s/(\w)/($C{$1} ||= ++$n) . &#39;.&#39;/ge</span><span class="sc">;</span> <span class="c"># BobR</span>
+
+<span class="c">#    my $i = 1;</span>
+<span class="c">#       $i += !! ( $w =~ s/$_/$i./g ) </span>
+<span class="c">#                for (split //, $w);</span>
+         <span class="i">$w</span><span class="sc">;</span>
+         <span class="s">}</span>
+<a name="__END__-"></a><span class="k">__END__</span>
+<span class="q">b czfbczc bh bu gqlvh hbxz hl uhgih vd xt lkp qrly. lpz hjbpy hjgh b jgaz</span>
+<span class="q">plhbfzc bp xt hbxz qilkubpy hjz qrlyludjziz bu hjgh hjziz giz g kjlrz</span>
+<span class="q">rlh lm hziibmbf ufbzpfz qrlyu lvh hjziz: ligf, djgitpyvrg, gzhblrlyt,</span>
+<span class="q">evuh hl pgxz g mzk. qvh hjziz bu plh pzgirt ul xvfj lvh hjziz czcbfghzc</span>
+<span class="q">hl xghj - gpc bp dgihbfvrgi hl hjz xbuvuz lm xghj. b hjbpw hjgh hjgh bu</span>
+<span class="q">g cgxp ujgxz, qzfgvuz bp xt zodzibzpfz, lpz lm hjz xluh frzgi kgtu lm</span>
+<span class="q">bczphbmtbpy g figfwdlh bu hjilvyj xghj. pl xghhzi hjz udzfbmbf uvqezfh,</span>
+<span class="q">hjz figfwdlhu grkgtu zbhjzi galbc li ufizk vd hjz xghj. kjzhjzi bh&#39;u</span>
+<span class="q">hjz &quot;xzifvit fgvuzu gvhbux&quot; mlrwu, hjz azrbwlauwbgpu, fizghblpbuhu,</span>
+<span class="q">grh-xzcbfbpz svgfwu, izdvqrbfgp dlrruhziu, li ufbzphlrlybuhu - tlv fgp</span>
+<span class="q">grkgtu izflypbnz hjz figfwdlhu qt hjzbi xghj. ul b gx ylbpy hl cl xt</span>
+<span class="q">qzuh hl dilabcz g albfz lm xghjzxghbfgr ugpbht - qlhj qt</span>
+<span class="q">ujlkbpy kjgh&#39;u kilpy kbhj hjz qgc xghj urld dvxdzc lvh qt hjz rllpbzu,</span>
+<span class="q">gpc qt ujlkbpy jlk yllc xghj kliwu.</span>
+
+<a name="EOF-"></a></pre></body>
+
+</html>
+
+
