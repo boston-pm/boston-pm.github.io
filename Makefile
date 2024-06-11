@@ -28,12 +28,12 @@ all: report $(Pages) $(RawPages)
 $(NoneSuch):
 	@echo Nothing done for $@
 
-extensions="+pipe_tables"
-flags="--title-prefix=Boston.pm --toc --toc-depth=1"
+extensions=+pipe_tables
+flags=--title-prefix=Boston.pm --toc --toc-depth=1
 
-# $(Pages): %.html: %.md
-$(Pages): 
-	pandoc -s -o $@ --css pandoc.css ${flags} -f markdown${extensions}  $>
+# why I need to use  $(@:.html=.md) instead of $< here IDK !
+$(Pages): %.html: %.md
+	pandoc -s -o $@ --css pandoc.css $(flags) -f markdown${extensions}  $(@:.html=.md)
 
 
 
