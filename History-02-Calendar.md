@@ -1290,10 +1290,10 @@ RedBones Wins. No meeting at MIT this month. Meet at RedBones, usual 7-7:15 time
 old _skul_ bit-banging entitled  "_Magic Numbers & Un/Pack_ : _a_ `use.perl.org` _magical mystery tour_". 
 [Slides pdf](./documents/magic_pack_tour.pdf)†
 [Scripts tar gz](./scripts/magic_pack_tour.tar.gz)
+[Slides alt pdf](./documents/Magic_pack_tour_v2.pdf)
 
 †(*This Free-software generated PDF (OOo 2.3) may need to be viewed with a
-genuine Adobe reader, because Evince and Xpdf get the overlays wrong.*)
-
+genuine Adobe reader, because Evince and Xpdf get the overlays wrong. Or try the alt PDF.*)
 
 
 To answer the Question from the floor, `Ilya'o'clock` will be just before
@@ -1309,6 +1309,8 @@ Refreshments provided by our kind sponsor **CIDC.com** ; be Sure to
 mention Boston.PM when you send them a resume.
 
 (*Narrator: [Magical Mystery Tour](https://en.wikipedia.org/wiki/Magical_Mystery_Tour) is an obscure Boomer cultural reference. Mystery Tour itself was a mostly British cultural reference.*)
+
+**2024**: the MIT AI Lab HakMem repository linked in the PDF has vanished earlier this year, but it's archived: [WayBack Machine](https://web.archive.org/web/20240227020926/https://inwap.com/pdp10/hbaker/hakmem/hakmem.html#contents)
 
 ## October 14, - Stone Soup / Lightning talks 
 
