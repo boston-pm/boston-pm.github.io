@@ -1,0 +1,7 @@
+make -rn --debug=iv all  2>&1 | ack --passthru --match "['][^']*[']"
+make -r  --debug=iv all  2>&1 | ack --passthru --match "['][^']*[']"
+make -r all
+
+
+git diff --name-only | xargs git add
+
