@@ -1299,3 +1299,18 @@ $ perl codes-poker.pl 2>&1 | less
     * [Centimeter resolution GPS](https://n1vux.github.io/articles/Geodetic/RTK-experiments.html) on a hobby budget.
 
 ----
+
+## Tuesday June 11th, 2024 - Perl 5.40 released ! 
+
+
+Since the [Perl Weekly 672](https://dev.to/szabgab/perl-weekly-672-its-time--2dab) and other channels have announed release of **Perl v5.40**, let's dive in and see what's new.  A lot of stuff previously experimental is now stable, as well as some new-new stuff.
+
+Bill, Jerrad, Ricky, Mike S, Chuba
+
+* https://metacpan.org/release/HAARG/perl-5.40.0
+* https://metacpan.org/release/HAARG/perl-5.40.0/view/pod/perldelta.pod
+* https://metacpan.org/pod/Test2::Suite
+
+
+----
+

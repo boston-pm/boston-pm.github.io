@@ -81,9 +81,7 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill.
 
-## June 11th, 2024 - Perl 5.40 released ! - 7.30 EDT topic start (7.00 gathering chatter)
-
-Since the [Perl Weekly 672](https://dev.to/szabgab/perl-weekly-672-its-time--2dab) and other channels have announed release of 5.40, let's dive in and see what's new.  A lot of stuff previously experimental is now stable, as well as some new-new stuff.
+## Tuesday July 9th, 2024 - TBD - 7.30 EDT topic start (7.00 gathering chatter)
 
 
 
