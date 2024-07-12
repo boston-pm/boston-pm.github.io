@@ -81,10 +81,13 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill.
 
-## Tuesday July 9th, 2024 - `feature class` proof of concept - 7.30 EDT topic start (7.00 gathering chatter)
+## August 13th  ? 
 
-I've been experimenting with Perl v5.40's **`feature class`** and prototype `Object::Pad` and some recently updated modules, e.g. `Data::Enum` latest supports `match::simple::sugar` which together provide a replacement for what I liked in the doomed `given-when` hypermatch. `Getopt::Declare` isn't exactly recent but I like it. `Perl::MinimumVersion`'s `perlver` is also cool. If time permits, a couple of interesting recent posts can be shared. -- *Bill* 
+We often cancel August due to vacations?  Or maybe a beer-garden physical meetup?
 
+## September 10th - 7.30 EDT topic start (7.00 gathering chatter)
+
+TBD
 
 ------------
 

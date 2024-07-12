@@ -1314,3 +1314,80 @@ Bill, Jerrad, Ricky, Mike S, Chuba
 
 ----
 
+## Tuesday July 9th, 2024 - Bill's `feature class` proof of concept and ensuing discussion
+
+I've been experimenting with Perl v5.40's **`feature class`** and prototype `Object::Pad` and some recently updated modules, e.g. `Data::Enum` latest supports `match::simple::sugar` which together provide a replacement for what I liked in the doomed `given-when` hypermatch. `Getopt::Declare` isn't exactly recent but I like it. `Perl::MinimumVersion`'s `perlver` is also cool. 
+
+* `feature class` introduced in Perl v5.38 has two major improvements [`:reader`](https://perldoc.perl.org/perlclass#:reader) and [`__CLASS__`](https://perldoc.perl.org/perldelta#New-__CLASS__-Keyword), which make it reasonably fun to use.
+* [`Feature::Compat::Class`](https://metacpan.org/pod/Feature::Compat::Class) provides a simple invocation of `feature class` if running Perl v5.38+ or [`Object::Pad`](https://metacpan.org/pod/Object::Pad) if not. 
+    * if prototyping in Object::Pad not just falling-back to, need to add `:strict(params)` to detect incorrect constructor keys; not permitted/not needed in `feature class`.
+* [`Data::Enum`](https://metacpan.org/pod/Data::Enum) recently revved to add a hook for [`match::simple::sugar`](https://metacpan.org/pod/match::simple::sugar) compatibility so that a variable containing a singleton `Data::Enum` value be matched against strings in a `for-when` block. (I do like that the enum is implemented as a set of singletons.)
+    ```
+    LINE: while (<>){
+    SWITCH: for ($STATE){
+        when 'none', then { … };
+        when 'header', then { … };
+        when 'line', then { … };
+        }
+    }
+    ```
+* My suggestions *`match::simple::sugar`* documentation*, [issues from lessons learned](https://github.com/tobyink/p5-match-simple/issues).
+        * `no feature 'switch';  # or use v5.36; or greater` to avoid deprecation warning and resulting syntax fail
+        * my other documentation issues / lessons learned:
+            * when using `match::simple::sugar` (with `Data::Enum` that now supports `match::simple` !), when nesting the switch `for () { when ..., then{}; ...}` non-looping loop block within an outer `for()`, `foreach()` or `while(<>){}` actual loop _~as one does~_, whether as an event loop or per-line-input loop, there are three implications that should be documented; one of which might be fixable in module code.
+
+1. the outer loops must use a named loop variable, or (minimally invasive) have a local `my $line=$_;` just before the `SWITCH: for when`, and any and all implicit `m{}`, `//`, _etc_ or explicit references to `$_` must be changed to `$line =~ m{}`.
+
+2. outer and inner loops need `LINE: while(<>){...}` and `SWITCH: for ($STATE){when ..` statement labels, as `when...then` will do `next` on the inner `for` as if it were a loop, so script's own loop control `next`, `redo`, `last` must name `next LINE;`.
+
+3. to avoid a ~flurry nay~ blizzard of `Exiting subroutine via next at` warnings on STDERR, must insert `no warnings 'exiting';` after `SWITCH: for ($var){`  .
+
+* I would _not_ put the `no warnings` outside the for-when lexical block, so as to not block warnings caused by other errors.  It might be practical to inject the `no warnings 'exiting';` into the anon-subs made from the `then {block}` ?
+
+* (Near as i can tell, there's no danger of an innermost loop inside the `then{}` clause having a problem, as the hidden `next SWITCH` by the `when` occurs after the `then{}` anon sub returns to `when`, if i don't `next LINE;` out of it.)
+
+* Additional warning required, that **`return`** in the `then {BLOCK}` won't do what is expected, but rather returns from the `when-then` anon-sub (lambda).
+
+* Would need to return up the call stack to return from my visible sub.
+
+* (Instead i just have a `$ret` value the way we used to do when one in one out structured programming forbade return from anywhere except the bottom of the subroutine. )
+* (Aside: Probably helped that I'm old enough to have suffered under that formalism. Which did let us reason over programs, and I have proved several production loops correct according to precondition, invariant, progress, postcondition, which benefited from no early exits / no gotos. But readable code is more useful most of the time. 🤣 )
+
+
+
+* [`perlver`](https://metacpan.org/release/DBOOK/Perl-MinimumVersion-1.42-TRIAL/view/script/perlver) reads your script or collection of modules and reports what is required to run it - both by checking explicit demand but what is actually used. It's not perfect yet, [we're hammering edge-cases](https://github.com/neilb/Perl-MinimumVersion/issues). If you like Postderef as I do, get the DEV version 1.42-TRIAL version not the 1.40 current 'production' version, if that is still current when you read this.
+
+Comments
+
+* Ricky notes I could use new built-in `weaken` and `trim` if commiting to v5.40 rather than using `Feature::Compat::Class`
+(`trim` is ok for this app as replacement from `chomp; chop if /\r\z/;` as mandatory id at front doesn't allow for leading spaces)
+
+* Jerrad notes `perl -CA` handles @ARGV decoding [perlunicookbook](https://www.perl.com/pub/2012/04/perlunicookbook-decode-argv-as-utf8.html/) . Jerrad says:(Quoth perlrun "Note: Since perl 5.10.1, if the -C option is used on the #! line, it must be specified on the command line as well, since the standard streams are already set up at this point in the execution of the perl interpreter." In which case it seems like -C w/o 1, 2 or 4 place set should be safe on shebang only, and esp. the 32s place. Tis a shame the interpreter doesn't differentiate.)
+
+* Ricky mentioned **Damian Conway** included reimplemnenting keywords, including smartmach `given` and `when`,  in his recent keynote at **@YAPCNA The Perl and Raku Conference - Las Vegas, NV 2024** 
+[**The Once and Future Perl**- Damian Conway - TPRC 2024](https://www.youtube.com/watch?v=0x9LD8oOmv0&pp=ygUja2V5bm90ZSBvbmNlIGFuZCBmdXR1cmUgcGVybCBjb253YXk%3D)
+    * He also discuss how he helped Ovid with prototyping of Corina class with PPR.
+    * Damian's [Switch::Back](https://metacpan.org/pod/Switch::Back) module reimplements the bad smartmatch-given-when 
+        * if it only had 6 rules, not 46, maybe it wouldn't have to die?
+        * *now* that Perl has canonical true values, can make simpler rules, only slight change in behavior, [Switch::Right](https://metacpan.org/dist/Switch-Back) 
+    * All **Damian Conway** 2024 Keynote modules:
+        * [Switch::Right](https://metacpan.org/dist/Switch-Right)
+            * depends: `B::Deparse` `Keyword::Simple` `Multi::Dispatch` **`Object::Pad`** `PPR` **`Test2::V0`** `Type::Tiny`
+        * [Switch::Back](https://metacpan.org/dist/Switch-Back)
+            * depends: `B::Deparse` `Keyword::Simple` **`Multi::Dispatch`** `PPR` `Test::More` `Type::Tiny`
+        * [Multi::Dispatch](https://metacpan.org/dist/Multi-Dispatch)
+            * depends: `Algorithm::FastPermute` `Data::Dump` **`Keyword::Simple`** **`PPR`** `Test::More` `Type::Tiny` 
+        * [Filter::Syntactic](https://metacpan.org/dist/Filter-Syntactic) 
+            * depends: `Filter::Simple` **`PPR`** `Test::More`
+        * [DWIM::Block](https://metacpan.org/dist/DWIM-Block) can reimplement Coy 
+            * depends: `AI::Chat` **`Filter::Simple` `PPR`** `Test::More`
+        * [PPR](https://metacpan.org/dist/PPR) {updated}
+        * older, referenced [Keyword::Declare](https://metacpan.org/dist/Keyword-Declare)
+
+
+* Randal says:there's an interesting anecdote about underscore prefix in early releases of Perl. Making `$_` visible in every package context initially made *every* private `$_variable` very very public.
+
+* Ricky asked if `Data::Dump dd` dumps new class objects ok; I think passably.  Ricky says: This claims to support dumping new objects:  [Data::Printer](https://metacpan.org/pod/Data::Printer).
+
+------------
+
