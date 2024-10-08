@@ -81,13 +81,9 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill.
 
-## August 13th  ? 
+## October 8th - 7.30 EDT topic start (7.00 gathering chatter)
 
-We often cancel August due to vacations?  Or maybe a beer-garden physical meetup?
-
-## September 10th - 7.30 EDT topic start (7.00 gathering chatter)
-
-TBD
+We'll discuss whatever Perl, FLOSS topics.
 
 ------------
 

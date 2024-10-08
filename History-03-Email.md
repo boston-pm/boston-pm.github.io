@@ -1389,5 +1389,14 @@ Comments
 
 * Ricky asked if `Data::Dump dd` dumps new class objects ok; I think passably.  Ricky says: This claims to support dumping new objects:  [Data::Printer](https://metacpan.org/pod/Data::Printer).
 
+## August 
+
+We usually cancel August due to vacations, and we did so again
+
+## Tuesday September 10th
+
+We had a chat, but I don't think i took notes?
+
+
 ------------
 
