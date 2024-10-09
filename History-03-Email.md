@@ -1397,6 +1397,26 @@ We usually cancel August due to vacations, and we did so again
 
 We had a chat, but I don't think i took notes?
 
+Tabs left open appear to be
+
+* [GitHub Pages for Perl developers](https://perlmaven.com/github-pages-for-perl-developers)
+* [How to pass JSON using WWW::Mechanize in perl](https://perl.theplanetarium.org/)
+* [MOM Macros for Gnu Troff](https://www.schaffter.ca/mom/mom-05.html)
+    * and other Troff matters such as [Randal's mods to O'Reilly's book macros](https://www.facebook.com/merlyn/posts/pfbid02HuoV9aVa1GWrNpJdgeC9Zg9PyvUuB7o5VGygSLVWSU1dWLZS6Lfym7TQrRagxcvXl)
+* [Ladino Kantoniko](https://github.com/kantoniko/)
+
+
+## Tuesday October 8th 
+
+* Randal reports [Audo Hijack](https://rogueamoeba.com/audiohijack/) for Mac lets him do a demonic voice for halloween, shift down one octave.
+* discussion of headsets, batteries
+* difficulties of finding LLM/AI tools (e.g. text summarizing, voice call summarizing) that promise they won't include your data in next training cycle and thus respect data confidentiality.
+* Christos Argyropoulos, a scientific Perl user seen on [FB Perl Community](https://www.facebook.com/groups/498667124274252/user/654377198) etc, [Fediverse](https://fosstodon.org/@christosargyrop.bsky.social@bsky.brid.gy), ... posted a reflection the classic _Higher Order Perl_ ([MJD's HOP](https://hop.perl.plover.com/)) book in light of \^recent\^ advances in Perl to [Blogs.Perl.Org](https://blogs.perl.org/users/chrisarg/2024/07/caching-memoization-with-state-variables.html) {has comments} and [Dev.to](https://dev.to/chrisarg/caching-memoization-with-state-variables-18dm) {has prettier code highlighting}. His example was Fibonacci using initialized `state` variables vs module `Memoize`.   BPO comments note that with Memoize, one can use a single implementation to create both Fibonacci and [Lucas](https://oeis.org/wiki/Lucas_numbers) sequences, but not with a named sub with one hidden state variable used by all uses, interesting edge case. {_n.b. the s in Lucas is silent._}
+* A new IDE for Perl appeared as [Yet another senseless pet project](https://www.facebook.com/groups/perlcommunity/posts/1769236873883931/) [App::Codit](https://metacpan.org/release/HANJE/App-Codit-0.10/source/README.md)
+* Jerrad wonders if since it uses Tk graphics it would be possible to integrate the existing [ptkdb](https://ptkdb.sourceforge.net/) debugger?
+* Jerrad has been dealing with aligning data collected as [NECTA: New England city and town area](https://en.wikipedia.org/wiki/New_England_city_and_town_area) vs [CBSA:Core-based statistical area](https://en.wikipedia.org/wiki/Core-based_statistical_area), County vs [Zipcode ZCTA](https://en.wikipedia.org/wiki/ZIP_Code_Tabulation_Area). Yet more [Falsehoods Programmers Believe](https://github.com/kdeldycke/awesome-falsehood) that need to be regularly debunked. 
+
+
 
 ------------
 
