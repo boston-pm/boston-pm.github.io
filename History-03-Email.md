@@ -1417,11 +1417,15 @@ Tabs left open appear to be
 * Jerrad has been dealing with aligning data collected as [NECTA: New England city and town area](https://en.wikipedia.org/wiki/New_England_city_and_town_area) vs [CBSA:Core-based statistical area](https://en.wikipedia.org/wiki/Core-based_statistical_area), County vs [Zipcode ZCTA](https://en.wikipedia.org/wiki/ZIP_Code_Tabulation_Area). Yet more [Falsehoods Programmers Believe](https://github.com/kdeldycke/awesome-falsehood) that need to be regularly debunked. 
 
 
-## November 12th - 7.30 pm EDT topic start 
+## November 12th 
 
-* I have no notes. IIRC I had a nice chat with Randal.
+* I have no notes; there was no agenda.
+* IIRC I had a nice chat with Randal.
 
 
+## December 10th, 2024 
+
+* No announced agenda. Nothing happened.
 
 ------------
 

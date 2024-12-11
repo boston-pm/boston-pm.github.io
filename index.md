@@ -81,9 +81,12 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill.
 
-## December 10th - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
+## January 14th, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
+
 
 We'll discuss whatever Perl, FLOSS topics.
+
+We might review one or more or the Advent calendars, that's somewhat traditionalfor January. 
 
 ------------
 
