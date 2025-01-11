@@ -1,4 +1,4 @@
-% Calendar (Wiki) History (2004-2016) ![](./images/Logo.jpg){#logo .float_r width=30% }
+% MIT Era History (i): from Wiki Calendar archives (2004-2016) ![](./images/Logo.jpg){#logo .float_r width=30% }
 % Boston Perl Mongers
   from old wiki entries of Ronald J Kimball & Bill Ricker
 % 2004-2016
@@ -8,25 +8,27 @@ Boston Perl Mongers history is divided into three parts, like Gaul.
 
 [Key Highlights (annals)](History-00.html)
 
-* [Reconstructed Ancient History 1999-2004](History-01-Reconstructed-1999.html)
-* [Mid History 2004-2016](History-02-Calendar.html) ***this file***
-* [Recent History 2017-present](History-03-Email.html)
+* [Reconstructed Ancient History 1999-2005](History-01-Reconstructed-1999.html)
+* [MIT Era pt i  2005-2016](History-02-Calendar.html) ***this file***
+* [MIT Era pt ii 2017-2020](History-03-Email.html) 
+* [Recent Plague/Virtual era 2020-present](History-04-Virtual.html)
 
 
 (*Note. This file is in **reverse** chronological order, most recent at the top.
-the others are chronological, recent at bottom.
+the the two later files are chronological, recent at bottom.
 All start with a table of contents by year.*)
 
 
 Tech Meetings have traditionally held on the 2nd Tuesday of every month, most recently at MIT.
 
-# The MIT Era 2005-08-09 - 2020-03-09
+# The MIT Era 2005-08-09 - 2020-03-09 (part 1: 2005-2016)
 
 For 15 years, MIT IT and Facilities provided user group meeting space on campus for the convenience of MIT staff and other community members who wished to attend.
 
 The facilities were very nice MBA case rooms in the Business & Humanities building E51.
 
-*MIT Era spans the file break between Mid History and [Recent history](History-03-Email.html).*
+*MIT Era spans the file break between this Part i and and [Part ii](History-03-Email.html), due to source of information. This file is extracted from 2-3 generations of Wiki Calendar Archives. 
+Part ii is extracted from Email archives.*
 
 # 2016
 
@@ -1738,125 +1740,6 @@ and RSS, and is built on top of Catalyst, an MVC web application framework.
 Reef will serve as the foundation for 2people.org, a community site devoted to
 sustainability .
 
-## May 4, Wednesday, Social Meeting Natick, 
+-----
 
-**Randal Schwartz** was the guest of honor.
-
-# The Boston University Era 2004-04-27 - 2005-04-12
-
-Thanks to Sean Quinlan, we had use of a BU classroom for about a year.
-
-Our schedule there was the second Tuesday of every month, *except* when 
-this would conflict with a Red Sox home game.
-
-
-(*The BU Era continues up into/down from Ancient History; the file break is because because Mid History is history from the Wiki Era, and Ancient only from Mail Archives.*)
-
-## April 12, - Federico Lucifredi - PerlQT 
-
-
-**Federico Lucifredi** gave a talk on the new **PerlQT** bindings.
-
-***END OF AN ERA - Last meeting in BU Kenmore Classroom Building*** 
-
-## February 10, Thursday, Social Meeting
-
-The ***Cheesecake Factory*** Cambridgeside Galleria  ***brian d foy*** was the guest of honor.
-
-## February 8, Tuesday, Tech Meeting - BU Kenmore Classroom Building  - room 103
-
-***brian d foy***  talked about ***Automating Releases***.
-
-![Brian's release problem](./images/P2080193.JPG)
-
-`brian` also answered questions about ***The Perl Review***  
-and had people pose for photos in **Schwern's famous shirt**.
-
-
-![bdf in Schewern's iconic shirt in front of Kenmore Square's iconic sign in same color scheme](./images/P2080209.JPG){ width=50%}
-
-![Jimmy Fundy Jimmy wearing Schewern's shirt, Fenway Park](./images/P2080212.v01.jpg){ width=50%}
-
-![Jimmy Fundy Jimmy wearing Schewern's shirt, Fenway Park](./images/P2080213.JPG){ width=40%}
-
-![Uri G's preferred pose](./images/Uri_shirt_P2080200.JPG){ width=50%}
-
-
-## January 19, Wednesday, Social Meeting
-
-### Fire & Ice, Harvard Square
-
-15 people enjoyed dinner at [Fire & Ice](http://www.fire-ice.com) with Ben Tilly, known as tilly on [PerlMonks](http://www.perlmonks.com).
-
-# 2004
-
-## December 14, Tuesday, Tech Meeting
-
-### BU Kenmore Classroom Building room 106, 7:30pm
-
-Only a few people showed up, so we went straight to Boston Beer Works for drinks and food.
-
-
-## November 9, Tuesday, Tech Meeting  
-
-### BU Physics Research Building room 148
-
-*Cool Uses for Perl:  "Bring a fun script to show."*
-
-**Bill Ricker** started us off by presenting some scripts he's written for analyzing and creating cryptograms, interspersed with interesting tidbits from the history of cryptography.
-
-**Ronald J Kimball** followed with some scripts he's written for solving cryptograms.  We also
-discussed some of the shortcomings to his brute force approach, particularly the problem of proper nouns. ([script](https://www.tamias.net/rjk/perl/ppt/))
-
-**Tim Kohl** then reviewed a short script that finds words whose digital sums add up
-to 666.  (e.g. cat = 3+1+20 = 24)  Except it really looks for 111, because
-it multiplies the digital sum by 6, because that's what the TV evangelist
-who inspired this script did.  We had fun looking through the words that
-the script found.
-
-
-After that people threw out a few questions for discussion.  One was a
-tab-delimited file transposition issue that was then discussed on the
-list.  Another was about recursively copying directories in Perl; the
-File::NCopy module was suggested.
-
-The pizza and soda were generously sponsored by monger **Greg London**.  
-Greg has two books available through his website, <http://www.Greg London.com/>: _Impatient Perl_ and _Hunger Pangs_, a science fiction novel. Greg London also has inevitable options.
-
-
-(PRB 148 is not our usual room, but is less than two blocks away.)
-
-
-## October 2, 2004  (*NOT FREE 8 Hours*)
-
-*Perl 6 and Parrot with **Dan Sugalski**.*
-
-Lunch included. at MIT.
-Part of Fall, 2004 **GBC/ACM Professional Development Seminars**
-<http://www.gbcacm.org> for registration and information 
-
-
-## September 28, 2004
-
-Dinner with ***Randal L Schwartz*** <http://www.stonehenge.com/merlyn/> at Legal's, Framingham
-
-## September 22, 2004
-
-Extra-ordinary working meeting at **Akamai, Cambridge** -- a workshop to implement a [**kWiki**](https://metacpan.org/pod/Kwiki) to be **Boston.pm.org**. 
-
-Followed by Beer and Dinner at CBC with Randal L Schwartz <http://www.stonehenge.com/merlyn/> who somehow managed to escape from his conference.
-
-(*Narrator: kWiki served us well for several years, but the frictionless registration meant it collected SEO spam, which eventually got tiring. I even discovered one cluster in this 2d history conversion!*)
-
-## before
-
-This history file begins with history recorded on the kWiki and later ported wikis.
-
-
-
-For history prior to Sept 2004, the [Reconstructed Ancient History 1999-2004](History-01-Reconstructed-1999.html) is built from mailing list archives.
-
-
-For before the mailing lists archive started, all we have currently is the highlights summary timeline in [History](History-00.html).
-
-
+[PREV](History-01-Reconstructed-1999.html) [UP](History-00.html) [NEXT](History-03-Email.html)

@@ -1,6 +1,6 @@
 % Boston Perl Mongers  ![](./images/Logo.jpg){#logo .float_r width=30% }
 % 
-% 2024
+% 2025
 
 
 
@@ -50,8 +50,9 @@ Boston-PM has presence on the following socials -
 
 * [MeetUp](https://www.meetup.com/boston-pm/)![icon](./images/Meetup-icon.png){#mu height=20 }
 * [LinkedIn](https://www.linkedin.com/groups/41363/)![icon](./images/Linkedin-icon.png){#lin height=20 }
-* [Twitter](https://twitter.com/BostonPM)![icon](./images/Twitter-icon.png){#tw height=20 }
-* Fediverse/Mastodon - _likely coming soon!_
+* [Twitter](https://twitter.com/BostonPM)![icon](./images/Twitter-icon.png){#tw height=20 } 
+    *We are **not** currently active on Xhitter.*
+* Fediverse/Mastodon - _likely coming soon! Maybe BSKY too?_
 * [Facebook Page](https://www.facebook.com/bostonpm/)
 * [FaceBook Group](https://www.facebook.com/groups/131595281237)
 * [YouTube](https://www.youtube.com/channel/UCY0sL_ILd6JUixlppAQlgsA/videos) (historical only at this time)
@@ -76,7 +77,7 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 
 # Schedule
 
-_Previous meetings' minutes are recorded at the bottom of the [latest history file](./History-03-Email.html)._
+_Previous meetings' minutes are recorded at the bottom of the [latest history file](./History-04-Virtual.html#section-5)._
 
 
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill.
@@ -86,7 +87,9 @@ If there's something you can or would want to talk about, please do volunteer - 
 
 We'll discuss whatever Perl, FLOSS topics.
 
-We might review one or more or the Advent calendars, that's somewhat traditionalfor January. 
+We might review one or more or the Advent calendars, that's somewhat traditional for January. 
+
+Or maybe the latest modules replacing the ill-fated `given when` switch.
 
 ------------
 

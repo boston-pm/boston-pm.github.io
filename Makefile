@@ -29,7 +29,7 @@ $(NoneSuch):
 	@echo Nothing done for $@
 
 extensions=+pipe_tables
-flags=--title-prefix=Boston.pm --toc --toc-depth=1
+flags=--title-prefix=Boston.pm --toc --toc-depth=2
 
 # why I need to use  $(@:.html=.md) instead of $< here IDK !
 $(Pages): %.html: %.md

@@ -1,30 +1,136 @@
-% Reconstructed History (1999-2004)
+% Reconstructed History (1999-2005)
 % Boston Perl Mongers   ![](./images/pmgeekbooktinyfall.jpg){#logo .float_r width=30% }
   from posts of: Ronald J Kimball, Uri Guttman, Elaine HFB, _etc_. 
-% 1999-2004
+% 1999-2005
 
+------
 
-Boston Perl Mongers history is divided into three parts, like Gaul.
+Boston Perl Mongers history is divided into four parts.
 
 [Key Highlights (annals)](History-00.html)
 
-* [Reconstructed Ancient History 1999-2004](History-01-Reconstructed-1999.html) ***this file***
-* [Mid History 2004-2016](History-02-Calendar.html)
-* [Recent History 2017-present](History-03-Email.html)
+* [Reconstructed Ancient History 1999-2005](History-01-Reconstructed-1999.html)  ***this file***
+* [MIT Era pt i  2005-2016](History-02-Calendar.html)
+* [MIT Era pt ii 2017-2020](History-03-Email.html) 
+* [Recent Plague/Virtual era 2020-present](History-04-Virtual.html) 
+
 
 
 (*Note. This file is in **Reverse** chronological order, most recent at the top.
 All start with a table of contents by year.*)
 
-Extracted 1999-Oct to 2004-Sep from mailing list archives, public and Private. 
+Extracted 1999-Oct to 2004-Sep from mailing list archives, public and Private,
 [Public Archive](https://www.mail-archive.com/boston-pm-announce@mail.pm.org/thrd3.html)
+and for the first few months of 2005, from Wiki Archives.
+
+
+(*Narrator: kWiki served us well for several years, but the frictionless registration meant it collected SEO spam, which eventually got tiring. I even discovered one cluster in this 2d history conversion!*)
+
 
 # The Boston University era 2004-04-27 - 2005-04-12 
 
-Sean Quinlan and other BU staff arranged for classroom use in BU Kenmore building.
-Second Tuesdays only if no Red Sox Home Game, we had to be flexible.
+Thanks to Sean Quinlan (and other BU staff),
+we had use of a BU classroom in BU's Kenmore building for about a year.
 
-(*The BU Era continues up into/down from Mid History; the file break is because because Mid History is history from the Wiki Era.*)
+Our schedule there was the second Tuesday of every month, *except* when 
+this would conflict with a Red Sox home game,
+when we had to be flexible.
+
+# 2005
+
+## April 12, - Federico Lucifredi - PerlQT 
+
+
+**Federico Lucifredi** gave a talk on the new **PerlQT** bindings.
+
+***END OF AN ERA - Last meeting in BU Kenmore Classroom Building*** 
+
+## February 10, Thursday, Social Meeting
+
+The ***Cheesecake Factory*** Cambridgeside Galleria  ***brian d foy*** was the guest of honor.
+
+## February 8, Tuesday, Tech Meeting - BU Kenmore Classroom Building  - room 103
+
+***brian d foy***  talked about ***Automating Releases***.
+
+![Brian's release problem](./images/P2080193.JPG)
+
+`brian` also answered questions about ***The Perl Review***  
+and had people pose for photos in **Schwern's famous shirt**.
+
+
+![bdf in Schewern's iconic shirt in front of Kenmore Square's iconic sign in same color scheme](./images/P2080209.JPG){ width=50%}
+
+![Jimmy Fundy Jimmy wearing Schewern's shirt, Fenway Park](./images/P2080212.v01.jpg){ width=50%}
+
+![Jimmy Fundy Jimmy wearing Schewern's shirt, Fenway Park](./images/P2080213.JPG){ width=40%}
+
+![Uri G's preferred pose](./images/Uri_shirt_P2080200.JPG){ width=50%}
+
+
+## January 19, Wednesday, Social Meeting
+
+### Fire & Ice, Harvard Square
+
+15 people enjoyed dinner at [Fire & Ice](http://www.fire-ice.com) with Ben Tilly, known as tilly on [PerlMonks](http://www.perlmonks.com).
+
+# 2004
+
+## December 14, Tuesday, Tech Meeting
+
+### BU Kenmore Classroom Building room 106, 7:30pm
+
+Only a few people showed up, so we went straight to Boston Beer Works for drinks and food.
+
+
+## November 9, Tuesday, Tech Meeting  
+
+### BU Physics Research Building room 148
+
+*Cool Uses for Perl:  "Bring a fun script to show."*
+
+**Bill Ricker** started us off by presenting some scripts he's written for analyzing and creating cryptograms, interspersed with interesting tidbits from the history of cryptography.
+
+**Ronald J Kimball** followed with some scripts he's written for solving cryptograms.  We also
+discussed some of the shortcomings to his brute force approach, particularly the problem of proper nouns. ([script](https://www.tamias.net/rjk/perl/ppt/))
+
+**Tim Kohl** then reviewed a short script that finds words whose digital sums add up
+to 666.  (e.g. cat = 3+1+20 = 24)  Except it really looks for 111, because
+it multiplies the digital sum by 6, because that's what the TV evangelist
+who inspired this script did.  We had fun looking through the words that
+the script found.
+
+
+After that people threw out a few questions for discussion.  One was a
+tab-delimited file transposition issue that was then discussed on the
+list.  Another was about recursively copying directories in Perl; the
+File::NCopy module was suggested.
+
+The pizza and soda were generously sponsored by monger **Greg London**.  
+Greg has two books available through his website, <http://www.Greg London.com/>: _Impatient Perl_ and _Hunger Pangs_, a science fiction novel. Greg London also has inevitable options.
+
+
+(PRB 148 is not our usual room, but is less than two blocks away.)
+
+
+## October 2, 2004  (*NOT FREE 8 Hours*)
+
+*Perl 6 and Parrot with **Dan Sugalski**.*
+
+Lunch included. at MIT.
+Part of Fall, 2004 **GBC/ACM Professional Development Seminars**
+<http://www.gbcacm.org> for registration and information 
+
+
+## September 28, 2004
+
+Dinner with ***Randal L Schwartz*** <http://www.stonehenge.com/merlyn/> at Legal's, Framingham
+
+## September 22, 2004
+
+Extra-ordinary working meeting at **Akamai, Cambridge** -- a workshop to implement a [**kWiki**](https://metacpan.org/pod/Kwiki) to be **Boston.pm.org**. 
+
+Followed by Beer and Dinner at CBC with Randal L Schwartz <http://www.stonehenge.com/merlyn/> who somehow managed to escape from his conference.
 
 # 2004
 
@@ -1271,7 +1377,7 @@ Ronald
 
 (*Initially, the interface was sending mail to the `majordomo @`. From this point forward there is actual history and not just "annals". and that history carried over to `mailman` on `mail.pm.org` continuing to 2022+, the present as i edit this history.*)
 
-# The Dark Ages, 1998 - Oct 1999
+# The Dark Ages era, 1998 - Oct 1999
 
 The email archives of the crashed original server at `darkridge.com`  are lost in the mists of time, so we have only annals from the History file.
 
@@ -1315,4 +1421,6 @@ Chris "Pudge" Nandor  is distinguished by having entries at [imdb](https://www.i
 Chris would also later co-author the [**MacPerl**](http://dev.macperl.org/) book.
 
 
+------
 
+[UP](History-00.html) [NEXT](History-03-Email.html)

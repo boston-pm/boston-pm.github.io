@@ -8,9 +8,10 @@ Boston Perl Mongers history is divided into three parts, like Gaul.
 
 [Key Highlights (annals)](History-00.html) ***this file***
 
-* [Reconstructed Ancient History 1999-2004](History-01-Reconstructed-1999.html)
-* [Mid History 2004-2016](History-02-Calendar.html)
-* [Recent History 2017-present](History-03-Email.html)
+* [Reconstructed Ancient History 1999-2005](History-01-Reconstructed-1999.html)
+* [MIT Era pt i  2005-2016](History-02-Calendar.html)
+* [MIT Era pt ii 2017-2020](History-03-Email.html) 
+* [Recent Plague/Virtual era 2020-present](History-04-Virtual.html)
 
 (*Note. This file is in chronological order, most recent at the bottom.
 All start with a table of contents by year.*)
@@ -23,10 +24,10 @@ All start with a table of contents by year.*)
 | 1998-09-??  | | Meeting at MIT with **Randal Schwartz** |
 | 1998-10-??  | | First of many social meetings at **Elaine Ashton**'s house |
 | 1999-01-25  | | First regular tech meeting, held in **Uri Guttman**'s attic |
-| 1999-03  | |    **Ronald Kimball** takes over as leader of Boston.pm |
+| 1999-03     | |    **Ronald Kimball** takes over as leader of Boston.pm |
 | 1999-04-27  | | Boston.pm hosts a party during O'Reilly's Perl Tutorials in Boston |
 | 1999-06-07  | | **Cambridge.pm** is founded – we're still not sure why :) |
-| 1999-09  | |    **Uri Guttman** holds a haiku contest on the list; Phil Johnson, J Proctor, & John Saylor win books |
+| 1999-09     | |    **Uri Guttman** holds a haiku contest on the list; Phil Johnson, J Proctor, & John Saylor win books |
 | 1999-10-20  | | Discussion list moved to **hfb.pm.org** |
 | 1999-12-05  | | Boston.pm paintball outing |
 | 2000-02-07  | | Last regular tech meeting in Uri's attic |
@@ -44,8 +45,8 @@ All start with a table of contents by year.*)
 | 2002-01-18  | | Boston.pm has a team in the **MIT Mystery Hunt** (merges with team *Austerity Nymph*) |
 | 2002-09-03  | | Discussion list moved to **mailman** from **majordomo**; Announcement list created |
 | 2002-10-xx  | | Boston.PM listing added to [Boston User Group Calendaer](http://www.bugc.org/) and www(.)BostonUserGroups(.)com |
-| 2004-01-13 | | Last regular tech meeting at **Boston.com** |
-| 2004-03 | | Ronald's **5th Anniversary** as Facilitator goes unrecognized since no meeting. ***Yeah Ronald!*** |
+| 2004-01-13  | | Last regular tech meeting at **Boston.com** |
+| 2004-03     | | Ronald's **5th Anniversary** as Facilitator goes unrecognized since no meeting. ***Yeah Ronald!*** |
 | 2004-04-27 | | First regular tech meeting at **Boston University** |
 | 2004-05-04 | | Social meeting with **Randal Schwartz and Tad McClellan** |
 | 2004-09-22 | | **Boston.PM.org** **Kwiki** set up during a tech meeting at **Akamai/Novell,** followed by Social meeting with **Randal Schwartz** in Cambridge (CBC)|
@@ -92,4 +93,5 @@ All start with a table of contents by year.*)
 | 2021-04-28 | | **first joint Boston + Charlotte PM** virtual meeting. |
 | 2022-02    | | **QualityBox.us** folds, **Boston.PM.org** wiki eventually falls unresponsive |
 | 2022-08-19 | | **MIT** [announces](https://twitter.com/realBurhanAzeem/status/1560730305660538880) open campus will not return, locked is the new normal. |
-| 2022-09 | | **Boston.PM.org** redirects to bostonpm.github.io/ , now produced as markdown -> static html offline |
+| 2022-09 | | [**Boston.PM.org**](https://boston.pm.org/) redirects to bostonpm.github.io/ , now produced as markdown -> static html offline |
+
