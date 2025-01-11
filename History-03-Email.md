@@ -1322,7 +1322,7 @@ I've been experimenting with Perl v5.40's **`feature class`** and prototype `Obj
 * [`Feature::Compat::Class`](https://metacpan.org/pod/Feature::Compat::Class) provides a simple invocation of `feature class` if running Perl v5.38+ or [`Object::Pad`](https://metacpan.org/pod/Object::Pad) if not. 
     * if prototyping in Object::Pad not just falling-back to, need to add `:strict(params)` to detect incorrect constructor keys; not permitted/not needed in `feature class`.
 * [`Data::Enum`](https://metacpan.org/pod/Data::Enum) recently revved to add a hook for [`match::simple::sugar`](https://metacpan.org/pod/match::simple::sugar) compatibility so that a variable containing a singleton `Data::Enum` value be matched against strings in a `for-when` block. (I do like that the enum is implemented as a set of singletons.)
-    ```
+```
     LINE: while (<>){
     SWITCH: for ($STATE){
         when 'none', then { … };
@@ -1330,7 +1330,7 @@ I've been experimenting with Perl v5.40's **`feature class`** and prototype `Obj
         when 'line', then { … };
         }
     }
-    ```
+```
 * My suggestions *`match::simple::sugar`* documentation*, [issues from lessons learned](https://github.com/tobyink/p5-match-simple/issues).
         * `no feature 'switch';  # or use v5.36; or greater` to avoid deprecation warning and resulting syntax fail
         * my other documentation issues / lessons learned:

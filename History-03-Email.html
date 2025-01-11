@@ -1840,8 +1840,16 @@ href="https://metacpan.org/pod/match::simple::sugar"><code>match::simple::sugar<
 compatibility so that a variable containing a singleton
 <code>Data::Enum</code> value be matched against strings in a
 <code>for-when</code> block. (I do like that the enum is implemented as
-a set of singletons.)
-<code>LINE: while (&lt;&gt;){     SWITCH: for ($STATE){         when 'none', then { … };         when 'header', then { … };         when 'line', then { … };         }     }</code></li>
+a set of singletons.)</li>
+</ul>
+<pre><code>    LINE: while (&lt;&gt;){
+    SWITCH: for ($STATE){
+        when &#39;none&#39;, then { … };
+        when &#39;header&#39;, then { … };
+        when &#39;line&#39;, then { … };
+        }
+    }</code></pre>
+<ul>
 <li>My suggestions <em><code>match::simple::sugar</code></em>
 documentation<em>, <a
 href="https://github.com/tobyink/p5-match-simple/issues">issues from
