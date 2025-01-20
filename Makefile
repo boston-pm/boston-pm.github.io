@@ -1,5 +1,5 @@
 # scripts 
-#
+# make -r all
 #
 
 

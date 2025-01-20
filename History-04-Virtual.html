@@ -253,7 +253,12 @@ October 8th</a></li>
 <li><a href="#december-10th-2024" id="toc-december-10th-2024">December
 10th, 2024</a></li>
 </ul></li>
-<li><a href="#section-5" id="toc-section-5">2025</a></li>
+<li><a href="#section-5" id="toc-section-5">2025</a>
+<ul>
+<li><a href="#january-14th-2025---given-when-switch-module-contenders"
+id="toc-january-14th-2025---given-when-switch-module-contenders">January
+14th, 2025 - <code>given when switch</code> module contenders</a></li>
+</ul></li>
 </ul>
 </nav>
 <h1 id="boston.pm">Boston.PM</h1>
@@ -1701,6 +1706,108 @@ Programmers Believe</a> that need to be regularly debunked.</li>
 <li>No announced agenda. Nothing happened.</li>
 </ul>
 <h1 id="section-5">2025</h1>
+<h2 id="january-14th-2025---given-when-switch-module-contenders">January
+14th, 2025 - <code>given when switch</code> module contenders</h2>
+<p>Attending: Bill, Ricky, Randal, Ken, Tom, Chiba.</p>
+<h3 id="admin-announcements">Admin announcements</h3>
+<p>While updating our History, resplitting it into 4 phases (Ancient,
+MIT from Wiki archive, MIT from Email Archive, Virtual), I noticed</p>
+<ul>
+<li>First two history two phases are recent-top reverse-chronological
+which was Wiki-update-friendly but history-unfriendly. That’s a deferred
+TBD.</li>
+<li>Our <a href="https://boston-pm.github.io/#social-media">Social
+Media</a> lists a bunch of things we’re not using much and should
+replace.
+<ul>
+<li><strong>MeetUp</strong> has raised prices and been odd lately, so
+we’ll be dropping that, probably before Feb meeting.</li>
+<li>Our <strong>Twitter</strong> account hasn’t been used in ages and
+likely won’t be; to prevent impersonation, I’d likely lock it down, not
+delete.</li>
+<li>Our <strong>Facebook</strong> Page, Group and
+<strong>LinkedIn</strong> Page, Group have been underutilized, whether
+to FMK those is TBD.</li>
+<li><strong>PLAN</strong>: We’ll announce on Mailing List and MeetUp
+push notice where on the Fediverse (Mastondon-compatible) and probably
+BlueSky we’ll pop-up a BostonPM presense. Current vague thinking is a
+<strong>Mobilizon</strong> public calendar and a <strong>BSKY</strong>,
+maybe a separate Mastodon or equivalent microblog. I’m not looking at
+all-in-one macro/micro/events/groups Fediverse options as we have an ok
+website and separating dependencies prevents SPOF.</li>
+<li>The PerlWeekly <a href="https://perlweekly.com/perlweekly.ical">iCal
+calendar</a> is importable into most personal calendars and
+automatically includes our time now.</li>
+</ul></li>
+</ul>
+<p>Best way to be informed is either sign up for one or both mailing
+lists or just watch the home page <a
+href="https://boston.pm.org">boston.pm.org</a> .</p>
+<h3
+id="discussion-of-latest-modules-replacing-the-ill-fated-given-when-switch.">Discussion
+of latest modules replacing the ill-fated <code>given when</code>
+switch.</h3>
+<p>While Perl 5.010’s smartmatch operator <code>~~</code> was
+problematic in its complexity, there was a niceness of the
+<code>given when</code> keywords, and some of us miss <em>those</em>
+with deprecation of smartmatch.</p>
+<p>There are a number of proposals to enhance Perl Syntax in the P5P PPC
+queue. Another coming (not PPC-numbered at this writing ) will be
+providing a replacement different syntax to provide enough Switch
+without too much smart-match magic, which * Paul Evans has prototyped as
+<a
+href="https://metacpan.org/pod/Syntax::Keyword::Match">Syntax::Keyword::Match</a>,
+which will take advantage of several <a
+href="https://github.com/Perl/PPCs/tree/main/ppcs">PPC</a> <a
+href="https://metacpan.org/author/PEVANS"><code>Syntax::Operator::...</code></a>
+prototype modules if available (<code>Divides</code>, <code>Equ</code>,
+<code>Identical</code>, <code>In</code>, <code>Is</code>).</p>
+<p>There are several other modules on CPAN which aim to provide
+replacements for the deprecated <code>given when</code> with some
+improved sanity of smart-match. * Toby Inkster’s <a
+href="https://metacpan.org/pod/match::simple">match::simple</a>, <a
+href="https://metacpan.org/pod/match::simple::sugar">match::simple::sugar</a>,
+and <a href="https://metacpan.org/pod/match::smart">match::smart</a>
+which we looked at July 2024 * Damian Conway’s <a
+href="https://metacpan.org/pod/Switch::Back">Switch::Back</a>, which is
+almost back-wards compatible, with a few caveats, and <a
+href="https://metacpan.org/pod/Switch::Right">Switch::Right</a>, which
+has a less DWIM-magery smartmatch. These experimental modules could be
+used to keep debugged legacy code using 5.010 <code>given when</code>
+logic with Perl 5.040+.</p>
+<h3 id="cpan-support-for-markdown">CPAN support for Markdown</h3>
+<p>It was noted that the latest release of <code>pandoc</code> cli tool
+supports Perl POD as an output. This and my need to at some point
+un-reverse the early chapters of this history sparked a review of what
+Perl had for Markdown support.</p>
+<ul>
+<li><a
+href="https://metacpan.org/pod/Markdown::Parser">Markdown::Parser</a></li>
+<li><a
+href="https://metacpan.org/pod/Markdown::Compiler">Markdown::Compiler</a></li>
+<li><a
+href="https://metacpan.org/dist/Markdown-Perl/view/script/pmarkdown">Markdown-Perl
+<code>pmarkdown</code></a></li>
+<li><a href="https://metacpan.org/search?q=markdown">more</a> Tk,
+Markdown2Pod, TOC, Pod2Markdown, MD2HTML, phpBB, …</li>
+</ul>
+<h3 id="getopttypetiny">Getopt::Type::Tiny</h3>
+<p>Curtis aka Ovid announced a work-in-progress. Imagine if
+<code>Getopt::Long</code> supported <code>Type::Tiny</code> for
+automagic validation that <code>--len=99</code> had integer arguments
+only.</p>
+<p><a href="https://github.com/Ovid/getopt-type-tiny">Ovid’s wip on
+Github</a> might appear on CPAN at some point.</p>
+<p>(Myself, I find [Getopt::Declare]’s numeric restriction to be quite
+sufficient and it’s interleaving of help-text with Getopt defintion is
+quite advantageous.)</p>
+<h3 id="other-topics">Other topics</h3>
+<p>We discussed which features we wanted in Raku (exP6) and what was
+going on now. RakuAST is a major conversion effort to have an Abstract
+Syntax Tree available in Raku, neat. Alas it doesn’t appear to be
+solution to the declined RFC to allow abusing Raku grammars as Logic
+Programs, but Raku grammars should allow defining a Prolog or Ops-5 like
+logic language and implementing forward or backwards chaining.</p>
 <hr />
 <p><strong>History Pages Menu</strong></p>
 <ul>

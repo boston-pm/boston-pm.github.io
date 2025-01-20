@@ -905,6 +905,61 @@ Tabs left open appear to be
 
 # 2025
 
+## January 14th, 2025 - `given when switch` module contenders
+
+Attending: Bill, Ricky, Randal, Ken, Tom, Chiba.
+
+### Admin announcements
+
+While updating our History, resplitting it into 4 phases (Ancient, MIT from Wiki archive, MIT from Email Archive, Virtual), I noticed
+
+* First two history two phases are recent-top reverse-chronological which was Wiki-update-friendly but history-unfriendly. That's a deferred TBD.
+* Our [Social Media](https://boston-pm.github.io/#social-media) lists a bunch of things we're not using much and should replace.
+    - **MeetUp** has raised prices and been odd lately, so we'll be dropping that, probably before Feb meeting.
+    - Our **Twitter** account hasn't been used in ages and likely won't be; to prevent impersonation, I'd likely lock it down, not delete.
+    - Our **Facebook** Page, Group and **LinkedIn** Page, Group have been underutilized, whether to FMK those is TBD.
+    - **PLAN**: We'll announce on Mailing List and MeetUp push notice where on the Fediverse (Mastondon-compatible) and probably BlueSky we'll pop-up a BostonPM presense. Current vague thinking is a **Mobilizon** public calendar and a **BSKY**, maybe a separate Mastodon or equivalent microblog. I'm not looking at all-in-one macro/micro/events/groups Fediverse options as we have an ok website and separating dependencies prevents SPOF.
+    - The PerlWeekly [iCal calendar](https://perlweekly.com/perlweekly.ical) is importable into most personal calendars and automatically includes our time now.
+
+Best way to be informed is either sign up for one or both mailing lists or just watch the home page 
+[boston.pm.org](https://boston.pm.org) .
+
+
+### Discussion of latest modules replacing the ill-fated `given when` switch.
+
+While Perl 5.010's smartmatch operator `~~` was problematic in its complexity, there was a niceness of the `given when` keywords, and some of us miss *those* with deprecation of smartmatch.
+
+There are a number of proposals to enhance Perl Syntax in the P5P PPC queue.
+Another coming (not PPC-numbered at this writing ) will be providing a replacement different syntax to provide enough Switch without too much smart-match magic, which 
+* Paul Evans has prototyped as [Syntax::Keyword::Match](https://metacpan.org/pod/Syntax::Keyword::Match), which will take advantage of several [PPC](https://github.com/Perl/PPCs/tree/main/ppcs) [`Syntax::Operator::...`](https://metacpan.org/author/PEVANS) prototype modules if available (`Divides`, `Equ`, `Identical`, `In`, `Is`).
+
+There are several other modules on CPAN which aim to provide replacements for the deprecated `given when` with some improved sanity of smart-match.
+* Toby Inkster's [match::simple](https://metacpan.org/pod/match::simple), [match::simple::sugar](https://metacpan.org/pod/match::simple::sugar), and [match::smart](https://metacpan.org/pod/match::smart) which we looked at July 2024
+* Damian Conway's [Switch::Back](https://metacpan.org/pod/Switch::Back), which is almost back-wards compatible, with a few caveats, and [Switch::Right](https://metacpan.org/pod/Switch::Right), which has a less DWIM-magery smartmatch. These experimental modules could be used to keep debugged legacy code using 5.010 `given when` logic with Perl 5.040+.
+
+### CPAN support for Markdown
+
+It was noted that the latest release of `pandoc` cli tool supports Perl POD as an output.
+This and my need to at some point un-reverse the early chapters of this history sparked a review of what Perl had for Markdown support.
+
+* [Markdown::Parser](https://metacpan.org/pod/Markdown::Parser)
+* [Markdown::Compiler](https://metacpan.org/pod/Markdown::Compiler)
+* [Markdown-Perl `pmarkdown`](https://metacpan.org/dist/Markdown-Perl/view/script/pmarkdown)
+* [more](https://metacpan.org/search?q=markdown) Tk, Markdown2Pod, TOC, Pod2Markdown, MD2HTML, phpBB, ...
+
+### Getopt::Type::Tiny
+
+Curtis aka Ovid announced a work-in-progress.  Imagine if `Getopt::Long` supported `Type::Tiny` for automagic validation that `--len=99` had integer arguments only.
+
+[Ovid's wip on Github](https://github.com/Ovid/getopt-type-tiny) might appear on CPAN at some point.
+
+(Myself, I find [Getopt::Declare]'s numeric restriction to be quite sufficient and it's interleaving of help-text with Getopt defintion is quite advantageous.)
+
+### Other topics
+
+We discussed which features we wanted in Raku (exP6) and what was going on now. RakuAST is a major conversion effort to have an Abstract Syntax Tree available in Raku, neat. Alas it doesn't appear to be solution to the declined RFC to allow abusing Raku grammars as Logic Programs, but Raku grammars should allow defining a Prolog or Ops-5 like logic language and implementing forward or backwards chaining.
+
+
 ------------
 
 **History Pages Menu**

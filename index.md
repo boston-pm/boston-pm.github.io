@@ -46,18 +46,32 @@ Typically these are negotiated among interested folks on the Discuss mailing-lis
 
 ## Social Media
 
+**NEWS 2025**: While updating our History, resplitting it into 4 phases (Ancient, MIT from Wiki archive, MIT from Email Archive, Virtual), I noticed
+
+* First two history two phases are recent-top reverse-chronological which was Wiki-update-friendly but history-unfriendly. That's a deferred TBD.
+* Our [Social Media](https://boston-pm.github.io/#social-media) lists a bunch of things we're not using much and should replace.
+    - **MeetUp** has raised prices and been odd lately, so we'll be dropping that, probably before Feb meeting.
+    - Our **Twitter** account hasn't been used in ages and likely won't be; to prevent impersonation, I'd likely lock it down, not delete.
+    - Our **Facebook** Page, Group and **LinkedIn** Page, Group have been underutilized, whether to FMK those is TBD.
+    - **PLAN**: We'll announce on Mailing List and MeetUp push notice where on the Fediverse (Mastondon-compatible) and probably BlueSky we'll pop-up a BostonPM presense. Current vague thinking is a **Mobilizon** public calendar and a **BSKY**, maybe a separate Mastodon or equivalent microblog. I'm not looking at all-in-one macro/micro/events/groups Fediverse options as we have an ok website and separating dependencies prevents SPOF.
+    - The PerlWeekly [iCal calendar](https://perlweekly.com/perlweekly.ical) is importable into most personal calendars and automatically includes our time now.
+
+Best way to be informed is either sign up for one or both mailing lists or just watch the home page 
+[boston.pm.org](https://boston.pm.org) .
+
 Boston-PM has presence on the following socials -
 
-* [MeetUp](https://www.meetup.com/boston-pm/)![icon](./images/Meetup-icon.png){#mu height=20 }
+* **WATCH THIS SPACE — COMING SOON**
+* ~~[MeetUp](https://www.meetup.com/boston-pm/)![icon](./images/Meetup-icon.png){#mu height=20 }~~
 * [LinkedIn](https://www.linkedin.com/groups/41363/)![icon](./images/Linkedin-icon.png){#lin height=20 }
-* [Twitter](https://twitter.com/BostonPM)![icon](./images/Twitter-icon.png){#tw height=20 } 
+* ~~[Twitter](https://twitter.com/BostonPM)![icon](./images/Twitter-icon.png){#tw height=20 }~~
     *We are **not** currently active on Xhitter.*
 * Fediverse/Mastodon - _likely coming soon! Maybe BSKY too?_
 * [Facebook Page](https://www.facebook.com/bostonpm/)
 * [FaceBook Group](https://www.facebook.com/groups/131595281237)
 * [YouTube](https://www.youtube.com/channel/UCY0sL_ILd6JUixlppAQlgsA/videos) (historical only at this time)
-* Perl Weekly [newsletter ![icon](./images/Mail-icon.png){#pwnl height=20 }](https://perlweekly.com/), [iCal calendar](https://perlweekly.com/perlweekly.ical), [![RSS](./images/feed-icon32x32.png){#rss height=20 }](https://perlweekly.com/perlweekly.rss); and their [Twitter ![icon](./images/Twitter-icon.png){#pwtw height=20 }](https://twitter.com/PerlWeekly) may promote select items of ours. <br /> [![](./images/perl_weekly_234x60.png)](https://perlweekly.com/)
-* [The Boston-area User Group Calendar](http://www.bugc.org) "Since 1997"
+* Perl Weekly [newsletter ![icon](./images/Mail-icon.png){#pwnl height=20 }](https://perlweekly.com/), [iCal calendar](https://perlweekly.com/perlweekly.ical), [![RSS](./images/feed-icon32x32.png){#rss height=20 }](https://perlweekly.com/perlweekly.rss); may promote select items of ours. <br /> [![](./images/perl_weekly_234x60.png)](https://perlweekly.com/)
+* [The Boston-area User Group Calendar](http://www.bugc.org) "Since 1997" (not currently showing us? TBD!)
 
 The primary announcement channels are MeetUp, Twitter, and Announce mailing-list.
 
@@ -82,14 +96,10 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill.
 
-## January 14th, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
-
+## February 11th, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
 
 We'll discuss whatever Perl, FLOSS topics.
 
-We might review one or more or the Advent calendars, that's somewhat traditional for January. 
-
-Or maybe the latest modules replacing the ill-fated `given when` switch.
 
 ------------
 
