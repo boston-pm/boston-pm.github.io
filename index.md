@@ -53,7 +53,7 @@ Typically these are negotiated among interested folks on the Discuss mailing-lis
     - **MeetUp** has raised prices and been odd lately, so we'll be dropping that, probably before Feb meeting.
     - Our **Twitter** account hasn't been used in ages and likely won't be; to prevent impersonation, I'd likely lock it down, not delete.
     - Our **Facebook** Page, Group and **LinkedIn** Page, Group have been underutilized, whether to FMK those is TBD.
-    - **PLAN**: We'll announce on Mailing List and MeetUp push notice where on the Fediverse (Mastondon-compatible) and probably BlueSky we'll pop-up a BostonPM presense. Current vague thinking is a **Mobilizon** public calendar and a **BSKY**, maybe a separate Mastodon or equivalent microblog. I'm not looking at all-in-one macro/micro/events/groups Fediverse options as we have an ok website and separating dependencies prevents SPOF.
+    - **PLAN**: We'll announce on Mailing List and MeetUp push notice where on the Fediverse (Mastodon-compatible) and probably BlueSky we'll pop-up a BostonPM presence. Current vague thinking is a **Mobilizon** public calendar and a **BSKY**, maybe a separate Mastodon or equivalent microblog. I'm not looking at all-in-one macro/micro/events/groups Fediverse options as we have an ok website and separating dependencies prevents SPOF.
     - The PerlWeekly [iCal calendar](https://perlweekly.com/perlweekly.ical) is importable into most personal calendars and automatically includes our time now.
 
 Best way to be informed is either sign up for one or both mailing lists or just watch the home page 
