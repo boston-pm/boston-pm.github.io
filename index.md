@@ -66,7 +66,9 @@ Boston-PM has presence on the following socials -
 * [LinkedIn](https://www.linkedin.com/groups/41363/)![icon](./images/Linkedin-icon.png){#lin height=20 }
 * ~~[Twitter](https://twitter.com/BostonPM)![icon](./images/Twitter-icon.png){#tw height=20 }~~
     *We are **not** currently active on Xhitter.*
-* Fediverse <a rel="me" href="https://fosstodon.org/@Boston_PM">Mastodon</a>![icon](./images/Mastodon.png){#tw height=20 } `@Boston_PM@fosstodon.org` 
+* Fediverse 
+    * <a rel="me" href="https://fosstodon.org/@Boston_PM">Mastodon</a>![icon](./images/Mastodon.png){#tw height=20 } `@Boston_PM@fosstodon.org` 
+    * Mobilizon [&#x2139;&#xFE0F;](https://framablog.org/2022/11/08/mobilizon-v3-find-events-and-groups-throughout-the-fediverse/) [&#x1F4C5; calendar/events](https://mobilizon.us/search?search=Boston+Perl)
 * _BSKY too?_
 * [Facebook Page](https://www.facebook.com/bostonpm/)
 * [FaceBook Group](https://www.facebook.com/groups/131595281237)
@@ -101,7 +103,11 @@ If there's something you can or would want to talk about, please do volunteer - 
 
 ## February 11th, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
 
-We'll discuss whatever Perl, FLOSS topics.
+We'll discuss whatever Perl, FLOSS topics.  
+
+* Perl 5.41 beta new features!
+* interesting CPAN modules
+* [&#x1F4C5;](https://mobilizon.us/events/948f6693-142c-4d8f-abfc-463ce7af3876)
 
 
 ------------
