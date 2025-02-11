@@ -18,15 +18,15 @@ For a calendar of up-coming meetings, see below at [Schedule](#schedule).
 
 For past calendar and annals of history, see the [History](History-00.html) pages.
 
-In the Virtual Meeting world, Boston PM participates in three sets of meetings:
+In the Virtual Meeting world, Boston PM participates in two sets of meetings:
 
 * Meetings arranged and hosted by Boston.PM are in [meet.Jit.si](https://meet.Jit.si) and on 2d Tuesday. See below at Schedule and BoilerPlate for details.
-
-* Meetings arranged and hosted by [Charlotte.PM](https://www.meetup.com/charlotte-pm/) are in Zoom and on Last Wednesdays.  Boston.pm provides publicity and attendees for these meetings. Charlotte records these.
 
 * Meetings hosted by Boston Linux Unix (<http://blu.org>) are in [Jitsi](https://meet.Jit.si) and on 3d Wednesday. These are POSIX or hardware related, not Perl related. BLU records these and publishes on YouTube.
 
     - Bill Ricker, Boston.pm facilitator, regularly invites Boston.PM to his [BLU](https://blu.org/) presentations and others we think will be of interest. These tend to be POSIX as opposed to Perl, though both Bill and Federico Lucifredi tend to have some Perl in support of their projects.
+
+* Boston.PM in the early years of plague also co-sponsored virtual meetings with Charlotte.PM
 
 (A few of our older, in-person Boston.pm meetings (2014-2015) are on [YouTube](https://www.youtube.com/channel/UCY0sL_ILd6JUixlppAQlgsA/videos) mostly when we had a remote speaker via YouTube/Hangouts, but we haven't been adding to this collection.)
 
@@ -49,29 +49,25 @@ Typically these are negotiated among interested folks on the Discuss mailing-lis
 **NEWS 2025**: While updating our History, resplitting it into 4 phases (Ancient, MIT from Wiki archive, MIT from Email Archive, Virtual), I noticed
 
 * First two history two phases are recent-top reverse-chronological which was Wiki-update-friendly but history-unfriendly. That's a deferred TBD.
-* Our [Social Media](https://boston-pm.github.io/#social-media) lists a bunch of things we're not using much and should replace.
-    - **MeetUp** has raised prices and been odd lately, so we'll be dropping that, probably before Feb meeting.
-    - Our **Twitter** account hasn't been used in ages and likely won't be; to prevent impersonation, I'd likely lock it down, not delete.
-    - Our **Facebook** Page, Group and **LinkedIn** Page, Group have been underutilized, whether to FMK those is TBD.
-    - **PLAN**: We'll announce on Mailing List and MeetUp push notice where on the Fediverse (Mastodon-compatible) and probably BlueSky we'll pop-up a BostonPM presence. Current vague thinking is a **Mobilizon** public calendar and a **BSKY**, maybe a separate Mastodon or equivalent microblog. I'm not looking at all-in-one macro/micro/events/groups Fediverse options as we have an ok website and separating dependencies prevents SPOF.
-    - The PerlWeekly [iCal calendar](https://perlweekly.com/perlweekly.ical) is importable into most personal calendars and automatically includes our time now.
+* Our [Social Media](https://boston-pm.github.io/#social-media) had listed a bunch of things underutilized and little useful.
+    - **ACTION** — I've created new ![Mastodon](images/Mastodon.png){ height=20} Mastodon, ![Icon_Mobilizon](images/Icon_Mobilizon.png){ height=20} Mobilizon&#x1F4C5; 
+    - **NEXT**: I may create a BlueSky BostonPM presence as well. We've been invited to join [BostonOpen](https://bostonopen.dev) on Gabor's [ZulipChat server](https://osdc.zulipchat.com/#narrow/channel/406743-boston) for FLOSS communities, there are Boston and Perl channels there. We can discuss whether `BostonPM` should be a Topic under Boston channel or a new/sub channel or what.
+    - **continuing:** The **PerlWeekly** [iCal calendar](https://perlweekly.com/perlweekly.ical) is importable into most personal calendars and semiautomagically includes our time now. (I'll tweak it to point usefully instead of MeetUp.)
 
-Best way to be informed is either sign up for one or both mailing lists or just watch the home page 
-[boston.pm.org](https://boston.pm.org) .
+Best way to be informed is either sign up for one or both mailing lists [boston.pm.org](https://boston.pm.org) . But please try the new socials ![icon](./images/Mastodon.png){ height=20 }  ![Icon_Mobilizon](images/Icon_Mobilizon.png){height=20} ![icon](./images/zulip-chat-icon.png){ height=20 }
 
 Boston-PM has presence on the following socials -
 
-* **WATCH THIS SPACE — COMING SOON**
-* ~~[MeetUp](https://www.meetup.com/boston-pm/)![icon](./images/Meetup-icon.png){#mu height=20 }~~
-* [LinkedIn](https://www.linkedin.com/groups/41363/)![icon](./images/Linkedin-icon.png){#lin height=20 }
+* ~~[MeetUp](https://www.meetup.com/boston-pm/)![icon](./images/Meetup-icon.png){#mu height=20 }~~ (raised prices and been odd lately, <u>so we've be droped that</u>.)
+* [LinkedIn](https://www.linkedin.com/groups/41363/)![icon](./images/Linkedin-icon.png){#lin height=20 }  — underutilized; FMK?
 * ~~[Twitter](https://twitter.com/BostonPM)![icon](./images/Twitter-icon.png){#tw height=20 }~~
-    *We are **not** currently active on Xhitter.*
-* Fediverse 
-    * <a rel="me" href="https://fosstodon.org/@Boston_PM">Mastodon</a>![icon](./images/Mastodon.png){#tw height=20 } `@Boston_PM@fosstodon.org` 
-    * Mobilizon [&#x2139;&#xFE0F;](https://framablog.org/2022/11/08/mobilizon-v3-find-events-and-groups-throughout-the-fediverse/) [&#x1F4C5; calendar/events](https://mobilizon.us/search?search=Boston+Perl)
+    *We are **not** currently active on Xhitter. I'll likely lock it down, **not** delete.*
+* **Fediverse** 
+    * <a rel="me" href="https://fosstodon.org/@Boston_PM">Mastodon</a>![icon](./images/Mastodon.png){#ms height=20 } `@Boston_PM@fosstodon.org` 
+    * Mobilizon ![Icon_Mobilizon](images/Icon_Mobilizon.png){#mo height=20}[&#x2139;&#xFE0F;](https://framablog.org/2022/11/08/mobilizon-v3-find-events-and-groups-throughout-the-fediverse/) [&#x1F4C5; calendar/events](https://mobilizon.us/search?search=Boston+Perl)
 * _BSKY too?_
-* [Facebook Page](https://www.facebook.com/bostonpm/)
-* [FaceBook Group](https://www.facebook.com/groups/131595281237)
+* [ZulipChat Boston Open](https://osdc.zulipchat.com/#narrow/channel/406743-boston)![icon](./images/zulip-chat-icon.png){#zc height=20 } Boston (BostonOpen.dev) and Perl channels
+* [Facebook Page](https://www.facebook.com/bostonpm/) + [Group](https://www.facebook.com/groups/131595281237) — underutilized; FMK?
 * [YouTube](https://www.youtube.com/channel/UCY0sL_ILd6JUixlppAQlgsA/videos) (historical only at this time)
 * Perl Weekly [newsletter ![icon](./images/Mail-icon.png){#pwnl height=20 }](https://perlweekly.com/), [iCal calendar](https://perlweekly.com/perlweekly.ical), [![RSS](./images/feed-icon32x32.png){#rss height=20 }](https://perlweekly.com/perlweekly.rss); may promote select items of ours. <br /> [![](./images/perl_weekly_234x60.png)](https://perlweekly.com/)
 * [The Boston-area User Group Calendar](http://www.bugc.org) "Since 1997" (not currently showing us? TBD!)
