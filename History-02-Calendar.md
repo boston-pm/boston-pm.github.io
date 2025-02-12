@@ -1312,7 +1312,21 @@ mention Boston.PM when you send them a resume.
 
 (*Narrator: [Magical Mystery Tour](https://en.wikipedia.org/wiki/Magical_Mystery_Tour) is an obscure Boomer cultural reference. Mystery Tour itself was a mostly British cultural reference.*)
 
-**2024**: the MIT AI Lab HakMem repository linked in the PDF has vanished earlier this year, but it's archived: [WayBack Machine](https://web.archive.org/web/20240227020926/https://inwap.com/pdp10/hbaker/hakmem/hakmem.html#contents)
+### UPDATES
+
+* **December 2008: PerlAdvent** ![clock](https://perladvent.org/2008/12/Screenshot-Clock-tk.png){#clock .float_r } Jerrad of Boston.PM was PerlAdvent editor that year, so the above `time_t` adventures showed up again in PerlAdvent the next month twice [2008 Dec 12 by Bill](https://perladvent.org/2008/12/) &amp; [2008 Dec 16 by Jerrad](https://perladvent.org/2008/16/).
+* **February 2009** And we had a small **Boston time_t &#x2615;&nbsp;Party**  at `scalar localtime 1234567890` = `Fri Feb 13 18:31:30 2009 EST (UT 23:31:30)`, with the little PerlAdvent Perl/Tk clock app on a laptop in the hotel lobby bar, [Boston.pm.org](https://mail.pm.org/mailman/private/boston-pm/2009-February/012971.html) + [BLU.org](https://blu.org/pipermail/discuss/2009-January/031796.html) + [GNHLUG](http://mail.gnhlug.org/pipermail/gnhlug-discuss/2009-February/026115.html) invited.
+* **2024**: the MIT AI Lab HakMem repository linked in the PDF has vanished earlier this year, but it's archived: [WayBack Machine](https://web.archive.org/web/20240227020926/https://inwap.com/pdp10/hbaker/hakmem/hakmem.html#contents)
+* **2025**: Note that `use.perl.org` embedded blog-post links in the slide PDFs are `404` but use.perl is archived at `use-perl.github.io` (replacing `~` with `/users/` in URLs):
+    * [Have a nice 1111111111 day / **cog** on `2005-03-18T09:39:16`](https://use-perl.github.io/user/cog/journal/23711/) {which is where the dangling comment link references}
+    * [Happy "BILL" o'Clock / **n1vux** on `2005-03-29T13:03:39`](https://use-perl.github.io/user/n1vux/journal/23904/)
+    * [Who needs bignums? / **n1vux** on `2007-10-27T00:25:43`](https://use-perl.github.io/user/davorg/journal/34739/), reply to  
+      ["One Of These Things Is Not Like The Others" / **davorg** on `2007-10-23T14:36:07`](https://use-perl.github.io/user/davorg/journal/34739/)
+    * [The Y3001 bug. / **schwern** on `2008-10-02T05:24:42`](https://use-perl.github.io/user/schwern/journal/37586/)
+    * [y2038 TPF Grant Delivered / **schwern** on `2008-10-17T23:03:20`](https://use-perl.github.io/user/schwern/journal/37688)
+    * archive [repo](https://github.com/use-perl/use-perl.github.io) has search.
+
+
 
 ## October 14, - Stone Soup / Lightning talks 
 

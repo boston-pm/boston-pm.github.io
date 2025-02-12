@@ -39,7 +39,7 @@ In normal times, Boston.pm does non-technical, social meetings.
 Typically this involves a restaurant or bar but could be a coffee-shop, public park, house-party, whatever.
 
 There is no regular schedule.
-Typically these are negotiated among interested folks on the Discuss mailing-list.
+Typically these are negotiated among interested folks on the Discuss mailing-list.![icon](./images/Mail-icon.png){#ml height=20 }
 
 
 # Communications
@@ -54,7 +54,7 @@ Typically these are negotiated among interested folks on the Discuss mailing-lis
     - **NEXT**: I may create a BlueSky BostonPM presence as well. We've been invited to join [BostonOpen](https://bostonopen.dev) on Gabor's [ZulipChat server](https://osdc.zulipchat.com/#narrow/channel/406743-boston) for FLOSS communities, there are Boston and Perl channels there. We can discuss whether `BostonPM` should be a Topic under Boston channel or a new/sub channel or what.
     - **continuing:** The **PerlWeekly** [iCal calendar](https://perlweekly.com/perlweekly.ical) is importable into most personal calendars and semiautomagically includes our time now. (I'll tweak it to point usefully instead of MeetUp.)
 
-Best way to be informed is either sign up for one or both mailing lists [boston.pm.org](https://boston.pm.org) . But please try the new socials ![icon](./images/Mastodon.png){ height=20 }  ![Icon_Mobilizon](images/Icon_Mobilizon.png){height=20} ![icon](./images/zulip-chat-icon.png){ height=20 }
+Best way to be informed is either sign up for one or both mailing lists [boston.pm.org](https://boston.pm.org)![icon](./images/Mail-icon.png){#ml height=20 } . But please try the new socials ![icon](./images/Mastodon.png){ height=20 }  ![Icon_Mobilizon](images/Icon_Mobilizon.png){height=20} ![icon](./images/zulip-chat-icon.png){ height=20 }.
 
 Boston-PM has presence on the following socials -
 
@@ -74,18 +74,20 @@ Boston-PM has presence on the following socials -
 
 
 
-The primary announcement channels are MeetUp, Twitter, and Announce mailing-list.
+The primary announcement channel is the Announce mailing-list (see next).
 
 
 ## Mailing Lists ![icon](./images/Mail-icon.png){#ml height=30 }
 
 (*Are Mailing Lists Anti-Social media?*)
 
-Boston.pm has two email lists supported by center Perl Mongers. Mailman list management has the official archives being password protected, visible only to list members. **HOWEVER NOTE** that both lists are logged by one or more popular archival websites that have subscribed to the lists, so these lists are effectively public.
+Boston.pm has two email lists supported by central Perl Mongers.   
+Mailman list management has the **official archives** being password protected, visible only to list members from the each list's Page.    
+**HOWEVER NOTE** that both lists are logged by one or more popular archival websites that have subscribed to the lists, so these lists are **<u>effectively public</u>**.
 
-* [Announce list](https://mail.pm.org/mailman/listinfo/boston-pm-announce) is moderated, intended for meeting & social announcements and cancellations and other such things. [Unofficial Public Archive, 2008-present](https://www.mail-archive.com/boston-pm-announce@mail.pm.org/info.html) 
+* [Announce list](https://mail.pm.org/mailman/listinfo/boston-pm-announce)![icon](./images/Mail-icon.png){#ml height=20 } is **moderated**, intended for meeting & social announcements and cancellations and other such things. 
 
-* [Discuss list](https://mail.pm.org/mailman/listinfo/boston-pm) is un-moderated, available for discussion of Perl-ish topics, discussions before and after meetings, etc. [Unofficial Public Archive, 2002-2018](https://www.mail-archive.com/boston-pm@pm.org/info.html) (*2002-2008 there was a single list, that history is here.*)
+* [Discuss list](https://mail.pm.org/mailman/listinfo/boston-pm)![icon](./images/Mail-icon.png){#ml height=20 } is un-moderated, available for discussion of Perl-ish topics, discussions before and after meetings, etc.  (*2002-2008 there was just this as the only list.*)
 
 
 Before posting jobs to the list, please check our [Job Posting Policy](JobPostingPolicy.html).
@@ -97,14 +99,11 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill.
 
-## February 11th, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
+## March 11th, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
 
 We'll discuss whatever Perl, FLOSS topics.  
 
-* Perl 5.41 beta new features!
-* interesting CPAN modules
-* [&#x1F4C5;](https://mobilizon.us/events/948f6693-142c-4d8f-abfc-463ce7af3876)
-
+* TBD
 
 ------------
 

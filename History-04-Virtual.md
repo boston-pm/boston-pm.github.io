@@ -903,6 +903,8 @@ Tabs left open appear to be
 
 * No announced agenda. Nothing happened.
 
+-----
+
 # 2025
 
 ## January 14th, 2025 - `given when switch` module contenders
@@ -958,6 +960,49 @@ Curtis aka Ovid announced a work-in-progress.  Imagine if `Getopt::Long` support
 ### Other topics
 
 We discussed which features we wanted in Raku (exP6) and what was going on now. RakuAST is a major conversion effort to have an Abstract Syntax Tree available in Raku, neat. Alas it doesn't appear to be solution to the declined RFC to allow abusing Raku grammars as Logic Programs, but Raku grammars should allow defining a Prolog or Ops-5 like logic language and implementing forward or backwards chaining.
+
+## February 11th, 2025 
+
+Attending: Bill; Ricky; oylenshpeegul; Randal; Jerrad; Chuba.
+
+
+### Perl 5.41 dev/alpha new features!
+
+* via [FB: PerlCommunity](https://www.facebook.com/groups/perlcommunity/posts/1860849011389383/)  Mohammad Sajid Anwar noted the [Perl 5.41.8](https://perldoc.perl.org/5.41.8/perl5418delta) dev release.
+    * [5.41.7 PerlDelta](https://perldoc.perl.org/5.41.8/perl5417delta) had the important bits, 
+    * **`any` `all`** in core as `experimental` so faster than `List::Util` and short-cutting; 
+    * and Corina `use class;` gets the `:writer` attribute to declaratively generate the setter method `set_mything()`.
+    * ([perl5416delta](https://perldoc.perl.org/5.41.8/perl5416delta) notes `Apostrophe is again recognized as a global name separator`, but can now be suppressed with `no feature`. )
+
+### interesting CPAN modules
+
+* [**App::Codit**](https://metacpan.org/pod/App::Codit) appears to be a WIP new Perl IDE using Tk; [PerlGUI homepage](https://www.perlgui.org/)
+* Ricky likes [Data::PathSimple](https://metacpan.org/pod/Data::PathSimple) for **CSS**-compatible path access to Perl data structures. It's tracking the nice WIP features of CSS v4!
+* Tim Legge, the new CPAN maintainer for [Crypt::OpenPGP](https://metacpan.org/pod/Crypt::OpenPGP) [noticed](https://mas.to/@timlegge/113249406453538775)  that [Data::Buffer](https://metacpan.org/pod/Data::Buffer) hadn't updated in 23 years (2001 to 2024) yet still worked great, so he adopted it also. 
+    * `Data::Buffer` does one thing well: it's like an SWYM OOP interface to what `pack` and `unpack` do functionally for binary buffer data. (But built-in `pack` and `unpack` will be faster if it's critical performance.)
+    * Which prompted some discussion about why anyone would have binary files anymore (aside from say images); protocol headers and legacy compressed or encrypted data or ....
+    * Which reminded Bill of the time (Nov.2008) that he gave Boston.PM a [“Magic Numbers & Un/Pack use.perl.org magical mystery tour”](https://boston-pm.github.io/History-02-Calendar.html#november-18-2008---magic-numbers-unpack-a-use.perl.org-magical-mystery-tour) which showed up again in PerlAdvent the next month twice , and we had a small **Boston time_t &#x2615; Party**  at `scalar localtime 1234567890` = `Fri Feb 13 18:31:30 2009 EST (UT 23:31:30)`, details added in 2008 history linked above.
+
+### Other Perl News
+
+* [The Underbar, a new Perl-adjacent Podcast]()  (h/t oylenshpeegul blog](https://oylenshpeegul.gitlab.io/blog/posts/20250121/) via Mastodon )
+* ["Yet Another Perl-Powered Company: Geolytica"](https://www.perl.com/geolytica-powered-by-perl/  on [Perl.com](https://www.perl.com/geolytica-powered-by-perl/), [lavx.hu](https://news.lavx.hu/article/geolytica-harnessing-perl-for-advanced-geolocation-solutions). Semi-structured text such as addresses submitted for geolocation remain a Perl strength.
+* **Proposed Perl Changes** website. Dave Cross built a new [front end for P5P's major change suggestion slips "PPC"](https://perl.github.io/PPCs/) using similar GitHub workflow as his prior [PSC Minutes viewer](https://psc.perlhacks.com/), rendering pretty static HTML representing ugly structured [PPC repo](https://github.com/Perl/PPCs) contents with Perl and Pandoc. [blog 1](https://perlhacks.com/2025/01/proposed-perl-changes/) [blog 2](https://perlhacks.com/2025/02/proposed-perl-changes-part-2/) [Template::Provider::Pandoc](https://metacpan.org/pod/Template::Provider::Pandoc)
+* Reminder that old `use.perl.org` blog posts (2001-2010) were removed when `blogs.perl.org` was spun up, but are archived at `use-perl.github.io` (replacing `~` with `/users/` in URLs). archive [repo](https://github.com/use-perl/use-perl.github.io) has search.
+
+
+
+### Housekeeping: Survey of Boston.PM changed socials [&#x1F4C5;](https://mobilizon.us/events/948f6693-142c-4d8f-abfc-463ce7af3876)
+
+* As noted previously and posted on [homepage](./index.html#social-media), due to changes in the environment we've dropped ~~**MeetUp**~~ and ~~**Xhitter**~~.
+* Replacing those we've added accounts on FLOSS Fediverse services
+    - ![Mastodon](images/Mastodon.png){ height=20} [`@Boston_PM@fosstodon.org`](https://fosstodon.org/@Boston_PM) , on a FOSS-specific Mastodon instance;
+    - ![Icon_Mobilizon](images/Icon_Mobilizon.png){ height=20} [Mobilizon&#x1F4C5;](https://mobilizon.us/search?search=Boston+Perl)
+* And we've been [invited](https://osdc.zulipchat.com/#narrow/channel/406743-boston/topic/Boston.20Perl.20Mongers) to a FLOSS **ZulipChat**![icon](./images/zulip-chat-icon.png){#zc height=20 } server already serving [Boston](https://osdc.zulipchat.com/#narrow/channel/406743-boston) and [Perl](https://osdc.zulipchat.com/#narrow/channel/393688-perl), thanks to hospitality of Gabor Szabo and [Boston Open](https://bostonopen.dev/).
+* The [Announce mailing list](./index.html#mailing-lists-icon)![icon](./images/Mail-icon.png){#ml height=20 } remains the most reliable announcements channel.
+
+
+
 
 
 ------------

@@ -258,6 +258,8 @@ October 8th</a></li>
 <li><a href="#january-14th-2025---given-when-switch-module-contenders"
 id="toc-january-14th-2025---given-when-switch-module-contenders">January
 14th, 2025 - <code>given when switch</code> module contenders</a></li>
+<li><a href="#february-11th-2025" id="toc-february-11th-2025">February
+11th, 2025</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1705,6 +1707,7 @@ Programmers Believe</a> that need to be regularly debunked.</li>
 <ul>
 <li>No announced agenda. Nothing happened.</li>
 </ul>
+<hr />
 <h1 id="section-5">2025</h1>
 <h2 id="january-14th-2025---given-when-switch-module-contenders">January
 14th, 2025 - <code>given when switch</code> module contenders</h2>
@@ -1808,6 +1811,129 @@ Syntax Tree available in Raku, neat. Alas it doesn’t appear to be
 solution to the declined RFC to allow abusing Raku grammars as Logic
 Programs, but Raku grammars should allow defining a Prolog or Ops-5 like
 logic language and implementing forward or backwards chaining.</p>
+<h2 id="february-11th-2025">February 11th, 2025</h2>
+<p>Attending: Bill; Ricky; oylenshpeegul; Randal; Jerrad; Chuba.</p>
+<h3 id="perl-5.41-devalpha-new-features">Perl 5.41 dev/alpha new
+features!</h3>
+<ul>
+<li>via <a
+href="https://www.facebook.com/groups/perlcommunity/posts/1860849011389383/">FB:
+PerlCommunity</a> Mohammad Sajid Anwar noted the <a
+href="https://perldoc.perl.org/5.41.8/perl5418delta">Perl 5.41.8</a> dev
+release.
+<ul>
+<li><a href="https://perldoc.perl.org/5.41.8/perl5417delta">5.41.7
+PerlDelta</a> had the important bits,</li>
+<li><strong><code>any</code> <code>all</code></strong> in core as
+<code>experimental</code> so faster than <code>List::Util</code> and
+short-cutting;</li>
+<li>and Corina <code>use class;</code> gets the <code>:writer</code>
+attribute to declaratively generate the setter method
+<code>set_mything()</code>.</li>
+<li>(<a
+href="https://perldoc.perl.org/5.41.8/perl5416delta">perl5416delta</a>
+notes
+<code>Apostrophe is again recognized as a global name separator</code>,
+but can now be suppressed with <code>no feature</code>. )</li>
+</ul></li>
+</ul>
+<h3 id="interesting-cpan-modules">interesting CPAN modules</h3>
+<ul>
+<li><a
+href="https://metacpan.org/pod/App::Codit"><strong>App::Codit</strong></a>
+appears to be a WIP new Perl IDE using Tk; <a
+href="https://www.perlgui.org/">PerlGUI homepage</a></li>
+<li>Ricky likes <a
+href="https://metacpan.org/pod/Data::PathSimple">Data::PathSimple</a>
+for <strong>CSS</strong>-compatible path access to Perl data structures.
+It’s tracking the nice WIP features of CSS v4!</li>
+<li>Tim Legge, the new CPAN maintainer for <a
+href="https://metacpan.org/pod/Crypt::OpenPGP">Crypt::OpenPGP</a> <a
+href="https://mas.to/@timlegge/113249406453538775">noticed</a> that <a
+href="https://metacpan.org/pod/Data::Buffer">Data::Buffer</a> hadn’t
+updated in 23 years (2001 to 2024) yet still worked great, so he adopted
+it also.
+<ul>
+<li><code>Data::Buffer</code> does one thing well: it’s like an SWYM OOP
+interface to what <code>pack</code> and <code>unpack</code> do
+functionally for binary buffer data. (But built-in <code>pack</code> and
+<code>unpack</code> will be faster if it’s critical performance.)</li>
+<li>Which prompted some discussion about why anyone would have binary
+files anymore (aside from say images); protocol headers and legacy
+compressed or encrypted data or ….</li>
+<li>Which reminded Bill of the time (Nov.2008) that he gave Boston.PM a
+<a
+href="https://boston-pm.github.io/History-02-Calendar.html#november-18-2008---magic-numbers-unpack-a-use.perl.org-magical-mystery-tour">“Magic
+Numbers &amp; Un/Pack use.perl.org magical mystery tour”</a> which
+showed up again in PerlAdvent the next month twice , and we had a small
+<strong>Boston time_t ☕ Party</strong> at
+<code>scalar localtime 1234567890</code> =
+<code>Fri Feb 13 18:31:30 2009 EST (UT 23:31:30)</code>, details added
+in 2008 history linked above.</li>
+</ul></li>
+</ul>
+<h3 id="other-perl-news">Other Perl News</h3>
+<ul>
+<li><a href="">The Underbar, a new Perl-adjacent Podcast</a> (h/t
+oylenshpeegul
+blog](https://oylenshpeegul.gitlab.io/blog/posts/20250121/) via Mastodon
+)</li>
+<li>[“Yet Another Perl-Powered Company:
+Geolytica”](https://www.perl.com/geolytica-powered-by-perl/ on <a
+href="https://www.perl.com/geolytica-powered-by-perl/">Perl.com</a>, <a
+href="https://news.lavx.hu/article/geolytica-harnessing-perl-for-advanced-geolocation-solutions">lavx.hu</a>.
+Semi-structured text such as addresses submitted for geolocation remain
+a Perl strength.</li>
+<li><strong>Proposed Perl Changes</strong> website. Dave Cross built a
+new <a href="https://perl.github.io/PPCs/">front end for P5P’s major
+change suggestion slips “PPC”</a> using similar GitHub workflow as his
+prior <a href="https://psc.perlhacks.com/">PSC Minutes viewer</a>,
+rendering pretty static HTML representing ugly structured <a
+href="https://github.com/Perl/PPCs">PPC repo</a> contents with Perl and
+Pandoc. <a
+href="https://perlhacks.com/2025/01/proposed-perl-changes/">blog 1</a>
+<a
+href="https://perlhacks.com/2025/02/proposed-perl-changes-part-2/">blog
+2</a> <a
+href="https://metacpan.org/pod/Template::Provider::Pandoc">Template::Provider::Pandoc</a></li>
+<li>Reminder that old <code>use.perl.org</code> blog posts (2001-2010)
+were removed when <code>blogs.perl.org</code> was spun up, but are
+archived at <code>use-perl.github.io</code> (replacing <code>~</code>
+with <code>/users/</code> in URLs). archive <a
+href="https://github.com/use-perl/use-perl.github.io">repo</a> has
+search.</li>
+</ul>
+<h3 id="housekeeping-survey-of-boston.pm-changed-socials">Housekeeping:
+Survey of Boston.PM changed socials <a
+href="https://mobilizon.us/events/948f6693-142c-4d8f-abfc-463ce7af3876">📅</a></h3>
+<ul>
+<li>As noted previously and posted on <a
+href="./index.html#social-media">homepage</a>, due to changes in the
+environment we’ve dropped <del><strong>MeetUp</strong></del> and
+<del><strong>Xhitter</strong></del>.</li>
+<li>Replacing those we’ve added accounts on FLOSS Fediverse services
+<ul>
+<li><img src="images/Mastodon.png" height="20" alt="Mastodon" /> <a
+href="https://fosstodon.org/@Boston_PM"><code>@Boston_PM@fosstodon.org</code></a>
+, on a FOSS-specific Mastodon instance;</li>
+<li><img src="images/Icon_Mobilizon.png" height="20"
+alt="Icon_Mobilizon" /> <a
+href="https://mobilizon.us/search?search=Boston+Perl">Mobilizon📅</a></li>
+</ul></li>
+<li>And we’ve been <a
+href="https://osdc.zulipchat.com/#narrow/channel/406743-boston/topic/Boston.20Perl.20Mongers">invited</a>
+to a FLOSS <strong>ZulipChat</strong><img
+src="./images/zulip-chat-icon.png" id="zc" height="20" alt="icon" />
+server already serving <a
+href="https://osdc.zulipchat.com/#narrow/channel/406743-boston">Boston</a>
+and <a
+href="https://osdc.zulipchat.com/#narrow/channel/393688-perl">Perl</a>,
+thanks to hospitality of Gabor Szabo and <a
+href="https://bostonopen.dev/">Boston Open</a>.</li>
+<li>The <a href="./index.html#mailing-lists-icon">Announce mailing
+list</a><img src="./images/Mail-icon.png" id="ml" height="20"
+alt="icon" /> remains the most reliable announcements channel.</li>
+</ul>
 <hr />
 <p><strong>History Pages Menu</strong></p>
 <ul>
