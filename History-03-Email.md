@@ -476,7 +476,7 @@ _The HSL model is very similar to the HSV model, with subtle distinction between
 
 ![Ack3 HSL model for background colors](./images/May-2019-ack3-676x380.webp.png)
 
-[test_HSL.pl(html)](./images/test_HSL.pl.html) [(.pl)](./images/test_HSL.pl)
+[test_HSL.pl(html)](./scripts/test_HSL.pl.html) [(.pl)](./scripts/test_HSL.pl)
 
 ## June 11, E51-376 (Back to 3rd Floor) ¨Perl begat Perl¨ - Uri Guttman
 
