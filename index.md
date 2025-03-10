@@ -97,13 +97,15 @@ Before posting jobs to the list, please check our [Job Posting Policy](JobPostin
 _Previous meetings' minutes are recorded at the bottom of the [latest history file](./History-04-Virtual.html#section-5)._
 
 
-If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill.
+If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill. (Or something you'ld like discussed, I can add it to agenda.)
 
 ## March 11th, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
 
 We'll discuss whatever Perl, FLOSS topics.  
 
 * TBD
+
+[Mobilizon event](https://mobilizon.us/events/02805723-3639-496c-8492-63fa3e7f612a)
 
 ------------
 
@@ -113,7 +115,7 @@ This is a JitSi meeting. The secure URL will be computed by this command (valid 
 perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'  
 
 ```
-(and will likely be posted here just in time, but to avoid spammers, won't be posted on public social media)
+(to avoid spammers, won't be posted on public social media; but usually is on the Mobilizon above.)
 
 (See [Boilerplate](./index.html/#boilerplate) below for additional how-to etc.)
 
