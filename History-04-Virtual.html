@@ -260,6 +260,8 @@ id="toc-january-14th-2025---given-when-switch-module-contenders">January
 14th, 2025 - <code>given when switch</code> module contenders</a></li>
 <li><a href="#february-11th-2025" id="toc-february-11th-2025">February
 11th, 2025</a></li>
+<li><a href="#march-11th-2025" id="toc-march-11th-2025">March 11th,
+2025</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1933,6 +1935,84 @@ href="https://bostonopen.dev/">Boston Open</a>.</li>
 <li>The <a href="./index.html#mailing-lists-icon">Announce mailing
 list</a><img src="./images/Mail-icon.png" id="ml" height="20"
 alt="icon" /> remains the most reliable announcements channel.</li>
+</ul>
+<h2 id="march-11th-2025">March 11th, 2025</h2>
+<p>Randal, Ricky, Tom, Bill</p>
+<ul>
+<li><a href="https://boston.pm.org/#social-media">reprise of new socials
+for Boston.pm</a> and dive in on a couple of <code>#perl</code> posts on
+Fediverse -
+<ul>
+<li><a
+href="https://fosstodon.org/@rl_dane@polymaths.social/114140282970773668">is
+Perl a shell?</a></li>
+<li><a href="https://fosstodon.org/@kcaran/111131605058481904">UTC/Local
+Date Conversion in #perl With Time::Piece</a>
+<ul>
+<li>=&gt; <a
+href="https://www.kcaran.com/posts/utc-local-date-conversion-in-perl-with-time-piece.html">blog
+post</a></li>
+<li>=&gt; <a
+href="https://metacpan.org/pod/Time::Piece#Date-Parsing">CPAN</a></li>
+<li>commentary: <code>Time::Piece</code> is simple OO interface to
+<code>localtime()</code> plus has basic Parsing built that
+<code>DateTime</code> exiles to plugins.</li>
+<li><code>Time::Piece</code> is core so is usable in all but the most
+obsolete Perls.</li>
+<li><code>Time::Piece</code> can return epoch and <code>DateTime</code>
+can construct <code>from_epoch</code> so one can use
+<code>Time::Piece</code> where simplicity is good and upgrade to the
+<code>DateTime::*</code> universe only when needed.</li>
+<li>Synchronicity, just after testing <code>from_epoch</code>, it was
+useful in attempting to recreate a <code>DateTime</code> Heisenbug, in
+which namespace::(auto)clean and dynamic plugin loading don’t play nice
+but not reproducible !?</li>
+</ul></li>
+</ul></li>
+</ul>
+<pre><code>$ corelist Time::Piece
+
+Data for 2024-06-04
+Time::Piece was first released with perl v5.9.5
+
+$ perl -M Time::Piece -M DateTime -E &#39;my $t= localtime; \
+             say ref($t),q( =&gt; ),$t,q( = ),$t-&gt;datetime; \
+             my $dt=DateTime-&gt;from_epoch(epoch=&gt;$t-&gt;epoch); \
+             say q(DateTime=&gt;),$dt;&#39;
+Time::Piece =&gt; Tue Mar 11 21:17:23 2025 = 2025-03-11T21:17:23
+DateTime=&gt;2025-03-12T01:17:23</code></pre>
+<ul>
+<li><a
+href="https://security.metacpan.org/2025/02/25/cpansec-is-cna-for-perl-and-cpan.html">Perl’s
+CPAN Security Group “CPANSec” is Now a CNA, Can Assign CVEs</a> was
+picked up by multiple news sources.</li>
+<li>Bill was amused that the <a
+href="https://metacpan.org/dist/Rex/view/bin/rex">Rex</a> task <a
+href="https://en.wikipedia.org/wiki/Rex_%20software%21">Remote
+Execution</a> system recycles the name of the old <a
+href="https://en.wikipedia.org/wiki/Rexx">REXX</a> system.</li>
+<li><a
+href="https://www.endpointdev.com/blog/2025/02/django-mojolicious/">Django
+and Mojolicious: a quick comparison of two popular web frameworks</a>
+(Also seen on the socials)</li>
+<li>We discussed the impossibility of getting verifiably identical
+answers from statistics computed in radically different floating point
+implementations with same data.
+<ul>
+<li>Tangent: And noted that <a
+href="https://youtu.be/Ub86BRzqndA?si=4miK7K0ku5euKCpo">Google Android
+CALCULATOR</a> implements Recursive Reals that pick a binary rational
+fraction approximation that doesn’t lose precision. <a
+href="https://research.google/pubs/towards-an-api-for-the-real-numbers/">SIGPLAN
+article</a> <a
+href="https://scholar.google.com/scholar?lr&amp;ie=UTF-8&amp;oe=UTF-8&amp;q=Towards%20an%20API%20for%20the%20Real%20Numbers%20Hans-J.%20Boehm">(cite)</a>
+; <a href="https://chadnauseam.com/coding/random/calculator-app">Blog
+Post</a> used in the video.</li>
+<li>Tangent not chased then: <a
+href="https://en.wikipedia.org/wiki/Unum_%20number_format%21#Posit_%20Type_III_Unum%21">Posit
+Unums</a> are an alternative to IEEE 754 floats gaining traction in
+Risc-V and elsewhere.</li>
+</ul></li>
 </ul>
 <hr />
 <p><strong>History Pages Menu</strong></p>

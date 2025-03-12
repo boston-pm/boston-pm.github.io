@@ -1001,9 +1001,42 @@ Attending: Bill; Ricky; oylenshpeegul; Randal; Jerrad; Chuba.
 * And we've been [invited](https://osdc.zulipchat.com/#narrow/channel/406743-boston/topic/Boston.20Perl.20Mongers) to a FLOSS **ZulipChat**![icon](./images/zulip-chat-icon.png){#zc height=20 } server already serving [Boston](https://osdc.zulipchat.com/#narrow/channel/406743-boston) and [Perl](https://osdc.zulipchat.com/#narrow/channel/393688-perl), thanks to hospitality of Gabor Szabo and [Boston Open](https://bostonopen.dev/).
 * The [Announce mailing list](./index.html#mailing-lists-icon)![icon](./images/Mail-icon.png){#ml height=20 } remains the most reliable announcements channel.
 
+## March 11th, 2025
 
+Randal, Ricky, Tom, Bill 
 
+* [reprise of new socials for Boston.pm](https://boston.pm.org/#social-media)
+  and dive in on a couple of `#perl` posts on Fediverse -
+    * [is Perl a shell?](https://fosstodon.org/@rl_dane@polymaths.social/114140282970773668)
+    * [UTC/Local Date Conversion in #perl With Time::Piece](https://fosstodon.org/@kcaran/111131605058481904)
+        - => [blog post](https://www.kcaran.com/posts/utc-local-date-conversion-in-perl-with-time-piece.html)
+        - => [CPAN](https://metacpan.org/pod/Time::Piece#Date-Parsing)
+        - commentary: `Time::Piece` is simple OO interface to `localtime()` plus has basic Parsing built that `DateTime` exiles to plugins. 
+        - `Time::Piece` is core so is usable in all but the most obsolete Perls.
+        - `Time::Piece` can return epoch and `DateTime` can construct `from_epoch` so one can use `Time::Piece` where simplicity is good and upgrade to the `DateTime::*` universe only when needed.
+        - Synchronicity, just after testing `from_epoch`, it was useful in attempting to recreate a `DateTime` Heisenbug, in which namespace::(auto)clean and dynamic plugin loading don't play nice but not reproducible !?
 
+```
+$ corelist Time::Piece
+
+Data for 2024-06-04
+Time::Piece was first released with perl v5.9.5
+
+$ perl -M Time::Piece -M DateTime -E 'my $t= localtime; \
+             say ref($t),q( => ),$t,q( = ),$t->datetime; \
+             my $dt=DateTime->from_epoch(epoch=>$t->epoch); \
+             say q(DateTime=>),$dt;'
+Time::Piece => Tue Mar 11 21:17:23 2025 = 2025-03-11T21:17:23
+DateTime=>2025-03-12T01:17:23
+```
+* [Perl's CPAN Security Group "CPANSec" is Now a CNA, Can Assign CVEs](https://security.metacpan.org/2025/02/25/cpansec-is-cna-for-perl-and-cpan.html)
+  was picked up by multiple news sources. 
+* Bill was amused that the [Rex](https://metacpan.org/dist/Rex/view/bin/rex) task [Remote Execution](https://en.wikipedia.org/wiki/Rex_%20software%21) system recycles the name of the old [REXX](https://en.wikipedia.org/wiki/Rexx) system.
+* [Django and Mojolicious: a quick comparison of two popular web frameworks](https://www.endpointdev.com/blog/2025/02/django-mojolicious/) 
+  (Also seen on the socials)
+* We discussed the impossibility of getting verifiably identical answers from statistics computed in radically different floating point implementations with same data.
+    * Tangent: And noted that [Google Android CALCULATOR](https://youtu.be/Ub86BRzqndA?si=4miK7K0ku5euKCpo) implements Recursive Reals that pick a binary rational fraction approximation that doesn't lose precision. [SIGPLAN article](https://research.google/pubs/towards-an-api-for-the-real-numbers/) [(cite)](https://scholar.google.com/scholar?lr&ie=UTF-8&oe=UTF-8&q=Towards%20an%20API%20for%20the%20Real%20Numbers%20Hans-J.%20Boehm) ; [Blog Post](https://chadnauseam.com/coding/random/calculator-app) used in the video.
+    * Tangent not chased then: [Posit Unums](https://en.wikipedia.org/wiki/Unum_%20number_format%21#Posit_%20Type_III_Unum%21) are an alternative to IEEE 754 floats gaining traction in Risc-V and elsewhere.
 
 ------------
 

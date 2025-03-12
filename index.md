@@ -64,7 +64,7 @@ Boston-PM has presence on the following socials -
     *We are **not** currently active on Xhitter. I'll likely lock it down, **not** delete.*
 * **Fediverse** 
     * <a rel="me" href="https://fosstodon.org/@Boston_PM">Mastodon</a>![icon](./images/Mastodon.png){#ms height=20 } `@Boston_PM@fosstodon.org` 
-    * Mobilizon ![Icon_Mobilizon](images/Icon_Mobilizon.png){#mo height=20}[&#x2139;&#xFE0F;](https://framablog.org/2022/11/08/mobilizon-v3-find-events-and-groups-throughout-the-fediverse/) [&#x1F4C5; calendar/events](https://mobilizon.us/search?search=Boston+Perl)
+    * Mobilizon ![Icon_Mobilizon](images/Icon_Mobilizon.png){#mo height=20}[&#x2139;&#xFE0F;](https://framablog.org/2022/11/08/mobilizon-v3-find-events-and-groups-throughout-the-fediverse/) [&#x1F4C5; calendar/events](https://mobilizon.us/search?search=Boston+Perl) [(past)](https://mobilizon.us/search?search=Boston+Perl&when=past&eventPage=1)
 * _BSKY too?_
 * [ZulipChat Boston Open](https://osdc.zulipchat.com/#narrow/channel/406743-boston)![icon](./images/zulip-chat-icon.png){#zc height=20 } Boston (BostonOpen.dev) and Perl channels
 * [Facebook Page](https://www.facebook.com/bostonpm/) + [Group](https://www.facebook.com/groups/131595281237) — underutilized; FMK?
@@ -99,13 +99,15 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill. (Or something you'ld like discussed, I can add it to agenda.)
 
-## March 11th, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
+## April 8th, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
 
 We'll discuss whatever Perl, FLOSS topics.  
 
 * TBD
+* Topic suggestions welcome!
 
-[Mobilizon event](https://mobilizon.us/events/02805723-3639-496c-8492-63fa3e7f612a)
+[Mobilizon event](https://mobilizon.us/events/6769278b-1b22-4c39-b874-37fc2b3e5264) 
+[(list)](https://mobilizon.us/search?search=Boston+Perl)
 
 ------------
 
