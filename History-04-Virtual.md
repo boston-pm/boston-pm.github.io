@@ -1040,6 +1040,32 @@ DateTime=>2025-03-12T01:17:23
 
 ------------
 
+
+## April 8th, 2025
+
+Attending: Bill, Andy, Ricky, Jerrad, Chuba.
+
+* issues with gzip compression and query-response leakage breaking HTTPS ?
+    * https://en.wikipedia.org/wiki/BREACH
+    * mitigating that may be part of the slowdown?
+    * compression / padding / oracle type attack, old news from 2018, got some currency recently for some reason
+* [PerlModules.net](https://www.perlmodules.net/), a personal index
+    * Text::CSV Ricky & Bill like the functional interface; Jerrad likes Text::xSV 
+    * https://metacpan.org/release/Map-Tube
+* CPAN Security Audit etc
+    * [CPAN CVE Announce mailing list](https://lists.security.metacpan.org/cve-announce/threads/2025/04/)
+        * audit of misues of libc rand(), untrusted LIBPATH
+    * [CPANSA-DB release](https://metacpan.org/release/BRIANDFOY/CPANSA-DB-20250407.003/source/Changes)
+* bdf's [https://metacpan.org/pod/Perl::MinimumVersion::Fast] looks promising 
+* an odd but quite comprehensive ?wiki?  about perlish things https://savage.net.au/misc/Perl.Wiki.html 
+    * feels less opinionated and much more up-to-date than [mstPan](https://blog.kablamo.org/2015/09/08/mstpan/); he also has Mojo, Debian, ...page. [up](https://savage.net.au/Perl.html)
+
+* Ricky's downloader converts multi-frame gif images to mp4 via **`ffmpeg`**
+* CSS, HLS/HSV color spaces, CSS tables with sticky headers, ... 
+
+
+------------
+
 **History Pages Menu**
 
 * [Reconstructed Ancient History 1999-2005](History-01-Reconstructed-1999.html)

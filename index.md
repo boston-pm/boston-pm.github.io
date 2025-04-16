@@ -99,14 +99,14 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill. (Or something you'ld like discussed, I can add it to agenda.)
 
-## April 8th, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
+## May 13, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
 
 We'll discuss whatever Perl, FLOSS topics.  
 
 * TBD
 * Topic suggestions welcome!
 
-[Mobilizon event](https://mobilizon.us/events/6769278b-1b22-4c39-b874-37fc2b3e5264) 
+[Mobilizon event](https://mobilizon.us/events/7f530be9-a6ec-4653-9c0d-403047ca3a25)
 [(list)](https://mobilizon.us/search?search=Boston+Perl)
 
 ------------
