@@ -1052,6 +1052,7 @@ Attending: Bill, Andy, Ricky, Jerrad, Chuba.
 * [PerlModules.net](https://www.perlmodules.net/), a personal index
     * Text::CSV Ricky & Bill like the functional interface; Jerrad likes Text::xSV 
     * https://metacpan.org/release/Map-Tube
+        * Ricky shares later a [how-to link](https://dev.to/peateasea/building-maptube-maps-a-howto-first-steps-40gg)
 * CPAN Security Audit etc
     * [CPAN CVE Announce mailing list](https://lists.security.metacpan.org/cve-announce/threads/2025/04/)
         * audit of misues of libc rand(), untrusted LIBPATH
