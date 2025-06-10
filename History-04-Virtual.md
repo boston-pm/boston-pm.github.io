@@ -1064,6 +1064,34 @@ Attending: Bill, Andy, Ricky, Jerrad, Chuba.
 * Ricky's downloader converts multi-frame gif images to mp4 via **`ffmpeg`**
 * CSS, HLS/HSV color spaces, CSS tables with sticky headers, ... 
 
+## May 13, 2025 
+
+* [Still Munging: Talk about a 2d Ed book for Toronto PM, slides & video.](https://talks.davecross.co.uk/talk/still-munging-data-with-perl/)
+    * Dave Cross recent posts (2)
+        - Reformating Images with AppBlurFill [FB](https://www.facebook.com/groups/498667124274252/user/581570410) -> [PerlHacks](https://perlhacks.com/2025/05/reformating-images-with-appblurfill/) 
+        - & Cleaner Web Feed Aggregation with App Feed DeDuplicator [FB](https://www.facebook.com/perlhacks/posts/pfbid0jgorZHtmhjBZS5Myn7DniLPpjDWL19fJH4P3snDF8ZAZYXF41HyPRbjmyL1ZKiHRl) -> [PerlHacks](https://perlhacks.com/2025/05/cleaner-web-feed-aggregation-with-appfeeddeduplicator/)
+
+
+* SmartMatch and Switch get stay of execution and stay available, un-deprecated.
+[reinstated perldelta](https://perldoc.perl.org/5.41.9/perldelta#Switch-and-Smart-Match-operator-reinstated); removal to guarded by a feature appears to be the current best practice instead of burn-with-fire.
+[issue](https://github.com/Perl/perl5/issues/22752)
+
+* Related, MJG made a table of the Feature Bundles with MD
+[Fosstodon](https://fosstodon.org/@mjg@nerdfight.online/114503053561212794)
+-> [gist](https://gist.github.com/mjgardner/3060e1d8b9cfdd3e92fb15ef7666c8c3)
+
+```
+cat ~/bin/strikeout 
+#! /bin/bash
+# naughty overlay mode strikeout
+perl -plE 's/(.)/$1\xcc\xb6/g;'
+```
+
+and shatgpt [fedi](https://mastodon.radio/@n1vux/114496006262609331)
+
+Meeting ended slightly prematurely by a net-split :-(
+
+
 
 ------------
 

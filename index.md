@@ -99,14 +99,14 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill. (Or something you'ld like discussed, I can add it to agenda.)
 
-## May 13, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
+## June 10, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
 
 We'll discuss whatever Perl, FLOSS topics.  
 
 * TBD
 * Topic suggestions welcome!
 
-[Mobilizon event](https://mobilizon.us/events/7f530be9-a6ec-4653-9c0d-403047ca3a25)
+[Mobilizon event](https://mobilizon.us/events/af38f653-a726-47a9-a300-ea0e3966c0da) (includes Jit.si meeting link)
 [(list)](https://mobilizon.us/search?search=Boston+Perl)
 
 ------------
@@ -117,7 +117,7 @@ This is a JitSi meeting. The secure URL will be computed by this command (valid 
 perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'  
 
 ```
-(to avoid spammers, won't be posted on public social media; but usually is on the Mobilizon above.)
+(to avoid spammers, won't be posted on public social media; but usually is on the Mobilizon above, sometime between Sunday and Tuesday.)
 
 (See [Boilerplate](./index.html/#boilerplate) below for additional how-to etc.)
 
