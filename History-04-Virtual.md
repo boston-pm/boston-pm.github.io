@@ -1091,7 +1091,81 @@ and shatgpt [fedi](https://mastodon.radio/@n1vux/114496006262609331)
 
 Meeting ended slightly prematurely by a net-split :-(
 
+---------------
 
+## June 10, 2025 
+
+Attending: Bill, Jerrad, Ricky, Chuba. 
+
+### Short Items
+
+* Recent [Learning XS series](https://dev.to/lnationorg/learning-perl-xs-how-to-create-an-object-24lj) seen via FB and [Planet Perl](https://perl.theplanetarium.org/) RSS (10 chapters and counting, each marked "12 minute read"; that's 2 hours of reading). _An interesting resource; when someone plows through it, we'd love a report!_
+
+
+* Fonts for embeding [Tufte's SparkLines](https://www.edwardtufte.com/notebook/sparkline-theory-and-practice-edward-tufte/) as type: 
+    * [Sparks](https://github.com/aftertheflood/sparks) 
+    * [Blazor](https://github.com/Misfits-Rebels-Outcasts/Blazor-Sparkline) 
+    * [DataLegreay-Figs](https://datalegreya.figs-lab.com/) which interleaves text and data (_tap `Complete` for the full effect!_)
+
+* VIM 
+    * VIM copy-and-pasting [syntax color](https://vim.fandom.com/wiki/Pasting_code_with_syntax_coloring_in_emails)
+    * Vim now has rectangular copy-paste (Visual/Block mode);   
+        and Emacs now has PCRE mode.
+
+
+* We discussed skipping July, August meetings as we frequently have, decided yes.
+
+
+###  When to use `Time::Piece` instead of `DateTime`
+
+* Script testing/(~~ab~~)using epoch conversion between `DateTime` and [`Time::Piece`](https://metacpan.org/pod/Time::Piece) (as discussed below)
+    * [`date-diff`](./scripts/date-diff.pl.html) script subtracts two ISO dates on commandline (to get an age in YY,MM,DD)
+    * using `Time::Piece` for parsing ISO format
+    * and` DateTime` for subtraction
+    * accepts dates in either order !
+* conversation re `Time::Piece` in [DateTime #148](https://github.com/houseabsolute/DateTime.pm/issues/148#issuecomment-2774097264) GH issues [Bill]:
+
+> Myself, when I do **not** want or need DateTime's bells and whistles, I just use CORE's `Time::Piece` OO wrapper for POSIX/libc time API.
+It's a very light OO wrapper to POSIX `localtime, gmtime, strftime, strptime` (with choice of accessors for both 0 and 1 based month, weekday, and 1900 or 0 offset years). 
+[`Time::Piece`](https://metacpan.org/pod/Time::Piece).
+I think of `Time::Piece` as _DateTime::Tiny_ (although there is one of those too).  
+
+> Unlike DateTime, `Time::Piece` is a CORE module (Perl 5.010), it is intended as the OO interface that POSIX time functions should have had in Perl 5, and nothing more. As CORE, it should be very good for those CPAN smokers.
+
+> T-P even provides a mostly complete `strptime`  for parsing date strings (which DT delegates to third-party `DateTime::Format::*` modules). Since T-P has an `epoch` accessor and DT has a `from_epoch` constructor, one can promote a time object later if need-be.
+
+~~~{.perl}
+$dt = DateTime->from_epoch($tp->epoch);
+~~~
+
+> How to convert a DateTime to a Time::Piece is not obvious; but T-P's
+`strptime` will accept epoch number coerced as a string!
+
+~~~{.perl}
+my $dt=DateTime->now();  
+my $tp=Time::Piece->strptime($dt->epoch,q(%s)); 
+~~~
+
+### Reinventing Mainframe card/tape CRUD-during-sort-merge
+
+I [Bill] had a text file with a section containing (mostly) sorted entries that I wanted to update with checkmarks ✓ if they had been entered into an application.  Rather than do that by hand (305 needed), I reached into my early DataProcessing past, during the transition from cards and tape to terminals and disk: the batch-processing **[Sequential Master File Update](https://www.cs.uni.edu/~east/teaching/cobol/topics/seq_update/algorithms.html)** algorithm. Which I'd learned four decades ago solidly enough to just open the editor and sketch it. (This algorithm was almost always coded in COBOL, and this was a major use of COBOL. I'd only done it in PL/1, but had studied a lengthy worked example in [Jackson Structured Programming](https://en.wikipedia.org/wiki/Jackson_structured_programming) (_by one of the three Michael Jacksons popular in the 1980s, one each in Music, Software, and Beer+Whisky_), in which MAJ possited 'program inversion' as a technique to process two or more files with different structures.)
+
+
+* [`hollick-mfu.pl`](./scripts/hollick-mfu.pl.html) 
+
+It was almost certainly quicker and definitely more fun to reconstruct the classic Batch Processing program from memory in Modern Perl than do the update by hand. 
+
+A little iterated `ack | sort -c` helped me fix the alphabetization of the semi-structured text file.
+
+I use 4 in-line subroutines to factor out the specifics of the file and application. I used the same `--range-start, --range-end` parameters as [`ack`](https://beyondgrep.com) to demarcate the section of the file to modify (and by implication, where not to). Assumption is that lines to change are start of top level MarkDown bullet list, initial bolded words forming the record's sort key; and for this, the Update transaction file consists only of Key value, as there is a uniform Update action of append `" ✓"`. 
+
+I could refactor this to put the 5 (or more) callbacks that tune it to the specific file file contents into plugins or subclass modules. In theory, it could support both semi-structured text and CSV, and all 4 kinds of CRUD operations. 
+
+Rather pleased with pulling this out of 4-decades past memory.
+
+* Ricky notes that for i18n it's better to use `fc` than `uc` for canonicalization, which doesn't affect my dataset.
+* Jerrad noted `.= $stuff` is much quicker append than `s/$/stuff/`, which if this were going to run with N much greater than 305 and frequently would possibly matter.
+* `Hollick` is the surname of the complier of the dataset I'm using.
 
 ------------
 

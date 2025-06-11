@@ -99,14 +99,18 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill. (Or something you'ld like discussed, I can add it to agenda.)
 
-## June 10, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
+## Summer Hiatus 2025 
+
+There will be no planned meeting in July or August 
+
+## Sept 9, 2025 - 7.30 pm EDT topic start (7.00 pm &#127482;&#127480; gathering chatter)
 
 We'll discuss whatever Perl, FLOSS topics.  
 
 * TBD
 * Topic suggestions welcome!
 
-[Mobilizon event](https://mobilizon.us/events/af38f653-a726-47a9-a300-ea0e3966c0da) (includes Jit.si meeting link)
+[Mobilizon event](https://mobilizon.us/events/8b32f98d-4376-46a4-8e3e-2e2bb56ce551) (includes Jit.si meeting link)
 [(list)](https://mobilizon.us/search?search=Boston+Perl)
 
 ------------
