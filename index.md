@@ -109,6 +109,30 @@ We'll discuss whatever Perl, FLOSS topics.
 
 * TBD
 * Topic suggestions welcome!
+* Possible topics
+    * [Perl 5.42 annual release](https://perldoc.perl.org/perldelta#Core-Enhancements)
+        * `&CORE::chdir`
+        * `use source::encoding 'ascii'` lexical, opposite of `use utf8`.
+        * Corinna `use experimental 'class'` gains `:writer`; and lexical-scope methods too.
+        * `any`, `all` from `List::Util` available in Core as `experimental`, `use feature 'keyword_all';`.
+        * Switch, SmartMatch deprecation softened to `use feature 'switch';` and `'smartmatch'`; default on for v5.xx featurebundles when it was official.
+        * [Unicode 16.0](https://blog.emojipedia.org/whats-new-in-unicode-16-0/)  including "Face with Bags Under Eyes"?; retrocomputing characters including PACMAN/Snake, outline capitals, block graphics, sprites, ...[Unicode® 16.0](https://www.unicode.org/charts/PDF/Unicode-16.0/)
+        * `^^=` operator (medium precedence XOR, but assigning)
+        * Binary, Octal, and Hex Floating point literals now documented. (Only Hex float supported in `sprintf` for roundtrip however.)
+        * two CVEs fixed (_see below_)
+    * CVEs
+        * review [CVE one TWC](https://theweeklychallenge.org/blog/cve-in-perl/)
+        * [CVE-2024-56406](https://theweeklychallenge.org/blog/cve-2024-56406/)
+            - Segfault `perl -e '$_ = "\x{FF}" x 1000000; tr/\xFF/\x{100}/;'` 
+            - fixed in [`5.38.4`](https://metacpan.org/release/SHAY/perl-5.38.4/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F) and [`5.40.2`](https://metacpan.org/release/SHAY/perl-5.40.2/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F) 
+            - not fixed in `5.36.[0-3]`, `5.34.[0-3]` but patchable.
+        * [CVE-2025-40927](https://theweeklychallenge.org/blog/cve-2025-40927/)
+            - in `CGI::Simple` (non-core) incomplete sanitization
+            - fixed in [CGI-Simple-1.282](https://metacpan.org/release/MANWAR/CGI-Simple-1.282/source/Changes)
+        * [CVE-2025-40909](https://lists.security.metacpan.org/cve-announce/msg/30017499/) Perl threads have a working directory race condition …
+            - fixed in [5.42.3](https://perldoc.perl.org/perldelta#%5BCVE-2025-40909%5D-Perl-threads-have-a-working-directory-race-condition-where-file-operations-may-target-unintended-paths) 
+    * [Holophrastic sponsors 2026 P&RC](https://www.perl.com/article/my-guilty-perl-obsession/)
+
 
 [Mobilizon event](https://mobilizon.us/events/8b32f98d-4376-46a4-8e3e-2e2bb56ce551) (includes Jit.si meeting link)
 [(list)](https://mobilizon.us/search?search=Boston+Perl)

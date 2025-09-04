@@ -237,6 +237,71 @@ id="sept-9-2025---7.30-pm-edt-topic-start-7.00-pm-gathering-chatter">Sept
 <ul>
 <li>TBD</li>
 <li>Topic suggestions welcome!</li>
+<li>Possible topics
+<ul>
+<li><a href="https://perldoc.perl.org/perldelta#Core-Enhancements">Perl
+5.42 annual release</a>
+<ul>
+<li><code>&amp;CORE::chdir</code></li>
+<li><code>use source::encoding 'ascii'</code> lexical, opposite of
+<code>use utf8</code>.</li>
+<li>Corinna <code>use experimental 'class'</code> gains
+<code>:writer</code>; and lexical-scope methods too.</li>
+<li><code>any</code>, <code>all</code> from <code>List::Util</code>
+available in Core as <code>experimental</code>,
+<code>use feature 'keyword_all';</code>.</li>
+<li>Switch, SmartMatch deprecation softened to
+<code>use feature 'switch';</code> and <code>'smartmatch'</code>;
+default on for v5.xx featurebundles when it was official.</li>
+<li><a
+href="https://blog.emojipedia.org/whats-new-in-unicode-16-0/">Unicode
+16.0</a> including “Face with Bags Under Eyes”?; retrocomputing
+characters including PACMAN/Snake, outline capitals, block graphics,
+sprites, …<a
+href="https://www.unicode.org/charts/PDF/Unicode-16.0/">Unicode®
+16.0</a></li>
+<li><code>^^=</code> operator (medium precedence XOR, but
+assigning)</li>
+<li>Binary, Octal, and Hex Floating point literals now documented. (Only
+Hex float supported in <code>sprintf</code> for roundtrip however.)</li>
+<li>two CVEs fixed (<em>see below</em>)</li>
+</ul></li>
+<li>CVEs
+<ul>
+<li>review <a
+href="https://theweeklychallenge.org/blog/cve-in-perl/">CVE one
+TWC</a></li>
+<li><a
+href="https://theweeklychallenge.org/blog/cve-2024-56406/">CVE-2024-56406</a>
+<ul>
+<li>Segfault
+<code>perl -e '$_ = "\x{FF}" x 1000000; tr/\xFF/\x{100}/;'</code></li>
+<li>fixed in <a
+href="https://metacpan.org/release/SHAY/perl-5.38.4/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F"><code>5.38.4</code></a>
+and <a
+href="https://metacpan.org/release/SHAY/perl-5.40.2/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F"><code>5.40.2</code></a></li>
+<li>not fixed in <code>5.36.[0-3]</code>, <code>5.34.[0-3]</code> but
+patchable.</li>
+</ul></li>
+<li><a
+href="https://theweeklychallenge.org/blog/cve-2025-40927/">CVE-2025-40927</a>
+<ul>
+<li>in <code>CGI::Simple</code> (non-core) incomplete sanitization</li>
+<li>fixed in <a
+href="https://metacpan.org/release/MANWAR/CGI-Simple-1.282/source/Changes">CGI-Simple-1.282</a></li>
+</ul></li>
+<li><a
+href="https://lists.security.metacpan.org/cve-announce/msg/30017499/">CVE-2025-40909</a>
+Perl threads have a working directory race condition …
+<ul>
+<li>fixed in <a
+href="https://perldoc.perl.org/perldelta#%5BCVE-2025-40909%5D-Perl-threads-have-a-working-directory-race-condition-where-file-operations-may-target-unintended-paths">5.42.3</a></li>
+</ul></li>
+</ul></li>
+<li><a
+href="https://www.perl.com/article/my-guilty-perl-obsession/">Holophrastic
+sponsors 2026 P&amp;RC</a></li>
+</ul></li>
 </ul>
 <p><a
 href="https://mobilizon.us/events/8b32f98d-4376-46a4-8e3e-2e2bb56ce551">Mobilizon

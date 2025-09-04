@@ -1169,6 +1169,10 @@ Rather pleased with pulling this out of 4-decades past memory.
 
 ------------
 
+## July & August 2025 skipped per usual
+
+-------------
+
 **History Pages Menu**
 
 * [Reconstructed Ancient History 1999-2005](History-01-Reconstructed-1999.html)
