@@ -110,6 +110,12 @@ We'll discuss whatever Perl, FLOSS topics.
 * TBD
 * Topic suggestions welcome!
 * Possible topics
+    * [RIP MST](https://curtispoe.org/blog/rip-mst.html)
+        * [mstpan qr](https://blog.kablamo.org/2015/09/08/mstpan/)
+        * [ripples / shadowcat](https://www.shadowcat.co.uk/2025/07/09/ripples-they-cause-in-the-world/)
+        * [the register](https://www.theregister.com/2025/07/11/matt_trout_dies_at_42/?td=keepreading)
+        * [perlmonks](https://www.perlmonks.org/?node_id=11165582)
+        * [Together We Remember](https://togetherweremember.com/timelines/qn/view)
     * [Perl 5.42 annual release](https://perldoc.perl.org/perldelta#Core-Enhancements)
         * `&CORE::chdir`
         * `use source::encoding 'ascii'` lexical, opposite of `use utf8`.
