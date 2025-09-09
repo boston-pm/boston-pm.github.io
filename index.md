@@ -108,15 +108,16 @@ There will be no planned meeting in July or August
 We'll discuss whatever Perl, FLOSS topics.  
 
 * TBD
-* Topic suggestions welcome!
+    * Topic suggestions welcome!
+* [**Holophrastic** sponsors 2026 P&RC](https://www.perl.com/article/my-guilty-perl-obsession/)
 * Possible topics
-    * [RIP MST](https://curtispoe.org/blog/rip-mst.html)
+    * **[RIP MST](https://curtispoe.org/blog/rip-mst.html)**
         * [mstpan qr](https://blog.kablamo.org/2015/09/08/mstpan/)
         * [ripples / shadowcat](https://www.shadowcat.co.uk/2025/07/09/ripples-they-cause-in-the-world/)
         * [the register](https://www.theregister.com/2025/07/11/matt_trout_dies_at_42/?td=keepreading)
         * [perlmonks](https://www.perlmonks.org/?node_id=11165582)
         * [Together We Remember](https://togetherweremember.com/timelines/qn/view)
-    * [Perl 5.42 annual release](https://perldoc.perl.org/perldelta#Core-Enhancements)
+    * **[Perl 5.42 annual release](https://perldoc.perl.org/5.42.0/perldelta#Core-Enhancements)**
         * `&CORE::chdir`
         * `use source::encoding 'ascii'` lexical, opposite of `use utf8`.
         * Corinna `use experimental 'class'` gains `:writer`; and lexical-scope methods too.
@@ -126,18 +127,42 @@ We'll discuss whatever Perl, FLOSS topics.
         * `^^=` operator (medium precedence XOR, but assigning)
         * Binary, Octal, and Hex Floating point literals now documented. (Only Hex float supported in `sprintf` for roundtrip however.)
         * two CVEs fixed (_see below_)
-    * CVEs
-        * review [CVE one TWC](https://theweeklychallenge.org/blog/cve-in-perl/)
-        * [CVE-2024-56406](https://theweeklychallenge.org/blog/cve-2024-56406/)
+    * **CVEs (Common Vulnerabilities and Exposures)**
+        * review: [CVE in Perl @ TWC](https://theweeklychallenge.org/blog/cve-in-perl/); [CPANsec](https://security.metacpan.org/) is now a CNA.
+        * [CVE-2024-56406](https://nvd.nist.gov/vuln/detail/CVE-2024-56406) [@CVE](https://www.cve.org/CVERecord?id=CVE-2024-56406) [@ TWC](https://theweeklychallenge.org/blog/cve-2024-56406/) in **core**: heap buffer overflow … in Perl
             - Segfault `perl -e '$_ = "\x{FF}" x 1000000; tr/\xFF/\x{100}/;'` 
-            - fixed in [`5.38.4`](https://metacpan.org/release/SHAY/perl-5.38.4/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F) and [`5.40.2`](https://metacpan.org/release/SHAY/perl-5.40.2/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F) 
-            - not fixed in `5.36.[0-3]`, `5.34.[0-3]` but patchable.
-        * [CVE-2025-40927](https://theweeklychallenge.org/blog/cve-2025-40927/)
+            - fixed in [`5.42.0`](https://perldoc.perl.org/5.42.0/perldelta#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F), [`5.40.2`](https://metacpan.org/release/SHAY/perl-5.40.2/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F), and [`5.38.4`](https://metacpan.org/release/SHAY/perl-5.38.4/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F)
+            - not fixed in `5.36.[0-3]`, `5.34.[0-3]`, but patchable.
+            - [Demo using `perlbrew exec --with`](./scripts/perlbrew-with-CVE-log.html)
+        * [CVE-2025-40927](https://lists.security.metacpan.org/cve-announce/msg/32357435/)  [TWC](https://theweeklychallenge.org/blog/cve-2025-40927/)
             - in `CGI::Simple` (non-core) incomplete sanitization
             - fixed in [CGI-Simple-1.282](https://metacpan.org/release/MANWAR/CGI-Simple-1.282/source/Changes)
-        * [CVE-2025-40909](https://lists.security.metacpan.org/cve-announce/msg/30017499/) Perl threads have a working directory race condition …
-            - fixed in [5.42.3](https://perldoc.perl.org/perldelta#%5BCVE-2025-40909%5D-Perl-threads-have-a-working-directory-race-condition-where-file-operations-may-target-unintended-paths) 
-    * [Holophrastic sponsors 2026 P&RC](https://www.perl.com/article/my-guilty-perl-obsession/)
+        * [CVE-2025-40909](https://lists.security.metacpan.org/cve-announce/msg/30017499/) in **core**: Perl threads have a working directory race condition …
+            - fixed in [`5.42.0`](https://perldoc.perl.org/5.42.0/perldelta#%5BCVE-2025-40909%5D-Perl-threads-have-a-working-directory-race-condition-where-file-operations-may-target-unintended-paths) and [`5.40.3`](https://perldoc.perl.org/5.40.3/perldelta)
+        * three more **new** CVEs re JSON from [@CPANsec](https://fosstodon.org/@cpansec) ([list](https://lists.security.metacpan.org/cve-announce/)) _this week_:
+            * [CVE-2025-40928](https://lists.security.metacpan.org/cve-announce/msg/32608909/): **`JSON::XS`** before version 4.04 for Perl has an integer buffer overflow causing a segfault when parsing crafted JSON, enabling denial-of-service attacks or other unspecified impact
+            * [CVE-2025-40929](https://lists.security.metacpan.org/cve-announce/msg/32608920/): **`Cpanel::JSON::XS`** before version 4.40 for Perl has an integer buffer overflow causing a segfault when parsing crafted JSON, enabling denial-of-service attacks or other unspecified impact
+            * [CVE-2025-40930](https://lists.security.metacpan.org/cve-announce/msg/32608921/): **`JSON::SIMD`** before version 1.07 and earlier for Perl has an integer buffer overflow causing a segfault when parsing crafted JSON, enabling denial-of-service attacks or other unspecified impact
+    * **Auditing**  with [**`CPAN::Audit`**](https://metacpan.org/pod/CPAN::Audit) (or, in Author release tests, [**`Test::CVE`**](https://metacpan.org/pod/Test::CVE))
+        
+        ```
+        $ cpanm CPAN::Audit Test::CVE
+        ...
+        $ cpan-audit installed
+        ```
+        
+        [(output)](scripts/cpan-audit-output.html)
+        
+    * **Upgrade** all affected Perlbrew libs  
+        [`pb-cpm-upgrade-all`](./scripts/pb-cpm-upgrade-all) module module ...`  
+        
+        **$** `/pb-cpm-upgrade-all JSON::XS Cpanel::JSON::XS JSON::SIMD`  
+        
+        ![pb-cpm-upgrade-all](./scripts/pb-cpm-upgrad-all.png)
+        (which uses another script [whichperlbrew.sh](./scripts/whichperlbrew.sh) which finds which Perlbrew named-libraries a module is built in, and [ack](https://beyondgrep.com).)
+        
+
+
 
 
 [Mobilizon event](https://mobilizon.us/events/8b32f98d-4376-46a4-8e3e-2e2bb56ce551) (includes Jit.si meeting link)

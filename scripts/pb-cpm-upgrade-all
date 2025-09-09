@@ -1,0 +1,16 @@
+#! /bin/bash
+
+set -x
+
+module=$1; shift
+
+while  [ "$module" != '' ]
+do
+    echo '====='; echo $module; 
+    found=$(whichperlbrew.sh $module \
+            | ack '[*][*] \K([^ ]*)(?= has )' -o \
+            | perl -000 -lE 'my $str=<>; $str =~ s/\r?\n\r?/,/g; say $str;' )
+
+    perlbrew exec --with $found cpanm $module
+    module=$1; shift
+done
