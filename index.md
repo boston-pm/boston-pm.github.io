@@ -107,6 +107,17 @@ There will be no planned meeting in July or August
 
 We'll discuss whatever Perl, FLOSS topics.  
 
+__TODO__ format, and move:
+
+**Attending**: Bill R, Brian M, Jerrad. 
+
+Jerrad offers [Regexp::Trie](https://metacpan.org/pod/Regexp::Trie) which makes optimal regexp from tables with lots of prefixes.
+This 2006 module is still useful **but** triggers the deep recursion warning in modern perls, and has `use warnings`.
+[ticket](https://rt.cpan.org/Ticket/Display.html?id=133091)
+
+[IOCCC](https://www.ioccc.org/years.html#2024)
+
+
 * TBD
     * Topic suggestions welcome!
 * [**Holophrastic** sponsors 2026 P&RC](https://www.perl.com/article/my-guilty-perl-obsession/)
