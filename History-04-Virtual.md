@@ -1173,7 +1173,154 @@ Rather pleased with pulling this out of 4-decades past memory.
 
 -------------
 
-**History Pages Menu**
+## Sept 9, 2025 — Community news, Release, CVEs
+
+
+**Attending**: Bill R, Brian M, Jerrad. 
+
+
+
+### Perl Community News
+
+* [**Holophrastic** is first declared sponsor for 2026 P&RC](https://www.perl.com/article/my-guilty-perl-obsession/)
+
+* **[RIP MST](https://curtispoe.org/blog/rip-mst.html)**
+    * [mstpan qr](https://blog.kablamo.org/2015/09/08/mstpan/)
+    * [ripples / shadowcat](https://www.shadowcat.co.uk/2025/07/09/ripples-they-cause-in-the-world/)
+    * [the register](https://www.theregister.com/2025/07/11/matt_trout_dies_at_42/?td=keepreading)
+    * [perlmonks](https://www.perlmonks.org/?node_id=11165582)
+    * [Together We Remember](https://togetherweremember.com/timelines/qn/view)
+
+### Perl Release
+
+We didn't fully cover the April annual release in our May meeting, so let's dive in now.
+
+* **[Perl 5.42 annual release](https://perldoc.perl.org/5.42.0/perldelta#Core-Enhancements)**
+    * `&CORE::chdir`
+    * `use source::encoding 'ascii'` lexical, opposite of `use utf8`.
+    * Corinna `use experimental 'class'` gains `:writer`; and lexical-scope methods too.
+    * `any`, `all` from `List::Util` available in Core as `experimental`, `use feature 'keyword_all';`.
+    * Switch, SmartMatch deprecation softened to `use feature 'switch';` and `'smartmatch'`; default on for v5.xx featurebundles when it was official.
+    * [Unicode 16.0](https://blog.emojipedia.org/whats-new-in-unicode-16-0/)  including "Face with Bags Under Eyes"?; retrocomputing characters including PACMAN/Snake, outline capitals, block graphics, sprites, ...[Unicode® 16.0](https://www.unicode.org/charts/PDF/Unicode-16.0/)
+    * `^^=` operator (medium precedence XOR, but assigning)
+    * Binary, Octal, and Hex Floating point literals now documented. (Only Hex float supported in `sprintf` for roundtrip however.)
+    * two CVEs fixed (_see below_)
+
+
+### Module Regexp::Trie useful but frustrating 
+
+Jerrad offers [Regexp::Trie](https://metacpan.org/pod/Regexp::Trie) which makes an optimal regexp from tables with lots of prefixes. (E.g. lists of ZipCodes)
+This 2006 module is still useful **but** triggers the deep recursion warning in modern Perls (v5.20+ ?), and has `use warnings`.
+[ticket](https://rt.cpan.org/Ticket/Display.html?id=133091).
+
+Even tho' this is lexical, turning off warnings (or that specific warning `no warnings qw( recursion );`) in your calling module can't block the warning being raised from within methods that have it on lexically. Oddly, `use 5.008001;` in the module doesn't suppress the newer warning either.
+
+(Recursion depth is a Perl build option, so could rebuild `perl` with Perlbrew or Configure for a deeper depth. Alternative in the opposite direction, `use warnings FATAL => 'recursion';` would make the warning fatal (as it previously had been v < 5.20).)
+
+(Unclear if this module would benefit from Tail Recursion `@_ = (adjusted, parms); goto __SUB__`; (or the older form `goto &this_function;` but I'd guess it might.)
+
+Several other modules turned on Warnings, affecting their callers, back when Modern Perl was pushing `warnings` and `strict` back before `-E` or `use 5.040;` would do so. And are realizing it was a violation of modular encapsulation and a mistake.  
+See [thread ![Mastodon](images/Mastodon.png){ height=20}&#1F9F5;](https://fosstodon.org/@rjbs@social.semiotic.systems/115112575840795306) in which lists following offenders
+
+* `Moose` + `Moose::Util::TypeConstraints`
+* `Test2::V0`, `Test::Most`, but in a testing environment, verbose warnings may be good?
+* `Object::Pad` (the CPAN prototype for `experimental class`), but Paul `@leonerd` Evans says they're [trying to undo that](https://metacpan.org/pod/Object::Pad#Implied-Pragmata), gracefully backing out of the pushiness.
+
+Possibly useful for Jerrad, it is [suggested](https://fosstodon.org/@barubary@infosec.exchange/115112684911295442) that 
+enclosing the `use` in a scope (instead of at global scope) as `{ use Moose; }` will contains Moose's use warnings; might work for Trie too? But since the warnable code is in the included module, I fear not.
+
+### International Obfuscated C Code Contest 2024 Results
+
+If you have a strong stomach, even worse than Perl Golf, the IOCCC 2024 judging has conclued.
+
+[IOCCC](https://www.ioccc.org/years.html#2024)
+
+### Perl's CPAN Security team and CVEs
+
+
+**CVE**s = **Common Vulnerabilities and Exposures**
+
+We've previously discussed that the (new-ish) [CPANsec](https://security.metacpan.org/) security team has been accredited as a CVE Number Authority, capable of issuing a CVE number to a vulnerability discovered within the Perl development community.
+
+[The Weekly Challenge (TWC) blog](https://theweeklychallenge.org/blog/cve-in-perl/) had a good review recently. 
+
+TWC also attempted to recreate several known CVEs within a Docker container as a learning exercise. Two of these were fixed in the April release of Perl.
+
+* [CVE-2024-56406](https://nvd.nist.gov/vuln/detail/CVE-2024-56406) [@CVE](https://www.cve.org/CVERecord?id=CVE-2024-56406) [@ TWC](https://theweeklychallenge.org/blog/cve-2024-56406/) in **core**: heap buffer overflow … in Perl
+    - Segfault `perl -e '$_ = "\x{FF}" x 1000000; tr/\xFF/\x{100}/;'` 
+    - fixed in [`5.42.0`](https://perldoc.perl.org/5.42.0/perldelta#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F), [`5.40.2`](https://metacpan.org/release/SHAY/perl-5.40.2/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F), and [`5.38.4`](https://metacpan.org/release/SHAY/perl-5.38.4/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F)
+    - not fixed in `5.36.[0-3]`, `5.34.[0-3]`, but patchable.
+    - [Demo using `perlbrew exec --with`](./scripts/perlbrew-with-CVE-log.html)
+* [CVE-2025-40927](https://lists.security.metacpan.org/cve-announce/msg/32357435/)  [TWC](https://theweeklychallenge.org/blog/cve-2025-40927/)
+    - in `CGI::Simple` (non-core) incomplete sanitization
+    - fixed in [CGI-Simple-1.282](https://metacpan.org/release/MANWAR/CGI-Simple-1.282/source/Changes)
+* [CVE-2025-40909](https://lists.security.metacpan.org/cve-announce/msg/30017499/) in **core**: Perl threads have a working directory race condition …
+    - fixed in [`5.42.0`](https://perldoc.perl.org/5.42.0/perldelta#%5BCVE-2025-40909%5D-Perl-threads-have-a-working-directory-race-condition-where-file-operations-may-target-unintended-paths) and [`5.40.3`](https://perldoc.perl.org/5.40.3/perldelta)
+
+Three more, **new** CPAN CVEs all related to parsing intentionally bad JSON were announced by [@CPANsec ![Mastodon](images/Mastodon.png){ height=20}](https://fosstodon.org/@cpansec) ([list &#x1F585;](https://lists.security.metacpan.org/cve-announce/), [posting ![Mastodon](images/Mastodon.png){ height=20}](https://fosstodon.org/@rrwo@infosec.exchange/115169497491018409)) _this last week_:  
+
+* [CVE-2025-40928](https://lists.security.metacpan.org/cve-announce/msg/32608909/): **`JSON::XS`** before version 4.04 for Perl has an integer buffer overflow causing a segfault when parsing crafted JSON, enabling denial-of-service attacks or other unspecified impact
+* [CVE-2025-40929](https://lists.security.metacpan.org/cve-announce/msg/32608920/): **`Cpanel::JSON::XS`** before version 4.40 for Perl has an integer buffer overflow causing a segfault when parsing crafted JSON, enabling denial-of-service attacks or other unspecified impact
+* [CVE-2025-40930](https://lists.security.metacpan.org/cve-announce/msg/32608921/): **`JSON::SIMD`** before version 1.07 and earlier for Perl has an integer buffer overflow causing a segfault when parsing crafted JSON, enabling denial-of-service attacks or other unspecified impact
+* **Auditing**  with [**`CPAN::Audit`**](https://metacpan.org/pod/CPAN::Audit) (or, in Author release tests, [**`Test::CVE`**](https://metacpan.org/pod/Test::CVE))
+
+    ```
+        $ cpanm CPAN::Audit Test::CVE
+        ...
+        $ cpan-audit installed
+    ```
+    
+    - [(output)](scripts/cpan-audit-output.html)
+    - I could use `perlbrew exec` to install and run this with each and every Perl 
+    - note, now I have both 5.40.0 and 5.40.3, and new 5.42.0, and so need to rebuild my [Perlbrew managed](https://metacpan.org/pod/perlbrew#COMMAND%3A-LIB) [`local::lib`](https://metacpan.org/pod/local::lib)s). The `perlbrew clone-modules` doesn't appear to support the `local::lib` `@libname`s so I have to use the longer form.
+    - When there aren't ABI changes, I might be able to cheat ...
+            
+* **Upgrade** all affected Perlbrew libs  
+    [`pb-cpm-upgrade-all`](./scripts/pb-cpm-upgrade-all) module module ...`  
+    
+    **$** `/pb-cpm-upgrade-all JSON::XS Cpanel::JSON::XS JSON::SIMD`  
+    
+    ![pb-cpm-upgrade-all](./scripts/pb-cpm-upgrad-all.png)
+    (which uses another script [whichperlbrew.sh](./scripts/whichperlbrew.sh) which finds which Perlbrew named-libraries a module is built in, and [ack](https://beyondgrep.com).)
+
+* **CVEs (Common Vulnerabilities and Exposures)**
+* review: [CVE in Perl @ TWC](https://theweeklychallenge.org/blog/cve-in-perl/); [CPANsec](https://security.metacpan.org/) is now a CNA.
+* [CVE-2024-56406](https://nvd.nist.gov/vuln/detail/CVE-2024-56406) [@CVE](https://www.cve.org/CVERecord?id=CVE-2024-56406) [@ TWC](https://theweeklychallenge.org/blog/cve-2024-56406/) in **core**: heap buffer overflow … in Perl
+    - Segfault `perl -e '$_ = "\x{FF}" x 1000000; tr/\xFF/\x{100}/;'` 
+    - fixed in [`5.42.0`](https://perldoc.perl.org/5.42.0/perldelta#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F), [`5.40.2`](https://metacpan.org/release/SHAY/perl-5.40.2/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F), and [`5.38.4`](https://metacpan.org/release/SHAY/perl-5.38.4/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F)
+    - not fixed in `5.36.[0-3]`, `5.34.[0-3]`, but patchable.
+    - [Demo using `perlbrew exec --with`](./scripts/perlbrew-with-CVE-log.html)
+* [CVE-2025-40927](https://lists.security.metacpan.org/cve-announce/msg/32357435/)  [TWC](https://theweeklychallenge.org/blog/cve-2025-40927/)
+    - in `CGI::Simple` (non-core) incomplete sanitization
+    - fixed in [CGI-Simple-1.282](https://metacpan.org/release/MANWAR/CGI-Simple-1.282/source/Changes)
+* [CVE-2025-40909](https://lists.security.metacpan.org/cve-announce/msg/30017499/) in **core**: Perl threads have a working directory race condition …
+    - fixed in [`5.42.0`](https://perldoc.perl.org/5.42.0/perldelta#%5BCVE-2025-40909%5D-Perl-threads-have-a-working-directory-race-condition-where-file-operations-may-target-unintended-paths) and [`5.40.3`](https://perldoc.perl.org/5.40.3/perldelta)
+* three more **new** CVEs re JSON from [@CPANsec](https://fosstodon.org/@cpansec) ([list](https://lists.security.metacpan.org/cve-announce/)) _this week_:
+    * [CVE-2025-40928](https://lists.security.metacpan.org/cve-announce/msg/32608909/): **`JSON::XS`** before version 4.04 for Perl has an integer buffer overflow causing a segfault when parsing crafted JSON, enabling denial-of-service attacks or other unspecified impact
+    * [CVE-2025-40929](https://lists.security.metacpan.org/cve-announce/msg/32608920/): **`Cpanel::JSON::XS`** before version 4.40 for Perl has an integer buffer overflow causing a segfault when parsing crafted JSON, enabling denial-of-service attacks or other unspecified impact
+    * [CVE-2025-40930](https://lists.security.metacpan.org/cve-announce/msg/32608921/): **`JSON::SIMD`** before version 1.07 and earlier for Perl has an integer buffer overflow causing a segfault when parsing crafted JSON, enabling denial-of-service attacks or other unspecified impact
+* **Auditing**  with [**`CPAN::Audit`**](https://metacpan.org/pod/CPAN::Audit) (or, in Author release tests, [**`Test::CVE`**](https://metacpan.org/pod/Test::CVE))
+
+```
+$ cpanm CPAN::Audit Test::CVE
+...
+$ cpan-audit installed
+```
+
+[(output)](scripts/cpan-audit-output.html)
+
+* **Upgrade** all affected Perlbrew libs  
+[`pb-cpm-upgrade-all`](./scripts/pb-cpm-upgrade-all) module module ...`  
+
+**$** `/pb-cpm-upgrade-all JSON::XS Cpanel::JSON::XS JSON::SIMD`  
+
+![pb-cpm-upgrade-all](./scripts/pb-cpm-upgrad-all.png)
+(which uses another script [whichperlbrew.sh](./scripts/whichperlbrew.sh) which finds which Perlbrew named-libraries a module is built in, and [ack](https://beyondgrep.com).)
+
+-------------
+
+
+# History Pages Menu
 
 * [Reconstructed Ancient History 1999-2005](History-01-Reconstructed-1999.html)
 * [MIT Era pt i  2005-2016](History-02-Calendar.html)

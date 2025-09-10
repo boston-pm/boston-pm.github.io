@@ -332,7 +332,12 @@ id="toc-january-14th-2025---given-when-switch-module-contenders">January
 <li><a href="#july-august-2025-skipped-per-usual"
 id="toc-july-august-2025-skipped-per-usual">July &amp; August 2025
 skipped per usual</a></li>
+<li><a href="#sept-9-2025-community-news-release-cves"
+id="toc-sept-9-2025-community-news-release-cves">Sept 9, 2025 —
+Community news, Release, CVEs</a></li>
 </ul></li>
+<li><a href="#history-pages-menu" id="toc-history-pages-menu">History
+Pages Menu</a></li>
 </ul>
 </nav>
 <h1 id="boston.pm">Boston.PM</h1>
@@ -2313,7 +2318,322 @@ I’m using.</li>
 <h2 id="july-august-2025-skipped-per-usual">July &amp; August 2025
 skipped per usual</h2>
 <hr />
-<p><strong>History Pages Menu</strong></p>
+<h2 id="sept-9-2025-community-news-release-cves">Sept 9, 2025 —
+Community news, Release, CVEs</h2>
+<p><strong>Attending</strong>: Bill R, Brian M, Jerrad.</p>
+<h3 id="perl-community-news">Perl Community News</h3>
+<ul>
+<li><p><a
+href="https://www.perl.com/article/my-guilty-perl-obsession/"><strong>Holophrastic</strong>
+is first declared sponsor for 2026 P&amp;RC</a></p></li>
+<li><p><strong><a href="https://curtispoe.org/blog/rip-mst.html">RIP
+MST</a></strong></p>
+<ul>
+<li><a href="https://blog.kablamo.org/2015/09/08/mstpan/">mstpan
+qr</a></li>
+<li><a
+href="https://www.shadowcat.co.uk/2025/07/09/ripples-they-cause-in-the-world/">ripples
+/ shadowcat</a></li>
+<li><a
+href="https://www.theregister.com/2025/07/11/matt_trout_dies_at_42/?td=keepreading">the
+register</a></li>
+<li><a
+href="https://www.perlmonks.org/?node_id=11165582">perlmonks</a></li>
+<li><a href="https://togetherweremember.com/timelines/qn/view">Together
+We Remember</a></li>
+</ul></li>
+</ul>
+<h3 id="perl-release">Perl Release</h3>
+<p>We didn’t fully cover the April annual release in our May meeting, so
+let’s dive in now.</p>
+<ul>
+<li><strong><a
+href="https://perldoc.perl.org/5.42.0/perldelta#Core-Enhancements">Perl
+5.42 annual release</a></strong>
+<ul>
+<li><code>&amp;CORE::chdir</code></li>
+<li><code>use source::encoding 'ascii'</code> lexical, opposite of
+<code>use utf8</code>.</li>
+<li>Corinna <code>use experimental 'class'</code> gains
+<code>:writer</code>; and lexical-scope methods too.</li>
+<li><code>any</code>, <code>all</code> from <code>List::Util</code>
+available in Core as <code>experimental</code>,
+<code>use feature 'keyword_all';</code>.</li>
+<li>Switch, SmartMatch deprecation softened to
+<code>use feature 'switch';</code> and <code>'smartmatch'</code>;
+default on for v5.xx featurebundles when it was official.</li>
+<li><a
+href="https://blog.emojipedia.org/whats-new-in-unicode-16-0/">Unicode
+16.0</a> including “Face with Bags Under Eyes”?; retrocomputing
+characters including PACMAN/Snake, outline capitals, block graphics,
+sprites, …<a
+href="https://www.unicode.org/charts/PDF/Unicode-16.0/">Unicode®
+16.0</a></li>
+<li><code>^^=</code> operator (medium precedence XOR, but
+assigning)</li>
+<li>Binary, Octal, and Hex Floating point literals now documented. (Only
+Hex float supported in <code>sprintf</code> for roundtrip however.)</li>
+<li>two CVEs fixed (<em>see below</em>)</li>
+</ul></li>
+</ul>
+<h3 id="module-regexptrie-useful-but-frustrating">Module Regexp::Trie
+useful but frustrating</h3>
+<p>Jerrad offers <a
+href="https://metacpan.org/pod/Regexp::Trie">Regexp::Trie</a> which
+makes an optimal regexp from tables with lots of prefixes. (E.g. lists
+of ZipCodes) This 2006 module is still useful <strong>but</strong>
+triggers the deep recursion warning in modern Perls (v5.20+ ?), and has
+<code>use warnings</code>. <a
+href="https://rt.cpan.org/Ticket/Display.html?id=133091">ticket</a>.</p>
+<p>Even tho’ this is lexical, turning off warnings (or that specific
+warning <code>no warnings qw( recursion );</code>) in your calling
+module can’t block the warning being raised from within methods that
+have it on lexically. Oddly, <code>use 5.008001;</code> in the module
+doesn’t suppress the newer warning either.</p>
+<p>(Recursion depth is a Perl build option, so could rebuild
+<code>perl</code> with Perlbrew or Configure for a deeper depth.
+Alternative in the opposite direction,
+<code>use warnings FATAL =&gt; 'recursion';</code> would make the
+warning fatal (as it previously had been v &lt; 5.20).)</p>
+<p>(Unclear if this module would benefit from Tail Recursion
+<code>@_ = (adjusted, parms); goto __SUB__</code>; (or the older form
+<code>goto &amp;this_function;</code> but I’d guess it might.)</p>
+<p>Several other modules turned on Warnings, affecting their callers,
+back when Modern Perl was pushing <code>warnings</code> and
+<code>strict</code> back before <code>-E</code> or
+<code>use 5.040;</code> would do so. And are realizing it was a
+violation of modular encapsulation and a mistake.<br />
+See <a
+href="https://fosstodon.org/@rjbs@social.semiotic.systems/115112575840795306">thread
+<img src="images/Mastodon.png" height="20"
+alt="Mastodon" />&amp;#1F9F5;</a> in which lists following offenders</p>
+<ul>
+<li><code>Moose</code> + <code>Moose::Util::TypeConstraints</code></li>
+<li><code>Test2::V0</code>, <code>Test::Most</code>, but in a testing
+environment, verbose warnings may be good?</li>
+<li><code>Object::Pad</code> (the CPAN prototype for
+<code>experimental class</code>), but Paul <code>@leonerd</code> Evans
+says they’re <a
+href="https://metacpan.org/pod/Object::Pad#Implied-Pragmata">trying to
+undo that</a>, gracefully backing out of the pushiness.</li>
+</ul>
+<p>Possibly useful for Jerrad, it is <a
+href="https://fosstodon.org/@barubary@infosec.exchange/115112684911295442">suggested</a>
+that enclosing the <code>use</code> in a scope (instead of at global
+scope) as <code>{ use Moose; }</code> will contains Moose’s use
+warnings; might work for Trie too? But since the warnable code is in the
+included module, I fear not.</p>
+<h3
+id="international-obfuscated-c-code-contest-2024-results">International
+Obfuscated C Code Contest 2024 Results</h3>
+<p>If you have a strong stomach, even worse than Perl Golf, the IOCCC
+2024 judging has conclued.</p>
+<p><a href="https://www.ioccc.org/years.html#2024">IOCCC</a></p>
+<h3 id="perls-cpan-security-team-and-cves">Perl’s CPAN Security team and
+CVEs</h3>
+<p><strong>CVE</strong>s = <strong>Common Vulnerabilities and
+Exposures</strong></p>
+<p>We’ve previously discussed that the (new-ish) <a
+href="https://security.metacpan.org/">CPANsec</a> security team has been
+accredited as a CVE Number Authority, capable of issuing a CVE number to
+a vulnerability discovered within the Perl development community.</p>
+<p><a href="https://theweeklychallenge.org/blog/cve-in-perl/">The Weekly
+Challenge (TWC) blog</a> had a good review recently.</p>
+<p>TWC also attempted to recreate several known CVEs within a Docker
+container as a learning exercise. Two of these were fixed in the April
+release of Perl.</p>
+<ul>
+<li><a
+href="https://nvd.nist.gov/vuln/detail/CVE-2024-56406">CVE-2024-56406</a>
+<a href="https://www.cve.org/CVERecord?id=CVE-2024-56406"><span
+class="citation" data-cites="CVE">@CVE</span></a> <a
+href="https://theweeklychallenge.org/blog/cve-2024-56406/">@ TWC</a> in
+<strong>core</strong>: heap buffer overflow … in Perl
+<ul>
+<li>Segfault
+<code>perl -e '$_ = "\x{FF}" x 1000000; tr/\xFF/\x{100}/;'</code></li>
+<li>fixed in <a
+href="https://perldoc.perl.org/5.42.0/perldelta#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F"><code>5.42.0</code></a>,
+<a
+href="https://metacpan.org/release/SHAY/perl-5.40.2/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F"><code>5.40.2</code></a>,
+and <a
+href="https://metacpan.org/release/SHAY/perl-5.38.4/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F"><code>5.38.4</code></a></li>
+<li>not fixed in <code>5.36.[0-3]</code>, <code>5.34.[0-3]</code>, but
+patchable.</li>
+<li><a href="./scripts/perlbrew-with-CVE-log.html">Demo using
+<code>perlbrew exec --with</code></a></li>
+</ul></li>
+<li><a
+href="https://lists.security.metacpan.org/cve-announce/msg/32357435/">CVE-2025-40927</a>
+<a href="https://theweeklychallenge.org/blog/cve-2025-40927/">TWC</a>
+<ul>
+<li>in <code>CGI::Simple</code> (non-core) incomplete sanitization</li>
+<li>fixed in <a
+href="https://metacpan.org/release/MANWAR/CGI-Simple-1.282/source/Changes">CGI-Simple-1.282</a></li>
+</ul></li>
+<li><a
+href="https://lists.security.metacpan.org/cve-announce/msg/30017499/">CVE-2025-40909</a>
+in <strong>core</strong>: Perl threads have a working directory race
+condition …
+<ul>
+<li>fixed in <a
+href="https://perldoc.perl.org/5.42.0/perldelta#%5BCVE-2025-40909%5D-Perl-threads-have-a-working-directory-race-condition-where-file-operations-may-target-unintended-paths"><code>5.42.0</code></a>
+and <a
+href="https://perldoc.perl.org/5.40.3/perldelta"><code>5.40.3</code></a></li>
+</ul></li>
+</ul>
+<p>Three more, <strong>new</strong> CPAN CVEs all related to parsing
+intentionally bad JSON were announced by <a
+href="https://fosstodon.org/@cpansec"><span class="citation"
+data-cites="CPANsec">@CPANsec</span> <img src="images/Mastodon.png"
+height="20" alt="Mastodon" /></a> (<a
+href="https://lists.security.metacpan.org/cve-announce/">list 🖅</a>, <a
+href="https://fosstodon.org/@rrwo@infosec.exchange/115169497491018409">posting
+<img src="images/Mastodon.png" height="20" alt="Mastodon" /></a>)
+<em>this last week</em>:</p>
+<ul>
+<li><p><a
+href="https://lists.security.metacpan.org/cve-announce/msg/32608909/">CVE-2025-40928</a>:
+<strong><code>JSON::XS</code></strong> before version 4.04 for Perl has
+an integer buffer overflow causing a segfault when parsing crafted JSON,
+enabling denial-of-service attacks or other unspecified impact</p></li>
+<li><p><a
+href="https://lists.security.metacpan.org/cve-announce/msg/32608920/">CVE-2025-40929</a>:
+<strong><code>Cpanel::JSON::XS</code></strong> before version 4.40 for
+Perl has an integer buffer overflow causing a segfault when parsing
+crafted JSON, enabling denial-of-service attacks or other unspecified
+impact</p></li>
+<li><p><a
+href="https://lists.security.metacpan.org/cve-announce/msg/32608921/">CVE-2025-40930</a>:
+<strong><code>JSON::SIMD</code></strong> before version 1.07 and earlier
+for Perl has an integer buffer overflow causing a segfault when parsing
+crafted JSON, enabling denial-of-service attacks or other unspecified
+impact</p></li>
+<li><p><strong>Auditing</strong> with <a
+href="https://metacpan.org/pod/CPAN::Audit"><strong><code>CPAN::Audit</code></strong></a>
+(or, in Author release tests, <a
+href="https://metacpan.org/pod/Test::CVE"><strong><code>Test::CVE</code></strong></a>)</p>
+<pre><code>    $ cpanm CPAN::Audit Test::CVE
+    ...
+    $ cpan-audit installed</code></pre>
+<ul>
+<li><a href="scripts/cpan-audit-output.html">(output)</a></li>
+<li>I could use <code>perlbrew exec</code> to install and run this with
+each and every Perl</li>
+<li>note, now I have both 5.40.0 and 5.40.3, and new 5.42.0, and so need
+to rebuild my <a
+href="https://metacpan.org/pod/perlbrew#COMMAND%3A-LIB">Perlbrew
+managed</a> <a
+href="https://metacpan.org/pod/local::lib"><code>local::lib</code></a>s).
+The <code>perlbrew clone-modules</code> doesn’t appear to support the
+<code>local::lib</code> <code>@libname</code>s so I have to use the
+longer form.</li>
+<li>When there aren’t ABI changes, I might be able to cheat …</li>
+</ul></li>
+<li><p><strong>Upgrade</strong> all affected Perlbrew libs<br />
+<a
+href="./scripts/pb-cpm-upgrade-all"><code>pb-cpm-upgrade-all</code></a>
+module module …`</p>
+<p><strong>$</strong>
+<code>/pb-cpm-upgrade-all JSON::XS Cpanel::JSON::XS JSON::SIMD</code></p>
+<p><img src="./scripts/pb-cpm-upgrad-all.png"
+alt="pb-cpm-upgrade-all" /> (which uses another script <a
+href="./scripts/whichperlbrew.sh">whichperlbrew.sh</a> which finds which
+Perlbrew named-libraries a module is built in, and <a
+href="https://beyondgrep.com">ack</a>.)</p></li>
+<li><p><strong>CVEs (Common Vulnerabilities and
+Exposures)</strong></p></li>
+<li><p>review: <a
+href="https://theweeklychallenge.org/blog/cve-in-perl/">CVE in Perl @
+TWC</a>; <a href="https://security.metacpan.org/">CPANsec</a> is now a
+CNA.</p></li>
+<li><p><a
+href="https://nvd.nist.gov/vuln/detail/CVE-2024-56406">CVE-2024-56406</a>
+<a href="https://www.cve.org/CVERecord?id=CVE-2024-56406"><span
+class="citation" data-cites="CVE">@CVE</span></a> <a
+href="https://theweeklychallenge.org/blog/cve-2024-56406/">@ TWC</a> in
+<strong>core</strong>: heap buffer overflow … in Perl</p>
+<ul>
+<li>Segfault
+<code>perl -e '$_ = "\x{FF}" x 1000000; tr/\xFF/\x{100}/;'</code></li>
+<li>fixed in <a
+href="https://perldoc.perl.org/5.42.0/perldelta#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F"><code>5.42.0</code></a>,
+<a
+href="https://metacpan.org/release/SHAY/perl-5.40.2/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F"><code>5.40.2</code></a>,
+and <a
+href="https://metacpan.org/release/SHAY/perl-5.38.4/changes#%5BCVE-2024-56406%5D-Heap-buffer-overflow-vulnerability-with-tr%2F%2F"><code>5.38.4</code></a></li>
+<li>not fixed in <code>5.36.[0-3]</code>, <code>5.34.[0-3]</code>, but
+patchable.</li>
+<li><a href="./scripts/perlbrew-with-CVE-log.html">Demo using
+<code>perlbrew exec --with</code></a></li>
+</ul></li>
+<li><p><a
+href="https://lists.security.metacpan.org/cve-announce/msg/32357435/">CVE-2025-40927</a>
+<a
+href="https://theweeklychallenge.org/blog/cve-2025-40927/">TWC</a></p>
+<ul>
+<li>in <code>CGI::Simple</code> (non-core) incomplete sanitization</li>
+<li>fixed in <a
+href="https://metacpan.org/release/MANWAR/CGI-Simple-1.282/source/Changes">CGI-Simple-1.282</a></li>
+</ul></li>
+<li><p><a
+href="https://lists.security.metacpan.org/cve-announce/msg/30017499/">CVE-2025-40909</a>
+in <strong>core</strong>: Perl threads have a working directory race
+condition …</p>
+<ul>
+<li>fixed in <a
+href="https://perldoc.perl.org/5.42.0/perldelta#%5BCVE-2025-40909%5D-Perl-threads-have-a-working-directory-race-condition-where-file-operations-may-target-unintended-paths"><code>5.42.0</code></a>
+and <a
+href="https://perldoc.perl.org/5.40.3/perldelta"><code>5.40.3</code></a></li>
+</ul></li>
+<li><p>three more <strong>new</strong> CVEs re JSON from <a
+href="https://fosstodon.org/@cpansec"><span class="citation"
+data-cites="CPANsec">@CPANsec</span></a> (<a
+href="https://lists.security.metacpan.org/cve-announce/">list</a>)
+<em>this week</em>:</p>
+<ul>
+<li><a
+href="https://lists.security.metacpan.org/cve-announce/msg/32608909/">CVE-2025-40928</a>:
+<strong><code>JSON::XS</code></strong> before version 4.04 for Perl has
+an integer buffer overflow causing a segfault when parsing crafted JSON,
+enabling denial-of-service attacks or other unspecified impact</li>
+<li><a
+href="https://lists.security.metacpan.org/cve-announce/msg/32608920/">CVE-2025-40929</a>:
+<strong><code>Cpanel::JSON::XS</code></strong> before version 4.40 for
+Perl has an integer buffer overflow causing a segfault when parsing
+crafted JSON, enabling denial-of-service attacks or other unspecified
+impact</li>
+<li><a
+href="https://lists.security.metacpan.org/cve-announce/msg/32608921/">CVE-2025-40930</a>:
+<strong><code>JSON::SIMD</code></strong> before version 1.07 and earlier
+for Perl has an integer buffer overflow causing a segfault when parsing
+crafted JSON, enabling denial-of-service attacks or other unspecified
+impact</li>
+</ul></li>
+<li><p><strong>Auditing</strong> with <a
+href="https://metacpan.org/pod/CPAN::Audit"><strong><code>CPAN::Audit</code></strong></a>
+(or, in Author release tests, <a
+href="https://metacpan.org/pod/Test::CVE"><strong><code>Test::CVE</code></strong></a>)</p></li>
+</ul>
+<pre><code>$ cpanm CPAN::Audit Test::CVE
+...
+$ cpan-audit installed</code></pre>
+<p><a href="scripts/cpan-audit-output.html">(output)</a></p>
+<ul>
+<li><strong>Upgrade</strong> all affected Perlbrew libs<br />
+<a
+href="./scripts/pb-cpm-upgrade-all"><code>pb-cpm-upgrade-all</code></a>
+module module …`</li>
+</ul>
+<p><strong>$</strong>
+<code>/pb-cpm-upgrade-all JSON::XS Cpanel::JSON::XS JSON::SIMD</code></p>
+<p><img src="./scripts/pb-cpm-upgrad-all.png"
+alt="pb-cpm-upgrade-all" /> (which uses another script <a
+href="./scripts/whichperlbrew.sh">whichperlbrew.sh</a> which finds which
+Perlbrew named-libraries a module is built in, and <a
+href="https://beyondgrep.com">ack</a>.)</p>
+<hr />
+<h1 id="history-pages-menu">History Pages Menu</h1>
 <ul>
 <li><a href="History-01-Reconstructed-1999.html">Reconstructed Ancient
 History 1999-2005</a></li>
