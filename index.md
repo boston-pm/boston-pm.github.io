@@ -100,7 +100,9 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill. (Or something you'ld like discussed, I can add it to agenda.)
 
 
-## Nov 11, 2025 - 7.30 pm EDT topic start (7.00 pm EDT &#127482;&#127480; gathering chatter)
+## Nov 11, 2025 - 7.30 pm EST topic start (7.00 pm EST &#127482;&#127480; gathering chatter)
+
+**STANDARD TIME NOW IN EFFECT**
 
 **Second** Tuesday. **Note, this is a US civic holiday, Veterans/Armistice Day**, which may be a work holiday for some.
 
