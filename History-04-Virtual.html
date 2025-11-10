@@ -335,6 +335,9 @@ skipped per usual</a></li>
 <li><a href="#sept-9-2025-community-news-release-cves"
 id="toc-sept-9-2025-community-news-release-cves">Sept 9, 2025 —
 Community news, Release, CVEs</a></li>
+<li><a href="#oct-14-2025---static-site-generators-new-modules"
+id="toc-oct-14-2025---static-site-generators-new-modules">Oct 14 2025 -
+Static Site Generators, New modules</a></li>
 </ul></li>
 <li><a href="#history-pages-menu" id="toc-history-pages-menu">History
 Pages Menu</a></li>
@@ -2632,6 +2635,69 @@ alt="pb-cpm-upgrade-all" /> (which uses another script <a
 href="./scripts/whichperlbrew.sh">whichperlbrew.sh</a> which finds which
 Perlbrew named-libraries a module is built in, and <a
 href="https://beyondgrep.com">ack</a>.)</p>
+<hr />
+<h2 id="oct-14-2025---static-site-generators-new-modules">Oct 14 2025 -
+Static Site Generators, New modules</h2>
+<p>People: Bill; Adam, Aram, Chuba, Jerrad, Ricky.</p>
+<p>We looked at a couple Static Site Generators (SSG) in Perl,
+particularly DOMM (Thomas Klausner)’s <a
+href="https://metacpan.org/pod/Time::Seconds">“Snig”</a>, Small/Simple
+Image Gallery generator and expanded out from there. Only 93 lines not
+counting POD !</p>
+<p>Perl Weekly <a
+href="https://perlweekly.com/archive/742.html">#742</a> had<br />
+* <code>Class::Mite</code> * <code>Crypt::TimestampedData</code> * Perl
+at SUSE * Martin Brown’s <a
+href="https://www.perlmonks.org/?node_id=64424"><em>Debugging
+Perl</em></a> is old — older than Perl Best Practices, so it contains
+much similar advice to avoid making bugs — but is still solid discussion
+of the use of the debugger. * Jerrad particularly appreciated use of the
+<code>#line</code> pre-processor formal comment (technically a
+‘directive’) to insert a tag displayable by the debugger.
+<code>#line</code> is inherited from C/C++, dating to early days of C
+pre-processor. Perl source-manipulation utilities are encouraged to
+comply with this ancient standard so the Debugger and thrown errors can
+report the actual source line rather than line in a temporary file. <a
+href="https://cppreference.net/cpp/preprocessor/line.html">CPPreference</a></p>
+<p>Additional Notes:</p>
+<ul>
+<li>In reading Snig’s <code>feature class</code> implementation we
+noticed the <a
+href="https://perldoc.perl.org/perlclass#Adjustment"><code>ADJUST</code></a>
+phaser, comparable to Moo(se) <code>BUILD</code> phaser blocks.</li>
+<li>In addition to previously mentioned <code>Time::Piece</code>, core
+also includes <a
+href="https://metacpan.org/pod/Time::Seconds"><code>Time::Seconds</code></a>
+which can display a duration in seconds in human hh:mm:ss form and basic
+arithmetic.</li>
+<li><a
+href="https://metacpan.org/pod/re#%27debug%27-mode"><code>use re 'debug';</code></a>
+to trace Regular Expressions</li>
+<li><a href="https://perldoc.perl.org/Safe"><code>use Safe;</code></a> –
+restricted compartments , e.g. can deny code eval’d code unsafe
+opcodes.</li>
+<li><a href="https://metacpan.org/pod/String::Escape">String::Escape</a>
+has <code>unbackslash()</code> and similar <strong>un</strong>escaping
+functions as well as escaping functions.</li>
+<li>SysInfo written in Perl (so portable?)
+https://codeberg.org/int16h/sysinfo-pl</li>
+<li><a href="https://metacpan.org/pod/Kelp">Kelp</a>, a “web framework
+light, yet rich in nutrients,” built on <a
+href="https://metacpan.org/pod/Plack">Plack PSGI</a> interface.</li>
+<li>or CGI::Simple + HTML::Simple</li>
+<li>Jerrad still prefers the minimalness of <a
+href="https://metacpan.org/pod/Text::xSV"><code>Text::xSV</code></a> to
+<code>Text::CSV</code> (and its XS accelerated version).</li>
+<li>Earlier this year, <a href="https://beyondgrep.com/">Ack 3.9</a>
+extended the <code>--not</code> command flag to work with new in last 12
+months <code>--and</code> and <code>--or</code> flags. These additions
+let one express order-independant boolean combinations of patterns
+outside of the RE sub-language, especially helpful with more than two
+any-order AND.</li>
+<li>The offline text indexer and search engine that Bill mentioned is <a
+href="https://en.wikipedia.org/wiki/SWISH-E">SWISH-E</a>, mostly
+implemented in C but supports a Perl API.</li>
+</ul>
 <hr />
 <h1 id="history-pages-menu">History Pages Menu</h1>
 <ul>

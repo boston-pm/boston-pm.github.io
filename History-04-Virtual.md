@@ -1319,6 +1319,36 @@ $ cpan-audit installed
 
 -------------
 
+## Oct 14 2025 - Static Site Generators, New modules
+
+People: Bill; Adam, Aram, Chuba, Jerrad, Ricky.
+
+We looked at a couple Static Site Generators (SSG) in Perl, particularly DOMM (Thomas Klausner)'s ["Snig"](https://metacpan.org/pod/Time::Seconds), Small/Simple Image Gallery generator and expanded out from there. Only 93 lines not counting POD ! 
+
+Perl Weekly [#742](https://perlweekly.com/archive/742.html) had  
+* `Class::Mite`
+* `Crypt::TimestampedData`
+* Perl at SUSE
+* Martin Brown's [_Debugging Perl_](https://www.perlmonks.org/?node_id=64424) is old — older than Perl Best Practices, so it contains much similar advice to avoid making bugs — but is still solid discussion of the use of the debugger. 
+    * Jerrad particularly appreciated use of the `#line` pre-processor formal comment (technically a 'directive') to insert a tag displayable by the debugger.  `#line` is inherited from C/C++, dating to early days of C pre-processor. Perl source-manipulation utilities are encouraged to comply with this ancient standard so the Debugger and thrown errors can report the actual source line rather than line in a temporary file. [CPPreference](https://cppreference.net/cpp/preprocessor/line.html)
+
+Additional Notes: 
+
+*  In reading Snig's `feature class` implementation we noticed the [`ADJUST`](https://perldoc.perl.org/perlclass#Adjustment) phaser, comparable to Moo(se) `BUILD` phaser blocks.
+* In addition to previously mentioned `Time::Piece`, core also includes [`Time::Seconds`](https://metacpan.org/pod/Time::Seconds) which can display a duration in seconds in human hh:mm:ss form and basic arithmetic.
+* [`use re 'debug';`](https://metacpan.org/pod/re#%27debug%27-mode) to trace Regular Expressions
+* [`use Safe;`](https://perldoc.perl.org/Safe) -- restricted compartments , e.g. can deny code eval'd code unsafe opcodes.
+* [String::Escape](https://metacpan.org/pod/String::Escape) has `unbackslash()` and similar **un**escaping functions as well as escaping functions.
+* SysInfo written in Perl (so portable?) https://codeberg.org/int16h/sysinfo-pl
+* [Kelp](https://metacpan.org/pod/Kelp), a "web framework light, yet rich in nutrients," built on [Plack PSGI](https://metacpan.org/pod/Plack) interface.
+* or CGI::Simple + HTML::Simple
+* Jerrad still prefers the minimalness of [`Text::xSV`](https://metacpan.org/pod/Text::xSV) to `Text::CSV` (and its XS accelerated version).
+* Earlier this year, [Ack 3.9](https://beyondgrep.com/) extended the  `--not` command flag to work with new in last 12 months `--and` and `--or` flags. These additions let one express order-independant boolean combinations of patterns outside of the RE sub-language, especially helpful with more than two any-order AND.
+* The offline text indexer and search engine that Bill mentioned is [SWISH-E](https://en.wikipedia.org/wiki/SWISH-E), mostly implemented in C but supports a Perl API.
+
+
+-------------
+
 
 # History Pages Menu
 
