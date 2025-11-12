@@ -100,17 +100,15 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill. (Or something you'ld like discussed, I can add it to agenda.)
 
 
-## Nov 11, 2025 - 7.30 pm EST topic start (7.00 pm EST &#127482;&#127480; gathering chatter)
+## Dec 9th, 2025 - 7.30 pm EST topic start (7.00 pm EST &#127482;&#127480; gathering chatter)
 
-**STANDARD TIME NOW IN EFFECT**
+**Second** Tuesday
 
-**Second** Tuesday. **Note, this is a US civic holiday, Veterans/Armistice Day**, which may be a work holiday for some.
+We'll discuss whatever Perl, FLOSS topics.
 
-We'll discuss whatever Perl, FLOSS topics.  
-
-
-[Mobilizon event](https://mobilizon.us/events/6fa436f6-c53a-4a5d-a6bc-d8a753ff9815) (includes Jit.si meeting link)
+[Mobilizon event](https://mobilizon.us/events/e2652f3e-e7da-4dd7-9acd-4269af4a6d36) (includes Jit.si meeting link)
 [(list)](https://mobilizon.us/search?search=Boston+Perl)
+
 
 ------------
 
@@ -124,7 +122,9 @@ perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week 
 
 (See [Boilerplate](./index.html/#boilerplate) below for additional how-to etc.)
 
+## Jan 13th, 2026 - future
 
+next
 
 
 # BoilerPlate
