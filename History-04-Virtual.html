@@ -338,6 +338,8 @@ Community news, Release, CVEs</a></li>
 <li><a href="#oct-14-2025---static-site-generators-new-modules"
 id="toc-oct-14-2025---static-site-generators-new-modules">Oct 14 2025 -
 Static Site Generators, New modules</a></li>
+<li><a href="#nov-11-2025--" id="toc-nov-11-2025--">Nov 11, 2025
+-</a></li>
 </ul></li>
 <li><a href="#history-pages-menu" id="toc-history-pages-menu">History
 Pages Menu</a></li>
@@ -2697,6 +2699,161 @@ any-order AND.</li>
 <li>The offline text indexer and search engine that Bill mentioned is <a
 href="https://en.wikipedia.org/wiki/SWISH-E">SWISH-E</a>, mostly
 implemented in C but supports a Perl API.</li>
+</ul>
+<hr />
+<h2 id="nov-11-2025--">Nov 11, 2025 -</h2>
+<h3 id="calendar-observances">Calendar Observances</h3>
+<ul>
+<li><p><strong>CPAN</strong> “Happy 30th Birthday Comprehensive Perl
+Archive Network.” Oct 26 <a
+href="https://fosstodon.org/@0xKaishakunin@mastodon.social/115441499611759357">Fedi</a></p>
+<ul>
+<li>and <a
+href="https://fosstodon.org/@ferki/115439927808279816">also</a> and <a
+href="https://fosstodon.org/@sjn@chaos.social/115437228743526384">also</a></li>
+<li><a
+href="https://groups.google.com/g/comp.lang.perl.announce/c/1qlLHdviZlY/m/hU90ubJHrf4J?pli=1">Comp.lang.perl.announce</a></li>
+</ul></li>
+<li><p>“<strong>Unix</strong> was born on November 3, 1971.” <a
+href="https://mastodon.social/@itsfoss/115485641665200017">Fedi “It’s
+FOSS”</a> <a
+href="https://infosec.exchange/@david_chisnall/115486270752288949">fedi</a></p>
+<blockquote>
+<p>David Chisnall (<em>Now with 50% more sarcasm!</em>) <span
+class="citation" data-cites="david_chisnall">@david_chisnall</span><span
+class="citation" data-cites="infosec.exchange">@infosec.exchange</span>
+The first release of UNIX was closer to the building of Colossus at
+Bletchley Park than today.</p>
+</blockquote></li>
+<li><p><strong>Y2K38 countdown</strong> <a
+href="https://mastodon.social/@countdownY2K38/115489183106518929"><span
+class="citation" data-cites="countdownY2K38">@countdownY2K38</span><span
+class="citation"
+data-cites="mastodon.social">@mastodon.social</span></a></p>
+<blockquote>
+<p>Epochalypse countdown: 12 years, 2 months, 15 days, 16 minutes, 6
+seconds ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 82.06%</p>
+</blockquote></li>
+<li><p>11th hour on 11/11 (1918) — <a
+href="https://n1vux.github.io/articles/11-11-11/output.html">They
+attacked knowing truce was coming.</a>; RIP.</p></li>
+</ul>
+<h3 id="perl-topical">Perl topical</h3>
+<ul>
+<li><p><code>Net::Random</code> Deprecated with extreme prejudice <a
+href="https://fosstodon.org/@DrHyde/115522542032189934">Fedi</a> <a
+href="https://metacpan.org/pod/Net::Random">CPAN</a></p>
+<ul>
+<li><a
+href="https://github.com/DrHyde/perl-modules-Net-Random/issues/35">MetaData
+option?</a></li>
+<li><a href="https://metacpan.org/dist/Data-Entropy">CPAN
+Data::Entropy</a></li>
+</ul></li>
+<li><p>Perl one-liner to highlight consecutively duplicated words <a
+href="https://fosstodon.org/@linuxgal@techhub.social/115509028657709844">Fedi</a><br />
+<code>perl -pe 's/\b(\w+)\s+\1\b/\e[31m$&amp;\e[0m/gi' gettysburg.txt</code></p></li>
+<li><p><strong>Perl IDE Survey</strong> c/o <strong>Perl Weekly</strong>
+<a
+href="https://fosstodon.org/@PerlWeeklyNews@mas.to/115484751571557418">Fedi</a>
+<a href="https://perlweekly.com/archive/745.html">PW 745</a></p>
+<ul>
+<li>also <a href="https://perlweekly.com/archive/746.html">PW 746</a>,
+<a href="https://perlweekly.com/archive/744.html">PW 744</a>, <a
+href="https://perlweekly.com/archive/743.html">PW 743</a></li>
+<li><strong>Dancer2</strong> 2.0.1 <a
+href="https://blogs.perl.org/users/jason_a_crome/">blog</a>
+<ul>
+<li>uses <a
+href="https://metacpan.org/pod/Data::Censor">Data::Censor</a></li>
+</ul></li>
+</ul></li>
+<li><p>What could be more portable than Perl?</p>
+<ul>
+<li><strong>WebPerl</strong>, Perl on WebAssembly <a
+href="https://fosstodon.org/@thewhalecc@framapiaf.org/115505820248590659">fedi</a>
+<a href="https://thewhale.cc/posts/webperl">webperl</a>
+<ul>
+<li>stale, why did who repost?</li>
+<li>but rebooting as <a
+href="https://andrews.substack.com/p/zeroperl-sandboxed-perl-with-webassembly">ZeroPerl</a>
+<a
+href="https://andrews.substack.com/p/get-in-loser-were-rewinding-the-stack">pt
+2</a> <a
+href="https://andrews.substack.com/p/4-mains-or-nothing-at-all">pt
+3</a></li>
+<li>(Thanks Ricky!)</li>
+</ul></li>
+<li><strong><code>jperl</code></strong> PerlOnJava getting close? <a
+href="https://fosstodon.org/@fglock@mastodon.social/115396569680203794">fedi</a>
+<ul>
+<li><a href="https://github.com/fglock/PerlOnJava">gh</a></li>
+<li>GH ReadMe has a WHY section not just a how-to-clone, nice.</li>
+</ul></li>
+<li>(<em>IIRC, ASP-ASP: ActiveState Perl plugin to MS IIS web server
+Active Server Pages, which (mostly) ran server-side, could run
+client-side if client Windows had ASPerl inserted into MS IE
+browser?.</em>)</li>
+</ul></li>
+<li><p><strong>SQL-Ledger</strong> updating to Perl 5.40 &amp; Pg 17 <a
+href="https://fosstodon.org/@tekki@swiss.social/115372489272843814">fedi</a>
+<a href="https://github.com/Tekki/sql-ledger">gh</a> <a
+href="https://github.com/Tekki/sql-ledger/issues/81">issue for
+update</a></p></li>
+<li><p><code>Object::Pad</code> trialing dynamic type checking for
+<code>feature class</code></p>
+<ul>
+<li><blockquote>
+<p>provided by the <code>:Checked</code> field and sub param
+attributes:</p>
+</blockquote></li>
+<li><a
+href="https://metacpan.org/pod/Object::Pad::FieldAttr::Checked">FieldAttr::Checked</a></li>
+<li><a
+href="https://metacpan.org/pod/Signature::Attribute::Checked">Signature::Attribute::Checked</a></li>
+<li>(<em>see discussion at “Types are useless” below.</em>)</li>
+</ul></li>
+<li><p>Real AI in Perl again:</p>
+<blockquote>
+<p><strong>FB</strong> <strong>The Perl Community</strong><br />
+Michael Roberts<br />
+So, long story short, a million years ago (actually thirty; it just
+<em>feels</em> like a million) I was an AI researcher, working with Doug
+Hofstadter.<br />
+Briefly. Before the money ran out.<br />
+But now my kids are gainfully employed, and something went
+<em>click</em>, and I’m back at it. What makes this relevant to this
+group is I’m working in Perl because that’s what my brain runs,
+apparently.<br />
+Anyway, I’ve implemented Hofstadter’s parallel terraced scan in Perl,
+and it’s at Codeberg: https://codeberg.org/Vivtek/AI-TerracedScan<br />
+Not on CPAN yet, not until I’ve exercised it a little more.</p>
+</blockquote></li>
+</ul>
+<h3 id="wider-software-memes">Wider software memes</h3>
+<ul>
+<li>Agentic artificial ignorance and security <a
+href="https://fosstodon.org/@Korny@hachyderm.io/115451903675545103">Fedi</a>;
+<a href="https://mastodon.social/@ladyteruki/115520812816212662">do LLM
+think?</a> (“Betteridge’s law” applies.)
+<ul>
+<li>Jerrad offers related
+<ul>
+<li>http://tom7.org/bovex/badness-0-knuth.pdf</li>
+<li>https://www.youtube.com/watch?v=Y65FRxE7uMc</li>
+<li>Welsh Labs
+https://www.youtube.com/channel/UConVfxXodg78Tzh5nNu85Ew</li>
+</ul></li>
+</ul></li>
+<li>QR Code Alignment Chart <a
+href="https://fosstodon.org/@antonia@zug.network/115394627604763488">Fedi;
+visual humor</a></li>
+<li><a href="https://merveilles.town/@aartaka/115491291680259593">Types
+are useless… at least the way we use them.</a> (fedi) <strong>snap
+link</strong> <strong>TODO</strong></li>
+<li><a
+href="https://better.boston/@scottsthoughts/115406618320308079">#Boston
+area #Coffeeneuring</a></li>
 </ul>
 <hr />
 <h1 id="history-pages-menu">History Pages Menu</h1>

@@ -1346,6 +1346,77 @@ Additional Notes:
 * Earlier this year, [Ack 3.9](https://beyondgrep.com/) extended the  `--not` command flag to work with new in last 12 months `--and` and `--or` flags. These additions let one express order-independant boolean combinations of patterns outside of the RE sub-language, especially helpful with more than two any-order AND.
 * The offline text indexer and search engine that Bill mentioned is [SWISH-E](https://en.wikipedia.org/wiki/SWISH-E), mostly implemented in C but supports a Perl API.
 
+-------------
+
+## Nov 11, 2025 - 
+
+
+### Calendar Observances
+
+
+* **CPAN** "Happy 30th Birthday Comprehensive Perl Archive Network." Oct 26 [Fedi](https://fosstodon.org/@0xKaishakunin@mastodon.social/115441499611759357)
+    *  and [also](https://fosstodon.org/@ferki/115439927808279816) and [also](https://fosstodon.org/@sjn@chaos.social/115437228743526384) 
+    * [Comp.lang.perl.announce](https://groups.google.com/g/comp.lang.perl.announce/c/1qlLHdviZlY/m/hU90ubJHrf4J?pli=1)
+* "**Unix** was born on November 3, 1971." [Fedi "It's FOSS"](https://mastodon.social/@itsfoss/115485641665200017)
+    [fedi](https://infosec.exchange/@david_chisnall/115486270752288949)  
+
+    > David Chisnall (*Now with 50% more sarcasm!*)
+    > @david_chisnall@infosec.exchange
+    > The first release of UNIX was closer to the building of Colossus at Bletchley Park than today.  
+
+* **Y2K38 countdown** [@countdownY2K38@mastodon.social](https://mastodon.social/@countdownY2K38/115489183106518929)  
+
+    > Epochalypse countdown: 
+    > 12 years, 2 months, 15 days, 16 minutes, 6 seconds
+    > ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░ 82.06%
+* 11th hour on 11/11 (1918) — [They attacked knowing truce was coming.](https://n1vux.github.io/articles/11-11-11/output.html); RIP.
+
+
+### Perl topical
+
+* `Net::Random` Deprecated with extreme prejudice [Fedi](https://fosstodon.org/@DrHyde/115522542032189934) [CPAN](https://metacpan.org/pod/Net::Random)
+    -  [MetaData option?](https://github.com/DrHyde/perl-modules-Net-Random/issues/35) 
+    + [CPAN Data::Entropy](https://metacpan.org/dist/Data-Entropy)
+* Perl one-liner to highlight consecutively duplicated words [Fedi](https://fosstodon.org/@linuxgal@techhub.social/115509028657709844)  
+    `perl -pe 's/\b(\w+)\s+\1\b/\e[31m$&\e[0m/gi' gettysburg.txt`
+* **Perl IDE Survey** c/o **Perl Weekly** [Fedi](https://fosstodon.org/@PerlWeeklyNews@mas.to/115484751571557418) [PW 745](https://perlweekly.com/archive/745.html)
+    * also [PW 746](https://perlweekly.com/archive/746.html), [PW 744](https://perlweekly.com/archive/744.html), [PW 743](https://perlweekly.com/archive/743.html)
+    * **Dancer2** 2.0.1 [blog](https://blogs.perl.org/users/jason_a_crome/)
+        * uses [Data::Censor](https://metacpan.org/pod/Data::Censor)
+* What could be more portable than Perl?
+    * **WebPerl**, Perl on WebAssembly [fedi](https://fosstodon.org/@thewhalecc@framapiaf.org/115505820248590659) [webperl](https://thewhale.cc/posts/webperl)
+        * stale, why did who repost?
+        * but rebooting as [ZeroPerl](https://andrews.substack.com/p/zeroperl-sandboxed-perl-with-webassembly) [pt 2](https://andrews.substack.com/p/get-in-loser-were-rewinding-the-stack) [pt 3](https://andrews.substack.com/p/4-mains-or-nothing-at-all) 
+        * (Thanks Ricky!)
+    * **`jperl`** PerlOnJava getting close? [fedi](https://fosstodon.org/@fglock@mastodon.social/115396569680203794) 
+        * [gh](https://github.com/fglock/PerlOnJava) 
+        * GH ReadMe has a WHY section not just a how-to-clone, nice.
+    * (_IIRC, ASP-ASP: ActiveState Perl plugin to MS IIS web server Active Server Pages, which (mostly) ran server-side, could run client-side if client Windows had ASPerl inserted into MS IE browser?._)
+* **SQL-Ledger** updating to Perl 5.40 & Pg 17 [fedi](https://fosstodon.org/@tekki@swiss.social/115372489272843814) [gh](https://github.com/Tekki/sql-ledger) [issue for update](https://github.com/Tekki/sql-ledger/issues/81)
+* `Object::Pad` trialing dynamic type checking for `feature class` 
+    + > provided by the `:Checked` field and sub param attributes:
+    + [FieldAttr::Checked](https://metacpan.org/pod/Object::Pad::FieldAttr::Checked)
+    + [Signature::Attribute::Checked](https://metacpan.org/pod/Signature::Attribute::Checked)
+    + (_see discussion at "Types are useless" below._)
+* Real AI in Perl again:  
+
+    > **FB** **The Perl Community**  
+    > Michael Roberts  
+    > So, long story short, a million years ago (actually thirty; it just *feels* like a million) I was an AI researcher, working with Doug Hofstadter.  
+    > Briefly. Before the money ran out.  
+    > But now my kids are gainfully employed, and something went *click*, and   I'm back at it. What makes this relevant to this group is I'm working in Perl because that's what my brain runs, apparently.  
+    > Anyway, I've implemented Hofstadter's parallel terraced scan in Perl, and it's at Codeberg: https://codeberg.org/Vivtek/AI-TerracedScan  
+    > Not on CPAN yet, not until I've exercised it a little more.  
+
+### Wider software memes
+* Agentic artificial ignorance and security [Fedi](https://fosstodon.org/@Korny@hachyderm.io/115451903675545103); [do LLM think?](https://mastodon.social/@ladyteruki/115520812816212662) ("Betteridge's law" applies.)
+    * Jerrad offers related 
+        * http://tom7.org/bovex/badness-0-knuth.pdf
+        * https://www.youtube.com/watch?v=Y65FRxE7uMc
+        * Welsh Labs https://www.youtube.com/channel/UConVfxXodg78Tzh5nNu85Ew
+* QR Code Alignment Chart [Fedi; visual humor](https://fosstodon.org/@antonia@zug.network/115394627604763488)
+* [Types are useless… at least the way we use them.](https://merveilles.town/@aartaka/115491291680259593) (fedi) **snap link** __TODO__
+* [#Boston area #Coffeeneuring](https://better.boston/@scottsthoughts/115406618320308079)
 
 -------------
 
