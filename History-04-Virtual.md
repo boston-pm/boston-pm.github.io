@@ -1418,6 +1418,10 @@ Additional Notes:
 * [Types are useless… at least the way we use them.](https://merveilles.town/@aartaka/115491291680259593) (fedi) **snap link** __TODO__
 * [#Boston area #Coffeeneuring](https://better.boston/@scottsthoughts/115406618320308079)
 
+### More Perl 
+
+Jerrad submitted a [csv-join script](https://rt.cpan.org/Public/Bug/Display.html?id=171121) to [**`App::CSVUtils`**](https://metacpan.org/pod/App::CSVUtils) using adding Fuzzy Match to the existing Strict match. 
+
 -------------
 
 
