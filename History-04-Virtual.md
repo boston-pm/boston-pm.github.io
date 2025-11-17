@@ -1385,9 +1385,12 @@ Additional Notes:
         * uses [Data::Censor](https://metacpan.org/pod/Data::Censor)
 * What could be more portable than Perl?
     * **WebPerl**, Perl on WebAssembly [fedi](https://fosstodon.org/@thewhalecc@framapiaf.org/115505820248590659) [webperl](https://thewhale.cc/posts/webperl)
-        * stale, why did who repost?
-        * but rebooting as [ZeroPerl](https://andrews.substack.com/p/zeroperl-sandboxed-perl-with-webassembly) [pt 2](https://andrews.substack.com/p/get-in-loser-were-rewinding-the-stack) [pt 3](https://andrews.substack.com/p/4-mains-or-nothing-at-all) 
+        * stale, why did who repost? but 
+    * rebooting as **[ZeroPerl](https://andrews.substack.com/p/zeroperl-sandboxed-perl-with-webassembly)**
+        * [pt 2](https://andrews.substack.com/p/get-in-loser-were-rewinding-the-stack) 
+        * [pt 3](https://andrews.substack.com/p/4-mains-or-nothing-at-all) 
         * (Thanks Ricky!)
+        * ZeroPerl update after meeting: [**Nov.15**](https://andrews.substack.com/p/typescript-x-perl) is now capable of runing **ExifTool** standalone.
     * **`jperl`** PerlOnJava getting close? [fedi](https://fosstodon.org/@fglock@mastodon.social/115396569680203794) 
         * [gh](https://github.com/fglock/PerlOnJava) 
         * GH ReadMe has a WHY section not just a how-to-clone, nice.
