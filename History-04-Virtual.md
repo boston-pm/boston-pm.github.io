@@ -1439,6 +1439,7 @@ Jerrad submitted a [csv-join script](https://rt.cpan.org/Public/Bug/Display.html
     * A 2024 blogpost discussed [deriving SVGs from bitmaps in PDL](https://pdl.perl.org/advent/blog/2024/12/21/image-manip/)
     * Bill also showed [old-school raster mapping with GD](https://ema.arrl.org/field_day/history/tour2023.html) from one of his side-projects.
     * Ricky mentioned [PDF::API2](https://metacpan.org/pod/PDF::API2),[-::Content](https://metacpan.org/pod/PDF::API2::Content) as useful for working with PDFs.
+    * Question of how to do windowing graphics in Perl was asked. IDK if the old Win32::* classes work with modern windows too, used to. The TK interface works for 'portable' applications. Staying with PerlAdvent theme, Bill did a PerlTK application inspired by his Boston.PM "A Magic Number Mystery Tour" for [PerlAdvent 2008-12-12](https://perladvent.org/2008/12/).
 
 -------------
 
