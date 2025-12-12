@@ -1348,7 +1348,7 @@ Additional Notes:
 
 -------------
 
-## Nov 11, 2025 - 
+## Nov 11, 2025 - Happy 30th Birthday CPAN
 
 
 ### Calendar Observances
@@ -1427,6 +1427,20 @@ Jerrad submitted a [csv-join script](https://rt.cpan.org/Public/Bug/Display.html
 
 -------------
 
+## Dec 9th, 2025 - Graphics old and new
+
+* [Fedi Nov 14](https://fosstodon.org/@leonerd/115550323350727016) Paul Evans `@leonerd` "support in #perl extended subroutine signatures for refalias parameters. That is, parameters that act like lexical variables within the function, but which in fact just alias to variables passed in by the caller" in [Sublike](https://metacpan.org/pod/Sublike::Extended#Refalias-Parameters) which provides a preview as "[t]his syntax is compatible with that proposed by PPC0024, which will become available in Perl version 5.43.5."
+* [Fedi](https://ieji.de/@dboehmer/115554830563380338), a workaround to use named Unicode entities in Perl Template Toolkit.
+* Graphics.
+    * We dove into a discussion of Perl raster graphics and SVG, inspired by the [Mandelbrot in Perl](https://benchmarksgame-team.pages.debian.net/benchmarksgame/program/mandelbrot-perl-1.html) item.
+    * We looked at venerable [GD](https://metacpan.org/pod/GD) module API.
+    * Bill had used GD and extended `Graphics::ColorNames` with metallic colors to put tinsel on a &#x1F384; tree in [Perl Advent 2006](https://perladvent.org/2006/11/)
+    * A more recent Perl Advent [2020](https://perladvent.org/2020/2020-12-13.html) re-did drawing Xmas Trees &#x1F384; with SVG, scalable vector graphics.
+    * A 2024 blogpost discussed [deriving SVGs from bitmaps in PDL](https://pdl.perl.org/advent/blog/2024/12/21/image-manip/)
+    * Bill also showed [old-school raster mapping with GD](https://ema.arrl.org/field_day/history/tour2023.html) from one of his side-projects.
+    * Ricky mentioned [PDF::API2](https://metacpan.org/pod/PDF::API2),[-::Content](https://metacpan.org/pod/PDF::API2::Content) as useful for working with PDFs.
+
+-------------
 
 # History Pages Menu
 
