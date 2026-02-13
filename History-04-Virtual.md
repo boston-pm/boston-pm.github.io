@@ -1449,6 +1449,34 @@ Jerrad submitted a [csv-join script](https://rt.cpan.org/Public/Bug/Display.html
 
 Unavailable to Host, travelling, sorry.
 
+
+## Feb 10th, 2026 - Perl news review
+
+(Attending: Bill, Jerrad, Chuba, Ricky)
+
+* [Perl Weekly 759](https://perlweekly.com/archive/759.html) one of many since we last met
+    * new Beautiful Perl Features series started; Async APIs
+* *#perl* on Mastodon
+    * Usually, our January meeting would have reviewed highlights of the [Perl Advent Calendar](https://perladvent.org/2025/), but it didn't happen. Here's two, via Mastodon `#perl` messages.
+        * [commentary](https://fosstodon.org/@oalders/115746956983693653) introduces [Perl Advent 19](https://perladvent.org/2025/2025-12-19.html) which introduces a new podcast ["The Underbar"](https://underbar.cpan.io/) on Perl History, old and new.
+        * [SUSE uses Perl for openQA and Open Build Service](https://fosstodon.org/@oalders/115753191983230915) [PerlAdvent](https://perladvent.org/2025/2025-12-20.html)
+    * The non-joke but harmlessly helpful ["install" module](https://fosstodon.org/@fastmail@mastodon.social/116015930766982969) [CPAN](https://metacpan.org/pod/install)
+    * [PEvans require support level](https://fosstodon.org/@leonerd/115831992394417098)
+    * [OpenBSD to ship Perl 5.42.0](https://fosstodon.org/@AFresh1@bsd.network/115792671718118278)
+    * [Dan Sugalski on on "artisanal software"](https://fosstodon.org/@wordshaper@weatherishappening.network/115894068091580644)
+    * [Hash::Util::Merge](https://fosstodon.org/@rrwo@infosec.exchange/116030109549944719) [CPAN](https://metacpan.org/release/RRWO/Hash-Util-Merge-v0.3.0/view/lib/Hash/Util/Merge.pm)
+    * [try syntax whinging](https://fosstodon.org/@rrwo@infosec.exchange/116023908533180120)
+    * PEvans [Future](https://metacpan.org/pod/Future) [::XS](https://metacpan.org/release/PEVANS/Future-XS-0.15) memory leak in XS, [a debug thread](https://fosstodon.org/@leonerd/115864979263933045)
+* TobyInk's [MooseX XS accelerators](https://toby.ink/blog/2026/01/17/how-can-we-make-this-moose-faster/) and [Marlin faster Mo*](https://toby.ink/blog/2026/01/11/marlin-racing/) 
+* [Graphic::Tool::Color update](https://blogs.perl.org/users/lichtkind/2025/08/architecture-of-gtc-18.html) provides [colorspace conversions](https://metacpan.org/pod/Graphics::Toolkit::Color::Space), [blog](https://hexmos.com/freedevtools/man-pages/library-functions/string-examination/graphics-toolkit-color-space-hub/) 
+    * which inspired discussion of Pantone vs [Freetone](https://www.figma.com/community/file/1168909896292427180/freetone), [HD](https://hackaday.com/2022/11/16/interview-stuart-semple-on-pantone-freetone-colour-and-open-source/), [Figma](https://en.wikipedia.org/wiki/Figma), [RAL euro color standards](https://en.wikipedia.org/wiki/RAL_colour_standard) which are more sane than Pantone anyway
+* Fastmail endorses Perl 5 stability, donates [Olaf](https://fosstodon.org/@oalders/116013484211603433), [Fastmail](https://fosstodon.org/@fastmail@mastodon.social/116015930766982969), 
+* The various [DataPath solutions](https://metacpan.org/search?q=dpath) to the Hash auto-vivification problem, providing getter/setter for nested hashes; including — 
+    - [`Data::Dpath`](https://metacpan.org/pod/Data::DPath) 
+    - [`Hash::Path`](https://metacpan.org/pod/Hash::Path) 
+    - [`Data::PathSimple`](https://metacpan.org/pod/Data::PathSimple) 
+    - and the [**PPBC0021**](https://github.com/Perl/PPCs/blob/main/ppcs/ppc0021-optional-chaining-operator.md) **"Optional Chaining"** or safe deref sane syntax, which was proposed [back in 2010](https://www.nntp.perl.org/group/perl.perl5.porters/2010/11/msg165931.html) , was worked on in 2024, but ... hasn't happened?
+
 -------------
 
 # History Pages Menu

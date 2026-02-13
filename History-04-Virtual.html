@@ -349,6 +349,9 @@ old and new</a></li>
 <ul>
 <li><a href="#jan-13th-2026---cancel"
 id="toc-jan-13th-2026---cancel">Jan 13th, 2026 - CANCEL</a></li>
+<li><a href="#feb-10th-2026---perl-news-review"
+id="toc-feb-10th-2026---perl-news-review">Feb 10th, 2026 - Perl news
+review</a></li>
 </ul></li>
 <li><a href="#history-pages-menu" id="toc-history-pages-menu">History
 Pages Menu</a></li>
@@ -2928,6 +2931,96 @@ href="https://perladvent.org/2008/12/">PerlAdvent 2008-12-12</a>.</li>
 <h1 id="section-6">2026</h1>
 <h2 id="jan-13th-2026---cancel">Jan 13th, 2026 - CANCEL</h2>
 <p>Unavailable to Host, travelling, sorry.</p>
+<h2 id="feb-10th-2026---perl-news-review">Feb 10th, 2026 - Perl news
+review</h2>
+<p>(Attending: Bill, Jerrad, Chuba, Ricky)</p>
+<ul>
+<li><a href="https://perlweekly.com/archive/759.html">Perl Weekly
+759</a> one of many since we last met
+<ul>
+<li>new Beautiful Perl Features series started; Async APIs</li>
+</ul></li>
+<li><em>#perl</em> on Mastodon
+<ul>
+<li>Usually, our January meeting would have reviewed highlights of the
+<a href="https://perladvent.org/2025/">Perl Advent Calendar</a>, but it
+didn’t happen. Here’s two, via Mastodon <code>#perl</code> messages.
+<ul>
+<li><a
+href="https://fosstodon.org/@oalders/115746956983693653">commentary</a>
+introduces <a href="https://perladvent.org/2025/2025-12-19.html">Perl
+Advent 19</a> which introduces a new podcast <a
+href="https://underbar.cpan.io/">“The Underbar”</a> on Perl History, old
+and new.</li>
+<li><a href="https://fosstodon.org/@oalders/115753191983230915">SUSE
+uses Perl for openQA and Open Build Service</a> <a
+href="https://perladvent.org/2025/2025-12-20.html">PerlAdvent</a></li>
+</ul></li>
+<li>The non-joke but harmlessly helpful <a
+href="https://fosstodon.org/@fastmail@mastodon.social/116015930766982969">“install”
+module</a> <a href="https://metacpan.org/pod/install">CPAN</a></li>
+<li><a href="https://fosstodon.org/@leonerd/115831992394417098">PEvans
+require support level</a></li>
+<li><a
+href="https://fosstodon.org/@AFresh1@bsd.network/115792671718118278">OpenBSD
+to ship Perl 5.42.0</a></li>
+<li><a
+href="https://fosstodon.org/@wordshaper@weatherishappening.network/115894068091580644">Dan
+Sugalski on on “artisanal software”</a></li>
+<li><a
+href="https://fosstodon.org/@rrwo@infosec.exchange/116030109549944719">Hash::Util::Merge</a>
+<a
+href="https://metacpan.org/release/RRWO/Hash-Util-Merge-v0.3.0/view/lib/Hash/Util/Merge.pm">CPAN</a></li>
+<li><a
+href="https://fosstodon.org/@rrwo@infosec.exchange/116023908533180120">try
+syntax whinging</a></li>
+<li>PEvans <a href="https://metacpan.org/pod/Future">Future</a> <a
+href="https://metacpan.org/release/PEVANS/Future-XS-0.15">::XS</a>
+memory leak in XS, <a
+href="https://fosstodon.org/@leonerd/115864979263933045">a debug
+thread</a></li>
+</ul></li>
+<li>TobyInk’s <a
+href="https://toby.ink/blog/2026/01/17/how-can-we-make-this-moose-faster/">MooseX
+XS accelerators</a> and <a
+href="https://toby.ink/blog/2026/01/11/marlin-racing/">Marlin faster
+Mo*</a></li>
+<li><a
+href="https://blogs.perl.org/users/lichtkind/2025/08/architecture-of-gtc-18.html">Graphic::Tool::Color
+update</a> provides <a
+href="https://metacpan.org/pod/Graphics::Toolkit::Color::Space">colorspace
+conversions</a>, <a
+href="https://hexmos.com/freedevtools/man-pages/library-functions/string-examination/graphics-toolkit-color-space-hub/">blog</a>
+<ul>
+<li>which inspired discussion of Pantone vs <a
+href="https://www.figma.com/community/file/1168909896292427180/freetone">Freetone</a>,
+<a
+href="https://hackaday.com/2022/11/16/interview-stuart-semple-on-pantone-freetone-colour-and-open-source/">HD</a>,
+<a href="https://en.wikipedia.org/wiki/Figma">Figma</a>, <a
+href="https://en.wikipedia.org/wiki/RAL_colour_standard">RAL euro color
+standards</a> which are more sane than Pantone anyway</li>
+</ul></li>
+<li>Fastmail endorses Perl 5 stability, donates <a
+href="https://fosstodon.org/@oalders/116013484211603433">Olaf</a>, <a
+href="https://fosstodon.org/@fastmail@mastodon.social/116015930766982969">Fastmail</a>,</li>
+<li>The various <a href="https://metacpan.org/search?q=dpath">DataPath
+solutions</a> to the Hash auto-vivification problem, providing
+getter/setter for nested hashes; including —
+<ul>
+<li><a
+href="https://metacpan.org/pod/Data::DPath"><code>Data::Dpath</code></a></li>
+<li><a
+href="https://metacpan.org/pod/Hash::Path"><code>Hash::Path</code></a></li>
+<li><a
+href="https://metacpan.org/pod/Data::PathSimple"><code>Data::PathSimple</code></a></li>
+<li>and the <a
+href="https://github.com/Perl/PPCs/blob/main/ppcs/ppc0021-optional-chaining-operator.md"><strong>PPBC0021</strong></a>
+<strong>“Optional Chaining”</strong> or safe deref sane syntax, which
+was proposed <a
+href="https://www.nntp.perl.org/group/perl.perl5.porters/2010/11/msg165931.html">back
+in 2010</a> , was worked on in 2024, but … hasn’t happened?</li>
+</ul></li>
+</ul>
 <hr />
 <h1 id="history-pages-menu">History Pages Menu</h1>
 <ul>
