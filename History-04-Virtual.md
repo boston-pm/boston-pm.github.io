@@ -1484,6 +1484,7 @@ Unavailable to Host, travelling, sorry.
 
 ### Perl 5.42.1 released, let's install it
 
+* [PerlDelta](https://metacpan.org/release/SHAY/perl-5.42.1/view/pod/perldelta.pod) reports several interesting bug fixes.
 * Install perl-5.42.1
 
 ```
@@ -1532,8 +1533,10 @@ $ perlbrew exec --with perl-5.42.0,perl-5.42.1 perl bin/dst.pl
 ((no deviation detected))
 ```
 
-### List to JSON
 
+### Other Recent Perl news on the socials
+
+* Oneliner to [convert list to JSON](https://fosstodon.org/@wmd@chaos.social/116119548632976304)
 ```
 $ ls schedule* | perl -MJSON -e 'print JSON->new->allow_nonref->pretty->encode( [map({chomp $_; $_} <STDIN>)] );'
 [
@@ -1544,8 +1547,18 @@ $ ls schedule* | perl -MJSON -e 'print JSON->new->allow_nonref->pretty->encode( 
    "schedule.tsv",
    "schedule.xml"
 ]
-
 ```
+* [`Container::Builder`](https://fosstodon.org/@adriaan@infosec.exchange/116133917294777460) "like googles distroless containers"
+* Assuming an API value received is a scalar without checking can be trouble; browsers sometimes accept N > 1 languages, in which case CGI stringifies to `ARRAY(...)` which truncates to `AR` thus Arabic. ([Fedi](https://fosstodon.org/@EndlessMason@hachyderm.io/116153531550210321))
+* CPAN Security team reported [CPANSec 2025 Year in Review](https://security.metacpan.org/2026/01/31/CPANSec-Retrospective-2025.html)
+* [Beatiful Perl](https://dev.to/damil/series/34753) series of Blog posts on Dev.To
+* PerlWeekly [760](https://perlweekly.com/archive/760.html) [761](https://perlweekly.com/archive/761.html) [762](https://perlweekly.com/archive/762.html) [763](https://perlweekly.com/archive/763.html) 
+    * selected highlights: Asynchronous modules growing; PAGI; TPRC 2026 Greenville; WebSockets; Perl/Plack Middleware for Emulating An Apache HTTP Server.
+* [The Underbar](https://underbar.cpan.io/)  a new-ish Podcast about Perl toolchain & community history by BooK
+* Someone gamified metaCPAN with a [popularity "leaderboard"](https://metacpan.org/favorite/leaderboard).
+* [DFF noted for Document Freedom Day that I18N helpers exist for C, Perl, etc](https://fosstodon.org/@dff/116155497951965284) 
+
+
 
 ### Randal Schwartz (Merlin) comments
 
