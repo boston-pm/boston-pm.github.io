@@ -100,13 +100,13 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill. (Or something you'ld like discussed, I can add it to agenda.)
 
 
-## March 10th, 2026 - 7.30 pm EST topic start (7.00 pm EST &#127482;&#127480; gathering chatter)
+## April 14th, 2026 - 7.30 pm EDT (UTC-4) topic start (7.00 pm EDT &#127482;&#127480; gathering chatter)
 
 **Second** Tuesday
 
 We'll discuss whatever Perl, FLOSS topics.
 
-[Mobilizon event](https://mobilizon.us/events/a1d656bd-72f9-494e-8bb2-e6c77eb1f042) (includes Jit.si meeting link)
+[Mobilizon event](https://mobilizon.us/events/b58e45ab-e982-4647-91a3-77fcb764c2dc) (includes Jit.si meeting link)
 [(list)](https://mobilizon.us/search?search=Boston+Perl)
 
 

@@ -1477,6 +1477,103 @@ Unavailable to Host, travelling, sorry.
     - [`Data::PathSimple`](https://metacpan.org/pod/Data::PathSimple) 
     - and the [**PPBC0021**](https://github.com/Perl/PPCs/blob/main/ppcs/ppc0021-optional-chaining-operator.md) **"Optional Chaining"** or safe deref sane syntax, which was proposed [back in 2010](https://www.nntp.perl.org/group/perl.perl5.porters/2010/11/msg165931.html) , was worked on in 2024, but ... hasn't happened?
 
+
+## Mar 10th, 2026 - Perl news review
+
+* Bill, Ricky, Randal, Aram, Chuba
+
+### Perl 5.42.1 released, let's install it
+
+* Install perl-5.42.1
+
+```
+$ time nice perlbrew install --64int --64all --ld 5.42.1
+
+Fetching perl 5.42.1 as /home/wdr/perl5/perlbrew/dists/perl-5.42.1.tar.gz
+Download http://www.cpan.org/src/5.0/perl-5.42.1.tar.gz to /home/wdr/perl5/perlbrew/dists/perl-5.42.1.tar.gz
+Installing /home/wdr/perl5/perlbrew/build/perl-5.42.1/perl-5.42.1 into ~/perl5/perlbrew/perls/perl-5.42.1
+
+This could take a while. You can run the following command on another shell to track the status:
+
+  tail -f ~/perl5/perlbrew/build.perl-5.42.1.log
+
+perl-5.42.1 is successfully installed.
+
+real	17m2.209s
+user	13m9.316s
+sys	1m1.472s
+```
+
+* test bugfix 1
+
+```
+$  perlbrew exec --with perl-5.42.0,perl-5.42.1 perl -cE 'for my ($k, $v) ($obj->items) {}'
+perl-5.42.0
+==========
+Command terminated with non-zero status.
+Command [perl -cE 'for my ($k, $v) ($obj->items) {}'] terminated with exit code 0 ($? = 139) under the following perl environment:
+Current perl:
+  Name: perl-5.42.0 
+  ...
+  Compiled at: Sep  8 2025 19:14:25
+
+perlbrew: ...
+
+
+perl-5.42.1
+==========
+-e syntax OK
+```
+
+* test bugfix 2
+
+```
+$ perlbrew exec --with perl-5.42.0,perl-5.42.1 perl bin/dst.pl
+((no deviation detected))
+```
+
+### List to JSON
+
+```
+$ ls schedule* | perl -MJSON -e 'print JSON->new->allow_nonref->pretty->encode( [map({chomp $_; $_} <STDIN>)] );'
+[
+   "schedule",
+   "schedule2.csv",
+   "schedule3.csv",
+   "schedule.csv",
+   "schedule.tsv",
+   "schedule.xml"
+]
+
+```
+
+### Randal Schwartz (Merlin) comments
+
+* Searched in [O'Reilly](https://www.oreilly.com/) for [Schwartzian Transform](https://www.oreilly.com/search/?q=Schwartzian&rows=100); only 2 Perl books and about 10 Python books, they've adopted the scheme!  (C++20 mentioned `<=>` SpaceShip operator by name.)
+    * _editorial comments in post:_ 
+        - _my search **on** OReilly.com has a more even mix of Java, Perl, Python, Ruby, including Perl Cookbook & PBP on page 1, when I cut it to Schwartzian; the others may be matching only Transform? And some are other publishers' books e.g. Manning. _
+        - _AI-free [Google &udm=14 search](https://www.google.com/search?q=%22Schwartzian%20Transform%22&udm=14) is still Perl-forward_
+        - _and [restricted to OREILLY.COM](https://www.google.com/search?q=%22Schwartzian%22+site:oreilly.com/&udm=14) finds 2×Mastering Algorithms with Perl, Intermediate Perl (4×2d, 2×1st, Errata), 3×Learning PORM, before wandering into Scala Idioms, TypeScript Workbook, and no Python?!_
+        -  _— Bill_
+* Randal found his 9-track mag-tape mail-archive that has email that launched the Camel Book.
+
+* Randal spotted his 'Camel Book' cover posted on the wall behind desk on show 'IT Crowd', by the FSM. [FB post](https://www.facebook.com/merlyn/posts/pfbid0CbvHdAfWfqrCuwSLuGGCL7P4WLhANzyEpxh4NeWK6CskgcaMeH3szRfpCHzCZJjwl) S1E1 @ 3:30 
+
+* Just today a click bait video dropped in the 'Is Perl Dead?' genre [Randal FB](https://www.facebook.com/merlyn/posts/pfbid02rwDZrd279e1TVUsgxLGPL2adMmjAm69gLxFxEfK3SeNsCMLt37pJ8AtBArdjzdmFl) [YT "Why Perl Quietly Disappeared"](https://www.youtube.com/watch?v=RCHhAEjEjKw) that's at least partly right. Randal commented that the anonymous hacker who started the JAPH sig, having used just another `${group}` hacker in every group, and got bored of it so started writing programs to generate, 2 years ahead of Obfuscated Perl.
+
+* B.C. has declared that after recent DST transition the new GMT offset is permanent and for them PST. More collisions in TZdatabase.
+
+### Ricky comments
+
+* notes there are THREE ways to do multiple and/or local Perl
+    * [plenv](https://github.com/tokuhirom/plenv)
+    * [perlbrew](https://perlbrew.pl/)
+    * [Perl::Build](https://metacpan.org/pod/Perl::Build)
+    * Also, for Windows, [Strawberry Perl](https://strawberryperl.com/) as well as [Active State](https://www.activestate.com/platform/supported-languages/perl/).
+
+(_with any of these, `locallib` is quie useful.-Bill_)
+
+
 -------------
 
 # History Pages Menu

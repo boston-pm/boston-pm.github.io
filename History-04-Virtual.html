@@ -352,6 +352,9 @@ id="toc-jan-13th-2026---cancel">Jan 13th, 2026 - CANCEL</a></li>
 <li><a href="#feb-10th-2026---perl-news-review"
 id="toc-feb-10th-2026---perl-news-review">Feb 10th, 2026 - Perl news
 review</a></li>
+<li><a href="#mar-10th-2026---perl-news-review"
+id="toc-mar-10th-2026---perl-news-review">Mar 10th, 2026 - Perl news
+review</a></li>
 </ul></li>
 <li><a href="#history-pages-menu" id="toc-history-pages-menu">History
 Pages Menu</a></li>
@@ -3021,6 +3024,127 @@ href="https://www.nntp.perl.org/group/perl.perl5.porters/2010/11/msg165931.html"
 in 2010</a> , was worked on in 2024, but … hasn’t happened?</li>
 </ul></li>
 </ul>
+<h2 id="mar-10th-2026---perl-news-review">Mar 10th, 2026 - Perl news
+review</h2>
+<ul>
+<li>Bill, Ricky, Randal, Aram, Chuba</li>
+</ul>
+<h3 id="perl-5.42.1-released-lets-install-it">Perl 5.42.1 released,
+let’s install it</h3>
+<ul>
+<li>Install perl-5.42.1</li>
+</ul>
+<pre><code>$ time nice perlbrew install --64int --64all --ld 5.42.1
+
+Fetching perl 5.42.1 as /home/wdr/perl5/perlbrew/dists/perl-5.42.1.tar.gz
+Download http://www.cpan.org/src/5.0/perl-5.42.1.tar.gz to /home/wdr/perl5/perlbrew/dists/perl-5.42.1.tar.gz
+Installing /home/wdr/perl5/perlbrew/build/perl-5.42.1/perl-5.42.1 into ~/perl5/perlbrew/perls/perl-5.42.1
+
+This could take a while. You can run the following command on another shell to track the status:
+
+  tail -f ~/perl5/perlbrew/build.perl-5.42.1.log
+
+perl-5.42.1 is successfully installed.
+
+real    17m2.209s
+user    13m9.316s
+sys 1m1.472s</code></pre>
+<ul>
+<li>test bugfix 1</li>
+</ul>
+<pre><code>$  perlbrew exec --with perl-5.42.0,perl-5.42.1 perl -cE &#39;for my ($k, $v) ($obj-&gt;items) {}&#39;
+perl-5.42.0
+==========
+Command terminated with non-zero status.
+Command [perl -cE &#39;for my ($k, $v) ($obj-&gt;items) {}&#39;] terminated with exit code 0 ($? = 139) under the following perl environment:
+Current perl:
+  Name: perl-5.42.0 
+  ...
+  Compiled at: Sep  8 2025 19:14:25
+
+perlbrew: ...
+
+
+perl-5.42.1
+==========
+-e syntax OK</code></pre>
+<ul>
+<li>test bugfix 2</li>
+</ul>
+<pre><code>$ perlbrew exec --with perl-5.42.0,perl-5.42.1 perl bin/dst.pl
+((no deviation detected))</code></pre>
+<h3 id="list-to-json">List to JSON</h3>
+<pre><code>$ ls schedule* | perl -MJSON -e &#39;print JSON-&gt;new-&gt;allow_nonref-&gt;pretty-&gt;encode( [map({chomp $_; $_} &lt;STDIN&gt;)] );&#39;
+[
+   &quot;schedule&quot;,
+   &quot;schedule2.csv&quot;,
+   &quot;schedule3.csv&quot;,
+   &quot;schedule.csv&quot;,
+   &quot;schedule.tsv&quot;,
+   &quot;schedule.xml&quot;
+]
+</code></pre>
+<h3 id="randal-schwartz-merlin-comments">Randal Schwartz (Merlin)
+comments</h3>
+<ul>
+<li><p>Searched in <a href="https://www.oreilly.com/">O’Reilly</a> for
+<a
+href="https://www.oreilly.com/search/?q=Schwartzian&amp;rows=100">Schwartzian
+Transform</a>; only 2 Perl books and about 10 Python books, they’ve
+adopted the scheme! (C++20 mentioned <code>&lt;=&gt;</code> SpaceShip
+operator by name.)</p>
+<ul>
+<li><em>editorial comments in post:</em>
+<ul>
+<li><em>my search <strong>on</strong> OReilly.com has a more even mix of
+Java, Perl, Python, Ruby, including Perl Cookbook &amp; PBP on page 1,
+when I cut it to Schwartzian; the others may be matching only Transform?
+And some are other publishers’ books e.g. Manning. </em></li>
+<li><em>AI-free <a
+href="https://www.google.com/search?q=%22Schwartzian%20Transform%22&amp;udm=14">Google
+&amp;udm=14 search</a> is still Perl-forward</em></li>
+<li><em>and <a
+href="https://www.google.com/search?q=%22Schwartzian%22+site:oreilly.com/&amp;udm=14">restricted
+to OREILLY.COM</a> finds 2×Mastering Algorithms with Perl, Intermediate
+Perl (4×2d, 2×1st, Errata), 3×Learning PORM, before wandering into Scala
+Idioms, TypeScript Workbook, and no Python?!</em></li>
+<li><em>— Bill</em></li>
+</ul></li>
+</ul></li>
+<li><p>Randal found his 9-track mag-tape mail-archive that has email
+that launched the Camel Book.</p></li>
+<li><p>Randal spotted his ‘Camel Book’ cover posted on the wall behind
+desk on show ‘IT Crowd’, by the FSM. <a
+href="https://www.facebook.com/merlyn/posts/pfbid0CbvHdAfWfqrCuwSLuGGCL7P4WLhANzyEpxh4NeWK6CskgcaMeH3szRfpCHzCZJjwl">FB
+post</a> S1E1 @ 3:30</p></li>
+<li><p>Just today a click bait video dropped in the ‘Is Perl Dead?’
+genre <a
+href="https://www.facebook.com/merlyn/posts/pfbid02rwDZrd279e1TVUsgxLGPL2adMmjAm69gLxFxEfK3SeNsCMLt37pJ8AtBArdjzdmFl">Randal
+FB</a> <a href="https://www.youtube.com/watch?v=RCHhAEjEjKw">YT “Why
+Perl Quietly Disappeared”</a> that’s at least partly right. Randal
+commented that the anonymous hacker who started the JAPH sig, having
+used just another <code>${group}</code> hacker in every group, and got
+bored of it so started writing programs to generate, 2 years ahead of
+Obfuscated Perl.</p></li>
+<li><p>B.C. has declared that after recent DST transition the new GMT
+offset is permanent and for them PST. More collisions in
+TZdatabase.</p></li>
+</ul>
+<h3 id="ricky-comments">Ricky comments</h3>
+<ul>
+<li>notes there are THREE ways to do multiple and/or local Perl
+<ul>
+<li><a href="https://github.com/tokuhirom/plenv">plenv</a></li>
+<li><a href="https://perlbrew.pl/">perlbrew</a></li>
+<li><a href="https://metacpan.org/pod/Perl::Build">Perl::Build</a></li>
+<li>Also, for Windows, <a href="https://strawberryperl.com/">Strawberry
+Perl</a> as well as <a
+href="https://www.activestate.com/platform/supported-languages/perl/">Active
+State</a>.</li>
+</ul></li>
+</ul>
+<p>(<em>with any of these, <code>locallib</code> is quie
+useful.-Bill</em>)</p>
 <hr />
 <h1 id="history-pages-menu">History Pages Menu</h1>
 <ul>
