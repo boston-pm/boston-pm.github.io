@@ -1477,6 +1477,7 @@ Unavailable to Host, travelling, sorry.
     - [`Data::PathSimple`](https://metacpan.org/pod/Data::PathSimple) 
     - and the [**PPBC0021**](https://github.com/Perl/PPCs/blob/main/ppcs/ppc0021-optional-chaining-operator.md) **"Optional Chaining"** or safe deref sane syntax, which was proposed [back in 2010](https://www.nntp.perl.org/group/perl.perl5.porters/2010/11/msg165931.html) , was worked on in 2024, but ... hasn't happened?
 
+-----
 
 ## Mar 10th, 2026 - Perl news review
 
@@ -1586,8 +1587,230 @@ $ ls schedule* | perl -MJSON -e 'print JSON->new->allow_nonref->pretty->encode( 
 
 (_with any of these, `locallib` is quie useful.-Bill_)
 
+----------
 
--------------
+## April 14th, 2026 - back to word puzzles; and Perl news
+
+* Bill; Matthew P.; Jerrad; Ricky; Gene B.; Chuba.
+
+
+### Most Alphabetized Word
+
+aka most Consecutive alphabetical-sequence letters
+
+On [A Problem Squared](https://a-problem-squared.fandom.com/wiki/A_Problem_Squared_Wiki) [Eps. 132](https://bsky.app/profile/aproblemsquared.bsky.social/post/3mjecz4pn552x) out this week, they (are) ask(ed)
+
+> Are there any English words with four letters in alphabetical order?
+
+and answer with "bad Python code". Let's answer it with good Perl code!
+
+They apparently meant in **adjacent** alphabetical order.
+
+(Searching for adjacent letters in a word such that it's a non-decreasing sequence alphabetically would be harder with REs and run slower?)
+
+[abcd.pl](scripts/abcd.pl)
+
+
+```
+# abcd.pl
+# On A Problem Squared Eps. 132 out this week, they (are) ask(ed)
+# > Are there any English words with four letters in alphabetical order?
+# https://a-problem-squared.fandom.com/wiki/A_Problem_Squared_Wiki 
+# https://bsky.app/profile/aproblemsquared.bsky.social/post/3mjecz4pn552x
+# and answer with "bad Python code". 
+# Let's answer it with good Perl code!
+
+use strict;
+use warnings;
+use 5.040;
+
+my @letters = ( "a" .. "z" );
+my $alphabet = join(q(),  @letters);
+say "'$alphabet'";
+
+
+my $len = 4;
+my @sequences = map { substr $alphabet, $_, $len } 0..($#letters - $len);
+# say for @sequences;
+my $pat = join q( | ), @sequences;
+$pat = qr/ $pat /ix;
+
+say $pat;
+
+# template to read lines from CLI args like `-nE` from `perldoc continue` , `perldoc eof`
+while (<>) {
+    #### redo always comes here
+    chop while m{[\r\n]$}; # chomp respects $/ but Internet files have CRLF on POSIX systems ...
+    say "$ARGV:$.:\t$&:\t'$_'" if $_ =~ $pat; 
+} continue {
+    #### next always comes here
+    # do_something_else;
+    # make $. correct for multiple files in @ARGV
+    close ARGV and say "" if eof;  # Not eof()!
+    # then back to the top to re-check EXPR
+}
+#### last always comes here
+```
+
+* [Matt's answer](https://bsky.app/profile/aproblemsquared.bsky.social/post/3mjecza2ha62t)
+    ![list of words containing rstu, mnop, stuv](https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:7l7b6rl3tbltjobxgejsxqwf/bafkreihz77xs6stlacrqxtm4ahcmi3ivymhr2aiycnvawkvu6bbevknici)
+* [Bill's additional](https://bsky.app/profile/bill-n1vux.bsky.social/post/3mjfbrevqys2w)
+
+> larger puzzlers' dict files include just a couple more which are perhaps quite appropriate:  
+  `enable1: superstud, superstuds`  
+  `words_alpha, moby-single: superstuff`  
+> (found using clean Perl &#x1f42B; code rather than the traditional bad Python &#x1F40D;. 😉)
+> (FWIW, this podcast is already top hit for "insistuvree".)
+
+* **POSTSCRIPT**: Jerrad really wanted to explore letters adjacent in the word but only in sequence in the alphabet. Using the [new-ish infix cascade `le`](https://perldoc.perl.org/perlop#Operator-Precedence-and-Associativity) would work if I was committed to a single length e.g. 4: `@abcd=split q(), q(bkqy); say q(yes) if $abcd[0] le $abcd[1] le $abcd[2] le $abcd[3];`
+* For variable length, and avoiding `eval`, to avoid coding explict FORTRAN FOR loops, will need [`List::Util reduce`](https://metacpan.org/pod/List::Util#reduce), [`List::MoreUtils slide`](https://metacpan.org/pod/List::MoreUtils#slide-BLOCK-LIST) or similar; but it is indeed slower than **re** matching of precise **abcd**-ish subsequence.
+    * 4 letters per `abcd.pl` above, all dicts: 1.4s
+    * 4 letters pairwise non-descending (`le`), all dicts: 10s , 271k (repeated) entries
+    * 7 ditto, 7.8s, 356 entries (incl. repeats between dicts)
+    * 8 ditto, 6.3s, 9 entries
+        * **Chan<u>cellorsv</u>ille** (both US + UK files), which is non-descending but **not **strictly increasing
+        * botanical and medical greco-latin (5 in `words_alpha`, 2 repeated in Moby 354k single)
+            * of which two are **strictly increasing**, one of which is a whole word
+            * <u>aegilops</u> 
+            * bron<u>chiloquy</u>
+    * of the 356 repeating entries for 7 in non-descending order, the following are full words (with the number of dictionary files containing each):
+        * `time perl -M List::MoreUtils=slide -MList::Util=reduce -nlE 'BEGIN {our $len=7;} our $len; chop while m{[\r\n]$}; next if /\W/; my $line=lc $_; my $n=length $line; for (map { substr $line,$_,$len} 0..($n-$len)){ @abcd=split q(), $_; say "$ARGV: $_ $line" if reduce {$a && $b} 1, slide {$a le $b} @abcd;} close ARGV if eof;' $dicts   | perl -lanE 'say $F[2] if length($F[1]) == length($F[2])'  | sort | uniq -c`
+        * 1 [Adelops](https://en.wiktionary.org/wiki/Adelops) **†**
+        * 2 [alloquy](https://en.wiktionary.org/wiki/alloquy)
+        * 3 [beefily](https://en.wiktionary.org/wiki/beefily)
+        * 2 [begorry](https://www.merriam-webster.com/dictionary/begorra) = _begorra(h)?_
+        * 2 [belloot](https://www.merriam-webster.com/dictionary/belote) = _belote_
+        * 5 [**billowy**](https://www.merriam-webster.com/dictionary/billowy)
+        * 2 [deglory](https://www.merriam-webster.com/dictionary/deglorify) **†**
+        * 2 [Egilops](https://www.merriam-webster.com/dictionary/aegilops) **†**   = _Ægilops, simplified_  
+             **†** *strictly increasing*
+
+
+### Dev Release
+
+[Mar 20](https://fosstodon.org/@eric_herman@mas.to/116262147462095731) **Perl 5.43.9** Dev release
+
+* [msg](https://www.nntp.perl.org/group/perl.perl5.porters/2026/03/msg270813.html)
+* [perldelta](https://perldoc.perl.org/5.43.9/perldelta)
+    * **Enhanced operation of regular expression patterns under `/xx`**
+        Experimentally, the `/xx` pattern modifier can allow bracketed character classes (e.g., `[a-zA-Z]` to extend across multiple lines and to contain comments, and to warn you of potential cases where a portion of a pattern inadvertently has been treated as a comment instead of what you intended. This behavior is enabled by use feature `"enhanced_xx"`. See [`"/x and /xx"` in `perlre`](https://perldoc.perl.org/5.43.9/perlre#/x-and-/xx).
+    * **Performance Enhancements**
+        Populating a hash from a list of key/value pairs, when the keys are constant string operands known at compile time, is commonly now faster. [GH #24228]
+    * **Bug Fixes** (2 in `class`)
+
+### Noted
+
+* [**CPAN Author’s Guide to Random Data for Security**](https://security.metacpan.org/docs/guides/random-data-for-security.html)
+    * and a Perl-Critic policy to match! [PCPSRBFH 011](https://metacpan.org/release/RRWO/Perl-Critic-Policy-Security-RandBytesFromHash-v0.1.1)
+
+* **Summarising a Month of Git Activity with Perl** (and a Little Help from AI)
+    * [Perl Hacks - (Dave Cross aka `davorg`)](https://perlhacks.com/2026/04/summarising-a-month-of-git-activity-with-perl-and-a-little-help-from-ai/)
+
+* `Sort::DJB`
+
+    FB Perl Programmers  
+    Marian Marinov  
+    I have just released `Sort::DJB`. This module implements [Daniel J. Bernstein](https://en.wikipedia.org/wiki/Daniel_J._Bernstein)'s [djbsort](https://sorting.cr.yp.to/) bitonic sorting networks.  
+    From my initial benchmarks, this looks like the fastest sorting method in Perl.  
+    Please tell me if I'm on the correct path
+
+    - [GH](https://github.com/hackman/Sort-DJB)
+    - comment: the Pure Perl (PP) fallback will _not_ be safe for cryptological use. Does the XS version call DJB's lib or re-implement?
+
+
+* `DBD::SimpleMock` 0.03
+    - [CPAN](https://metacpan.org/dist/SimpleMock) for DBD
+    - [GH ReadMe](https://github.com/cliveholloway/perl_simplemock)
+    - [POD](https://metacpan.org/pod/SimpleMock)
+
+### 2026 review of Programming Perl 2001 
+
+[Programming Perl by Larry Wall et al. by Larry Wall, Tom Christiansen, Jon Orwant ( ★★★★★ ) | 2026-04-06 &#x1F4D5;](https://stevengharms.com/books/2026-04-06-programming-perl-by-larry-wall/)
+via [Steven G Harms](https://fosstodon.org/@sgharms@techhub.social) etc.
+
+### Highlights from Fediverse #Perl posts
+
+* Apr 6 [**Writing Maintainable Perl: Breaking the "Write-Only" Stereotype**](https://slicker.me/perl/maintainable-perl.html) [discuss lemmy](https://lemmy.world/post/45233118)
+* Mar 30 `Douglas J Hunley @hunleyd` [**#Perl and DBI hashref keys case-sensitive**](https://fluca1978.github.io/2026/03/23/PerlDBICaseSensitiveColumns.html) `#postgresql`
+* Mar 30 `MetaCPAN @metacpan` **Today we welcome Grant Street Group as MetaCPAN's newest sponsor.**  
+
+> "Grant Street Group® is an innovator of enterprise-scale software-as-a-service solutions for government entities. Our product suite includes tax calculation, billing, collection, and distribution; modern payment processing; and online auctions of fixed-income instruments and delinquent property taxes."  
+> https://www.grantstreet.com/
+
+* [Mar 17](https://fosstodon.org/@danhon.com@bsky.brid.gy/116245483798557887) `Dan Hon @danhon.com@bsky.brid.gy`
+
+>    "Look, it started as a joke and then quickly got out of hand." is one of the best intros to a project
+    (perlsky, a Perl 5 implementation of an AT Protocol PDS)  
+    [repo](https://tangled.org/alice.mosphere.at/perlsky)
+    `alice.mosphere.at/perlsky`
+
+
+### Monthly <u>Perl Weekly</u> highlights
+
+_You're [subscribed](https://perlweekly.com/) or watching on [RSS](https://perlweekly.com/perlweekly.rss) or so-called 'social' media, right?_
+
+[Archive](https://perlweekly.com/archive/)  — [Calendar](https://perlweekly.com/events.html)
+
+* [768 	2026-04-13 	Perl and XS](https://perlweekly.com/archive/768.html)
+    * [Learning XS tutorial gets new post: Custom Ops](https://dev.to/lnation/learning-xs-custom-ops-4lag)
+    * [CPAN Dependencies, static and dynamic](https://blogs.perl.org/users/grinnz/2026/04/cpan-dependencies-static-and-dynamic.html) by Dan Book (DBOOK)
+    * Quick and dirty string dumping (to show code-points)
+    * Evolution strategy for `SQL::Abstract::More` : call for feedback
+    * How you too can improve Perl 5
+    * CPAN
+        * Net::Nostr !?
+        * LRU::Cache
+        * Heap::PQ (priority queue)
+        * DateTime::Lite
+* [767 	2026-04-06 	Rust and Perl](https://perlweekly.com/archive/767.html)
+    * PDL in Rust 
+    * [Chandra: Cross-Platform Desktop GUIs in Perl](https://dev.to/lnationorg/chandra-cross-platform-desktop-guis-in-perl-1ah2); *one of two such this month!*
+    * [Introducing Object::Proto — A Prototype Object System for Perl](https://dev.to/lnationorg/introducing-objectproto-a-prototype-object-system-for-perl-327j) [CPAN Object::Proto](https://metacpan.org/pod/Object::Proto) (*classless objects, inheriting from unprivileged exemplar objects;* **KRL** *and* **SELF** *are the early examplars.*)
+    * Manage the health of your CLI tools at scale
+* [766 	2026-03-30 	Perl: Past, Present and Future](https://perlweekly.com/archive/766.html)
+    * TPRF 2025 Annual Report
+    * [Beautiful Perl feature: "heredocs", multi-line strings embedded in source code](https://dev.to/damil/beautiful-perl-feature-heredocs-multi-line-strings-embedded-in-source-code-863)
+    * [C/XS Identifier Stack for Perl](https://dev.to/lnationorg/horus-apophis-and-sekhmet-an-cxs-identifier-stack-for-perl-1ac3), various UUID, ULID, Content-addressable features, XS speed.
+    * [Eshu, a polyglot indent-fixer](https://dev.to/lnationorg/eshu-indentation-fixer-for-eight-languages-written-in-c-3fm6) (in C, supports Perl)
+    * [TOON (Token-Oriented Object Notation) module](https://perlhacks.com/2026/03/writing-a-toon-module-for-perl/) Dave Cross; YAJSONML; similar to [Data::Toon](https://metacpan.org/pod/Data::TOON) but API like JSON.pm's, meaning exports `qw(encode_toon decode_toon to_toon from_toon)`. [CPAN TOON](https://metacpan.org/dist/TOON)
+    * CPAN
+        * [Graphics::Toolkit::Color 2.0](https://blogs.perl.org/users/lichtkind/2026/03/graphicstoolkitcolor-20-feater-overview.html) "GTC 2.0, an all in one color library"
+            * oh the irony, just as color-psych folks finally released update to mathematics of non-linearity of perceived color-space (a long discussed difficulty) [LANL](https://www.lanl.gov/media/news/0129-color-perception) [phys.org](https://phys.org/news/2026-01-eye-mathematically-attributes-essential-perception.pdf) [SciDaily](https://www.sciencedaily.com/releases/2026/02/260222092302.htm) [PM](https://www.popularmechanics.com/science/math/a70784732/color-theory-schrodinger/) ; building on their prior [2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC9170152/) work etc. 
+        * PerlOnJava Gets a CPAN Client
+* [765 	2026-03-23 	Testing in Perl and AI](https://perlweekly.com/archive/765.html)
+    * [Perl, the Strange Language That Built the Early Web](https://linuxexpert.org/perl-the-strange-language-that-built-the-early-web/) "A bit of nostalgy and a lot of good insights."
+    * TPRC Talk Submission Deadline extended (to April 21st)
+    * [Still on the [b]leading edge](https://perlhacks.com/2026/03/still-on-the-bleading-edge/) Dave Cross has problem building from CPAN into a container because reasons.
+    * [Beautiful Perl feature: reusable subregexes](https://dev.to/damil/beautiful-perl-feature-reusable-subregexes-4iib)
+    * PetaPerl - someone is trying to rebuild Perl 5.42+ in Rust, with JIT, and XS speed without XS. [fedi](https://fosstodon.org/@christosargyrop.bsky.social@bsky.brid.gy/116290835097964719)  (_reportedly closed source?_)
+    * Perl and AI. *please no*
+    * Explaining `Ambiguous use of ${x} resolved to $x` [Reddit](https://www.reddit.com/r/perl/comments/1rz719a/ambiguous_use_of_x_resolved_to_x/)
+    * PSC & PF grants
+        * CVE causes 5.42.2 with Compress::Raw::Zlib
+        * policy discussion
+        * 3 Feb progress reports for Core support
+* [764 	2026-03-16 	Dancer to Desktop with Prima](https://perlweekly.com/archive/764.html)
+    * [Dancer 2.10](https://blogs.perl.org/users/jason_a_crome/2026/03/dancer-210-released.html)
+    * [Prima cross-platform GUI toolkit](https://www.reiniermaliepaard.nl/prima); modern flat style, visual builder.  [CPAN](https://metacpan.org/dist/Prima); *second of two such this month!*
+    * "This week in PSC" March 9th provides transparency but no news.
+    * [Beautiful Perl feature : two-sided constructs, in list or in scalar context](https://dev.to/damil/beautiful-perl-feature-two-sided-constructs-in-list-or-in-scalar-context-4fhd), latest in a series
+    * CPAN
+        * [Mail::Make](https://metacpan.org/pod/Mail::Make)
+        * [DBIx::Class::MockData](https://metacpan.org/dist/DBIx-Class-MockData)
+
+### Contributed Topics
+
+* Jerrad, non-Perl cryptography; **"No one can force me to have a secure website!!!** — a pre-paid self-own" in which [Tom VII](https://en.wikipedia.org/wiki/Tom_Murphy_VII) objects to "toxic max security" [YT](https://www.youtube.com/watch?v=M1si1y5lvkk) or [in context at SIGBOVIK XX 2026](https://www.youtube.com/live/JazxeftHDwY?si=6I9l2--AyrlugQZQ&t=753), [PDF](https://tom7.org/httpv/httpv.pdf),  (_[SIGBOVIK](http://www.sigbovik.org/) is a satyrical computer conference, which isn't quite on April 1st; this paper is malicious-compliance for TLS validation without actual encryption._)
+* Ricky noted, [Enum::Declare](https://metacpan.org/pod/Enum::Declare)
+* Jerrad using `Selenium`, Ricky using `Marionette` (for driving a browser from scripts).
+* Gene B shared that `Perl.com` published his [**Making an Asynchronous Clocking Drum Machine App in Perl**](https://www.perl.com/article/making-an-asynchronous-clocking-drum-machine-in-perl/), now in Real Time !
+
+
+
+
+-------------------
+
+
 
 # History Pages Menu
 
