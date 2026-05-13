@@ -1805,6 +1805,78 @@ _You're [subscribed](https://perlweekly.com/) or watching on [RSS](https://perlw
 * Jerrad using `Selenium`, Ricky using `Marionette` (for driving a browser from scripts).
 * Gene B shared that `Perl.com` published his [**Making an Asynchronous Clocking Drum Machine App in Perl**](https://www.perl.com/article/making-an-asynchronous-clocking-drum-machine-in-perl/), now in Real Time !
 
+----------
+
+## May 12th, 2026 (2nd Tuesday)
+
+### Attending
+
+* Bill; Chuba; Ricky; Jerrad; Matthew P.
+
+
+### Noted
+
+From Bill's `#Perl` [Mastodon](https://fosstodon.org/@Boston_PM) bookmarks.
+
+* [Gene B](https://fosstodon.org/@ology/116446237348700032) updated his "Perl module that computes 'barycentric musical interval space.'" Links explain what that is; related to his MIDI drumming module he shared in our meeting last month.
+* `isra` [did a #perl poc of #copyfail](https://fosstodon.org/@ilv@infosec.exchange/116516835702681815); since the kernel is corrupted via pipe-ish IO, this doesn't require C code!
+* Mark Hughes [wrapped Irrsi module into a CLI script](https://fosstodon.org/@mdhughes@appdot.net/116417025854231538); Irssi is a more recent IRC-like chat protocol.
+* [PerlOnJava now includes Moose](https://fosstodon.org/@fglock@mastodon.social/116489042661061089)
+* [CPAN dropped ${Name}@CPAN.org email forwarding, surprising some](https://fosstodon.org/@leonerd/116495504847747218)
+    * Ricky says [Perl planet RSS feed](https://perl.theplanetarium.org/) had syndicated the announcement that [CPAN.org email forwading was being shut down](https://log.perl.org/2026/04/cpanorg-email-forwarding-has-been-shut.html)
+* [Brushing up my #Perl with a closer examination of carp..](https://fosstodon.org/@tardate@ruby.social/116494300638247655) ⇒ [Blog post](https://codingkata.tardate.com/perl/carp/)
+* [Neat summary of new #Perl features per release](https://fosstodon.org/@snonux/116546323073320734)  ⇒ [Summary](https://sheet.shiar.nl/perl) — *emphasis on summary, easy to scan one page.*
+* [WebDyne::Session **CVE-2026-5084** for insecure session Id](https://www.tenable.com/cve/CVE-2026-5084) — Old Code has old classic vulnerability. [OpenWall CVE archive](https://www.openwall.com/lists/oss-security/2026/05/11/3).
+    * [WebDyne](https://webdyne.org/00_introduction/) is a Perl ASP equivalent from 20+ years ago, still under maintenance; [CPAN](https://metacpan.org/pod/WebDyne).
+    * Pleased that CVE references include [cpan-sec's CPAN Author’s Guide to Random Data for Security](https://security.metacpan.org/docs/guides/random-data-for-security.html) as relevant Best Practice.
+    * CVE cites specific line number of latest (Jan) release 2.075 [#L120](https://metacpan.org/release/ASPEER/WebDyne-2.075/source/lib/WebDyne/Session.pm#L120)
+    * Ricky noted a very new [Perl doc commit that subtweets (subcommits?) the WebDyne CVE](https://github.com/Perl/perl5/commit/16357f7bef073667e5bd2316408a6a004055174b)
+        * [define 'subtweet'](https://www.urbandictionary.com/define.php?term=subtweet) - *commentary that references elliptically*
+        * The commit message:
+
+    > Revise the description of the rand() function  
+    The wording has not disuaded people from using it for security-related
+    purposes, so the description needs to be rewritten.  
+    The word "cryptographic" suggests cryptography, and the wording should
+    spell out examples of security-related applications that it should not
+    be used for.  
+    It should also emphasize that the output of it is predictable and that
+    systems which rely on it are easily broken.  
+    This is not some theoretical hand-waving exercise.
+
+
+
+
+
+
+### Monthly <u>Perl Weekly</u> highlights
+
+_You're [subscribed](https://perlweekly.com/) or watching on [RSS](https://perlweekly.com/perlweekly.rss) or so-called 'social' media, right?_
+
+[Archive](https://perlweekly.com/archive/)  — [Calendar](https://perlweekly.com/events.html)
+
+* [772](https://perlweekly.com/archive/772.html)
+    * [Stats-LikeR](https://metacpan.org/dist/Stats-LikeR/view/README.md), if you like the **R** statistics package and want to have same functions in Perl.
+    * [Using `DBIx::Class::Async` with an Oracle Database](https://theweeklychallenge.org/blog/dbix-async-oracle/) (and in Docker)
+    * Among many Perl Tool-chain Summit (PTS) trip-reports reports **deprecating **`Module::Signature` and new alternative, [Signing CPAN Releases with SigStore](https://blogs.perl.org/users/timothy_legge/2026/05/signing-cpan-releases-with-sigstore.html)
+    * Beautiful Perl series continues with [`and`, `or`, Boolean algebra and short-circuit evaluation](https://dev.to/damil/beautiful-perl-feature-low-precedence-boolean-operators-and-or-3900)
+    * The new Color toolkit that I worried last month missed new color model from LANL demonstrates flexibility by adding 12 more color-spaces, most new to CPAN entirel, [GTC 2.1 go pro](https://blogs.perl.org/users/lichtkind/2026/05/gtc-21-go-pro.html)
+
+
+* [771](https://perlweekly.com/archive/771.html)
+    * [Perl Toolchain Summit organizer's notes](https://domm.plix.at/perl/2026_04_perl_toolchain_summit.html) ⇒ [PTS 2026 homepage](https://perltoolchainsummit.org/pts2026/), [BooK blog](https://blogs.perl.org/users/book/2026/04/welcome-to-the-perl-toolchain-summit-2026.html), etc.
+
+* [770](https://perlweekly.com/archive/770.html)
+    * [App::Yath, the Test2 native harness](https://metacpan.org/pod/App::Yath)
+* [769](https://perlweekly.com/archive/769.html)
+    * [Enums for Perl: Adopting Devel::CallParser and Building Enum::Declare](https://dev.to/lnationorg/enums-for-perl-adopting-develcallparser-and-building-enumdeclare-28bj)
+    * [Faster UTF-8 Validation](https://blogs.perl.org/users/chansen/2026/04/faster-utf-8-validation.html)
+    * [inter-process shared memory](https://blogs.perl.org/users/egor/2026/04/happy-sharing.html)
+    * [bdf: "A curious case of an autovivified env var"](https://www.reddit.com/r/perl/comments/1sn5he3/a_curious_case_of_an_autovivified_env_var/) ⇒ [bug #236](https://github.com/briandfoy/business-isbn-data/issues/236)
+    * [r/perl: parsing a csv with BOMs in every line](https://www.reddit.com/r/perl/comments/1sog0en/parsing_a_csv_with_boms_in_every_line/)
+        *  — *having Byte Order Mark in each CSV row seems highly heterodox, but each producer of CSVs is peculiar!!* 
+        * references [File::BOM](https://metacpan.org/pod/File::BOM) and [related](https://metacpan.org/search?q=File%3A%3ABOM) modules
+
 
 
 
