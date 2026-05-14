@@ -1865,6 +1865,7 @@ _You're [subscribed](https://perlweekly.com/) or watching on [RSS](https://perlw
 
 * [771](https://perlweekly.com/archive/771.html)
     * [Perl Toolchain Summit organizer's notes](https://domm.plix.at/perl/2026_04_perl_toolchain_summit.html) ⇒ [PTS 2026 homepage](https://perltoolchainsummit.org/pts2026/), [BooK blog](https://blogs.perl.org/users/book/2026/04/welcome-to-the-perl-toolchain-summit-2026.html), etc.
+    * [Key Results & Deliverables](https://www.perl.com/article/perl-toolchain-summit-2026-key-results/) 
 
 * [770](https://perlweekly.com/archive/770.html)
     * [App::Yath, the Test2 native harness](https://metacpan.org/pod/App::Yath)
