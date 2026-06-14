@@ -1879,10 +1879,76 @@ _You're [subscribed](https://perlweekly.com/) or watching on [RSS](https://perlw
         * references [File::BOM](https://metacpan.org/pod/File::BOM) and [related](https://metacpan.org/search?q=File%3A%3ABOM) modules
 
 
+-----------------
+
+## June 9th, 2026 
 
 
--------------------
+* Attending: Bill; Ricky; Jerrad; Chuba
 
+
+### Featured ...
+
+* `Abi Gail` [![Abi_Gail-re-DEFINE-HTML](images/Abi_Gail-re-DEFINE-HTML.jpg){#ReDefine .float_r width=30% }](https://www.facebook.com/groups/498667124274252/?multi_permalinks=2265573497583597) posted a PWC answer using [`?(DEFINE)`](https://perldoc.perl.org/perlre#Extended-Patterns) block in a `qr{}` to parse HTML tokens _correctly)_. [FB](https://www.facebook.com/groups/498667124274252/?multi_permalinks=2265573497583597)
+* [ExifTool remains unmatched.](https://fosstodon.org/@randomgeek@masto.hackers.town/116581282508586287)
+    * Ricky remembers that enabling ExifTool to run in a browser is why [`zeroperl` sandboxed Perl with WebAssembly](https://andrews.substack.com/p/zeroperl-sandboxed-perl-with-webassembly).
+
+### New Releases
+
+* Timey-Wimey and Testing modules
+    * [Introducing **`Time::Str`**](https://blogs.perl.org/users/chansen/2026/05/introducing-timestr.html)   [CPAN](https://metacpan.org/pod/Time::Str) 
+    * [**`Test-MockTime`**](https://metacpan.org/pod/Test::MockTime) provides simulated time via mock of system time calls for Testing.
+    * [**`Test2::V1`**](https://metacpan.org/pod/Test2::V1) big update from **`Test2::V0`** included in Test-Simple.
+        * _I rather like the `bag` comparand constructor!_
+* "Perlsky Is a Perl 5 Implementation of an `at Protocol` Personal Data Server" [HN@FEdi](https://fosstodon.org/@h4ckernews@mastodon.social/116245330361369097) ⇒ [repo](https://tangled.org/alice.mosphere.at/perlsky) 
+
+### Noted
+
+From [#Perl Mastodon Fediverse](https://fosstodon.org/tags/Perl) bookmarks
+
+* `merlyn` post on Medium "The Day I Decided Never to Learn Python" [Medium](https://medium.com/@realmerlyn/the-day-i-decided-never-to-learn-python-2c59d1a1edc5) via [Fedi reshare](https://mastodon.online/@VogueLaGalere/116715333843895172) 
+* Dr Christos posts ["#Perl5 as a data science language"](https://www.iconoclasts.blog/chrisarg/perlasadatascilang.html.en) via [Fedi](https://mstdn.science/@ChristosArgyrop/116273372051050227)
+* Mohammad (PWC editor) postings
+    * [DBIx::Class and GraphQL](https://theweeklychallenge.org/blog/dbic-graphql/) via [FB](https://www.facebook.com/groups/498667124274252/?multi_permalinks=2265595894248024&hoisted_section_header_type=recently_seen)
+    * [Roles in core Perl OO](https://theweeklychallenge.org/blog/roles-in-core-oo/) via [FB](https://www.facebook.com/groups/498667124274252/user/786372640/) 
+    * [subtle change in HTTP::Message](https://gist.github.com/manwar/22c332d65ec99e7cb5a3522a310b39a0) via [FB](https://www.facebook.com/groups/perlcommunity/posts/2264763207664626/) 
+    * [FB: Enumeration Attack on REST API UUIDs](https://www.facebook.com/groups/perlcommunity/posts/2265124424295171/) provoked lively discussion there and Dave Cross [answered on his blog](https://perlhacks.com/2026/06/public-identifiers-uuids-and-a-tiny-seo-fix/)  
+
+
+### Monthly <u>Perl Weekly</u> highlights
+
+_You're [subscribed](https://perlweekly.com/) or watching on [RSS](https://perlweekly.com/perlweekly.rss) or so-called 'social' media, right?_
+
+[Archive](https://perlweekly.com/archive/)  — [Calendar](https://perlweekly.com/events.html)
+
+I've cherry-picked some items above, but you might find something else of interest.
+
+* [773](https://perlweekly.com/archive/773.html) 
+* [774](https://perlweekly.com/archive/774.html)
+* [775](https://perlweekly.com/archive/775.html)
+* [776](https://perlweekly.com/archive/776.html)
+
+
+### Contributed Topics
+
+* Ricky noted regarding mocking time that [PadWalker](https://metacpan.org/pod/PadWalker) was essential for tweaking some core features; he needed to override quote escapes thusly:
+```
+{
+	package Mojo::DOM58::Entities;
+	sub pukku_fix_quote_expansion {
+		use PadWalker qw(closed_over);
+		my $vars = closed_over( \&html_escape );
+		$vars->{'%ESCAPE'}->{q[']} = q['];
+	}
+	package main;
+	Mojo::DOM58::Entities::pukku_fix_quote_expansion();
+} 
+```
+* Ricky shared [Ivory](https://tapbots.com/ivory/), an iOS/iPadOS/MacOS Fediverse-Mostodon client that supports forward cronological order and remembers where you'd read to, for next time.
+
+
+
+------------------------
 
 
 # History Pages Menu
