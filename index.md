@@ -100,18 +100,16 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill. (Or something you'ld like discussed, I can add it to agenda.)
 
 
-## July 14th, 2026 - 7.30 pm EDT (UTC-4) topic start (7.00 pm EDT &#127482;&#127480; gathering chatter)
+## September 8th, 2026 - 7.30 pm EDT (UTC-4) topic start (7.00 pm EDT &#127482;&#127480; gathering chatter)
 
-**Second** Tuesday. 9th is _almost_ as early as 2nd Tuesday can be.
+**Second** Tuesday. 8th is as early as 2nd Tuesday can be, and is the day after Labor Day, ouch.
 
-We'll discuss whatever Perl, FLOSS topics.
+We'll discuss whatever Perl, FLOSS topics, likely starting with July and August Perl news.
 
-[Mobilizon event](https://mobilizon.us/events/f3d7c62b-b0b2-42d4-9aa5-84862ee1a7a6) (includes Jit.si meeting link)
+[Mobilizon event](https://mobilizon.us/events/829386e6-9e9b-4853-9e24-6eb0b982f221) (includes Jit.si meeting link)
 [(list)](https://mobilizon.us/search?search=Boston+Perl)
 
-## AUGUST - We typically SKIP August Tech
 
-Perhaps we'll have a social in a public park or beer garden ?
 
 ------------
 

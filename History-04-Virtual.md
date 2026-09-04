@@ -1946,7 +1946,44 @@ I've cherry-picked some items above, but you might find something else of intere
 ```
 * Ricky shared [Ivory](https://tapbots.com/ivory/), an iOS/iPadOS/MacOS Fediverse-Mostodon client that supports forward cronological order and remembers where you'd read to, for next time.
 
+-----------------
 
+## July 14, 2026
+
+* Bill; Jim Keenan; Ricky; Aram; Chuba.
+
+
+### Featured ...
+
+* Bill discussed going throught the [CVE](https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures) process for [Ack](https://metacpan.org/dist/ack) with CPAN-Security Group (very helpful!). [&#x1F418; Fedi](https://fosstodon.org/@confuseacat@mastodon.social/116588684347031239) [contact ticket](https://github.com/beyondgrep/ack3/issues/399) [Ack alert page](https://beyondgrep.com/security/) [cpan sec announce archive](https://lists.security.metacpan.org/cve-announce/dates/2026/07/) [CVE.org](https://www.cve.org/CVERecord/SearchResults?query=%22Ack%22) 
+[CVE-2026-49145](https://www.cve.org/CVERecord?id=CVE-2026-49145) [CVE-2026-49145](https://www.cve.org/CVERecord?id=CVE-2026-49146) [CVE-2026-49147](https://www.cve.org/CVERecord?id=CVE-2026-49147) (Note that CPAN shows Security Advisories now.)
+
+
+### New Releases
+
+* Perl-5.44.0-RC1,-RC2 [msg RC1](https://www.nntp.perl.org/group/perl.perl5.porters/2026/06/msg271001.html) [msg RC2](https://www.nntp.perl.org/group/perl.perl5.porters/2026/07/msg271044.html) [delta](https://metacpan.org/release/LEONT/perl-5.44.0-RC2/view/pod/perldelta.pod#Named-Parameters-in-Signatures)
+    - [Jim K gave backstory on how (only) one of the 5.12 deprecations got final](https://metacpan.org/release/LEONT/perl-5.44.0-RC2/view/pod/perldelta.pod#Deprecations) ( & [GitHub argument](https://github.com/Perl/perl5/issues/23618) )
+* [Number::Phone](https://metacpan.org/release/DCANTRELL/Number-Phone-4.0011) by David Cantrell aka DrHyde [&#x1F418; Fedi](https://fosstodon.org/@DrHyde/116727961251639015) now supports dual-home international-dialing for Northern Ireland and San Marino.
+* [CPAN::FindDependencies](https://metacpan.org/release/DCANTRELL/CPAN-FindDependencies-3.14) also by David Cantrell, bugfix on non-existant cache dir. [&#x1F418; Fedi](https://fosstodon.org/@DrHyde/116788761958008372)
+* [**A "switch" for Perl that compiles away: introducing Switch::Declare**](https://dev.to/lnation/a-switch-for-perl-that-compiles-away-introducing-switchdeclare-knl) via [FB](https://www.facebook.com/groups/498667124274252/?multi_permalinks=2271984076942539) Robert Acock ⇒ [**`Switch::Declare`**](https://metacpan.org/pod/Switch::Declare) ; not re-inventing SmartMatch, but a dumb-match that does just enough, and edits your syntax tree at compile time so will be faster too.
+* someone complained that builtins that were lvalues was an antipattern; it was pointed out that [Acme::Lvalue](https://metacpan.org/pod/Acme::Lvalue) lets one override more things to be Lvalues. Just because you can doesn't mean you should but ... 
+
+### Noted
+
+From [#Perl Mastodon Fediverse](https://fosstodon.org/tags/Perl) bookmarks
+
+* ["Are you still using the 2-argument open?"](https://security.metacpan.org/2025/06/06/two-arg-open.html) via [&#x1F418; Fediverse](https://fosstodon.org/@cpansec/114637327317512579)
+* [&#x1F418; Signatures discussion](https://fosstodon.org/@m3tti@functional.cafe/116764732722073249)
+* [RE to match Emoji's?](https://fosstodon.org/@anelki@tilde.zone/116874216917304071) `\p{Emoji}` is too general, so [UTS report RE](https://www.unicode.org/reports/tr51/#EBNF_and_Regex) may need tweaking to use Perl bits that aren't too loose, _e.g._
+
+```
+perl -CSDA -nlE 'say "$1:$_" if /((?x: \p{EPres} | \p{Emoji_Modifier_Base} | \p{Emoji_Modifier}  )+)/;'  *.md
+```
+
+
+## AUGUST - We typically SKIP August Tech
+
+and we did.
 
 ------------------------
 

@@ -362,6 +362,10 @@ id="toc-april-14th-2026---back-to-word-puzzles-and-perl-news">April
 id="toc-may-12th-2026-2nd-tuesday">May 12th, 2026 (2nd Tuesday)</a></li>
 <li><a href="#june-9th-2026" id="toc-june-9th-2026">June 9th,
 2026</a></li>
+<li><a href="#july-14-2026" id="toc-july-14-2026">July 14, 2026</a></li>
+<li><a href="#august---we-typically-skip-august-tech"
+id="toc-august---we-typically-skip-august-tech">AUGUST - We typically
+SKIP August Tech</a></li>
 </ul></li>
 <li><a href="#history-pages-menu" id="toc-history-pages-menu">History
 Pages Menu</a></li>
@@ -3889,6 +3893,96 @@ iOS/iPadOS/MacOS Fediverse-Mostodon client that supports forward
 cronological order and remembers where you’d read to, for next
 time.</li>
 </ul>
+<hr />
+<h2 id="july-14-2026">July 14, 2026</h2>
+<ul>
+<li>Bill; Jim Keenan; Ricky; Aram; Chuba.</li>
+</ul>
+<h3 id="featured-1">Featured …</h3>
+<ul>
+<li>Bill discussed going throught the <a
+href="https://en.wikipedia.org/wiki/Common_Vulnerabilities_and_Exposures">CVE</a>
+process for <a href="https://metacpan.org/dist/ack">Ack</a> with
+CPAN-Security Group (very helpful!). <a
+href="https://fosstodon.org/@confuseacat@mastodon.social/116588684347031239">🐘
+Fedi</a> <a href="https://github.com/beyondgrep/ack3/issues/399">contact
+ticket</a> <a href="https://beyondgrep.com/security/">Ack alert page</a>
+<a
+href="https://lists.security.metacpan.org/cve-announce/dates/2026/07/">cpan
+sec announce archive</a> <a
+href="https://www.cve.org/CVERecord/SearchResults?query=%22Ack%22">CVE.org</a>
+<a
+href="https://www.cve.org/CVERecord?id=CVE-2026-49145">CVE-2026-49145</a>
+<a
+href="https://www.cve.org/CVERecord?id=CVE-2026-49146">CVE-2026-49145</a>
+<a
+href="https://www.cve.org/CVERecord?id=CVE-2026-49147">CVE-2026-49147</a>
+(Note that CPAN shows Security Advisories now.)</li>
+</ul>
+<h3 id="new-releases-1">New Releases</h3>
+<ul>
+<li>Perl-5.44.0-RC1,-RC2 <a
+href="https://www.nntp.perl.org/group/perl.perl5.porters/2026/06/msg271001.html">msg
+RC1</a> <a
+href="https://www.nntp.perl.org/group/perl.perl5.porters/2026/07/msg271044.html">msg
+RC2</a> <a
+href="https://metacpan.org/release/LEONT/perl-5.44.0-RC2/view/pod/perldelta.pod#Named-Parameters-in-Signatures">delta</a>
+<ul>
+<li><a
+href="https://metacpan.org/release/LEONT/perl-5.44.0-RC2/view/pod/perldelta.pod#Deprecations">Jim
+K gave backstory on how (only) one of the 5.12 deprecations got
+final</a> ( &amp; <a
+href="https://github.com/Perl/perl5/issues/23618">GitHub argument</a>
+)</li>
+</ul></li>
+<li><a
+href="https://metacpan.org/release/DCANTRELL/Number-Phone-4.0011">Number::Phone</a>
+by David Cantrell aka DrHyde <a
+href="https://fosstodon.org/@DrHyde/116727961251639015">🐘 Fedi</a> now
+supports dual-home international-dialing for Northern Ireland and San
+Marino.</li>
+<li><a
+href="https://metacpan.org/release/DCANTRELL/CPAN-FindDependencies-3.14">CPAN::FindDependencies</a>
+also by David Cantrell, bugfix on non-existant cache dir. <a
+href="https://fosstodon.org/@DrHyde/116788761958008372">🐘 Fedi</a></li>
+<li><a
+href="https://dev.to/lnation/a-switch-for-perl-that-compiles-away-introducing-switchdeclare-knl"><strong>A
+“switch” for Perl that compiles away: introducing
+Switch::Declare</strong></a> via <a
+href="https://www.facebook.com/groups/498667124274252/?multi_permalinks=2271984076942539">FB</a>
+Robert Acock ⇒ <a
+href="https://metacpan.org/pod/Switch::Declare"><strong><code>Switch::Declare</code></strong></a>
+; not re-inventing SmartMatch, but a dumb-match that does just enough,
+and edits your syntax tree at compile time so will be faster too.</li>
+<li>someone complained that builtins that were lvalues was an
+antipattern; it was pointed out that <a
+href="https://metacpan.org/pod/Acme::Lvalue">Acme::Lvalue</a> lets one
+override more things to be Lvalues. Just because you can doesn’t mean
+you should but …</li>
+</ul>
+<h3 id="noted-3">Noted</h3>
+<p>From <a href="https://fosstodon.org/tags/Perl">#Perl Mastodon
+Fediverse</a> bookmarks</p>
+<ul>
+<li><a
+href="https://security.metacpan.org/2025/06/06/two-arg-open.html">“Are
+you still using the 2-argument open?”</a> via <a
+href="https://fosstodon.org/@cpansec/114637327317512579">🐘
+Fediverse</a></li>
+<li><a
+href="https://fosstodon.org/@m3tti@functional.cafe/116764732722073249">🐘
+Signatures discussion</a></li>
+<li><a
+href="https://fosstodon.org/@anelki@tilde.zone/116874216917304071">RE to
+match Emoji’s?</a> <code>\p{Emoji}</code> is too general, so <a
+href="https://www.unicode.org/reports/tr51/#EBNF_and_Regex">UTS report
+RE</a> may need tweaking to use Perl bits that aren’t too loose,
+<em>e.g.</em></li>
+</ul>
+<pre><code>perl -CSDA -nlE &#39;say &quot;$1:$_&quot; if /((?x: \p{EPres} | \p{Emoji_Modifier_Base} | \p{Emoji_Modifier}  )+)/;&#39;  *.md</code></pre>
+<h2 id="august---we-typically-skip-august-tech">AUGUST - We typically
+SKIP August Tech</h2>
+<p>and we did.</p>
 <hr />
 <h1 id="history-pages-menu">History Pages Menu</h1>
 <ul>
