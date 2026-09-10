@@ -1985,6 +1985,11 @@ perl -CSDA -nlE 'say "$1:$_" if /((?x: \p{EPres} | \p{Emoji_Modifier_Base} | \p{
 
 and we did.
 
+## SEPTEMBER 2026
+
+Ricky & Bill had a _de facto_ social meeting, Perl tech content carried over to October.
+
+
 ------------------------
 
 
