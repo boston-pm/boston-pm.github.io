@@ -106,9 +106,9 @@ If there's something you can or would want to talk about, please do volunteer - 
 
 We'll discuss whatever Perl, FLOSS topics, likely starting with July and August Perl news.
 
-[Mobilizon event](https://mobilizon.us/events/50c2d0a9-facf-46e7-a58a-e895c3778b18) (includes Jit.si meeting link)
-[(list)](https://mobilizon.us/search?search=Boston+Perl)
+Oops. I created the Mobilzon event with wrong Jitsi URL and wrong date, and they aren't accepting edits right now.
 
+If you can't run the Perl command below to get the secret anti-spam URL, reply and I'll send it to you ...
 
 
 ------------
