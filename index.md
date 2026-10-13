@@ -100,7 +100,7 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill. (Or something you'ld like discussed, I can add it to agenda.)
 
 
-## October 12th, 2026 - 7.30 pm EDT (UTC-4) topic start (7.00 pm EDT &#127482;&#127480; gathering chatter)
+## October 13th, 2026 - 7.30 pm EDT (UTC-4) topic start (7.00 pm EDT &#127482;&#127480; gathering chatter)
 
 **Second** Tuesday. 
 
