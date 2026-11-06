@@ -1989,7 +1989,34 @@ and we did.
 
 Ricky & Bill had a _de facto_ social meeting, Perl tech content carried over to October.
 
+## OCTOBER 12th
 
+
+* Bill, Aram, Chuba, Matthew P, Jerrad, Randal 
+
+Note: **Jitsi is now enforcing a 95minute limit on free meetings.** 
+
+### Featured ...
+
+* Randal says: **Synthetic Scars** is a work in progress... for our public press so far, see [Syntehtic Scars (series)](https://dev.to/randalschwartz/series/44156), starting with "Why AI keeps making the same coding mistakes";
+    * Latest [essay posted Nov.4th](https://dev.to/gde/crows-moths-and-makefiles-how-300-megabytes-of-crow-dna-explains-why-a-20-kilobyte-scar-file-36a)
+    *  [Randal's Preferred Ticket Resolution Workflow — Index & Series Links](https://gist.github.com/RandalSchwartz/598a1f2b5760a23c1d70b57e9e85393f)
+.  (How to have AI agent problems only once or less, with starter kit. Applying 50yrs of Unix solutions to avoid reinventing things.)
+
+
+* SDL allows direct framebuffer access?  
+    Jerrad says: [Frozen Bubble](https://en.wikipedia.org/wiki/Frozen_Bubble) is [Bubble Bobble](https://en.wikipedia.org/wiki/Bubble_Bobble) in perl-SDL.
+    (That's a class of game.)
+
+* regarding CVEs and setuid/root,  
+    Jerrad: `dies if EUID==0 and not --shoot-my-foot required`?
+
+
+### New Releases
+
+* Perl-5.44.0 Released July 16th [perldelta](https://perldoc.perl.org/5.44.0/perldelta)
+    * [P5P announcement](https://www.nntp.perl.org/group/perl.perl5.porters/2026/07/msg271063.html) 
+    *
 ------------------------
 
 
