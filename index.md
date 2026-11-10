@@ -100,21 +100,20 @@ _Previous meetings' minutes are recorded at the bottom of the [latest history fi
 If there's something you can or would want to talk about, please do volunteer - in person, on the mailing list, or privately to Bill. (Or something you'ld like discussed, I can add it to agenda.)
 
 
-## November 10th, 2026 - TBD ? 7.00 or 7.30 ?pm EDT (UTC-5; &#127482;&#127480;) topic start [pending vote] 
+## November 10th, 2026 — 7.30 pm EDT (UTC-5; &#127482;&#127480;) topic start 
 
 As we noticed last month, Jitsi has tightened the free meeting time limit to 95 minutes.
 
-I inadvertently did the right thing last month by failing to start the meeting early as I used to do; going forward, unless I'm persuaded by others' experiments with other services or whatever, I'll aim to start JITSI meeting at 6:55 pm ET (which will put the cut-off at 8:30PM), and rather than waiting until 7:30 to start "main topic" we'll do that as soon as possible after 7:00pm. 
+I inadvertently did the right thing last month by failing to start the meeting early as I usually used to do!
 
-Or we could do  7:25 meeting turn-on, just before 7:30 start, timer expires 9:00 when most folks have to leave anyway.
-
-**VOTE**: **7-8:30** or **7:30-9:00** ??
+Going forward, unless I'm persuaded by others' experiments with other services or whatever,  I'll aim to start JITSI meeting at **7:25 pm ET** (**updated after vote**) which will put the automatic cut-off at 9:00PM, and rather than waiting to start "main topic" we'll do that as soon as possible. 
 
 We'll discuss whatever Perl, FLOSS topics, likely starting with July and August Perl news (that I planned for Sept or Oct and didn't use).
 
-## December 16th (timing open as above)
+## December 16th — 7.30 pm EDT (UTC-5; &#127482;&#127480;) topic start 
 
-We have an actual speaker and topic for December. [JMAC (Jason McIntosh)](https://www.jmac.org/), a BostonPM expat iirc, has several ongoing neat Perl projects (a couple beyond what's on [CPAN](https://metacpan.org/author/JMAC)), one of which got busy again lately.  (More to follow.)
+
+We have an actual speaker and topic for December. **[JMAC (Jason McIntosh)](https://www.jmac.org/)**, a BostonPM expat iirc, has several ongoing neat Perl projects (a couple beyond what's on [CPAN](https://metacpan.org/author/JMAC)), one of which got busy again lately.  (More to follow.)
 
 **Second** Tuesday. 
 
