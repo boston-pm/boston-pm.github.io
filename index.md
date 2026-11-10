@@ -50,11 +50,11 @@ Typically these are negotiated among interested folks on the Discuss mailing-lis
 
 * First two history two phases are recent-top reverse-chronological which was Wiki-update-friendly but history-unfriendly. That's a deferred TBD.
 * Our [Social Media](https://boston-pm.github.io/#social-media) had listed a bunch of things underutilized and little useful.
-    - **ACTION** — I've created new ![Mastodon](images/Mastodon.png){ height=20} Mastodon, ![Icon_Mobilizon](images/Icon_Mobilizon.png){ height=20} ~~Mobilizon&#x1F4C5;~~ 
+    - **ACTION** — I've created new ![Mastodon](images/Mastodon.png){ height=20} Mastodon, ![Icon_Mobilizon](images/Icon_Mobilizon.png){ height=20} &#x1F4C5; 
     - **NEXT**: I may create a BlueSky BostonPM presence as well. We've been invited to join [BostonOpen](https://bostonopen.dev) on Gabor's [ZulipChat server](https://osdc.zulipchat.com/#narrow/channel/406743-boston) for FLOSS communities, there are Boston and Perl channels there. We can discuss whether `BostonPM` should be a Topic under Boston channel or a new/sub channel or what.
     - **continuing:** The **PerlWeekly** [iCal calendar](https://perlweekly.com/perlweekly.ical) is importable into most personal calendars and semiautomagically includes our time now. (I'll tweak it to point usefully instead of MeetUp.)
 
-Best way to be informed is either sign up for one or both mailing lists [boston.pm.org](https://boston.pm.org)![icon](./images/Mail-icon.png){#ml height=20 } . But please try the new socials ![icon](./images/Mastodon.png){ height=20 }   ![icon](./images/zulip-chat-icon.png){ height=20 }.
+Best way to be informed is either sign up for one or both mailing lists [boston.pm.org](https://boston.pm.org)![icon](./images/Mail-icon.png){#ml height=20 } . But please try the new socials ![icon](./images/Mastodon.png){ height=20 }  ![Icon_Mobilizon](images/Icon_Mobilizon.png){height=20} ![icon](./images/zulip-chat-icon.png){ height=20 }.
 
 Boston-PM has presence on the following socials -
 
@@ -64,7 +64,7 @@ Boston-PM has presence on the following socials -
     *We are **not** currently active on Xhitter. I'll likely lock it down, **not** delete.*
 * **Fediverse** 
     * <a rel="me" href="https://fosstodon.org/@Boston_PM">Mastodon</a>![icon](./images/Mastodon.png){#ms height=20 } `@Boston_PM@fosstodon.org` 
-    * Alas ~~Mobilizon.us~~ ![Icon_Mobilizon](images/Icon_Mobilizon.png){#mo height=20} free calendar of events has failed.
+    * Mobilizon ![Icon_Mobilizon](images/Icon_Mobilizon.png){#mo height=20}[&#x2139;&#xFE0F;](https://framablog.org/2022/11/08/mobilizon-v3-find-events-and-groups-throughout-the-fediverse/) [&#x1F4C5; calendar/events](https://mobilizon.us/search?search=Boston+Perl) [(past)](https://mobilizon.us/search?search=Boston+Perl&when=past&eventPage=1)
 * _BSKY too?_
 * [ZulipChat Boston Open](https://osdc.zulipchat.com/#narrow/channel/406743-boston)![icon](./images/zulip-chat-icon.png){#zc height=20 } Boston (BostonOpen.dev) and Perl channels
 * [Facebook Page](https://www.facebook.com/bostonpm/) + [Group](https://www.facebook.com/groups/131595281237) — underutilized; FMK?
@@ -110,6 +110,10 @@ Going forward, unless I'm persuaded by others' experiments with other services o
 
 We'll discuss whatever Perl, FLOSS topics, likely starting with July and August Perl news (that I planned for Sept or Oct and didn't use).
 
+[Mobilizon event](https://mobilizon.us/events/21698284-bb1a-411c-8d89-7f5aee70f10c) ![Icon_Mobilizon](images/Icon_Mobilizon.png){#mo height=20}[&#x1F4C5;] (includes Jit.si meeting link)
+[(list)](https://mobilizon.us/search?search=Boston+Perl)
+
+
 ## December 16th — 7.30 pm EDT (UTC-5; &#127482;&#127480;) topic start 
 
 
@@ -130,7 +134,7 @@ This is a JitSi meeting. The secure URL will be computed by this command (valid 
 perl -MDigest::SHA=sha1_hex -MPOSIX=strftime -le 'print strftime "%Y/%m/%d week %U", localtime; $date=strftime "Y%Y W%U", localtime; print $date; print  "https://meet.jit.si/BostonPM-".substr(sha1_hex("BostonPM".$date),0,12);'  
 
 ```
-(to avoid spammers, won't be posted on public social media; ~~but usually is on the Mobilizon above~~; I may post on email list or this web-page **same-day only**. The Mobilizon calendar that had held the meeting pointer has failed, alas.)
+(to avoid spammers, won't be posted on public social media; but usually is on the ![Icon_Mobilizon](images/Icon_Mobilizon.png){ height=20} Mobilizon &#x1F4C5; above; I may post on email list or this web-page **same-day only**.)
 
 (See [Boilerplate](./index.html/#boilerplate) below for additional how-to etc.)
 
